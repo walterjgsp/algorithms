@@ -2,8 +2,7 @@
 
 using namespace std;
 
-template <typename T> struct Node
-{
+template <typename T> struct Node{
 	T value;
 	Node<T> *next;
 
@@ -17,13 +16,15 @@ template <typename T> struct Node
 	}
 };
 
-template <typename T> struct List
-{
+template <typename T> struct List{
+	
 	Node<T> *start;
 	Node<T> *end;
+	int size;
 
 	List(){
 		start = end = NULL;
+		size = 0;
 	}
 
 	void push_back(T value){
@@ -37,6 +38,7 @@ template <typename T> struct List
 		}
 
 		end = temp;
+		size++;
 	}
 
 	void push_front(T value){
@@ -49,7 +51,7 @@ template <typename T> struct List
 		}
 
 		start = temp;
-
+		size++;
 	}
 
 	void printList(){
@@ -61,7 +63,28 @@ template <typename T> struct List
 		}
 		cout<<endl;
 	}
-	
+
+	int size(){
+		return size;
+	}
+
+	bool empty(){
+		if(size==0)
+			return true;
+		return false;
+	}
+
+	T back(){
+		if(end!=NULL)
+			return end->value;
+		return NULL;
+	}
+
+	T front(){
+		if(start!=NULL)
+			return start->value;
+		return NULL
+	}
 };
 
 int main(){
