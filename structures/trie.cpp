@@ -5,6 +5,7 @@ using namespace std;
 class Trie{
 private:
 	class TrieNode{
+	public:
 		vector<TrieNode*> childs;
 		bool endWord;
 		TrieNode(){
@@ -29,6 +30,7 @@ public:
 				it->childs[pos] = new TrieNode();
 
 			it = it->childs[pos];
+			index++;
 		}
 
 		it->endWord = true;
@@ -43,6 +45,7 @@ public:
 			if(!it->childs[pos])
 				return false;
 			it = it->childs[pos];
+			index++;
 		}
 
 		return it->endWord;
@@ -67,7 +70,7 @@ public:
 		for(int i=0;i<node->childs.size();i++){
 			if(node->childs[i]){
 				word.push_back(i+'a');
-				printWord(temp,node->childs[i]);
+				printWord(word,node->childs[i]);
 				word.pop_back();
 			}
 		}
@@ -78,11 +81,10 @@ public:
 int main(){
 
 	Trie t;
-	string s;
-
-	while(cin>>s){
-		t.insert(s);
-	}
-
+	t.insert("abacate");
+	t.insert("aba");
+	t.insert("panela");
 	t.printWords();
+	if(t.query("aba"))
+		cout<<"Found"<<endl;
 }
