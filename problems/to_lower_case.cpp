@@ -6,22 +6,28 @@
 
 using namespace std;
 
-string toLowerCase(string str) {
 
-    string to_return;
+class Solution {
+public:
+  string toLowerCase(string str) {
 
-    for(auto c:str){
-        if(c>='A' && c<='Z')
-            c='a'+c-'A';
+      string to_return;
 
-        to_return.push_back(c);
-    }
+      for(auto c:str){
+          if(c>='A' && c<='Z')
+              c='a'+c-'A';
 
-    return to_return;
-}
+          to_return.push_back(c);
+      }
+
+      return to_return;
+  }
+};
+
 
 int main(){
   string str = "CODETOLOWER";
-  cout<<toLowerCase(str)<<endl;
+  Solution sol;
+  cout<<sol.toLowerCase(str)<<endl;
   return 0;
 }
