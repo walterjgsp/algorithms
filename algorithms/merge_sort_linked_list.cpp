@@ -1,5 +1,5 @@
 // Iterative MergeSort using deque that can be used in single linked lists
-// Time Complexity: O(n) Space Complexity: O(n)
+// Time Complexity: O(nlogn) Space Complexity: O(n)
 
 #include <bits/stdc++.h>
 
