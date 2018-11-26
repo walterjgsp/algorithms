@@ -1,3 +1,13 @@
+// Problem Statement
+// On a 2D plane, we place stones at some integer coordinate points.  
+// Each coordinate point may have at most one stone.
+// Now, a move consists of removing a stone that shares a column or row with another stone on the grid.
+// What is the largest possible number of moves we can make?
+
+// Example:
+// Input: stones = [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
+// Output: 5
+
 class DSU {
     
     vector<int> parent;
