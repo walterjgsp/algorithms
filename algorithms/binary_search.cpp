@@ -1,4 +1,5 @@
 //Simple binary search in a sorted list.
+// Complexity O(logn)
 
 #include <bits/stdc++.h>
 
