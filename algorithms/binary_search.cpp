@@ -1,5 +1,7 @@
 //Simple binary search in a sorted list.
-// Complexity O(logn)
+//Time Complexity O(logn)
+//Space Complexity: O(1)
+//n is the size of the array
 
 #include <bits/stdc++.h>
 

@@ -9,7 +9,7 @@ private:
 		vector<TrieNode*> childs;
 		bool endWord;
 		TrieNode(){
-			childs = vector<TrieNode*> (26,0);
+			childs = vector<TrieNode*> (26,NULL);
 			endWord = false;
 		}
 	};
