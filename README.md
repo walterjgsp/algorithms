@@ -23,11 +23,11 @@ And to run the code:
 To compile use the following command:
 
 ```bash
-kotlinc <INPUT_FILE_NAME> -include-runtime -d <OUTPUT_FILE_NAME>
+kotlinc <INPUT_FILE_NAME> -include-runtime -d <OUTPUT_FILE_NAME>.jar
 ```
 
 And to run the code:
 
 ```bash
-run -r <OUTPUT_FILE_NAME>
+java -jar <OUTPUT_FILE_NAME>
 ```
