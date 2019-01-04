@@ -18,7 +18,7 @@ And to run the code:
 ./<OUTPUT_FILE_NAME>
 ```
 
-## Run Kotlin++
+## Run Kotlin
 
 To compile use the following command:
 
