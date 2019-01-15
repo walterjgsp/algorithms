@@ -12,10 +12,10 @@ List of solved problems
 |6| Anagrams | :heavy_check_mark: |  |
 |7| Arrange Coins | :heavy_check_mark: | :heavy_check_mark: |
 |8| Array Nesting | :heavy_check_mark: | :heavy_check_mark: |
-|9| Binary Tree Tilt | :heavy_check_mark: |  |
+|9| Binary Tree Tilt | :heavy_check_mark: | :heavy_check_mark: |
 |10| Count Primes | :heavy_check_mark: | :heavy_check_mark: |
 |11| Evaluate Division | :heavy_check_mark: |  |
-|12| Find Minimum in Rotated Sorted Array | :heavy_check_mark: |  |
+|12| Find Minimum in Rotated Sorted Array | :heavy_check_mark: | :heavy_check_mark: |
 |13| Find Right Interval | :heavy_check_mark: |  |
 |14| Gas Station | :heavy_check_mark: |  |
 |15| Koko Eating Bananas | :heavy_check_mark: |  |
