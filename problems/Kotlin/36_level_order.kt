@@ -23,32 +23,33 @@
  *     var right: TreeNode? = null
  * }
  */
-class Solution {
-    fun levelOrder(root: TreeNode?): List<List<Int>> {
-        var result:MutableList<MutableList<Int>> = mutableListOf<MutableList<Int>>();
+ import java.util.ArrayDeque;
 
-        if(root==null)
-            return result;
+ class Solution {
+     fun levelOrder(root: TreeNode?): List<List<Int>> {
+         var result:MutableList<MutableList<Int>> = mutableListOf<MutableList<Int>>();
 
-        var bfs:MutableList<TreeNode?> = mutableListOf<TreeNode?>();
-        bfs.add(root);
+         if(root==null)
+             return result;
 
-        while(bfs.isNotEmpty()){
-            var level: MutableList<Int> = mutableListOf<Int>();
-            var tam : Int = bfs.size;
-            while(tam>0){
-                var node:TreeNode? = bfs[0];
-                bfs.removeAt(0);
-                level.add(node!!.`val`);
-                if(node?.left!=null)
-                    bfs.add(node?.left);
-                if(node?.right!=null)
-                    bfs.add(node?.right);
-                tam--;
-            }
-            result.add(level);
-        }
+         var bfs:ArrayDeque<TreeNode?> = ArrayDeque<TreeNode?>();
+         bfs.add(root);
 
-        return result;
-    }
-}
+         while(bfs.isNotEmpty()){
+             var level: MutableList<Int> = mutableListOf<Int>();
+             var tam : Int = bfs.size;
+             while(tam>0){
+                 var node:TreeNode? = bfs.pollFirst();
+                 level.add(node!!.`val`);
+                 if(node?.left!=null)
+                     bfs.add(node?.left);
+                 if(node?.right!=null)
+                     bfs.add(node?.right);
+                 tam--;
+             }
+             result.add(level);
+         }
+
+         return result;
+     }
+ }
