@@ -14,7 +14,7 @@ List of solved problems
 |8| Array Nesting | :heavy_check_mark: | :heavy_check_mark: |
 |9| Binary Tree Tilt | :heavy_check_mark: | :heavy_check_mark: |
 |10| Count Primes | :heavy_check_mark: | :heavy_check_mark: |
-|11| Evaluate Division | :heavy_check_mark: |  |
+|11| Evaluate Division | :heavy_check_mark: | :heavy_check_mark: |
 |12| Find Minimum in Rotated Sorted Array | :heavy_check_mark: | :heavy_check_mark: |
 |13| Find Right Interval | :heavy_check_mark: |  |
 |14| Gas Station | :heavy_check_mark: |  |
@@ -30,7 +30,7 @@ List of solved problems
 |24| Score of Parentheses | :heavy_check_mark: |  |
 |25| Single Element in Sorted Array | :heavy_check_mark: |  |
 |26| Smallest Range I | :heavy_check_mark: |  |
-|27| Sort Array Parity | :heavy_check_mark: |  |
+|27| Sort Array Parity | :heavy_check_mark: | :heavy_check_mark: |
 |28| String Toggle | :heavy_check_mark: |  |
 |29| Summary Ranges | :heavy_check_mark: |  |
 |30| To Lower Case | :heavy_check_mark: |  |
