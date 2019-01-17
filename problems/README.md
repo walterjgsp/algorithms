@@ -47,4 +47,5 @@ List of solved problems
 |41| Integer Replacement | :heavy_check_mark: | :heavy_check_mark: |
 |42| Friends Of Appropriate Ages | :heavy_check_mark: | :heavy_check_mark: |
 |43| Maximum Subarray | :heavy_check_mark: | :heavy_check_mark: |
-|44| Maximum Average Subarray I| | :heavy_check_mark:|
+|44| Maximum Average Subarray I| :heavy_check_mark: | :heavy_check_mark:|
+|45| Jewel and Stones | :heavy_check_mark: | :heavy_check_mark: |
