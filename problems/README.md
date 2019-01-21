@@ -43,7 +43,7 @@ List of solved problems
 |37| Validate Anagram | :heavy_check_mark: | :heavy_check_mark: |
 |38| Flip Binary Tree to Match Preorder | :heavy_check_mark: |  |
 |39| N Repeated Element in Size 2N Array | :heavy_check_mark: | :heavy_check_mark: |
-|40| Design Twitter | :heavy_check_mark: |  |
+|40| Design Twitter | :heavy_check_mark: | :heavy_check_mark: |
 |41| Integer Replacement | :heavy_check_mark: | :heavy_check_mark: |
 |42| Friends Of Appropriate Ages | :heavy_check_mark: | :heavy_check_mark: |
 |43| Maximum Subarray | :heavy_check_mark: | :heavy_check_mark: |

@@ -35,71 +35,65 @@
 // // User 1's news feed should return a list with 1 tweet id -> [5],
 // // since user 1 is no longer following user 2.
 // twitter.getNewsFeed(1);
-#include <bits/stdc++.h>
 
-using namespace std;
+class Twitter() {
 
-class Twitter {
-private:
-    unordered_map<int,set<int>> connections;
-    vector<pair<int,int>> tweets;
-public:
     /** Initialize your data structure here. */
-    Twitter() {
-        connections = unordered_map<int,set<int>> ();
-        tweets = vector<pair<int,int>>();
-    }
+    val users:HashMap<Int,HashSet<Int>> = HashMap<Int,HashSet<Int>>();
+    val feedList:MutableList<Pair<Int,Int>> = mutableListOf<Pair<Int,Int>>();
 
     /** Compose a new tweet. */
-    void postTweet(int userId, int tweetId) {
-        if(connections.find(userId)==connections.end()){
-            connections[userId] = set<int>();
+    fun postTweet(userId: Int, tweetId: Int) {
+        if(!users.containsKey(userId)){
+            users.put(userId,HashSet<Int>());
         }
-
-        tweets.push_back(make_pair(userId,tweetId));
+        feedList.add(Pair(userId,tweetId));
     }
 
     /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
-    vector<int> getNewsFeed(int userId) {
-        vector<int> newsFeed;
-        int index = tweets.size()-1;
-        while(index>=0 && newsFeed.size()<10){
-            if(tweets[index].first == userId || connections[userId].find(tweets[index].first)!=connections[userId].end()){
-                newsFeed.push_back(tweets[index].second);
+    fun getNewsFeed(userId: Int): List<Int> {
+        val newsFeed:MutableList<Int> = mutableListOf<Int>();
+
+        for(index in feedList.lastIndex downTo 0){
+            var feed = feedList[index];
+            if(newsFeed.size==10){
+                break;
             }
-            index--;
+
+            if(feed.first == userId || (users.containsKey(userId) && users.get(userId)!!.contains(feed.first))){
+                newsFeed.add(feed.second);
+            }
         }
 
         return newsFeed;
     }
 
     /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
-    void follow(int followerId, int followeeId) {
-        connections[followerId].insert(followeeId);
+    fun follow(followerId: Int, followeeId: Int) {
+        if(!users.containsKey(followerId)){
+            users.put(followerId,HashSet<Int>());
+        }
+        users.get(followerId)!!.add(followeeId)
     }
 
     /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
-    void unfollow(int followerId, int followeeId) {
-        if(connections.find(followerId)!=connections.end()){
-            connections[followerId].erase(followeeId);
+    fun unfollow(followerId: Int, followeeId: Int) {
+        if(!users.containsKey(followerId)){
+            return
         }
-    }
-};
 
-void printVec(const vector<int> &vec){
-  for(auto val : vec)
-    cout<<val<<" ";
-  cout<<endl;
+        users.get(followerId)!!.remove(followeeId);
+    }
+
 }
 
-int main(){
-  Twitter twitter;
+fun main(args:Array<String>){
+  val twitter:Twitter = Twitter();
   twitter.postTweet(1, 5);
-  printVec(twitter.getNewsFeed(1));
+  println(twitter.getNewsFeed(1));
   twitter.follow(1, 2);
   twitter.postTweet(2, 6);
-  printVec(twitter.getNewsFeed(1));
+  println(twitter.getNewsFeed(1));
   twitter.unfollow(1, 2);
-  printVec(twitter.getNewsFeed(1));
-  return 0;
+  println(twitter.getNewsFeed(1));
 }
