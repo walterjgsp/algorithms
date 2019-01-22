@@ -9,7 +9,7 @@ List of solved problems
 |3| Add Two Numbers | :heavy_check_mark: | :heavy_check_mark: |
 |4| Advantage Shuffle | :heavy_check_mark: | :heavy_check_mark: |
 |5| Allocate Areas | :heavy_check_mark: |  |
-|6| Anagrams | :heavy_check_mark: |  |
+|6| Anagrams | :heavy_check_mark: | :heavy_check_mark: |
 |7| Arrange Coins | :heavy_check_mark: | :heavy_check_mark: |
 |8| Array Nesting | :heavy_check_mark: | :heavy_check_mark: |
 |9| Binary Tree Tilt | :heavy_check_mark: | :heavy_check_mark: |
