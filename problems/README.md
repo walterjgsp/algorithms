@@ -50,5 +50,6 @@ List of solved problems
 |44| Maximum Average Subarray I| :heavy_check_mark: | :heavy_check_mark:|
 |45| Jewel and Stones | :heavy_check_mark: | :heavy_check_mark: |
 |46| Odd Even Jump | :heavy_check_mark: | |
-|47| All Nodes Distance K in Binary Tree | :heavy_check_mark: | |
 |47| Group Anagrams | :heavy_check_mark: | :heavy_check_mark: |
+|48| All Nodes Distance K in Binary Tree | :heavy_check_mark: | |
+|49| Unique Paths III | :heavy_check_mark: | |
