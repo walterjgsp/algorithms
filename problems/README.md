@@ -9,7 +9,7 @@ List of solved problems
 |3| Add Two Numbers | :heavy_check_mark: | :heavy_check_mark: |
 |4| Advantage Shuffle | :heavy_check_mark: | :heavy_check_mark: |
 |5| Allocate Areas | :heavy_check_mark: |  |
-|6| Anagrams | :heavy_check_mark: |  |
+|6| Anagrams | :heavy_check_mark: | :heavy_check_mark: |
 |7| Arrange Coins | :heavy_check_mark: | :heavy_check_mark: |
 |8| Array Nesting | :heavy_check_mark: | :heavy_check_mark: |
 |9| Binary Tree Tilt | :heavy_check_mark: | :heavy_check_mark: |
@@ -43,7 +43,7 @@ List of solved problems
 |37| Validate Anagram | :heavy_check_mark: | :heavy_check_mark: |
 |38| Flip Binary Tree to Match Preorder | :heavy_check_mark: |  |
 |39| N Repeated Element in Size 2N Array | :heavy_check_mark: | :heavy_check_mark: |
-|40| Design Twitter | :heavy_check_mark: |  |
+|40| Design Twitter | :heavy_check_mark: | :heavy_check_mark: |
 |41| Integer Replacement | :heavy_check_mark: | :heavy_check_mark: |
 |42| Friends Of Appropriate Ages | :heavy_check_mark: | :heavy_check_mark: |
 |43| Maximum Subarray | :heavy_check_mark: | :heavy_check_mark: |
@@ -51,3 +51,4 @@ List of solved problems
 |45| Jewel and Stones | :heavy_check_mark: | :heavy_check_mark: |
 |46| Odd Even Jump | :heavy_check_mark: | |
 |47| All Nodes Distance K in Binary Tree | :heavy_check_mark: | |
+|47| Group Anagrams | :heavy_check_mark: | :heavy_check_mark: |
