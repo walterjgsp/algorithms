@@ -18,7 +18,7 @@ List of solved problems
 |12| Find Minimum in Rotated Sorted Array | :heavy_check_mark: | :heavy_check_mark: |
 |13| Find Right Interval | :heavy_check_mark: |  |
 |14| Gas Station | :heavy_check_mark: |  |
-|15| Koko Eating Bananas | :heavy_check_mark: |  |
+|15| Koko Eating Bananas | :heavy_check_mark: | :heavy_check_mark:  |
 |16| Largest Component Size by Commom Factor | :heavy_check_mark: |  |
 |17| Longest Harmonious Subsequence | :heavy_check_mark: |  |
 |18| Most Stones Removed with Same Row or Column | :heavy_check_mark: |  |
