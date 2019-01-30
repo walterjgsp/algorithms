@@ -53,3 +53,4 @@ List of solved problems
 |47| Group Anagrams | :heavy_check_mark: | :heavy_check_mark: |
 |48| All Nodes Distance K in Binary Tree | :heavy_check_mark: | |
 |49| Unique Paths III | :heavy_check_mark: | |
+|50| Shortest Bridge | :heavy_check_mark: | |
