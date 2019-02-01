@@ -54,3 +54,4 @@ List of solved problems
 |48| All Nodes Distance K in Binary Tree | :heavy_check_mark: | |
 |49| Unique Paths III | :heavy_check_mark: | |
 |50| Shortest Bridge | :heavy_check_mark: | |
+|51| Is Graph Bipartite? | :heavy_check_mark: | |
