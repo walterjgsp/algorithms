@@ -55,3 +55,4 @@ List of solved problems
 |49| Unique Paths III | :heavy_check_mark: | |
 |50| Shortest Bridge | :heavy_check_mark: | |
 |51| Is Graph Bipartite? | :heavy_check_mark: | |
+|52| Eventual Safe Nodes | :heavy_check_mark: | :heavy_check_mark: |
