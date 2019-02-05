@@ -58,3 +58,4 @@ List of solved problems
 |52| Eventual Safe Nodes | :heavy_check_mark: | :heavy_check_mark: |
 |53| Interval List Intersection | :heavy_check_mark: |  |
 |54| Sum of Even Numbers After Queries | :heavy_check_mark: | :heavy_check_mark: |
+|55| Spiral Matrix I | :heavy_check_mark: | :heavy_check_mark: |
