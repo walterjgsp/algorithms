@@ -60,3 +60,4 @@ List of solved problems
 |54| Sum of Even Numbers After Queries | :heavy_check_mark: | :heavy_check_mark: |
 |55| Spiral Matrix I | :heavy_check_mark: | :heavy_check_mark: |
 |56| Car Fleet | :heavy_check_mark: | |
+|57| Broken Calculator | :heavy_check_mark: | |
