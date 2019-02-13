@@ -61,3 +61,4 @@ List of solved problems
 |55| Spiral Matrix I | :heavy_check_mark: | :heavy_check_mark: |
 |56| Car Fleet | :heavy_check_mark: | |
 |57| Broken Calculator | :heavy_check_mark: | |
+|58| Satisfiability of Equality Equations | :heavy_check_mark: | |
