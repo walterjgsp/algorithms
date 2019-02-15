@@ -1,0 +1,4 @@
+baseURL = "walterjgsp.github.io/Algorithms/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "ananke"
