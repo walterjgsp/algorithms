@@ -1,4 +1,25 @@
 baseURL = "http://walterjgsp.github.io/Algorithms/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
+title= "Algorithms"
+theme="kube"
+description = "Repository of algorithms, problems and structures that i have learned to help me and the others if needed."
+Paginate = 4
+[Params]
+  RSSLink = "/index.xml"
+  author = "walterjgsp" # add your company name
+  github = "" # add your github profile name
+  twitter = "" # add your twitter profile
+  email = "walterjgsp@gmail.com"
+
+[[menu.main]]
+    name = "Problems"
+    weight = -100
+    url = "/problems/"
+[[menu.main]]
+    name = "Algorithms"
+    weight = -100
+    url = "/algorithms/"
+[[menu.main]]
+    name = "Structures"
+    weight = -100
+    url = "/structures/"

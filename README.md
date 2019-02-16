@@ -33,9 +33,3 @@ And to run the code:
 ```bash
 java -jar <OUTPUT_FILE_NAME>
 ```
-
-### Contributors
-<center>
-{% avatar walterjgsp size=100%}
-{% avatar viniiciusconceicao size=100%}
-</center>
