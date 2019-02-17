@@ -1,7 +1,7 @@
 baseURL = "http://walterjgsp.github.io/Algorithms/"
 languageCode = "en-us"
 title= "Algorithms"
-theme="kube"
+theme="kubeMod"
 description = "Repository of algorithms, problems and structures that i have learned to help me and the others if needed."
 Paginate = 4
 [Params]
