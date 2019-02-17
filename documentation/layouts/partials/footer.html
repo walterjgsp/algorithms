@@ -1,0 +1,18 @@
+  <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <p class="level-item">
+         <a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} {{end}}>
+           {{ .Name }}
+         </a>
+       </p>
+       {{end}}
+      </div>
+    </nav>
+
+  </footer>

@@ -1,0 +1,21 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <section class="hero is-medium">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-size-1" >{{.Title}}</h1>
+      <p class="subtitle is-size-6">{{.Description}}</p>
+      <a class="button outline big" href="https://github.com/walterjgsp/Algorithms">
+        <i class="fab fa-github"></i> View on Github
+      </a>
+    </div>
+
+
+  </section>
+  
+  {{.Content}}
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

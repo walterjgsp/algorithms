@@ -62,3 +62,4 @@ List of solved problems
 |56| Car Fleet | :heavy_check_mark: | |
 |57| Broken Calculator | :heavy_check_mark: | |
 |58| Satisfiability of Equality Equations | :heavy_check_mark: | |
+|59| Roting Oragnes | :heavy_check_mark: | |

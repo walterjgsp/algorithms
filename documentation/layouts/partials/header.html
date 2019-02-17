@@ -1,0 +1,25 @@
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/Algorithms">
+      <img class="has-text-link" src="{{ "/img/algorithm.svg" | relURL }}"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+       <a class="navbar-item" href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} {{end}}>
+         {{ .Name }}
+       </a>
+     {{end}}
+
+    </div>
+  </div>
+</nav>
