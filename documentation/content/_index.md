@@ -19,7 +19,7 @@ draft = false
 
 <section class="section">
   <div class="container">
-    <h3 class="is-size-2">Contributors</h3>
+    <h3 class="is-size-3 has-text-weight-bold">Contributors</h3>
     <div class="columns is-multiline is-centered">
       <div class="column is-2 is-horizontal-center is-flex">
         <figure class="image is-128x128 ">
