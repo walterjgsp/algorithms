@@ -6,10 +6,21 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Feb 2019 19:37:40 -0200</lastBuildDate>
+    <lastBuildDate>Sun, 17 Feb 2019 19:22:35 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/Algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://walterjgsp.github.io/Algorithms/faq/how_to_c/</link>
+      <pubDate>Sun, 17 Feb 2019 19:22:35 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/Algorithms/faq/how_to_c/</guid>
+      <description>All the C++ code were done using the C++14 version. To compile use the following command:
+g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt;  And to run the code:
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt;  </description>
+    </item>
     
     <item>
       <title>Two Sum</title>
@@ -18,6 +29,17 @@
       
       <guid>http://walterjgsp.github.io/Algorithms/problems/01-two-sum/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://walterjgsp.github.io/Algorithms/faq/how_to_kotlin/</link>
+      <pubDate>Sun, 17 Feb 2019 19:30:50 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/Algorithms/faq/how_to_kotlin/</guid>
+      <description>To compile use the following command:
+kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar  And to run the code:
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;  </description>
     </item>
     
   </channel>

@@ -6,17 +6,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Algorithms </title>
+    <title> FAQ </title>
 
     
-    <meta name="description" content="Repository for algorithms, problems and data structures that I have used. This serves as a reference for everyone interested."> 
+    <meta name="description" content="Asked and answered"> 
     
     
     
     
+    
+    <meta name="robots" content="noindex">
     
 
-    <link rel="canonical" href="http://walterjgsp.github.io/Algorithms/">  
+    <link rel="canonical" href="http://walterjgsp.github.io/Algorithms/faq/">  
 
     <link rel="shortcut icon" type="image/png"  href="/Algorithms/img/icon.png" />
 
@@ -55,7 +57,7 @@
          Problems
        </a>
      
-       <a class="navbar-item" href="/Algorithms/faq/" >
+       <a class="navbar-item" href="/Algorithms/faq/"  >
          FAQ
        </a>
      
@@ -66,51 +68,55 @@
  </header>
     <main>
 
-<div id="main">
-  <section class="hero is-medium">
-    <div class="hero-body has-text-centered">
-      <h1 class="title is-size-1" >Algorithms Repository</h1>
-      <p class="subtitle is-size-5 has-text-grey">Repository for algorithms, problems and data structures that I have used. This serves as a reference for everyone interested.</p>
-      <a class="button is-medium is-link is-outlined" href="https://github.com/walterjgsp/Algorithms">
-        <i class="fab fa-github"></i> View on Github
-      </a>
-    </div>
-  </section>
-
-  <div class="container">
-  <div class="has-text-justified">
-    <p>
-      This repo contains questions from LeetCode (most of them), Interviewbit, URI and Codeforces. We suggest you to try their platform so you can get new problems and articles about algorithms.
-    </p>
-    <br/>
-    <p>
-      For any suggestion on algorithm, problem or data structure, just open an issue with question label.
-    </p>
+<section class="hero ">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-size-1" >FAQ</h1>
+    <p class="subtitle is-size-5 has-text-grey">Asked and answered<br></p>
   </div>
-</div>
-
-<section class="section">
-  <div class="container">
-    <h3 class="is-size-3 has-text-weight-bold">Contributors</h3>
-    <div class="columns is-multiline is-centered">
-      <div class="column is-2 is-horizontal-center is-flex">
-        <figure class="image is-128x128 ">
-          <img class="is-rounded" src="https://avatars2.githubusercontent.com/u/5986103?s=400&v=4"/>
-        </figure>
-      </div>
-      <div class="column is-2 is-horizontal-center is-flex">
-        <figure class="image is-128x128 ">
-          <img class="is-rounded" src="https://avatars1.githubusercontent.com/u/3476247?s=400&v=4"/>
-        </figure>
-      </div>
-    <div/>
-  </div>
-
 </section>
+<div class="container">
+  
+    <h4 class="has-text-weight-semibold">How to run C&#43;&#43; code?</h4>
+    <br/>
+    <article class="message is-link">
+      <div class="message-body">
+        <p>All the C++ code were done using the C++14 version. To compile use the following command:</p>
 
+<pre><code class="language-bash">g++ -std=c++14 &lt;INPUT_FILE_NAME&gt; -o &lt;OUTPUT_FILE_NAME&gt;
+</code></pre>
+
+<p>And to run the code:</p>
+
+<pre><code class="language-bash">./&lt;OUTPUT_FILE_NAME&gt;
+</code></pre>
+
+      </div>
+    </article>
+  
+    <h4 class="has-text-weight-semibold">How to run Kotlin code?</h4>
+    <br/>
+    <article class="message is-link">
+      <div class="message-body">
+        <p>To compile use the following command:</p>
+
+<pre><code class="language-bash">kotlinc &lt;INPUT_FILE_NAME&gt; -include-runtime -d &lt;OUTPUT_FILE_NAME&gt;.jar
+</code></pre>
+
+<p>And to run the code:</p>
+
+<pre><code class="language-bash">java -jar &lt;OUTPUT_FILE_NAME&gt;
+</code></pre>
+
+      </div>
+    </article>
+  
 </div>
+
+<br/>
+
 </main>
-    <footer>   <footer class="footer">
+    <footer>
+    <footer class="footer">
     <nav class="level">
       <div class="level-left">
         <p>&copy; Licence MIT.</p>
@@ -125,7 +131,7 @@
        </p>
        
         <p class="level-item">
-         <a href="/Algorithms/faq/" >
+         <a href="/Algorithms/faq/"  >
            FAQ
          </a>
        </p>
@@ -134,7 +140,8 @@
     </nav>
 
   </footer>
- </footer>
+
+</footer>
   </body>
 
 </html>
