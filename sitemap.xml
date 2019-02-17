@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://walterjgsp.github.io/Algorithms/problems/01-two-sum/</loc>
+    <lastmod>2019-02-16T19:37:40-02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://walterjgsp.github.io/Algorithms/</loc>
+    <lastmod>2019-02-16T19:37:40-02:00</lastmod>
   </url>
   
   <url>
     <loc>http://walterjgsp.github.io/Algorithms/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/Algorithms/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/Algorithms/problems/</loc>
+    <lastmod>2019-02-16T19:37:40-02:00</lastmod>
   </url>
   
   <url>
