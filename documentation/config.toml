@@ -23,3 +23,7 @@ Paginate = 4
     name = "Structures"
     weight = -100
     url = "/structures/"
+[[menu.main]]
+    name = "FAQ"
+    weight = -90
+    url = "/faq/"
