@@ -4,16 +4,20 @@
 {{ define "main" }}
 
 <div id="hero" class="wrap">
-  <h1>Voice of {{.Site.Params.author }} Developers</h1>
-    <p>Our vision, news and ideas, and whatever feels important.<br> <a href="https://twitter.com/{{.Site.Params.twitter}}">Follow us on Twitter</a></p>
+  <h1>Problems</h1>
+    <p>List of solved problems</p>
 </div>
 <ul id="posts">
 
- {{ range .Paginator.Pages.ByWeight }} {{ partial "page-summary" . }} {{ end }}
-  <section>{{ partial "pagination" .}}</section>
+  {{ range .Paginator.Pages.ByWeight }}
+    {{ partial "page-summary" . }}
+  {{ end }}
+
 </ul>
 
-{{ end }} 
-{{ define "footer" }} 
-  {{ partial "footer" . }} 
+<section>{{ partial "pagination" .}}</section>
+
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer" . }}
 {{ end }}

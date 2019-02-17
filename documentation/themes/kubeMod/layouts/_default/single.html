@@ -5,14 +5,19 @@
 
 <div id="hero" class="wrap">
   <h1>{{.Title }}</h1>
-    <p>{{.Params.description}}</p>
+  <p>{{.Params.description}}</p>
+  <p>
+    {{ range .Params.languages }}
+      <div class="chip">{{ . }}</div>
+    {{ end }}
+  </p>
 </div>
 <ul id="posts">
 
  {{ .Content }}
-  
+
 </ul>
-{{ end }} 
-{{ define "footer" }} 
-  {{ partial "footer" . }} 
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer" . }}
 {{ end }}

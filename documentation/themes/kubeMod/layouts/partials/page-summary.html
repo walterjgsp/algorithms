@@ -6,4 +6,7 @@
     {{ if .Description }}
     <p itemprop="about">{{ .Description }}</p>
     {{ end }}
+    {{ range .Params.languages }}
+      <div class="chip">{{ . }}</div>
+    {{ end }}
 </li>
