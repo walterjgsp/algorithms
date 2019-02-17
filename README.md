@@ -1,10 +1,10 @@
 The documentation for this project can be found at: <https://walterjgsp.github.io/Algorithms/>
 
-Repository of algorithms, problems and structures that i have learned to help me and the others if needed.
-Any suggestion of algorithm, problem or structure, just open a issue in the repository with the question label.
+Repository for algorithms, problems and data structures that we have used. This serves as a reference for everyone interested.
+For any suggestion on algorithm, problem or data structure, just open an issue with question label.
 
-The majority of problems are taken from coaching code websites like LeetCode, Interviewbit, URI, Codeforces.
-I suggest you guys to try their platform so you can always get new problems and articles about algorithms.
+This repo contains questions from LeetCode (most of them), Interviewbit, URI and Codeforces.
+We suggest you to try their platform so you can get new problems and articles about algorithms.
 
 ## Run C++
 

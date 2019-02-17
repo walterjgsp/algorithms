@@ -1,0 +1,29 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main"}}
+<div id="main">
+  <section class="hero ">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-size-1" >{{.Title}}</h1>
+      <p class="subtitle is-size-5 has-text-grey">{{.Params.description}}<br></p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row gutters">
+      {{ range .Data.Pages.ByWeight }}
+      <div class="col col-4 item">
+        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        <p>{{ .Params.description }}</p>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+
+  <br/>
+</div>
+{{ end }}
+
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

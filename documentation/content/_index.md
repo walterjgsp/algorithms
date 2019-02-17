@@ -1,5 +1,5 @@
 +++
-description = "Repository for algorithms, problems and data structures that I have used. This serves as a reference for everyone interested."
+description = "Repository for algorithms, problems and data structures that we have used. This serves as a reference for everyone interested."
 title = "Algorithms Repository"
 draft = false
 

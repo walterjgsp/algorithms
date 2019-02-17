@@ -3,14 +3,14 @@
 
 {{ define "main" }}
 
-<div id="hero" class="wrap">
+<div class="hero">
   <h1>{{.Title }}</h1>
     <p>{{.Params.description}}<br></p>
 </div>
-<div id="kube-faq">
+<div class="container">
 {{.Content}}
 </div>
-{{ end }} 
-{{ define "footer" }} 
-  {{ partial "footer" . }} 
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer" . }}
 {{ end }}
