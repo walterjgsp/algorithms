@@ -1,0 +1,10 @@
++++
+title = "Add One Row to Tree"
+description = "Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1."
+date = 2019-02-18T19:24:15-03:00
+weight = 20
+draft = false
+toc = true
+languages = ["C++","Kotlin"]
+level = 0
++++

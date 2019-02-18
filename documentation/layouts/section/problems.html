@@ -11,11 +11,18 @@
   </section>
 
   <div class="container">
-    <div class="row gutters">
-      {{ range .Data.Pages.ByWeight }}
-      <div class="col col-4 item">
-        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-        <p>{{ .Params.description }}</p>
+    <div class="columns is-multiline">
+      {{ range .Data.Pages.ByDate }}
+      <div class="column is-one-quarter">
+        <a href="{{ .Permalink }}">
+          <div class="box">
+            <h4 class="has-text-link">{{ .Title }}</h4>
+            <p class="has-text-justified">{{ .Params.description }}</p>
+            {{ range $i, $language :=  .Params.languages }}
+            <span class="tag is-warning">{{ $language }}</span>
+            {{ end }}
+          </div>
+        </a>
       </div>
       {{ end }}
 
