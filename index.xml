@@ -6,10 +6,20 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Feb 2019 19:24:15 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 21:24:09 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/Algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Add Two Numbers</title>
+      <link>http://walterjgsp.github.io/Algorithms/problems/03_add_two_numbers/</link>
+      <pubDate>Mon, 18 Feb 2019 21:24:09 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/Algorithms/problems/03_add_two_numbers/</guid>
+      <description>Problem Statement  &amp;hellip;Your problem statement here
+ Solution</description>
+    </item>
     
     <item>
       <title>Add One Row to Tree</title>
@@ -17,7 +27,8 @@
       <pubDate>Mon, 18 Feb 2019 19:24:15 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/Algorithms/problems/02_add_one_row_to_tree/</guid>
-      <description></description>
+      <description>Problem Statement  &amp;hellip;Your problem statement here
+ Solution</description>
     </item>
     
     <item>
@@ -33,11 +44,13 @@ g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;g
     
     <item>
       <title>Two Sum</title>
-      <link>http://walterjgsp.github.io/Algorithms/problems/01-two-sum/</link>
+      <link>http://walterjgsp.github.io/Algorithms/problems/01_two_sum/</link>
       <pubDate>Sat, 16 Feb 2019 19:37:40 -0200</pubDate>
       
-      <guid>http://walterjgsp.github.io/Algorithms/problems/01-two-sum/</guid>
-      <description></description>
+      <guid>http://walterjgsp.github.io/Algorithms/problems/01_two_sum/</guid>
+      <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+ Solution</description>
     </item>
     
     <item>
