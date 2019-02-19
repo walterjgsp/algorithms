@@ -78,14 +78,41 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-5"> Problem Statement </h2>
+    <h2 class="title is-4"> Problem Statement </h2>
 
 <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
 
 <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
 
 <p><br/>
-<h2 class="title is-5"> Solution </h2></p>
+<h2 class="title is-4"> Questions to ask </h2></p>
+
+<p>The input array is already sorted?</p>
+
+<p>The input array is mutable or read only?</p>
+
+<p><br/>
+<h2 class="title is-4"> Solution </h2></p>
+
+<p>There are three main approaches to solve this problem: <strong>Naive</strong>, <strong>Time Optimized</strong>,<strong>Memory Optimized</strong>.</p>
+
+<p><br/>
+<strong>Naive</strong></p>
+
+<p><br/>
+The naive approach consists in choosing the first position of the array and matching with the subsequents until we find the target value.
+If we don&rsquo;t find, we pick the second position and repeat the process. We repet this process until the target value is find or all the pairs of positions are already tested.</p>
+
+<p>Why we avoid to use the naive approach? The time complexity for this solution is O(n²).</p>
+
+<p><br/>
+<strong>Time Optimized</strong></p>
+
+<p><br/>
+<strong>Memory Optimized</strong></p>
+
+<p><br/>
+Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve this problem, how we address it now? If we can, we sort the array.</p>
 
 
     </div>
