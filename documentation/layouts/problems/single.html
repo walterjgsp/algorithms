@@ -2,22 +2,20 @@
 {{ define "header"}} {{ partial "header" .}} {{end}}
 {{ define "main"}}
   <div id="main">
-    <div id="hero">
-      <h1> {{ .Title}} </h1>
-      <p class="hero-lead">
-           {{ .Params.description | safeHTML }}.
-      </p>
-
-    </div>
-    <div id="kube-component" class="content">
-    {{ partial "toc" .}}
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >{{.Title}}</h1>
+        {{ range $i, $language :=  .Params.languages }}
+          <span class="tag is-warning">{{ $language }}</span>
+        {{ end }}
+      </div>
+    </section>
+    <div class="section container">
 
     {{ .Content}}
-<!-- Inject script tag in this template  -->
-    {{if .Params.script}}
-     {{ $script := (delimit (slice "scripts" .Params.script) "/")}}
-    {{ partial (string $script) .}}
-    {{end }}
+
     </div>
-    </div>
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer" . }}
 {{ end }}
