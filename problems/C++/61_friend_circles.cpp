@@ -14,41 +14,35 @@ using namespace std;
 class Solution {
 public:
     int findCircleNum(vector<vector<int>>& M) {
-        map<int,set<int>> graph;
+        set<int> visited;
         int circles = 0;
 
         for(int i=0;i<M.size();i++){
-            for(int j=i;j<M[i].size();j++){
-                if(M[i][j]==1){
-                    graph[i].insert(j);
-                    graph[j].insert(i);
-                }
-            }
-        }
+            if(visited.find(i)==visited.end()){
 
-        set<int> visited;
-        for(auto student : graph){
-            if(visited.find(student.first)==visited.end()){
                 stack<int> dfs;
-                dfs.push(student.first);
+
+                dfs.push(i);
 
                 while(!dfs.empty()){
 
-                    int vertex = dfs.top();
+                    int friends = dfs.top();
                     dfs.pop();
+                    if(visited.find(friends)==visited.end()){
 
-                    if(visited.find(vertex)==visited.end()){
-                        visited.insert(vertex);
-
-                        for(auto friends : graph[vertex]){
-                            dfs.push(friends);
+                        for(int j=0;j<M[friends].size();j++){
+                            if(M[friends][j]==1){
+                                dfs.push(j);
+                            }
                         }
+                        visited.insert(friends);
                     }
                 }
 
                 circles++;
             }
         }
+
 
         return circles;
     }
