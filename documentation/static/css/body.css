@@ -7,6 +7,10 @@ h1.title, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 button, .button {
   font-family: 'Rubik', sans-serif !important; }
 
+p{
+  font-family: 'Rubik', sans-serif !important;
+  margin-bottom: 5px !important;
+}
 
 .box { transition: all .2s ease-in-out !important;  }
 
