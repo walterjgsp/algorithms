@@ -19,7 +19,7 @@
             <h4 class="has-text-link">{{ .Title }}</h4>
             <p class="has-text-justified">{{ .Params.description }}</p>
             {{ range $i, $language :=  .Params.languages }}
-            <span class="tag is-warning">{{ $language }}</span>
+              <span class="tag has-text-white" value={{ $language }} >{{ $language }}</span>
             {{ end }}
           </div>
         </a>
@@ -30,6 +30,12 @@
   </div>
 
   <br/>
+  <script type="text/javascript">
+    $.each($( ".tag" ), function(i,val){
+      $( this ).css("background-color",language_colors[val.attributes.value.value])
+    })
+
+  </script>
 </div>
 {{ end }}
 

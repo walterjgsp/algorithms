@@ -6,7 +6,7 @@
       <div class="hero-body has-text-centered">
         <h1 class="title is-size-1" >{{.Title}}</h1>
         {{ range $i, $language :=  .Params.languages }}
-          <span class="tag is-warning">{{ $language }}</span>
+          <span class="has-text-white tag is-warning" value={{ $language }}>{{ $language }}</span>
         {{ end }}
       </div>
     </section>
@@ -15,6 +15,14 @@
     {{ .Content}}
 
     </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+    </script>
+  </div>
 {{ end }}
 {{ define "footer" }}
   {{ partial "footer" . }}
