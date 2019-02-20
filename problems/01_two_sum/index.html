@@ -30,6 +30,9 @@
     <script src="/Algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
     </script>
 
+    <script src="/Algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
   </head>
 
 
@@ -70,9 +73,9 @@
       <div class="hero-body has-text-centered">
         <h1 class="title is-size-1" >Two Sum</h1>
         
-          <span class="tag is-warning">C&#43;&#43;</span>
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
         
-          <span class="tag is-warning">Kotlin</span>
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
         
       </div>
     </section>
@@ -147,6 +150,14 @@ Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve
 
 
     </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+    </script>
+  </div>
 </main>
     <footer>
     <footer class="footer">
@@ -176,5 +187,7 @@ Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve
 
 </footer>
   </body>
+
+
 
 </html>
