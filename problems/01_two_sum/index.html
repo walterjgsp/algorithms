@@ -26,8 +26,12 @@
     <link href="/Algorithms/css/body.css" rel="stylesheet" type="text/css">
     <link href="/Algorithms/css/highlight.css" rel="stylesheet" type="text/css">
     <link href="/Algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/Algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
   
     <script src="/Algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/Algorithms/js/bulma-extensions.min.js" type="text/javascript">
     </script>
 
     <script src="/Algorithms/js/languages_colors.js" type="text/javascript">
@@ -72,6 +76,7 @@
     <section class="hero ">
       <div class="hero-body has-text-centered">
         <h1 class="title is-size-1" >Two Sum</h1>
+        <span class="tag has-text-white level_tag" value=0 >Easy</span>
         
           <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
         
@@ -114,7 +119,7 @@ If we don&rsquo;t find it, we pick the second position and repeat the process. W
 <p>What if we could keep a memory of all the values that we already pass in the array and it is possible to make a query about a certain value really fast, this help us to solve the problem?</p>
 
 <p><br/>
-The time optimized solution is based on a basic structure of coding the <strong>Map</strong> (HashMap). With this structure i can keep a track of all the past values and also query if a value was already
+The time optimized solution is based on a basic structure of coding, the <strong>Map</strong> (HashMap). With this structure i can keep a track of all the past values and also query if a value was already
 seen in O(1). How this helps?</p>
 
 <p><br/>
@@ -126,8 +131,8 @@ Let&rsquo;s say we have this kind of input:</p>
 
 <p><br/>
 If we lookup at the number 2 at the first index, knowing the target value, which is the value that we need to find in the array so that the sum of the two add to the target 9?
-With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet, is impossible to devise the future. But we can keep a track about the past, this is
-why we use a <strong>map</strong>.</p>
+With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet.It is impossible to devise the future, but we can keep a track about the past,
+this is why we use a <strong>map</strong>.</p>
 
 <p><br/>
 In this approach, we traverse the array, looking if the complement of the target minus the value we are processing is in the map, and if not, we add the value we are processing on the map
@@ -146,7 +151,23 @@ With this approach we have the following complexity:</p>
 <strong>Memory Optimized</strong></p>
 
 <p><br/>
-Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve this problem, how we address it now? If we can, we sort the array.</p>
+Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve this problem, and we just want to know if two values exists in the array, how we address it now?
+If we can, we sort the array.</p>
+
+<p><br/>
+With the array sorted we keep two pointers, one pointing to the first position of the array and the other pointing to the last. We get the two values of each pointer
+and compare the result of the sum to the target. If the result is bigger than the target we need to move the pointers in a way that the result of the sum get smaller.
+To do this we decrement the pointer with the bigger value (the one pointing to the last position). Otherwise, if we need to make the result bigger, we increment the
+pointer with the smaller value (the one pointing to the first positon).</p>
+
+<p><br/>
+With this approach we have the following complexity:</p>
+
+<p><em>Time Complexity : O(nlogn)</em></p>
+
+<p><em>Space Complexity : O(1)</em></p>
+
+<p>where n is the number of elements in the array.</p>
 
 
     </div>
@@ -154,6 +175,12 @@ Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve
     <script type="text/javascript">
       $.each($( ".tag" ), function(i,val){
         $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
       })
 
     </script>

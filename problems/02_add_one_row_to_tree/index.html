@@ -26,8 +26,12 @@
     <link href="/Algorithms/css/body.css" rel="stylesheet" type="text/css">
     <link href="/Algorithms/css/highlight.css" rel="stylesheet" type="text/css">
     <link href="/Algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/Algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
   
     <script src="/Algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/Algorithms/js/bulma-extensions.min.js" type="text/javascript">
     </script>
 
     <script src="/Algorithms/js/languages_colors.js" type="text/javascript">
@@ -72,6 +76,7 @@
     <section class="hero ">
       <div class="hero-body has-text-centered">
         <h1 class="title is-size-1" >Add One Row to Tree</h1>
+        <span class="tag has-text-white level_tag" value=1 >Easy</span>
         
           <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
         
@@ -94,6 +99,12 @@
     <script type="text/javascript">
       $.each($( ".tag" ), function(i,val){
         $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
       })
 
     </script>
