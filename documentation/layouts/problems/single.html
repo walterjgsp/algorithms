@@ -5,6 +5,7 @@
     <section class="hero ">
       <div class="hero-body has-text-centered">
         <h1 class="title is-size-1" >{{.Title}}</h1>
+        <span class="tag has-text-white level_tag" value={{ .Params.level }} >Easy</span>
         {{ range $i, $language :=  .Params.languages }}
           <span class="has-text-white tag is-warning" value={{ $language }}>{{ $language }}</span>
         {{ end }}
@@ -19,6 +20,12 @@
     <script type="text/javascript">
       $.each($( ".tag" ), function(i,val){
         $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
       })
 
     </script>

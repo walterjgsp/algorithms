@@ -6,7 +6,9 @@ weight = 20
 draft = false
 toc = true
 languages = ["C++","Kotlin"]
-level = 0
+level = 1
+source = "LeetCode"
+link = "https://leetcode.com/problems/two-sum/"
 +++
 <h2 class="title is-5"> Problem Statement </h2>
 

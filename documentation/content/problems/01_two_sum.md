@@ -7,6 +7,8 @@ draft = false
 languages = ["C++","Kotlin"]
 toc = true
 level = 0
+source = "LeetCode"
+link = "https://leetcode.com/problems/two-sum/"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
 
@@ -41,7 +43,7 @@ Why should we avoid this naive approach? The time complexity for this solution i
 What if we could keep a memory of all the values that we already pass in the array and it is possible to make a query about a certain value really fast, this help us to solve the problem?
 
 <br/>
-The time optimized solution is based on a basic structure of coding the **Map** (HashMap). With this structure i can keep a track of all the past values and also query if a value was already
+The time optimized solution is based on a basic structure of coding, the **Map** (HashMap). With this structure i can keep a track of all the past values and also query if a value was already
 seen in O(1). How this helps?
 
 <br/>
@@ -53,8 +55,8 @@ Let's say we have this kind of input:
 
 <br/>
 If we lookup at the number 2 at the first index, knowing the target value, which is the value that we need to find in the array so that the sum of the two add to the target 9?
-With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet, is impossible to devise the future. But we can keep a track about the past, this is
-why we use a **map**.
+With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet.It is impossible to devise the future, but we can keep a track about the past,
+this is why we use a **map**.
 
 <br/>
 In this approach, we traverse the array, looking if the complement of the target minus the value we are processing is in the map, and if not, we add the value we are processing on the map
@@ -73,4 +75,20 @@ where n is the number of elements in the array.
 **Memory Optimized**
 
 <br/>
-Let's assume that we don't have memory to spend when trying to solve this problem, how we address it now? If we can, we sort the array.
+Let's assume that we don't have memory to spend when trying to solve this problem, and we just want to know if two values exists in the array, how we address it now?
+If we can, we sort the array.
+
+<br/>
+With the array sorted we keep two pointers, one pointing to the first position of the array and the other pointing to the last. We get the two values of each pointer
+and compare the result of the sum to the target. If the result is bigger than the target we need to move the pointers in a way that the result of the sum get smaller.
+To do this we decrement the pointer with the bigger value (the one pointing to the last position). Otherwise, if we need to make the result bigger, we increment the
+pointer with the smaller value (the one pointing to the first positon).
+
+<br/>
+With this approach we have the following complexity:
+
+*Time Complexity : O(nlogn)*
+
+*Space Complexity : O(1)*
+
+where n is the number of elements in the array.
