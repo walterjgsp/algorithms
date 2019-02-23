@@ -65,3 +65,4 @@ List of solved problems
 |59| Roting Oragnes | :heavy_check_mark: | :heavy_check_mark: |LeetCode |
 |60| Kth Largest Element in a Stream | :heavy_check_mark: |  |[LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/) |
 |61| Friend Circles | :heavy_check_mark: |  |[LeetCode](https://leetcode.com/problems/friend-circles/) |
+|62| Max Chunks To Make Sorted | :heavy_check_mark: | :heavy_check_mark: |[LeetCode](https://leetcode.com/problems/max-chunks-to-make-sorted/) |
