@@ -8,6 +8,7 @@ languages = ["C++","Kotlin"]
 toc = true
 level = 0
 source = "LeetCode"
+source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/two-sum/"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
@@ -40,11 +41,11 @@ Why should we avoid this naive approach? The time complexity for this solution i
 <br/>
 **Time Optimized**
 
-What if we could keep a memory of all the values that we already pass in the array and it is possible to make a query about a certain value really fast, this help us to solve the problem?
+What if we could keep in memory all values that we've already encountered such that it is possible to query a certain target value, would it help us solve the problem ?
 
 <br/>
-The time optimized solution is based on a basic structure of coding, the **Map** (HashMap). With this structure i can keep a track of all the past values and also query if a value was already
-seen in O(1). How this helps?
+The time optimized solution is based on a basic data structure, Map (HashMap).
+With this structure we can keep a track of all the past values and also query if a value was already seen in O(1). How this helps?
 
 <br/>
 Let's say we have this kind of input:
@@ -55,12 +56,11 @@ Let's say we have this kind of input:
 
 <br/>
 If we lookup at the number 2 at the first index, knowing the target value, which is the value that we need to find in the array so that the sum of the two add to the target 9?
-With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet.It is impossible to devise the future, but we can keep a track about the past,
+With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet.It is impossible to predict the future, but we can keep a track about the past,
 this is why we use a **map**.
 
 <br/>
-In this approach, we traverse the array, looking if the complement of the target minus the value we are processing is in the map, and if not, we add the value we are processing on the map
-and go to the next one until we find the solution.
+IIn this approach, we traverse the array, looking for | target - number|, if we find it voilà! Otherwise, we add the value the current value on our map and proceed
 
 <br/>
 With this approach we have the following complexity:
@@ -80,9 +80,8 @@ If we can, we sort the array.
 
 <br/>
 With the array sorted we keep two pointers, one pointing to the first position of the array and the other pointing to the last. We get the two values of each pointer
-and compare the result of the sum to the target. If the result is bigger than the target we need to move the pointers in a way that the result of the sum get smaller.
-To do this we decrement the pointer with the bigger value (the one pointing to the last position). Otherwise, if we need to make the result bigger, we increment the
-pointer with the smaller value (the one pointing to the first positon).
+and compare the result of the sum to the target. If the result is bigger than our target, we need to move the biggest pointer down, so our sum is smaller. Otherwise,
+if we need to make result bigger, we increment the pointer with the smaller value (the one pointing to the first positon).
 
 <br/>
 With this approach we have the following complexity:

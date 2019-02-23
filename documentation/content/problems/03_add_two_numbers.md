@@ -8,6 +8,7 @@ toc = true
 languages = ["C++","Kotlin"]
 level = 1
 source = "LeetCode"
+source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/add-two-numbers/"
 +++
 <h2 class="title is-5"> Problem Statement </h2>
