@@ -6,4 +6,5 @@ const language_colors = {
 const level_object = [
   {value:"Easy",color:"#39a848"},
   {value:"Medium",color:"#efe51c"},
+  {value:"Hard",color:"#e11212"} 
 ]

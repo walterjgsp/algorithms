@@ -6,10 +6,22 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Feb 2019 21:24:09 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 15:26:52 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/Algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Edit Distance</title>
+      <link>http://walterjgsp.github.io/Algorithms/problems/65_edit_distance/</link>
+      <pubDate>Sat, 02 Mar 2019 15:26:52 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/Algorithms/problems/65_edit_distance/</guid>
+      <description>Problem Statement  Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word:
+ Insert a character Delete a character Replace a character    Solution 
+If word1 = &amp;ldquo;horse&amp;rdquo; and word2 = &amp;ldquo;ros&amp;rdquo;, how can we solve the problem? In a first look the problem seens much more complex than it is.</description>
+    </item>
     
     <item>
       <title>Add Two Numbers</title>
@@ -51,11 +63,9 @@ g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;g
       <guid>http://walterjgsp.github.io/Algorithms/problems/01_two_sum/</guid>
       <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
- Questions to ask 
-Is the input array already sorted?
+Questions to ask  Is the input array already sorted?
 Is The input array mutable or read only?
- Solution 
-There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
+Solution  There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
     </item>
     
     <item>
