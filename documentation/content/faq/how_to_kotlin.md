@@ -7,12 +7,12 @@ draft = false
 
 To compile use the following command:
 
-```bash
-kotlinc <INPUT_FILE_NAME> -include-runtime -d <OUTPUT_FILE_NAME>.jar
-```
+{{< highlight bash >}}
+  kotlinc <INPUT_FILE_NAME> -include-runtime -d <OUTPUT_FILE_NAME>.jar
+{{< /highlight >}}
 
 And to run the code:
 
-```bash
-java -jar <OUTPUT_FILE_NAME>
-```
+{{< highlight bash >}}
+  java -jar <OUTPUT_FILE_NAME>
+{{< /highlight >}}

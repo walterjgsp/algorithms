@@ -1,4 +1,4 @@
-The documentation for this project can be found at: <https://walterjgsp.github.io/Algorithms/>
+The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
 Repository for algorithms, problems and data structures that we have used. This serves as a reference for everyone interested.
 For any suggestion on algorithm, problem or data structure, just open an issue with question label.

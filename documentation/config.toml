@@ -1,6 +1,7 @@
-baseURL = "http://walterjgsp.github.io/Algorithms/"
+baseURL = "http://walterjgsp.github.io/algorithms/"
 languageCode = "en-us"
 title= "Algorithms"
+pygmentsUseClasses=true
 description = "Repository of algorithms, problems and structures that i have learned to help me and the others if needed."
 Paginate = 5
 [Params]

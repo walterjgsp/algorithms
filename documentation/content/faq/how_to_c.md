@@ -7,12 +7,13 @@ draft = false
 
 All the C++ code were done using the C++14 version. To compile use the following command:
 
-```bash
-g++ -std=c++14 <INPUT_FILE_NAME> -o <OUTPUT_FILE_NAME>
-```
+
+{{< highlight bash >}}
+  g++ -std=c++14 <INPUT_FILE_NAME> -o <OUTPUT_FILE_NAME>
+{{< /highlight >}}
 
 And to run the code:
 
-```bash
-./<OUTPUT_FILE_NAME>
-```
+{{< highlight bash >}}
+  ./<OUTPUT_FILE_NAME>
+{{< /highlight >}}

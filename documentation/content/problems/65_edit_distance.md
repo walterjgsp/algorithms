@@ -57,18 +57,28 @@ and keep the *index2* the same because we still need to find a match.
 I imagine that this complete know 30% of our problem. We already know the basic cases and how to implement each operation on a atomic
 base.
 
+I found easier to implement starting from the end, this way, when an index is smaller than 0 means that my word ended and i need to return
+only the value of the other index plus 1. But the logic is the same regards the way you decide to go: from one index get the minimum of
+all three operations being applied if the character value for the arrays are different.
+
 With this in mind we can come up with the simple algorithm for treating individual characters of a string:
 
-```java
-if(word1[index1]==word2[index2])
-  go to next index
-else
-  execute some operation and go to next index
-```
+{{< highlight cpp >}}
+minDistance(string word1, int index1, string word2, int index2){
 
-And we do this until one of the words are empty
+  if(index1<0)
+    return index2+1;
 
-I found easier to implement starting from the end, this way, when an index is smaller than 0 means that my word ended and i need to return
-only the value of the other index plus 1. But the logic is the same regards the way you decide to go.
+  if(index2<0)
+    return index1+1;
 
-min(distance(word1,index-1,word2,index2-1),distance(word1,index1,word2,index2-1),distance(word1,index-1,word2,index2))
+  if(word1[index1]==word2[index2])
+    distance = minDistance(word1,index-1,word2,index2-1);
+  else
+    distance = 1+min(minDistance(word1,index-1,word2,index2-1),
+        minDistance(word1,index1,word2,index2-1),
+        minDistance(word1,index-1,word2,index2));
+
+  return distance;
+}
+{{< /highlight >}}

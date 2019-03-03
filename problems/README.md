@@ -69,3 +69,4 @@ List of solved problems
 |63| Coin Change II | :heavy_check_mark: | |[LeetCode](https://leetcode.com/problems/coin-change-2/) |
 |64| Coin Change | :heavy_check_mark: | :heavy_check_mark: |[LeetCode](https://leetcode.com/problems/coin-change/) |
 |65| Edit Distance | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/edit-distance/)|
+|66| Check If Word Is Valid After Substitutions | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/)|
