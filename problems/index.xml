@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Problems on Algorithms</title>
-    <link>http://walterjgsp.github.io/Algorithms/problems/</link>
+    <link>http://walterjgsp.github.io/algorithms/problems/</link>
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 02 Mar 2019 15:26:52 -0300</lastBuildDate>
     
-	<atom:link href="http://walterjgsp.github.io/Algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Edit Distance</title>
-      <link>http://walterjgsp.github.io/Algorithms/problems/65_edit_distance/</link>
+      <link>http://walterjgsp.github.io/algorithms/problems/65_edit_distance/</link>
       <pubDate>Sat, 02 Mar 2019 15:26:52 -0300</pubDate>
       
-      <guid>http://walterjgsp.github.io/Algorithms/problems/65_edit_distance/</guid>
+      <guid>http://walterjgsp.github.io/algorithms/problems/65_edit_distance/</guid>
       <description>Problem Statement  Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
 You have the following 3 operations permitted on a word:
  Insert a character Delete a character Replace a character    Solution 
@@ -25,10 +25,10 @@ If word1 = &amp;ldquo;horse&amp;rdquo; and word2 = &amp;ldquo;ros&amp;rdquo;, ho
     
     <item>
       <title>Add Two Numbers</title>
-      <link>http://walterjgsp.github.io/Algorithms/problems/03_add_two_numbers/</link>
+      <link>http://walterjgsp.github.io/algorithms/problems/03_add_two_numbers/</link>
       <pubDate>Mon, 18 Feb 2019 21:24:09 -0300</pubDate>
       
-      <guid>http://walterjgsp.github.io/Algorithms/problems/03_add_two_numbers/</guid>
+      <guid>http://walterjgsp.github.io/algorithms/problems/03_add_two_numbers/</guid>
       <description>Problem Statement  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  Solution</description>
@@ -36,20 +36,20 @@ You may assume the two numbers do not contain any leading zero, except the numbe
     
     <item>
       <title>Add One Row to Tree</title>
-      <link>http://walterjgsp.github.io/Algorithms/problems/02_add_one_row_to_tree/</link>
+      <link>http://walterjgsp.github.io/algorithms/problems/02_add_one_row_to_tree/</link>
       <pubDate>Mon, 18 Feb 2019 19:24:15 -0300</pubDate>
       
-      <guid>http://walterjgsp.github.io/Algorithms/problems/02_add_one_row_to_tree/</guid>
+      <guid>http://walterjgsp.github.io/algorithms/problems/02_add_one_row_to_tree/</guid>
       <description>Problem Statement  &amp;hellip;Your problem statement here
  Solution</description>
     </item>
     
     <item>
       <title>Two Sum</title>
-      <link>http://walterjgsp.github.io/Algorithms/problems/01_two_sum/</link>
+      <link>http://walterjgsp.github.io/algorithms/problems/01_two_sum/</link>
       <pubDate>Sat, 16 Feb 2019 19:37:40 -0200</pubDate>
       
-      <guid>http://walterjgsp.github.io/Algorithms/problems/01_two_sum/</guid>
+      <guid>http://walterjgsp.github.io/algorithms/problems/01_two_sum/</guid>
       <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 Questions to ask  Is the input array already sorted?

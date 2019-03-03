@@ -16,25 +16,26 @@
     
     
 
-    <link rel="canonical" href="http://walterjgsp.github.io/Algorithms/problems/65_edit_distance/">  
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/problems/65_edit_distance/">  
 
-    <link rel="shortcut icon" type="image/png"  href="/Algorithms/img/icon.png" />
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
 
 
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="/Algorithms/css/body.css" rel="stylesheet" type="text/css">
-    <link href="/Algorithms/css/highlight.css" rel="stylesheet" type="text/css">
-    <link href="/Algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
-    <link href="/Algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
   
-    <script src="/Algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
     </script>
 
-    <script src="/Algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
     </script>
 
-    <script src="/Algorithms/js/languages_colors.js" type="text/javascript">
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
     </script>
 
   </head>
@@ -43,8 +44,8 @@
   <body>
     <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/Algorithms">
-      <img class="has-text-link" src="/Algorithms/img/algorithm.svg"  >
+    <a class="navbar-item" href="/algorithms">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
     </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
@@ -58,11 +59,11 @@
     <div class="navbar-start">
       
       
-       <a class="navbar-item" href="/Algorithms/problems/" >
+       <a class="navbar-item" href="/algorithms/problems/" >
          Problems
        </a>
      
-       <a class="navbar-item" href="/Algorithms/faq/" >
+       <a class="navbar-item" href="/algorithms/faq/" >
          FAQ
        </a>
      
@@ -130,20 +131,30 @@ and keep the <em>index2</em> the same because we still need to find a match.</p>
 <p>I imagine that this complete know 30% of our problem. We already know the basic cases and how to implement each operation on a atomic
 base.</p>
 
+<p>I found easier to implement starting from the end, this way, when an index is smaller than 0 means that my word ended and i need to return
+only the value of the other index plus 1. But the logic is the same regards the way you decide to go: from one index get the minimum of
+all three operations being applied if the character value for the arrays are different.</p>
+
 <p>With this in mind we can come up with the simple algorithm for treating individual characters of a string:</p>
 
-<pre><code class="language-java">if(word1[index1]==word2[index2])
-  go to next index
-else
-  execute some operation and go to next index
-</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">minDistance</span><span class="p">(</span><span class="n">string</span> <span class="n">word1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index1</span><span class="p">,</span> <span class="n">string</span> <span class="n">word2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index2</span><span class="p">){</span>
 
-<p>And we do this until one of the words are empty</p>
+  <span class="k">if</span><span class="p">(</span><span class="n">index1</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">index2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
 
-<p>I found easier to implement starting from the end, this way, when an index is smaller than 0 means that my word ended and i need to return
-only the value of the other index plus 1. But the logic is the same regards the way you decide to go.</p>
+  <span class="k">if</span><span class="p">(</span><span class="n">index2</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
 
-<p>min(distance(word1,index-1,word2,index2-1),distance(word1,index1,word2,index2-1),distance(word1,index-1,word2,index2))</p>
+  <span class="k">if</span><span class="p">(</span><span class="n">word1</span><span class="p">[</span><span class="n">index1</span><span class="p">]</span><span class="o">==</span><span class="n">word2</span><span class="p">[</span><span class="n">index2</span><span class="p">])</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">min</span><span class="p">(</span><span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="n">distance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
     <br/>
@@ -178,13 +189,13 @@ only the value of the other index plus 1. But the logic is the same regards the 
         
         
         <p class="level-item">
-         <a href="/Algorithms/problems/" >
+         <a href="/algorithms/problems/" >
            Problems
          </a>
        </p>
        
         <p class="level-item">
-         <a href="/Algorithms/faq/" >
+         <a href="/algorithms/faq/" >
            FAQ
          </a>
        </p>
