@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/walterjgsp/Algorithms.svg?branch=master)](https://travis-ci.com/walterjgsp/Algorithms)
+
 The documentation for this project can be found at: <https://walterjgsp.github.io/Algorithms/>
 
 Repository for algorithms, problems and data structures that we have used. This serves as a reference for everyone interested.
