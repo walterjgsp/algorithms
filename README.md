@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/walterjgsp/Algorithms.svg?branch=master)](https://travis-ci.com/walterjgsp/Algorithms)
+[![Build Status](https://travis-ci.org/walterjgsp/algorithms.svg?branch=master)](https://travis-ci.org/walterjgsp/algorithms)
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
