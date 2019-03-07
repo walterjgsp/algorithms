@@ -82,3 +82,45 @@ minDistance(string word1, int index1, string word2, int index2){
   return distance;
 }
 {{< /highlight >}}
+
+With this code you solve the problem, but the complexity of this implementation is exponential O(2<sup>n</sup>).
+That is not a good solution. How can we make our code better?
+
+If we observe the solution, we process some pair of indexes more than one time and we can solve the problem by solving smaller parts
+of the problem (**overlapping sub-problems**). Other condition is that an optimal solution can be constructed from optimal solutions
+of the subproblems (**optimal substructure**). This two are necessary conditions to apply dynamic programming. Doing with memoization, keeping a
+track of all the solved subproblems using the index as a key of a map, we have the following code.
+
+
+{{< highlight cpp >}}
+
+unordered_map<pair<int,int>,int> memo;
+
+minDistance(string word1, int index1, string word2, int index2){
+  pair<int,int> key = make_pair(index1,index2);
+
+  if(memo.find(key)!=memo.end())
+    return memo[key];
+
+  if(index1<0)
+    return memo[key]=index2+1;
+
+  if(index2<0)
+    return memo[key]=index1+1;
+
+  if(word1[index1]==word2[index2])
+    distance = minDistance(word1,index-1,word2,index2-1);
+  else
+    distance = 1+min(minDistance(word1,index-1,word2,index2-1),
+        minDistance(word1,index1,word2,index2-1),
+        minDistance(word1,index-1,word2,index2));
+
+  return memo[key]=distance;
+}
+{{< /highlight >}}
+
+
+Time complexity : O(mn)
+Space complexity : O(mn)
+
+Where m is the size of word1 and n the size of word2

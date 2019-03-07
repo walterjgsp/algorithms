@@ -72,3 +72,4 @@ List of solved problems
 |66| Check If Word Is Valid After Substitutions | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/)|
 |67| Loud And Rich | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/loud-and-rich/)|
 |68| Sliding Puzzle | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/sliding-puzzle/)|
+|69| Arithmetic Slices | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/arithmetic-slices/)|
