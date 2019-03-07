@@ -156,6 +156,44 @@ all three operations being applied if the character value for the arrays are dif
 <span class="p">}</span>
 </code></pre></div>
 
+<p>With this code you solve the problem, but the complexity of this implementation is exponential O(2<sup>n</sup>).
+That is not a good solution. How can we make our code better?</p>
+
+<p>If we observe the solution, we process some pair of indexes more than one time and we can solve the problem by solving smaller parts
+of the problem (<strong>overlapping sub-problems</strong>). Other condition is that an optimal solution can be constructed from optimal solutions
+of the subproblems (<strong>optimal substructure</strong>). This two are necessary conditions to apply dynamic programming. Doing with memoization, keeping a
+track of all the solved subproblems using the index as a key of a map, we have the following code.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">memo</span><span class="p">;</span>
+
+<span class="n">minDistance</span><span class="p">(</span><span class="n">string</span> <span class="n">word1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index1</span><span class="p">,</span> <span class="n">string</span> <span class="n">word2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index2</span><span class="p">){</span>
+  <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">key</span> <span class="o">=</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">index1</span><span class="p">,</span><span class="n">index2</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">memo</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!=</span><span class="n">memo</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">];</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">index1</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">index2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">index2</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">word1</span><span class="p">[</span><span class="n">index1</span><span class="p">]</span><span class="o">==</span><span class="n">word2</span><span class="p">[</span><span class="n">index2</span><span class="p">])</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">min</span><span class="p">(</span><span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">distance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Time complexity : O(mn)
+Space complexity : O(mn)</p>
+
+<p>Where m is the size of word1 and n the size of word2</p>
+
 
     <br/>
     <p class="is-size-7 has-text-right">
