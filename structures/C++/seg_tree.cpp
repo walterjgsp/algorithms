@@ -24,7 +24,7 @@ private:
   }
 
   int updateHelper(int treeIndex,int start, int end, const int &lower, const int &upper, const int &val){
-    
+
     if(start>upper || end<lower)
       return tree[treeIndex];
 

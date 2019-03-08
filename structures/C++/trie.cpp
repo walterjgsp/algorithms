@@ -5,16 +5,17 @@ using namespace std;
 class Trie{
 private:
 	class TrieNode{
-	public:
-		vector<TrieNode*> childs;
-		bool endWord;
-		TrieNode(){
-			childs = vector<TrieNode*> (26,NULL);
-			endWord = false;
-		}
-	};
+		public:
+			vector<TrieNode*> childs;
+			bool endWord;
+			TrieNode(){
+				childs = vector<TrieNode*> (26,NULL);
+				endWord = false;
+			}
+		};
 
 	TrieNode *root;
+
 public:
 	Trie(){
 		root = new TrieNode();

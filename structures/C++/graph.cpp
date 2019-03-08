@@ -5,6 +5,7 @@ using namespace std;
 class GraphAdjList{
 private:
   vector<vector<int>> adjList;
+  
 public:
   GraphAdjList(int vertexes){
     adjList = vector<vector<int>> (vertexes);

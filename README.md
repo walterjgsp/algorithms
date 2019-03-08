@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/walterjgsp/algorithms.svg?branch=master)](https://travis-ci.org/walterjgsp/algorithms)
+[![CodeFactor](https://www.codefactor.io/repository/github/walterjgsp/algorithms/badge)](https://www.codefactor.io/repository/github/walterjgsp/algorithms)
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
