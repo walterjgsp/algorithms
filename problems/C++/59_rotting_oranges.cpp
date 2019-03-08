@@ -15,14 +15,13 @@ using namespace std;
 class Solution {
 private:
     vector<pair<int,int>> walkMask = {{0,1},{0,-1},{1,0},{-1,0}};
-public:
 
+public:
     bool canWalk(int row, int col, vector<vector<int>> &grid, pair<int,int> dir){
         return row+dir.first>=0 && row+dir.first<grid.size() && col+dir.second>=0 && col+dir.second<grid[0].size() && grid[row+dir.first][col+dir.second]==1;
     }
 
     int orangesRotting(vector<vector<int>>& grid) {
-
         queue<pair<int,int>> bfs;
         int result=-1;
 
@@ -66,7 +65,6 @@ public:
 };
 
 int main(){
-
   vector<vector<int>> grid = {{2,1,1},{2,1,0},{0,1,1}};
   Solution sol;
   cout<<sol.orangesRotting(grid)<<endl;

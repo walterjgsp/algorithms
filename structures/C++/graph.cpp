@@ -5,7 +5,7 @@ using namespace std;
 class GraphAdjList{
 private:
   vector<vector<int>> adjList;
-  
+
 public:
   GraphAdjList(int vertexes){
     adjList = vector<vector<int>> (vertexes);
@@ -52,7 +52,6 @@ public:
 };
 
 int main(){
-
   cout<<"Adjacency List"<<endl<<endl;
 
   GraphAdjList graph(4);

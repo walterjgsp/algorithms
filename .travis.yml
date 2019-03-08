@@ -4,7 +4,7 @@ compiler:
   - gcc
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "walterjgsp-github" # the key of the org you chose at step #3
     token: $SONAR_TOKEN
   apt:
     sources:

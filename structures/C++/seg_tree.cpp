@@ -8,7 +8,6 @@ private:
   int end_arr;
 
   int queryHelper(int treeIndex, int start, int end, const int &lower, const int &upper){
-
     if(start>upper || end<lower)
       return 0;
 
@@ -24,7 +23,6 @@ private:
   }
 
   int updateHelper(int treeIndex,int start, int end, const int &lower, const int &upper, const int &val){
-
     if(start>upper || end<lower)
       return tree[treeIndex];
 
@@ -57,7 +55,6 @@ public:
   }
 
   int createTree(const vector <int> arr,int treeIndex,int start, int end){
-
     if(start == end){
       tree[treeIndex]=arr[start];
     }else{
@@ -66,7 +63,6 @@ public:
     }
 
     return tree[treeIndex];
-
   }
 
   int queryRange(int lower,int upper){
@@ -76,7 +72,6 @@ public:
   int updateRange(int lower, int upper, int val){
       return updateHelper(0,0,end_arr,lower,upper,val);
   }
-
 };
 
 int main(){

@@ -9,8 +9,8 @@ using namespace std;
 class Graph{
 private:
   vector<vector<int>> adjList;
-public:
 
+public:
   Graph(){}
 
   Graph(int vertexes){
@@ -72,7 +72,6 @@ public:
     }
 
     return to_return;
-
   }
 }
 
@@ -92,5 +91,4 @@ int main(){
   printVec(dfs.dfsFrom(1));
 
   return 0;
-
 }
