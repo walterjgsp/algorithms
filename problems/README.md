@@ -73,3 +73,4 @@ List of solved problems
 |67| Loud And Rich | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/loud-and-rich/)|
 |68| Sliding Puzzle | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/sliding-puzzle/)|
 |69| Arithmetic Slices | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/arithmetic-slices/)|
+|70| Pow(x, n) | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/powx-n/)|

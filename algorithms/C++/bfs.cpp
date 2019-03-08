@@ -10,8 +10,8 @@ using namespace std;
 class Graph{
 private:
   vector<vector<int>> adjList;
-public:
 
+public:
   Graph(){}
 
   Graph(int vertexes){
@@ -40,6 +40,7 @@ public:
 class BFS{
 private:
   Graph graph;
+
 public:
   BFS(Graph g){
     graph = g;
@@ -94,5 +95,4 @@ int main(){
   printVec(bfs.bfsFrom(1));
 
   return 0;
-
 }
