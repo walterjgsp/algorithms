@@ -14,7 +14,6 @@ vector<int> createTable(string str){
 
 	//That is the trick part, you will walk through all the pattern
 	for(int i=1;i<str.size();i++){
-
 		//Your j will increment only if you find a match inside the pattern, this means
 		//only if the value of str[i] == str[j]. The secret of this algorithm is that you don't
 		//need to return the value of j one by one, in reality you can't do that. Since you already
@@ -67,7 +66,6 @@ int main(){
 			matchs.push_back(i-j);
 			j=0;
 		}
-
 	}
 
 	printVec(matchs);

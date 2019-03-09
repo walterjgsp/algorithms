@@ -26,9 +26,9 @@ private:
             return i1.end<i2.end;
         return i1.start<i2.start;
     }
+
 public:
     vector<int> partitionLabels(string S) {
-
         vector<int> to_return;
 
         if(S.empty())

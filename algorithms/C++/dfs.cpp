@@ -46,6 +46,7 @@ void printVec(const vector<int> &vec){
 class DFS{
 private:
   Graph graph;
+  
 public:
   DFS(Graph g){
     graph = g;

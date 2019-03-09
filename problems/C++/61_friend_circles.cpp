@@ -25,11 +25,9 @@ public:
                 dfs.push(i);
 
                 while(!dfs.empty()){
-
                     int friends = dfs.top();
                     dfs.pop();
                     if(visited.find(friends)==visited.end()){
-
                         for(int j=0;j<M[friends].size();j++){
                             if(M[friends][j]==1){
                                 dfs.push(j);
@@ -42,7 +40,6 @@ public:
                 circles++;
             }
         }
-
 
         return circles;
     }

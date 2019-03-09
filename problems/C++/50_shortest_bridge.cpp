@@ -14,8 +14,8 @@ class Solution {
 private:
     vector<pair<int,int>> steps = {{-1,0},{1,0},{0,1},{0,-1}};
     int row_max,col_max;
-public:
 
+public:
     bool canWalk(const int &row, const int &col, const pair<int,int> step){
         return row+step.first>=0 && row+step.first<row_max && col+step.second>=0 && col+step.second<col_max;
     }
@@ -87,7 +87,6 @@ public:
         }
 
         return result;
-
     }
 };
 

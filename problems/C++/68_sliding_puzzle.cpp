@@ -15,6 +15,7 @@ using namespace std;
 class Solution {
 private:
     vector<vector<int>> moves { {1,3}, {0,2,4}, {1,5}, {0,4}, {1,3,5}, {2,4} };
+
 public:
     string boardToString(vector<vector<int>> &board){
         string str_board = "";
@@ -37,7 +38,6 @@ public:
 
         int result = 0;
         while(!bfs.empty()){
-
             int tam = bfs.size();
 
             for(int i=0;i<tam;i++){
@@ -56,7 +56,6 @@ public:
                 }
             }
             result++;
-
         }
 
         return -1;

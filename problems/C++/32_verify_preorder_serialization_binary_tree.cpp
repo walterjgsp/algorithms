@@ -42,7 +42,6 @@ public:
             if(temp!="#"){
                 helper.push_back(temp);
             }else{
-
                 helper.push_back(temp);
                 int index = helper.size();
 
@@ -61,11 +60,8 @@ public:
                     helper.push_back("#");
 
                     index = helper.size();
-
                 }
-
             }
-
         }
 
         return (helper.size() ==1 && helper[0]=="#");

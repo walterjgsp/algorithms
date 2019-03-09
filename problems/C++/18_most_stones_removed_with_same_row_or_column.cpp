@@ -9,41 +9,41 @@
 // Output: 5
 
 class DSU {
-    vector<int> parent;
-    vector<int> rank;
-    public:
-    DSU(int size){
-        rank.resize(size , 0);
-        parent.resize(size , 0);
-        for(int i=0;i<size;i++)
-            parent[i]=i;
-    }
+  vector<int> parent;
+  vector<int> rank;
 
-    // (uses path compression technique)
-     int Find(int x){
-        if(parent[x]!=x)
-            parent[x] = Find(parent[x]);
-        return parent[x];
-     }
+public:
+  DSU(int size){
+      rank.resize(size , 0);
+      parent.resize(size , 0);
+      for(int i=0;i<size;i++)
+          parent[i]=i;
+  }
 
-     void Union (int x, int y){
-        //Naive implementation
-        //return parent[find(x)] = find(y);
+  // (uses path compression technique)
+   int Find(int x){
+      if(parent[x]!=x)
+          parent[x] = Find(parent[x]);
+      return parent[x];
+   }
 
-        //(uses union by rank)
-        int xroot=Find(x);
-        int yroot=Find(y);
+   void Union (int x, int y){
+      //Naive implementation
+      //return parent[find(x)] = find(y);
 
-        if(rank[xroot] == rank[yroot]){
-            parent[yroot] = xroot;
-            rank[xroot]++;
-        }else if(rank[xroot] > rank[yroot]){
-            parent[yroot] = xroot;
-        }else{
-            parent[xroot] = yroot;
-        }
-     }
+      //(uses union by rank)
+      int xroot=Find(x);
+      int yroot=Find(y);
 
+      if(rank[xroot] == rank[yroot]){
+          parent[yroot] = xroot;
+          rank[xroot]++;
+      }else if(rank[xroot] > rank[yroot]){
+          parent[yroot] = xroot;
+      }else{
+          parent[xroot] = yroot;
+      }
+   }
 };
 
 class Solution {

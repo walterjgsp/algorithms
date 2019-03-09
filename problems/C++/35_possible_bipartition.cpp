@@ -13,7 +13,6 @@ using namespace std;
 class Solution {
 public:
     bool possibleBipartition(int N, vector<vector<int>>& dislikes) {
-
         vector<vector<int>> graph(N+1);
         vector<int> colors(N+1,-1);
         unordered_set<int> visited;
@@ -24,7 +23,6 @@ public:
         }
 
         for(int src=1;src<graph.size();src++){
-
             if(visited.find(src)==visited.end()){
                 queue<int> bfs;
                 bfs.push(src);
@@ -46,11 +44,9 @@ public:
                     }
                 }
             }
-
         }
 
         return true;
-
     }
 };
 

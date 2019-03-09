@@ -52,7 +52,6 @@ public:
         bfs_helper.push(target);
 
         while(!bfs_helper.empty()){
-
             if(K==0){
                 while(!bfs_helper.empty()){
                     TreeNode *vertex = bfs_helper.front();
@@ -64,7 +63,6 @@ public:
 
             int tam = bfs_helper.size();
             for(int i=0;i<tam;i++){
-
                 TreeNode* vertex = bfs_helper.front();
                 bfs_helper.pop();
 
@@ -80,8 +78,6 @@ public:
             }
 
             K--;
-
-
         }
 
         return result;

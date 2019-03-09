@@ -16,6 +16,7 @@ class Solution {
 private:
     int result;
     vector<pair<int,int>> mask = {{1,0},{-1,0},{0,-1},{0,1}};
+    
 public:
     int uniquePathsIII(vector<vector<int>>& grid) {
         result = 0;
@@ -68,8 +69,6 @@ public:
         }
 
         visited.erase(square);
-
-
     }
 };
 
