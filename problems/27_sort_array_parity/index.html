@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Sort Array By Parity </title>
+
+    
+    <meta name="description" content="Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/problems/27_sort_array_parity/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/algorithms">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="/algorithms/problems/" >
+         Problems
+       </a>
+     
+       <a class="navbar-item" href="/algorithms/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Sort Array By Parity</h1>
+        <span class="tag has-text-white level_tag" value=0 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.</p>
+
+<p>You may return any answer array that satisfies this condition.</p>
+
+<h2 class="title is-4"> Questions to ask </h2>
+
+<p>Is the input array mutable or read only?</p>
+
+<p>Can i have negative numbers in my input array?</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>There are two solutions for this problem with time complexity <strong>O(n)</strong> with just one pass in the array.</p>
+
+<p><strong>Two Arrays</strong></p>
+
+<p>Use two auxilary arrays, one for odd numbers and the other for even numbers, when looping through place each value in the right array.
+After all the values are processed you merge the two arrays into one and return.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortArrayByParity</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">odd</span><span class="p">,</span><span class="n">even</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">num</span> <span class="p">:</span> <span class="n">A</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+          <span class="n">odd</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+      <span class="k">else</span>
+          <span class="n">even</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">even</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">even</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">odd</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">odd</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+  <span class="k">return</span> <span class="n">even</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Two pointers</strong></p>
+
+<p>Use one pointer in the start of the array and another pointer in the end, loop until <em>start</em> is smaller than <em>end</em> pointer. If the value
+in start position is odd and in end position is even, swap these two values and move the pointers toward the middle. Otherwise, just check
+the pointers condition to move each one.</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortArrayByParityInPlace</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="n">start</span><span class="o">&lt;</span><span class="n">end</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span><span class="o">!=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">A</span><span class="p">[</span><span class="n">end</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+          <span class="n">swap</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">start</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="n">end</span><span class="p">]);</span>
+          <span class="n">start</span><span class="o">++</span><span class="p">;</span>
+          <span class="n">end</span><span class="o">--</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+          <span class="n">start</span><span class="o">++</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">end</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
+          <span class="n">end</span><span class="o">--</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">A</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="/algorithms/problems/" >
+           Problems
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>
