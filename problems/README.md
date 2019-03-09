@@ -30,7 +30,7 @@ List of solved problems
 |24| Score of Parentheses | :heavy_check_mark: |  |LeetCode |
 |25| Single Element in Sorted Array | :heavy_check_mark: |  |LeetCode |
 |26| Smallest Range I | :heavy_check_mark: | :heavy_check_mark: |LeetCode |
-|27| Sort Array Parity | :heavy_check_mark: | :heavy_check_mark: |LeetCode |
+|27| Sort Array Parity | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/sort-array-by-parity/) |
 |28| String Toggle | :heavy_check_mark: |  |LeetCode |
 |29| Summary Ranges | :heavy_check_mark: |  |LeetCode |
 |30| To Lower Case | :heavy_check_mark: |  |LeetCode |
@@ -75,3 +75,4 @@ List of solved problems
 |69| Arithmetic Slices | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/arithmetic-slices/)|
 |70| Pow(x, n) | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/powx-n/)|
 |71| Squares of a Sorted Array | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/squares-of-a-sorted-array/)|
+|72| Find Common Characters | :heavy_check_mark: |  | [LeetCode](https://leetcode.com/problems/find-common-characters/)|

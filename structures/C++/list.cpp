@@ -17,7 +17,6 @@ template <typename T> struct Node{
 };
 
 template <typename T> struct List{
-	
 	Node<T> *start;
 	Node<T> *end;
 	int size;
@@ -28,10 +27,9 @@ template <typename T> struct List{
 	}
 
 	void push_back(T value){
-		
 		Node<T> * temp = new Node<T>(value);
 
-		if(end==NULL){	
+		if(end==NULL){
 			start = temp;
 		}else{
 			end->next = temp;
@@ -55,7 +53,6 @@ template <typename T> struct List{
 	}
 
 	void printList(){
-
 		Node<T> *aux = start;
 		while(aux!=NULL){
 			cout<<aux->value<<" ";
@@ -88,7 +85,6 @@ template <typename T> struct List{
 };
 
 int main(){
-
 	List<int> lista;
 
 	lista.push_back(1);
@@ -97,4 +93,5 @@ int main(){
 	lista.push_front(4);
 	lista.printList();
 
+	return 0;
 }

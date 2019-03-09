@@ -61,7 +61,6 @@ public:
         }
 
         for(int i=0;i<intervals.size();i++){
-
             int target = intervals[i].end;
             int mid,low = 0, upper = starts.size()-1;
 

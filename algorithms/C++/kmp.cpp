@@ -8,7 +8,6 @@
 using namespace std;
 
 vector<int> createTable(string str){
-
 	//Create a vector the size of the pattern you are looking for
 	vector<int> t_pre(str.size(),0);
 	int j=0;
@@ -40,7 +39,6 @@ void printVec(vector<int> vec){
 }
 
 int main(){
-
 	string text,pattern;
 	vector<int> prefix_table,matchs;
 
@@ -53,7 +51,6 @@ int main(){
 	int j=0;
 
 	for(int i=0;i<text.size();i++){
-
 		//What you do here is very similar to the creation of the preffix table
 		//You know the start of the preffixes that are similar. With this you can keep a track
 		//of how many positions of the pattern you can ignore because you have already compared.

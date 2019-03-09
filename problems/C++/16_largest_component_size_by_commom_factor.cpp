@@ -11,7 +11,6 @@ using namespace std;
 
 class Solution {
 public:
-
     vector<int> getPrimes(const int &limit){
         vector<bool> helper(limit+1,true);
         vector<int> primes;
@@ -29,7 +28,6 @@ public:
     }
 
     int largestComponentSize(vector<int>& A) {
-
         int bigger_val = A[0];
 
         for(int i=1;i<A.size();i++){
@@ -83,7 +81,6 @@ public:
     }
 
     void Union(vector<pair<int,int>> &parent, int x, int y){
-
         int xroot = find(parent,x);
         int yroot = find(parent,y);
 

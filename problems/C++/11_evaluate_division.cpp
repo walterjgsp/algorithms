@@ -8,16 +8,13 @@
 // Given a / b = 2.0, b / c = 3.0.
 // queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ? .
 // return [6.0, 0.5, -1.0, 1.0, -1.0 ].
-
 #include <bits/stdc++.h>
 
 using namespace std;
 
 class Solution {
 public:
-
     double evaluate(map<string, map <string,double> > &graph, string start, string end){
-
         queue <pair<string,double>> bfs;
         set <string> visited;
 
@@ -48,7 +45,6 @@ public:
     }
 
     vector<double> calcEquation(vector<pair<string, string>> equations, vector<double>& values, vector<pair<string, string>> queries) {
-
         map<string, map <string,double> >graph;
         vector<double> to_return;
 
@@ -86,7 +82,6 @@ void printVec(const vector<T> vec){
 }
 
 int main(){
-
   vector<pair<string, string>> equations= {{"a","b"},{"b","c"},{"e","d"}},
     queries={ {"a", "c"}, {"b", "a"}, {"a", "e"}, {"a", "a"}, {"x", "x"}};
   vector<double> values ={2.0,3.0,5.0};

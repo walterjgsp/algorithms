@@ -40,6 +40,7 @@ private:
       }
     };
     TreeNode * root;
+    
   public:
     EventTree(){
       root = NULL;
@@ -82,6 +83,7 @@ private:
   };
 
   EventTree eventTree;
+
 public:
   MyCalendar(){}
 

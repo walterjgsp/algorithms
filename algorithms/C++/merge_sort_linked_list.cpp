@@ -15,7 +15,6 @@ struct ListNode {
 class MergeSort{
 public:
   ListNode *sort(ListNode *root){
-
     deque<ListNode*> helper;
     ListNode *it=root,*prev;
     while(it){
@@ -85,7 +84,6 @@ ListNode * vecToLinkedList(vector<int> vec){
 }
 
 int main(){
-
   MergeSort merger;
   vector<int> vec = {1,4,6,10,2,3,5,6,8,13};
   ListNode * mList = vecToLinkedList(vec);
