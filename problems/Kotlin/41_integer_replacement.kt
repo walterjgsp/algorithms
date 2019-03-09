@@ -7,7 +7,6 @@
 class Solution constructor(){
     var memo:HashMap<Int,Int> = HashMap<Int,Int>();
     fun integerReplacement(n: Int): Int {
-
         if(n==Int.MAX_VALUE)
             return 32;
 

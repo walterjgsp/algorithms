@@ -34,8 +34,8 @@ private:
             }
         };
         TreeNode *root;
-    public:
 
+    public:
         BinaryTree(){
             root = NULL;
         }
@@ -116,7 +116,6 @@ private:
 
 public:
     int oddEvenJumps(vector<int>& A) {
-
         if(A.empty())
             return 0;
 
@@ -151,7 +150,6 @@ public:
         }
 
         return result;
-
     }
 };
 

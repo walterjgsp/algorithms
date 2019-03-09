@@ -74,3 +74,4 @@ List of solved problems
 |68| Sliding Puzzle | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/sliding-puzzle/)|
 |69| Arithmetic Slices | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/arithmetic-slices/)|
 |70| Pow(x, n) | :heavy_check_mark: | | [LeetCode](https://leetcode.com/problems/powx-n/)|
+|71| Squares of a Sorted Array | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/squares-of-a-sorted-array/)|

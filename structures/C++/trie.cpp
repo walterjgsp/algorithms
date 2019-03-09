@@ -76,11 +76,9 @@ public:
 			}
 		}
 	}
-
 };
 
 int main(){
-
 	Trie t;
 	t.insert("abacate");
 	t.insert("aba");

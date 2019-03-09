@@ -50,7 +50,6 @@ public:
   }
 
   int eraseOverlapIntervals(vector<Interval>& intervals){
-
     if(intervals.size()<2)
       return 0;
 
@@ -59,7 +58,6 @@ public:
     int i=0,j=1,to_return=0;
 
     while (j<intervals.size()) {
-
       if(intervals[i].end>intervals[j].start){
         intervals[j].start=intervals[i].start;
         intervals[j].end = min(intervals[j].end,intervals[i].end);

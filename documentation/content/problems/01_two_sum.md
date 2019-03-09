@@ -21,7 +21,7 @@ You may assume that each input would have exactly one solution, and you may not 
 
 Is the input array already sorted?
 
-Is The input array mutable or read only?
+Is the input array mutable or read only?
 
 <h2 class="title is-4"> Solution </h2>
 
