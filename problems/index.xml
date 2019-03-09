@@ -6,10 +6,22 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Mar 2019 15:26:52 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2019 01:26:01 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Squares of a Sorted Array</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/71_squares_of_sorted_array/</link>
+      <pubDate>Sat, 09 Mar 2019 01:26:01 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/71_squares_of_sorted_array/</guid>
+      <description>Problem Statement  Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Questions to ask  Can i have negative numbers in my input array?
+Is the input array mutable or read only?
+Solution  The naive solution is to traverse the array calculating the square of each value and adding the result in a array to return.</description>
+    </item>
     
     <item>
       <title>Edit Distance</title>
@@ -53,7 +65,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
       <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 Questions to ask  Is the input array already sorted?
-Is The input array mutable or read only?
+Is the input array mutable or read only?
 Solution  There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
     </item>
     
