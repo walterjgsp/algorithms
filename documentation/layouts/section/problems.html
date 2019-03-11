@@ -11,9 +11,10 @@
   </section>
 
   <div class="container">
-    <div class="columns is-multiline">
+    <div class="grid">
+      <div class="grid-sizer"></div>
       {{ range .Data.Pages.ByDate }}
-      <div class="column is-one-quarter">
+      <div class="grid-item">
         <a href="{{ .Permalink }}">
           <div class="box">
             <h4 class="has-text-link">{{ .Title }}</h4>
@@ -33,6 +34,16 @@
 
   <br/>
   <script type="text/javascript">
+    $('.grid').isotope({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      masonry: {
+        gutter: 10,
+        fitWidth: true,
+        columnWidth: '.grid-sizer'
+      }
+    })
+
     $.each($( ".language_tag" ), function(i,val){
       $( this ).css("background-color",language_colors[val.attributes.value.value])
     })

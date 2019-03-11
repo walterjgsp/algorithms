@@ -13,9 +13,20 @@ p{
 }
 
 .margin_left{
-  margin-left: 20px
+  margin-left: 20px;
 }
 
 .box { transition: all .2s ease-in-out !important;  }
 
 .box:hover { transform: scale(1.05) !important; }
+
+/* Masonry configuration css */
+.grid {
+  margin: 0 auto;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 24%;
+  margin-bottom: 10px;
+}
