@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ac7a4bb042914b5e9298cef2e03f462d)](https://app.codacy.com/app/walterjgsp/algorithms?utm_source=github.com&utm_medium=referral&utm_content=walterjgsp/algorithms&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/walterjgsp/algorithms.svg?branch=master)](https://travis-ci.org/walterjgsp/algorithms)
 [![CodeFactor](https://www.codefactor.io/repository/github/walterjgsp/algorithms/badge)](https://www.codefactor.io/repository/github/walterjgsp/algorithms)
 
