@@ -90,6 +90,13 @@
   </section>
 
   <div class="container">
+
+    <div class="buttons has-addons is-centered filter-button-group">
+      <span class="button" data-filter="Easy">Easy</span>
+      <span class="button" data-filter="Medium">Medium</span>
+      <span class="button" data-filter="Hard">Hard</span>
+    </div>
+
     <div class="grid">
       <div class="grid-sizer"></div>
       
@@ -203,6 +210,11 @@
       }
     })
 
+    $('.filter-button-group').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+    });
+    
     $.each($( ".language_tag" ), function(i,val){
       $( this ).css("background-color",language_colors[val.attributes.value.value])
     })

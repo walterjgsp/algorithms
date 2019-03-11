@@ -56,7 +56,8 @@ If word1 = &amp;ldquo;horse&amp;rdquo; and word2 = &amp;ldquo;ros&amp;rdquo;, ho
       <guid>http://walterjgsp.github.io/algorithms/problems/03_add_two_numbers/</guid>
       <description>Problem Statement  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
- Solution</description>
+Solution  Assuming a list node like this:
+struct ListNode {int val;ListNode *next;ListNode(int x) : val(x), next(NULL) {}};  Since the digits are already stored in reverse order with the less significant value first and the return must be the same way, is only necessary to execute the add operation in each value taking care to not lose any pointer and avoid access to null pointer nodes.</description>
     </item>
     
     <item>
@@ -65,8 +66,8 @@ You may assume the two numbers do not contain any leading zero, except the numbe
       <pubDate>Mon, 18 Feb 2019 19:24:15 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/problems/02_add_one_row_to_tree/</guid>
-      <description>Problem Statement  &amp;hellip;Your problem statement here
- Solution</description>
+      <description>Problem Statement  Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.
+The adding rule is: given a positive integer depth d, for each NOT null tree nodes N in depth d-1, create two tree nodes with value v as N&amp;rsquo;s left subtree root and right subtree root.</description>
     </item>
     
     <item>

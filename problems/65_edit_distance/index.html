@@ -93,7 +93,7 @@
 
     <h2 class="title is-4"> Problem Statement </h2>
 
-<p>Given two words <em>word1</em> and <em>word2</em>, find the minimum number of operations required to convert <em>word1</em> to <em>word2</em>.</p>
+<p>Given two words <strong>word1</strong> and <strong>word2</strong>, find the minimum number of operations required to convert <strong>word1</strong> to <strong>word2</strong>.</p>
 
 <p>You have the following 3 operations permitted on a word:</p>
 
@@ -108,22 +108,22 @@
 <p><br/>
 <h2 class="title is-5"> Solution </h2></p>
 
-<p>If <em>word1</em> = &ldquo;horse&rdquo; and <em>word2</em> = &ldquo;ros&rdquo;, how can we solve the problem? In a first look the problem seens much more complex
-than it is. In an attempt to make it more simple, let&rsquo;s break it in smaller problems a go back to these words latter.</p>
+<p>If <strong>word1</strong> = &ldquo;horse&rdquo; and <strong>word2</strong> = &ldquo;ros&rdquo;, how can we solve the problem? In a first look the problem seens much more complex
+than it is. In an attempt to make simple, let&rsquo;s break it in smaller problems a go back to these words latter.</p>
 
-<p>How many operations we need to convert an empty string &ldquo; &rdquo; into &ldquo;ab&rdquo;? The answer is easy, using the inser operation in two moves
+<p>How many operations do we need to convert an empty string &ldquo; &rdquo; into &ldquo;ab&rdquo;? The answer is easy, using the insert operation in two moves
 we can insert character &ldquo;a&rdquo; and &ldquo;b&rdquo; into the empty string. And the opposite? Also easy, we can delete the characters in two operations.
 And what about having two strings with only one character that area equal (&ldquo;a&rdquo; and &ldquo;a&rdquo;)? No movements needed there. And two different
 characters (&ldquo;a&rdquo; and &ldquo;b&rdquo;)? Also one operation, replace a character. Now we know how to treat the basic cases, 10% of the problem is solved.</p>
 
-<p>We now know the operations we can execute on <em>word1</em>, but, how we represent then? Treating a string as an array of characters and using
-one index in each word (<em>index1</em> for <em>word1</em> and <em>index2</em> for <em>word2</em>).</p>
+<p>We now know the operations we can execute on <strong>word1</strong>, but, how we represent then? Treating a string as an array of characters and using
+one index in each word (<strong>index1</strong> for <strong>word1</strong> and <strong>index2</strong> for <strong>word2</strong>).</p>
 
 <p><strong>Insert</strong></p>
 
-<p>From the first index (<em>index1 = 0</em> and <em>index2 = 0</em>) in both words keep the index of the first word and add 1 in <em>index2</em>. This means that
-i don&rsquo;t have more problem with the first position on <em>word2</em> is already solved, i inserted the right character, so let&rsquo;s go to the other
-character but keeping the same index on <em>word1</em> since i&rsquo;m still processing it.</p>
+<p>From the first index (<strong>index1 = 0</strong> and <strong>index2 = 0</strong>) in both words keep the index of the first word and add 1 in <strong>index2</strong>. This means that
+i don&rsquo;t have more problem with the first position on <strong>word2</strong> is already solved, i inserted the right character, so let&rsquo;s go to the other
+character but keeping the same index on <strong>word1</strong> since i&rsquo;m still processing it.</p>
 
 <p><strong>Replace</strong></p>
 
@@ -131,8 +131,8 @@ character but keeping the same index on <em>word1</em> since i&rsquo;m still pro
 
 <p><strong>Delete</strong></p>
 
-<p>Deletion is the opposite of insertion. When in insertion we keep the <em>index1</em> in deletion we ignore this index, meaning remove the character,
-and keep the <em>index2</em> the same because we still need to find a match.</p>
+<p>Deletion is the opposite of insertion. When in insertion we keep the <strong>index1</strong> in deletion we ignore this index, meaning remove the character,
+and keep the <strong>index2</strong> the same because we still need to find a match.</p>
 
 <p>I imagine that this complete know 30% of our problem. We already know the basic cases and how to implement each operation on a atomic
 base.</p>

@@ -95,10 +95,68 @@
 
     <h2 class="title is-5"> Problem Statement </h2>
 
-<p>&hellip;Your problem statement here</p>
+<p>Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v
+at the given depth d. The root node is at depth 1.</p>
 
-<p><br/>
-<h2 class="title is-5"> Solution </h2></p>
+<p>The adding rule is: given a positive integer depth d, for each NOT null tree nodes N in depth d-1,
+create two tree nodes with value v as N&rsquo;s left subtree root and right subtree root.
+And N&rsquo;s original left subtree should be the left subtree of the new left subtree root,
+its original right subtree should be the right subtree of the new right subtree root.
+If depth d is 1 that means there is no depth d-1 at all, then create a tree node with value v
+as the new root of the whole original tree, and the original tree is the new root&rsquo;s left subtree.</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>Assuming that the node structure of the tree is:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="n">TreeNode</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+  <span class="n">TreeNode</span> <span class="o">*</span><span class="n">left</span><span class="p">;</span>
+  <span class="n">TreeNode</span> <span class="o">*</span><span class="n">right</span><span class="p">;</span>
+  <span class="n">TreeNode</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The problem can be solved recursively treating the base cases:</p>
+
+<div class="margin_left">
+  <ol>
+    <li>d-1 = 0 : This condition means that we need to add a new root to the tree. Create a new node and make him root with the actual root as left children.</li>
+    <li>d-1 = 1 : This node is parent of the new nodes that are going to be added. Create two new nodes for left and right and make the respective old childres of the
+parent left and right childres.</li>
+    <li>d-1 > 1 : This case means is necessary to go deeper in the tree. Check if the childs exists and if positive call the same function withe depth value minus 1. </li>
+  </ol>
+</div>
+
+<p>With this information the following implementation is made:</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">TreeNode</span><span class="o">*</span> <span class="nf">addOneRow</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">TreeNode</span><span class="o">*</span> <span class="n">newRoot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+        <span class="n">newRoot</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">root</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">newRoot</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+        <span class="n">TreeNode</span> <span class="o">*</span><span class="n">newleft</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="o">*</span><span class="n">newright</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+        <span class="n">newleft</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+        <span class="n">newright</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+        <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">newleft</span><span class="p">;</span>
+        <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">newright</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="n">addOneRow</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span><span class="n">addOneRow</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">root</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+
+<p>Time complexity <strong>O(n)</strong></p>
 
 
     <br/>
