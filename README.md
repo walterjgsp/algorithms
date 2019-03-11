@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/walterjgsp/algorithms.svg?branch=master)](https://travis-ci.org/walterjgsp/algorithms)
 [![CodeFactor](https://www.codefactor.io/repository/github/walterjgsp/algorithms/badge)](https://www.codefactor.io/repository/github/walterjgsp/algorithms)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/798842654ab045da9080cd4148f64456)](https://www.codacy.com/app/walterjgsp/algorithms?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=walterjgsp/algorithms&amp;utm_campaign=Badge_Grade)
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
@@ -39,5 +40,9 @@ java -jar <OUTPUT_FILE_NAME>
 
 ### Services
 
-(TravisCI)[https://travis-ci.org/walterjgsp/algorithms]
-(CodeFactor)[https://www.codefactor.io/repository/github/walterjgsp/algorithms]
+Services that i decided to use in this repository so i could test a more professional way of working:
+
+* [SonarQube](https://sonarcloud.io/dashboard?id=walterjgsp-github)
+* [TravisCI](https://travis-ci.org/walterjgsp/algorithms)
+* [CodeFactor](https://www.codefactor.io/repository/github/walterjgsp/algorithms)
+* [Codacy](https://app.codacy.com/project/walterjgsp/algorithms/dashboard)
