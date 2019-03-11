@@ -19,5 +19,55 @@ Add the two numbers and return it as a linked list.
 
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-<br/>
 <h2 class="title is-5"> Solution </h2>
+
+Assuming a list node like this:
+
+{{< highlight cpp >}}
+struct ListNode {
+   int val;
+   ListNode *next;
+   ListNode(int x) : val(x), next(NULL) {}
+};
+{{< /highlight >}}
+
+Since the digits are already stored in reverse order with the less significant value first
+and the return must be the same way, is only necessary to execute the add operation in each
+value taking care to not lose any pointer and avoid access to null pointer nodes.
+
+The solution become simple and the implementation straightforward.
+
+{{< highlight cpp >}}
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+  ListNode *dummy = new ListNode(-1), *it = dummy;
+  int carry=0;
+
+  while (l1 || l2) {
+    int val1=0,val2=0;
+
+    if(l1){
+      val1 = l1->val;
+      l1 = l1->next;
+    }
+    if(l2){
+      val2 = l2->val;
+      l2 = l2->next;
+    }
+
+    int sum = val1+val2+carry;
+    carry=sum/10;
+    sum%=10;
+
+    it->next = new ListNode(sum);
+    it = it->next;
+  }
+
+  if(carry>0){
+    it->next = new ListNode(1);
+  }
+
+  return dummy->next;
+}
+{{< /highlight >}}
+
+Time complexity **O(max(n,m))** where n is the size of list1 and m the size of list2

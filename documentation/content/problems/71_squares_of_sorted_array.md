@@ -28,12 +28,12 @@ we sort the result array and return.
 
 The time complexity of this code is **O(N logn)** that is the cost to sort the array.
 
-A more optimized solution can be made if we use two pointers and the information that the array is already sorted.
+A more optimized solution can be achived if we use two pointers and the information that the array is already sorted.
 
 Keep one pointer in the initial position and other in the final position of the input array. Using absolute difference we discover the bigger
 value and we add the square of this value in the result array. The last step is to move the pointer were we found the bigger value,
-if was the initial we increment this pointer, otherwise we decrement the final position pointer. We gonna have a result array sorted in reverse order, reverse
-the array and we found a solution. The time complexity of this code is **O(N)**
+if was the initial we increment this pointer, otherwise we decrement the final position pointer. We are going to have a result array sorted in reverse order,
+reverse the array and we found a solution. The time complexity of this code is **O(N)**
 
 {{< highlight cpp >}}
 vector<int> sortedSquares(vector<int>& A) {

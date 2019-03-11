@@ -46,7 +46,6 @@ public:
             return newRoot;
         }
 
-
         if(d-1==1){
             TreeNode *newleft = new TreeNode(v), *newright = new TreeNode(v);
             newleft->left = root->left;

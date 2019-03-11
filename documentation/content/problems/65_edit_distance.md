@@ -13,7 +13,7 @@ link = "https://leetcode.com/problems/edit-distance/"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
 
-Given two words *word1* and *word2*, find the minimum number of operations required to convert *word1* to *word2*.
+Given two words **word1** and **word2**, find the minimum number of operations required to convert **word1** to **word2**.
 
 You have the following 3 operations permitted on a word:
 
@@ -28,22 +28,22 @@ You have the following 3 operations permitted on a word:
 <br/>
 <h2 class="title is-5"> Solution </h2>
 
-If *word1* = "horse" and *word2* = "ros", how can we solve the problem? In a first look the problem seens much more complex
-than it is. In an attempt to make it more simple, let's break it in smaller problems a go back to these words latter.
+If **word1** = "horse" and **word2** = "ros", how can we solve the problem? In a first look the problem seens much more complex
+than it is. In an attempt to make simple, let's break it in smaller problems a go back to these words latter.
 
-How many operations we need to convert an empty string " " into "ab"? The answer is easy, using the inser operation in two moves
+How many operations do we need to convert an empty string " " into "ab"? The answer is easy, using the insert operation in two moves
 we can insert character "a" and "b" into the empty string. And the opposite? Also easy, we can delete the characters in two operations.
 And what about having two strings with only one character that area equal ("a" and "a")? No movements needed there. And two different
 characters ("a" and "b")? Also one operation, replace a character. Now we know how to treat the basic cases, 10% of the problem is solved.
 
-We now know the operations we can execute on *word1*, but, how we represent then? Treating a string as an array of characters and using
-one index in each word (*index1* for *word1* and *index2* for *word2*).
+We now know the operations we can execute on **word1**, but, how we represent then? Treating a string as an array of characters and using
+one index in each word (**index1** for **word1** and **index2** for **word2**).
 
 **Insert**
 
-From the first index (*index1 = 0* and *index2 = 0*) in both words keep the index of the first word and add 1 in *index2*. This means that
-i don't have more problem with the first position on *word2* is already solved, i inserted the right character, so let's go to the other
-character but keeping the same index on *word1* since i'm still processing it.
+From the first index (**index1 = 0** and **index2 = 0**) in both words keep the index of the first word and add 1 in **index2**. This means that
+i don't have more problem with the first position on **word2** is already solved, i inserted the right character, so let's go to the other
+character but keeping the same index on **word1** since i'm still processing it.
 
 **Replace**
 
@@ -51,8 +51,8 @@ Both indexes increment since we have made the replacement operation and made bot
 
 **Delete**
 
-Deletion is the opposite of insertion. When in insertion we keep the *index1* in deletion we ignore this index, meaning remove the character,
-and keep the *index2* the same because we still need to find a match.
+Deletion is the opposite of insertion. When in insertion we keep the **index1** in deletion we ignore this index, meaning remove the character,
+and keep the **index2** the same because we still need to find a match.
 
 I imagine that this complete know 30% of our problem. We already know the basic cases and how to implement each operation on a atomic
 base.
