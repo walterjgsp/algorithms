@@ -6,10 +6,23 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Mar 2019 14:29:27 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2019 21:14:47 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Advantage Shuffle</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/04_advantage_suffle/</link>
+      <pubDate>Mon, 11 Mar 2019 21:14:47 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/04_advantage_suffle/</guid>
+      <description>Problem Statement  Given two arrays A and B of equal size, the advantage of A with respect to B is the number of indices i for which A[i] &amp;gt; B[i].
+Return any permutation of A that maximizes its advantage with respect to B.
+Questions to ask  Is the input array already sorted? Not sorted
+Is the input array mutable or read only? Mutable
+Can i have negative numbers in my input array?</description>
+    </item>
     
     <item>
       <title>Sort Array By Parity</title>
@@ -19,8 +32,8 @@
       <guid>http://walterjgsp.github.io/algorithms/problems/27_sort_array_parity/</guid>
       <description>Problem Statement  Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
 You may return any answer array that satisfies this condition.
-Questions to ask  Is the input array mutable or read only?
-Can i have negative numbers in my input array?
+Questions to ask  Is the input array mutable or read only? Mutable
+Can i have negative numbers in my input array? Yes
 Solution  There are two solutions for this problem with time complexity O(n) with just one pass in the array.</description>
     </item>
     
@@ -78,8 +91,8 @@ The adding rule is: given a positive integer depth d, for each NOT null tree nod
       <guid>http://walterjgsp.github.io/algorithms/problems/01_two_sum/</guid>
       <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Questions to ask  Is the input array already sorted?
-Is the input array mutable or read only?
+Questions to ask  Is the input array already sorted? No
+Is the input array mutable or read only? Mutable
 Solution  There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
     </item>
     

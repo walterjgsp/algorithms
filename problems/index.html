@@ -91,11 +91,7 @@
 
   <div class="container">
 
-    <div class="buttons has-addons is-centered filter-button-group">
-      <span class="button" data-filter="Easy">Easy</span>
-      <span class="button" data-filter="Medium">Medium</span>
-      <span class="button" data-filter="Hard">Hard</span>
-    </div>
+    
 
     <div class="grid">
       <div class="grid-sizer"></div>
@@ -194,6 +190,22 @@
         </a>
       </div>
       
+      <div class="grid-item">
+        <a href="http://walterjgsp.github.io/algorithms/problems/04_advantage_suffle/">
+          <div class="box">
+            <h4 class="has-text-link">Advantage Shuffle</h4>
+            <p class="is-divider is-marginless"></p>
+            <p class="has-text-justified">Given two arrays A and B of equal size, the advantage of A with respect to B is the number of indices i for which A[i] &gt; B[i].</p>
+            <span class="tag has-text-white level_tag" value=1 >Easy</span>
+            
+              <span class="tag has-text-white language_tag" value=C&#43;&#43; >C&#43;&#43;</span>
+            
+              <span class="tag has-text-white language_tag" value=Kotlin >Kotlin</span>
+            
+          </div>
+        </a>
+      </div>
+      
 
     </div>
   </div>
@@ -214,7 +226,7 @@
       var filterValue = $(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
     });
-    
+
     $.each($( ".language_tag" ), function(i,val){
       $( this ).css("background-color",language_colors[val.attributes.value.value])
     })
