@@ -19,9 +19,9 @@ You may assume that each input would have exactly one solution, and you may not 
 
 <h2 class="title is-4"> Questions to ask </h2>
 
-Is the input array already sorted?
+Is the input array already sorted? No
 
-Is the input array mutable or read only?
+Is the input array mutable or read only? Mutable
 
 <h2 class="title is-4"> Solution </h2>
 

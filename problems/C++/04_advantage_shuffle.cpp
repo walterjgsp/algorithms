@@ -10,43 +10,45 @@ using namespace std;
 class Solution {
 public:
     vector<int> advantageCount(vector<int>& A, vector<int>& B) {
-        vector<pair<int,int>> helperB;
+      vector<pair<int,int>> helperB;
+      vector<int> result (A.size(),-1);
+      int tam = A.size();
 
-        for(int i=0;i<A.size();i++){
-            helperB.push_back(make_pair(B[i],i));
-        }
+      for(int i=0;i<tam;i++){
+          helperB.push_back(make_pair(B[i],i));
+      }
 
-        sort(A.begin(),A.end());
-        sort(helperB.begin(),helperB.end());
+      sort(A.begin(),A.end());
+      sort(helperB.begin(),helperB.end());
 
-        vector<int> to_return (A.size(),INT_MIN), to_add;
+      int indexA = 0,indexB = 0;
 
-        int i=0,j=0;
+      while(indexA<tam){
+          auto pairB = helperB[indexB];
+          if(A[indexA]>pairB.first){
+              result[pairB.second]=A[indexA];
+              A[indexA]=-1;
+              indexB++;
+          }
+          indexA++;
+      }
 
-        while(i<A.size() && j<helperB.size()){
-            if(A[i]<=helperB[j].first){
-                to_add.push_back(A[i]);
-                i++;
-            }else{
-                to_return[helperB[j].second]=A[i];
-                i++;
-                j++;
-            }
-        }
+      indexA = 0;
+      int i = 0;
 
-        int index = 0;
-        for(int i=0;i<to_return.size();i++){
+      while(indexA<tam && i<tam){
+          if(A[indexA]==-1){
+              indexA++;
+          }else if(result[i]!=-1){
+              i++;
+          }else{
+              result[i]=A[indexA];
+              i++;
+              indexA++;
+          }
+      }
 
-            if(index>=to_add.size())
-                break;
-
-            if(to_return[i]==INT_MIN){
-                to_return[i]=to_add[index];
-                index++;
-            }
-        }
-
-        return to_return;
+      return result;
     }
 };
 
