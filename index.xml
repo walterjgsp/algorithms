@@ -6,10 +6,47 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2019 21:14:47 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 09:02:23 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sum of Even Numbers After Queries</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/54_sum_of_even_numbers_after_queries/</link>
+      <pubDate>Wed, 13 Mar 2019 09:02:23 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/54_sum_of_even_numbers_after_queries/</guid>
+      <description>Problem Statement  We have an array A of integers, and an array queries of queries.
+For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index]. Then, the answer to the i-th query is the sum of the even values of A.
+(Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.)
+Return the answer to all queries.</description>
+    </item>
+    
+    <item>
+      <title>Anagrams</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/06_anagrams/</link>
+      <pubDate>Wed, 13 Mar 2019 06:58:22 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/06_anagrams/</guid>
+      <description>Problem Statement  Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.
+Any characters can be deleted from either of the strings.
+Questions to ask  Characters in the string are only lowercase? Yes
+Can special characters exist in the string? No
+Solution  The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string.</description>
+    </item>
+    
+    <item>
+      <title>Valid Anagram</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/37_valid_anagram/</link>
+      <pubDate>Wed, 13 Mar 2019 06:57:57 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/37_valid_anagram/</guid>
+      <description>Problem Statement  Given two strings s and t , write a function to determine if t is an anagram of s.
+Questions to ask  Characters in the string are only lowercase? Yes
+Can special characters exist in the string? No
+Solution  The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string.</description>
+    </item>
     
     <item>
       <title>Advantage Shuffle</title>
@@ -91,7 +128,7 @@ The adding rule is: given a positive integer depth d, for each NOT null tree nod
       <guid>http://walterjgsp.github.io/algorithms/faq/how_to_c/</guid>
       <description>All the C++ code were done using the C++14 version. To compile use the following command:
 g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt; And to run the code:
-./&amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
     <item>
@@ -115,7 +152,7 @@ Solution  There are three main approaches to solve this problem: Naive, Time Opt
       <guid>http://walterjgsp.github.io/algorithms/faq/how_to_kotlin/</guid>
       <description>To compile use the following command:
 kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar And to run the code:
-java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
   </channel>
