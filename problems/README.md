@@ -7,7 +7,7 @@ List of solved problems
 | 3     | Add Two Numbers                             | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/add-two-numbers/)                            |
 | 4     | Advantage Shuffle                           | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
 | 5     | Allocate Areas                              | :heavy_check_mark: |                    | LeetCode                                                                              |
-| 6     | Anagrams                                    | :heavy_check_mark: | :heavy_check_mark: |                                                                                       |
+| 6     | Anagrams                                    | :heavy_check_mark: | :heavy_check_mark: | [HackerRank](https://www.hackerrank.com/challenges/making-anagrams/problem)           |
 | 7     | Arrange Coins                               | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
 | 8     | Array Nesting                               | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
 | 9     | Binary Tree Tilt                            | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
@@ -38,7 +38,7 @@ List of solved problems
 | 34    | Pancake Sort                                | :heavy_check_mark: |                    | LeetCode                                                                              |
 | 35    | Possible Bipartition                        | :heavy_check_mark: |                    | LeetCode                                                                              |
 | 36    | Level Order                                 | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
-| 37    | Validate Anagram                            | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
+| 37    | Validate Anagram                            | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/valid-anagram/)                              |
 | 38    | Flip Binary Tree to Match Preorder          | :heavy_check_mark: |                    | LeetCode                                                                              |
 | 39    | N Repeated Element in Size 2N Array         | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
 | 40    | Design Twitter                              | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
@@ -55,7 +55,7 @@ List of solved problems
 | 51    | Is Graph Bipartite?                         | :heavy_check_mark: |                    | LeetCode                                                                              |
 | 52    | Eventual Safe Nodes                         | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
 | 53    | Interval List Intersection                  | :heavy_check_mark: |                    | LeetCode                                                                              |
-| 54    | Sum of Even Numbers After Queries           | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
+| 54    | Sum of Even Numbers After Queries           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)          |
 | 55    | Spiral Matrix I                             | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                              |
 | 56    | Car Fleet                                   | :heavy_check_mark: |                    | LeetCode                                                                              |
 | 57    | Broken Calculator                           | :heavy_check_mark: |                    | LeetCode                                                                              |

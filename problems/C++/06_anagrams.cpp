@@ -12,26 +12,21 @@ class Solution{
 public:
 
     int getMinimumDeletionsToAnagram(string s1, string s2){
+      vector<int> count(256,0);
+      int result =0;
+      for(auto c:s1){
+        count[c-'a']++;
+      }
 
-        int to_return=0;
-        vector<int> count (256,0);
+      for(auto c:s2){
+        count[c-'a']--;
+      }
 
-        for( auto c:s1){
-            count[c]++;
-        }
+      for(auto val : count){
+        result+=abs(val);
+      }
 
-        for( auto c:s2){
-            if(count[c]==0)
-                to_return++;
-            else
-                count[c]--;
-        }
-
-        for(int i=0;i<count.size();i++){
-            to_return+=count[i];
-        }
-
-        return to_return;
+      return result;
     }
 };
 

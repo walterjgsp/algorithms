@@ -53,6 +53,24 @@ this is why we use a **map**.
 
 In this approach, we traverse the array, looking for | target - number|, if we find it voilà! Otherwise, we add the value the current value on our map and proceed
 
+{{< highlight cpp >}}
+vector<int> twoSum(vector<int>& nums, int target) {
+  unordered_map<int,int> index_val;
+  index_val[nums[0]]=0;
+  vector<int> result;
+  for(int i=1;i<nums.size();i++){
+    if(index_val.find(target-nums[i])!=index_val.end()){
+      result.push_back(index_val[target-nums[i]]);
+      result.push_back(i);
+      break;
+    }
+    index_val[nums[i]]=i;
+  }
+
+  return result;
+}
+{{< /highlight >}}
+
 With this approach we have the following complexity:
 
 *Time Complexity : O(n)*
