@@ -6,10 +6,21 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Mar 2019 09:02:23 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 21:30:24 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Min Cost Climbing Stairs</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/74_min_cost_clibing_stairs/</link>
+      <pubDate>Wed, 13 Mar 2019 21:30:24 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/74_min_cost_clibing_stairs/</guid>
+      <description>Problem Statement  On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Solution  To solve this problem we going to use dynamic programming.</description>
+    </item>
     
     <item>
       <title>Sum of Even Numbers After Queries</title>

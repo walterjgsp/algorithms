@@ -6,17 +6,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Anagrams </title>
+    <title> Min Cost Climbing Stairs </title>
 
     
-    <meta name="description" content="Given two strings, a and b , that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams."> 
+    <meta name="description" content="You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1."> 
     
     
     
     
     
 
-    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/problems/06_anagrams/">  
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/problems/74_min_cost_clibing_stairs/">  
 
     <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
 
@@ -82,12 +82,10 @@
   <div id="main">
     <section class="hero ">
       <div class="hero-body has-text-centered">
-        <h1 class="title is-size-1" >Anagrams</h1>
+        <h1 class="title is-size-1" >Min Cost Climbing Stairs</h1>
         <span class="tag has-text-white level_tag" value=0 >Easy</span>
         
           <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
-        
-          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
         
       </div>
     </section>
@@ -95,48 +93,40 @@
 
     <h2 class="title is-4"> Problem Statement </h2>
 
-<p>Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.</p>
+<p>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).</p>
 
-<p>Any characters can be deleted from either of the strings.</p>
-
-<h2 class="title is-4"> Questions to ask </h2>
-
-<p>Characters in the string are only lowercase? Yes</p>
-
-<p>Can special characters exist in the string? No</p>
+<p>Once you pay the cost, you can either climb one or two steps. You need to find minimum
+cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.</p>
 
 <h2 class="title is-5"> Solution </h2>
 
-<p>The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and sum the absolute value of each index to a result variable.</p>
+<p>To solve this problem we going to use dynamic programming. For each index on the array, the most important values are i-2 and i-1
+because they represent the immediate cost that i need to pay so i can arrive at my actual index. Since i want to minimize the cost,
+i will choose the minimum value between my actual cost and one of the previous costs that make it possible i arrive at my actual position.
+Keeping a track of this values with an array make it possible to find an answer.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">getMinimumDeletionsToAnagram</span><span class="p">(</span><span class="n">string</span> <span class="n">s1</span><span class="p">,</span> <span class="n">string</span> <span class="n">s2</span><span class="p">){</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span><span class="n">s1</span><span class="p">){</span>
-    <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
-  <span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">minCostClimbingStairs</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cost</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">cost</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">cost</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">cost</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 
-  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span><span class="n">s2</span><span class="p">){</span>
-    <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
-  <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">dp</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="p">}</span>
 
-  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">val</span> <span class="p">:</span> <span class="n">count</span><span class="p">){</span>
-    <span class="n">result</span><span class="o">+=</span><span class="n">abs</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">dp</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
 
 <p>Time Complexity: <strong>O(n)</strong></p>
 
-<p>Space Complexity: <strong>O(1)</strong></p>
+<p>Space Complexity: <strong>O(n)</strong></p>
 
 
     <br/>
     <p class="is-size-7 has-text-right">
       question from
-      <a href=https://www.hackerrank.com/>HackerRank</a>
+      <a href=https://leetcode.com/>LeetCode</a>
     </p>
 
     </div>
