@@ -6,10 +6,23 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Mar 2019 21:30:24 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 09:29:55 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Longest Absolute File Path</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/75_longest_absolute_file_path/</link>
+      <pubDate>Thu, 14 Mar 2019 09:29:55 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/75_longest_absolute_file_path/</guid>
+      <description>Problem Statement  Suppose we abstract our file system by a string in the following manner:
+The string &amp;ldquo;dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext&amp;rdquo; represents:
+dirsubdir1subdir2file.ext  The directory dir contains an empty sub-directory subdir1 and a sub-directory subdir2 containing a file file.ext.
+The string &amp;ldquo;dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext&amp;rdquo; represents:
+dirsubdir1file1.extsubsubdir1subdir2subsubdir2file2.ext  The directory dir contains two sub-directories subdir1 and subdir2. subdir1 contains a file file1.ext and an empty second-level sub-directory subsubdir1.</description>
+    </item>
     
     <item>
       <title>Min Cost Climbing Stairs</title>
