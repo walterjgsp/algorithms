@@ -29,6 +29,11 @@ Can i have negative numbers in my input array? Yes
 
 <h2 class="title is-5"> Solution </h2>
 
+To solve this problem we gonna keep an auxiliary variable to keep a track of the sum of all even values in the array. So, we loop through adding
+the value to this variable if it is even. Now we need to apply the changes proposed by the queries and also track the new sum. To do this we use simple math.
+If the query index has a even value we subtract this value from the variable with the total sum of even values, we appply the change and if the new value
+is even we add to the variable and also in the result array. 
+
 {{< highlight cpp >}}
 vector<int> sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries) {
     vector<int> result;

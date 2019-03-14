@@ -74,3 +74,5 @@ List of solved problems
 | 70    | Pow(x, n)                                   | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/powx-n/)                                     |
 | 71    | Squares of a Sorted Array                   | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/squares-of-a-sorted-array/)                  |
 | 72    | Find Common Characters                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/find-common-characters/)                     |
+| 73    | Repeated String                             | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/repeated-string/problem)           |
+| 74    | Min Cost Climbing Stairs                    | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/min-cost-climbing-stairs/)                   |

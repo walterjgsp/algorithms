@@ -7,7 +7,7 @@ The documentation for this project can be found at: <https://walterjgsp.github.i
 Repository for algorithms, problems and data structures that we have used. This serves as a reference for everyone interested.
 For any suggestion on algorithm, problem or data structure, just open an issue with question label.
 
-This repo contains questions from LeetCode (most of them), Interviewbit, URI and Codeforces.
+This repo contains questions from LeetCode (most of them), HackerRank, Interviewbit, URI, Codeforces.
 We suggest you to try their platform so you can get new problems and articles about algorithms.
 
 ## Run C++
