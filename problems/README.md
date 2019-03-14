@@ -76,3 +76,4 @@ List of solved problems
 | 72    | Find Common Characters                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/find-common-characters/)                     |
 | 73    | Repeated String                             | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/repeated-string/problem)           |
 | 74    | Min Cost Climbing Stairs                    | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/min-cost-climbing-stairs/)                   |
+| 75    | Longest Absolute File Path                  | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/longest-absolute-file-path/)                 |
