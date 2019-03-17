@@ -27,22 +27,23 @@ The solution is pretty straightforward. Knowing that the a character is a number
 the loop finish.
 
 {{< highlight cpp >}}
-int getMinimumDeletionsToAnagram(string s1, string s2){
-  vector<int> count(256,0);
-  int result =0;
-  for(auto c:s1){
-    count[c-'a']++;
+bool isAnagram(string s, string t){
+  vector<int> counter (26,0);
+
+  for(auto letter : s){
+    counter[letter-'a']++;
   }
 
-  for(auto c:s2){
-    count[c-'a']--;
+  for(auto letter : t){
+    counter[letter-'a']--;
   }
 
-  for(auto val : count){
-    result+=abs(val);
+  for(auto count : counter){
+    if(count!=0)
+      return false;
   }
 
-  return result;
+  return true;
 }
 {{< /highlight >}}
 

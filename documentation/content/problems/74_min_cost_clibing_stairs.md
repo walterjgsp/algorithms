@@ -20,7 +20,7 @@ cost to reach the top of the floor, and you can either start from the step with 
 
 <h2 class="title is-5"> Solution </h2>
 
-To solve this problem we going to use dynamic programming. For each index on the array, the most important values are i-2 and i-1
+To solve this problem we going to use dynamic programming. For each index in the array, the most important values are i-2 and i-1
 because they represent the immediate cost that i need to pay so i can arrive at my actual index. Since i want to minimize the cost,
 i will choose the minimum value between my actual cost and one of the previous costs that make it possible i arrive at my actual position.
 Keeping a track of this values with an array make it possible to find an answer.
