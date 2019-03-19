@@ -1,7 +1,7 @@
 //Problem Statement
 //Given two strings s and t , write a function to determine if t is an anagram of s.
 
-class Solution constructor() {
+class Solution {
     fun isAnagram(s: String, t: String): Boolean {
         var counter: IntArray = IntArray(26) { i-> 0};
 

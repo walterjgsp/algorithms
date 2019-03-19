@@ -20,7 +20,7 @@
  *     var right: TreeNode? = null
  * }
  */
-class Solution constructor() {
+class Solution {
     private var result:Int = 0;
     fun findTilt(root: TreeNode?): Int {
         result = 0;

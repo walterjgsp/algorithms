@@ -2,7 +2,7 @@
 
 // Count the number of prime numbers less than a non-negative number, n.
 
-class Solution constructor() {
+class Solution {
     fun countPrimes(n: Int): Int {
         var primes:BooleanArray = BooleanArray(n) { i -> true }
         var result:Int = 0;

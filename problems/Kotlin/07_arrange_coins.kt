@@ -15,7 +15,7 @@
 // ¤ ¤
 // return 2.
 
-class Solution constructor() {
+class Solution {
     fun arrangeCoins(n: Int): Int {
         var row:Int = 1;
         var result:Int = 0;

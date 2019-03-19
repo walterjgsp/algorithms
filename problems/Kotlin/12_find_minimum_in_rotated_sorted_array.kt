@@ -8,7 +8,7 @@
 //
 // You may assume no duplicate exists in the array.
 //
-class Solution constructor() {
+class Solution {
     fun findMin(nums: IntArray): Int {
         var lower:Int=0;
         var higher:Int=nums.size-1;

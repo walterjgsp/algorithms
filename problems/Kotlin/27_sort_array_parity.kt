@@ -5,7 +5,7 @@
 //
 // You may return any answer array that satisfies this condition.
 
-class Solution constructor(){
+class Solution {
     fun sortArrayByParity(A: IntArray): IntArray {
         var even:MutableList<Int> = mutableListOf();
         var odd:MutableList<Int> = mutableListOf();

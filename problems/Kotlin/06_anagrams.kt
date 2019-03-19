@@ -6,7 +6,7 @@
 
 import java.lang.Math;
 
-class Solution constructor(){
+class Solution{
     fun getMinimumDeletionsToAnagram(A : String, B:String): Int {
       var countA:IntArray = IntArray(26) ;
       var countB:IntArray = IntArray(26) ;

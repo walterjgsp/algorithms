@@ -5,7 +5,7 @@ List of solved problems
 | 1     | Two Sum                                             | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/two-sum/)                                             |
 | 2     | Add One Row to Tree                                 | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/add-one-row-to-tree/)                                 |
 | 3     | Add Two Numbers                                     | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/add-two-numbers/)                                     |
-| 4     | Advantage Shuffle                                   | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
+| 4     | Advantage Shuffle                                   | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/advantage-shuffle/)                                   |
 | 5     | Allocate Areas                                      | :heavy_check_mark: |                    | LeetCode                                                                                       |
 | 6     | Anagrams                                            | :heavy_check_mark: | :heavy_check_mark: | [HackerRank](https://www.hackerrank.com/challenges/making-anagrams/problem)                    |
 | 7     | Arrange Coins                                       | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
@@ -52,9 +52,9 @@ List of solved problems
 | 48    | All Nodes Distance K in Binary Tree                 | :heavy_check_mark: |                    | LeetCode                                                                                       |
 | 49    | Unique Paths III                                    | :heavy_check_mark: |                    | LeetCode                                                                                       |
 | 50    | Shortest Bridge                                     | :heavy_check_mark: |                    | LeetCode                                                                                       |
-| 51    | Is Graph Bipartite?                                 | :heavy_check_mark: |                    | LeetCode                                                                                       |
-| 52    | Eventual Safe Nodes                                 | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
-| 53    | Interval List Intersection                          | :heavy_check_mark: |                    | LeetCode                                                                                       |
+| 51    | Is Graph Bipartite?                                 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/is-graph-bipartite/)                                  |
+| 52    | Eventual Safe Nodes                                 | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/find-eventual-safe-states/)                           |
+| 53    | Interval List Intersection                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/interval-list-intersections/)                         |
 | 54    | Sum of Even Numbers After Queries                   | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                   |
 | 55    | Spiral Matrix I                                     | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/spiral-matrix/)                                       |
 | 56    | Car Fleet                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/car-fleet/)                                           |

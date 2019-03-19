@@ -6,7 +6,7 @@ class ListNode(var `val`: Int = 0) {
      var next: ListNode? = null
 }
 
-class Solution constructor() {
+class Solution {
     fun sortList(head: ListNode?): ListNode? {
 
         if(head == null )

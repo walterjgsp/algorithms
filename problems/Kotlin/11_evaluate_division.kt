@@ -11,7 +11,7 @@
 
 import java.util.ArrayDeque;
 
-class Solution constructor() {
+class Solution {
     fun calcEquation(equations: Array<Array<String>>, values: DoubleArray, queries: Array<Array<String>>): DoubleArray {
 
         val graph = HashMap<String,ArrayList<Pair<String,Double>>>();

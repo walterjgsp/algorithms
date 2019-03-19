@@ -2,7 +2,7 @@
 // Given an integer array nums, find the contiguous subarray (containing at
 // least one number) which has the largest sum and return its sum.
 
-class Solution constructor() {
+class Solution {
     fun maxSubArray(nums: IntArray): Int {
         var actualSum:Int = nums[0];
         var maxSum:Int = nums[0];

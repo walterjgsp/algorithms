@@ -7,7 +7,7 @@ Example :
 Input: [1,2,3,3]
 Output: 3 */
 
-class Solution constructor() {
+class Solution {
     fun repeatedNTimes(A: IntArray): Int {
         var unique:HashSet<Int> = HashSet<Int>();
 

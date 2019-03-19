@@ -4,7 +4,7 @@
 // If n is even, replace n with n/2.
 // If n is odd, you can replace n with either n + 1 or n - 1.
 // What is the minimum number of replacements needed for n to become 1?
-class Solution constructor(){
+class Solution{
     var memo:HashMap<Int,Int> = HashMap<Int,Int>();
     fun integerReplacement(n: Int): Int {
         if(n==Int.MAX_VALUE)

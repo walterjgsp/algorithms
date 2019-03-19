@@ -4,7 +4,7 @@
 //
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-class Solution constructor() {
+class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val visited = HashMap<Int,Int>();
         val to_return : IntArray = IntArray(2)

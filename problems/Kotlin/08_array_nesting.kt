@@ -17,7 +17,7 @@
 // One of the longest S[K]:
 // S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}
 
-class Solution constructor() {
+class Solution {
     fun arrayNesting(nums: IntArray): Int {
         var visited:HashSet<Int> = HashSet<Int>();
         var result:Int = 0;

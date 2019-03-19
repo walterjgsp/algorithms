@@ -36,7 +36,7 @@
 // // since user 1 is no longer following user 2.
 // twitter.getNewsFeed(1);
 
-class Twitter() {
+class Twitter {
 
     /** Initialize your data structure here. */
     val users:HashMap<Int,HashSet<Int>> = HashMap<Int,HashSet<Int>>();

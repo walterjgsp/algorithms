@@ -12,7 +12,7 @@
 //
 // How many total friend requests are made?
 
-class Solution constructor(){
+class Solution {
     fun numFriendRequests(ages: IntArray): Int {
         var counter:IntArray = IntArray(121) {i->0};
         var result:Int = 0;

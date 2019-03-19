@@ -13,7 +13,7 @@
 //
 // Return the minimum integer K such that she can eat all the bananas within H hours.
 
-class Solution constructor(){
+class Solution {
 
     private fun hoursToEat(piles:IntArray, eatSpeed:Int): Int{
         var hours:Int = 0;

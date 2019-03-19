@@ -6,7 +6,7 @@
 //
 // Return the smallest possible difference between the maximum value of B and the minimum value of B.
 
-class Solution constructor() {
+class Solution {
     fun smallestRangeI(A: IntArray, K: Int): Int {
         var maxVal:Int = Int.MIN_VALUE;
         var minVal:Int = Int.MAX_VALUE;
