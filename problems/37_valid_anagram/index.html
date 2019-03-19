@@ -108,22 +108,23 @@
 <p>The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and if some value is different from 0 return false. Otherwise return true when
 the loop finish.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">getMinimumDeletionsToAnagram</span><span class="p">(</span><span class="n">string</span> <span class="n">s1</span><span class="p">,</span> <span class="n">string</span> <span class="n">s2</span><span class="p">){</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span><span class="n">s1</span><span class="p">){</span>
-    <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">bool</span> <span class="nf">isAnagram</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">t</span><span class="p">){</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">counter</span> <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">letter</span> <span class="p">:</span> <span class="n">s</span><span class="p">){</span>
+    <span class="n">counter</span><span class="p">[</span><span class="n">letter</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span><span class="n">s2</span><span class="p">){</span>
-    <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">letter</span> <span class="p">:</span> <span class="n">t</span><span class="p">){</span>
+    <span class="n">counter</span><span class="p">[</span><span class="n">letter</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">val</span> <span class="p">:</span> <span class="n">count</span><span class="p">){</span>
-    <span class="n">result</span><span class="o">+=</span><span class="n">abs</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">count</span> <span class="p">:</span> <span class="n">counter</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 
