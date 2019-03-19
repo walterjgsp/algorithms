@@ -79,3 +79,4 @@ List of solved problems
 | 75    | Longest Absolute File Path                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/longest-absolute-file-path/)                          |
 | 76    | Pairs of Songs With Total Durations Divisible by 60 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) |
 | 77    | Capacity To Ship Packages Within D Days             | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)             |
+| 78    | Word Break                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/word-break/)                                          |
