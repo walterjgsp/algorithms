@@ -6,10 +6,20 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Mar 2019 21:21:57 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2019 06:40:40 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Container With Most Water</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/79_container_with_most_water/</link>
+      <pubDate>Wed, 20 Mar 2019 06:40:40 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/79_container_with_most_water/</guid>
+      <description>Problem Statement  Given n non-negative integers a1, a2, &amp;hellip;, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Note: You may not slant the container and n is at least 2.</description>
+    </item>
     
     <item>
       <title>Word Break</title>

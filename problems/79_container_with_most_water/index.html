@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Container With Most Water </title>
+
+    
+    <meta name="description" content="Find two lines, which together with x-axis forms a container, such that the container contains the most water. "> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/problems/79_container_with_most_water/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/algorithms">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="/algorithms/problems/" >
+         Problems
+       </a>
+     
+       <a class="navbar-item" href="/algorithms/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Container With Most Water</h1>
+        <span class="tag has-text-white level_tag" value=1 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Given n non-negative integers a1, a2, &hellip;, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
+
+<p><strong>Note:</strong> You may not slant the container and n is at least 2.</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>The area is dependent on the distance between the two heights and the minimum height between the two. It is possible
+to control in linear way the distance between the heights, starting from a point where the biggest distance is selected
+and shrink it over time.</p>
+
+<p>The biggest possible distance between heights can be found using two pointers, one in the start of the array and another at the end.
+Calculate the area and shrink the distance. To shrink optimally select the pointer that have the smallest value and move it to the middle.
+The loop will go through until the pointers position are different.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">maxArea</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="n">height</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">maxArea</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">area</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">start</span><span class="o">&lt;</span><span class="n">end</span><span class="p">){</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">start</span><span class="p">],</span><span class="n">height</span><span class="p">[</span><span class="n">end</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">);</span>
+        <span class="n">maxArea</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">maxArea</span><span class="p">,</span><span class="n">area</span><span class="p">);</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">&gt;</span><span class="n">height</span><span class="p">[</span><span class="n">end</span><span class="p">]){</span>
+            <span class="n">end</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span>
+            <span class="n">start</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">maxArea</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Time complexity: O(n)
+Space complexity: O(1)</p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="/algorithms/problems/" >
+           Problems
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>
