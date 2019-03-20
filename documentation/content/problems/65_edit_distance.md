@@ -120,7 +120,7 @@ minDistance(string word1, int index1, string word2, int index2){
 {{< /highlight >}}
 
 
-Time complexity : O(mn)
-Space complexity : O(mn)
+Time complexity : **O(mn)**
+Space complexity : **O(mn)**
 
 Where m is the size of word1 and n the size of word2

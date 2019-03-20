@@ -12,11 +12,11 @@
 
   <div class="container">
 
-    {{/* <div class="buttons has-addons is-centered filter-button-group">
+    <div class="buttons has-addons is-centered filter-button-group">
       <span class="button" data-filter="Easy">Easy</span>
       <span class="button" data-filter="Medium">Medium</span>
       <span class="button" data-filter="Hard">Hard</span>
-    </div> */}}
+    </div>
 
     <div class="grid">
       <div class="grid-sizer"></div>
@@ -27,7 +27,7 @@
             <h4 class="has-text-link">{{ .Title }}</h4>
             <p class="is-divider is-marginless"></p>
             <p class="has-text-justified">{{ .Params.description }}</p>
-            <span class="tag has-text-white level_tag" value={{ .Params.level }} >Easy</span>
+            <span class="tag has-text-white level_tag" value={{ .Params.level }} ></span>
             {{ range $i, $language :=  .Params.languages }}
               <span class="tag has-text-white language_tag" value={{ $language }} >{{ $language }}</span>
             {{ end }}
@@ -41,6 +41,15 @@
 
   <br/>
   <script type="text/javascript">
+
+    let filterMap = new Set();
+
+    $.each($( ".level_tag" ), function(i,val){
+      const level = level_object[val.attributes.value.value]
+      $( this ).css("background-color",level.color)
+      $( this ).text(level.value)
+    })
+
     $('.grid').isotope({
       itemSelector: '.grid-item',
       percentPosition: true,
@@ -48,22 +57,24 @@
         gutter: 15,
         fitWidth: true,
         columnWidth: '.grid-sizer'
+      },
+      filter: function() {
+        // _this_ is the item element. Get text of element's .number
+        var level = $(this).find('.level_tag').text();
+        // return true to show, false to hide
+        return (filterMap.size === 0) || (filterMap.has(level)) ;
       }
     })
 
-    $('.filter-button-group').on( 'click', 'button', function() {
+    $('.filter-button-group').on( 'click', '.button', function() {
       var filterValue = $(this).attr('data-filter');
-      $grid.isotope({ filter: filterValue });
+      $(this).toggleClass("is-active")
+      filterMap.has(filterValue) ? filterMap.delete(filterValue) :  filterMap.add(filterValue)
+      $('.grid').isotope();
     });
 
     $.each($( ".language_tag" ), function(i,val){
       $( this ).css("background-color",language_colors[val.attributes.value.value])
-    })
-
-    $.each($( ".level_tag" ), function(i,val){
-      const level = level_object[val.attributes.value.value]
-      $( this ).css("background-color",level.color)
-      $( this ).text(level.value)
     })
 
   </script>

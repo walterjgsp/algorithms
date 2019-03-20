@@ -78,3 +78,5 @@ vector<int> sortArrayByParityInPlace(vector<int>& A) {
   return A;
 }
 {{< /highlight >}}
+
+Time complexity: **O(n)**

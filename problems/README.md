@@ -11,7 +11,7 @@ List of solved problems
 | 7     | Arrange Coins                                       | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/arranging-coins/)                                     |
 | 8     | Array Nesting                                       | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/array-nesting/)                                       |
 | 9     | Binary Tree Tilt                                    | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/binary-tree-tilt/)                                    |
-| 10    | Count Primes                                        | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
+| 10    | Count Primes                                        | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/count-primes/)                                        |
 | 11    | Evaluate Division                                   | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 12    | Find Minimum in Rotated Sorted Array                | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 13    | Find Right Interval                                 | :heavy_check_mark: |                    | LeetCode                                                                                       |

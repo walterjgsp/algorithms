@@ -32,7 +32,7 @@ There are three main approaches to solve this problem: **Naive**, **Time Optimiz
 The naive approach consists in choosing the first position of the array and matching with the subsequents until we find the target value.
 If we don't find it, we pick the second position and repeat the process. We repeat this process until we find the target value or all the pairs of positions are already tested.
 
-Why should we avoid this naive approach? The time complexity for this solution is O(n²).
+Why should we avoid this naive approach? The time complexity for this solution is **O(n²)**.
 
 **Time Optimized**
 
@@ -73,9 +73,9 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
 With this approach we have the following complexity:
 
-*Time Complexity : O(n)*
+Time Complexity : **O(n)**
 
-*Space Complexity : O(n)*
+Space Complexity : **O(n)**
 
 where n is the number of elements in the array.
 
@@ -90,8 +90,8 @@ if we need to make result bigger, we increment the pointer with the smaller valu
 
 With this approach we have the following complexity:
 
-*Time Complexity : O(nlogn)*
+Time Complexity : **O(nlogn)**
 
-*Space Complexity : O(1)*
+Space Complexity : **O(1)**
 
 where n is the number of elements in the array.

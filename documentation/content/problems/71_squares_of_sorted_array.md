@@ -33,7 +33,7 @@ A more optimized solution can be achived if we use two pointers and the informat
 Keep one pointer in the initial position and other in the final position of the input array. Using absolute difference we discover the bigger
 value and we add the square of this value in the result array. The last step is to move the pointer were we found the bigger value,
 if was the initial we increment this pointer, otherwise we decrement the final position pointer. We are going to have a result array sorted in reverse order,
-reverse the array and we found a solution. The time complexity of this code is **O(N)**
+reverse the array and we found a solution.
 
 {{< highlight cpp >}}
 vector<int> sortedSquares(vector<int>& A) {
@@ -53,3 +53,5 @@ vector<int> sortedSquares(vector<int>& A) {
     return result;
 }
 {{< /highlight >}}
+
+The time complexity of this code is **O(n)**

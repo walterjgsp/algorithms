@@ -78,4 +78,4 @@ vector<int> advantageCount(vector<int>& A, vector<int>& B) {
 {{< /highlight >}}
 
 In one pass you pick the bigger values of A and place in the right position in the result array.
-The time complexity will be the cost to sort both arrays is **O(Nlogn)**
+The time complexity will be the cost to sort both arrays is **O(nlogn)**
