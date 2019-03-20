@@ -8,9 +8,9 @@ List of solved problems
 | 4     | Advantage Shuffle                                   | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/advantage-shuffle/)                                   |
 | 5     | Allocate Areas                                      | :heavy_check_mark: |                    | LeetCode                                                                                       |
 | 6     | Anagrams                                            | :heavy_check_mark: | :heavy_check_mark: | [HackerRank](https://www.hackerrank.com/challenges/making-anagrams/problem)                    |
-| 7     | Arrange Coins                                       | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
-| 8     | Array Nesting                                       | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
-| 9     | Binary Tree Tilt                                    | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
+| 7     | Arrange Coins                                       | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/arranging-coins/)                                     |
+| 8     | Array Nesting                                       | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/array-nesting/)                                       |
+| 9     | Binary Tree Tilt                                    | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/binary-tree-tilt/)                                    |
 | 10    | Count Primes                                        | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 11    | Evaluate Division                                   | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 12    | Find Minimum in Rotated Sorted Array                | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
@@ -80,3 +80,4 @@ List of solved problems
 | 76    | Pairs of Songs With Total Durations Divisible by 60 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) |
 | 77    | Capacity To Ship Packages Within D Days             | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)             |
 | 78    | Word Break                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/word-break/)                                          |
+| 79    | Container With Most Water                           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/container-with-most-water/)                           |
