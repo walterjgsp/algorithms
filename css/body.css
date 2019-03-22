@@ -25,6 +25,8 @@ p{
   margin: 0 auto;
 }
 
+.gutter-sizer { width: 1%; }
+
 .grid-sizer,
 .grid-item {
   width: 24%;
