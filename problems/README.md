@@ -12,10 +12,10 @@ List of solved problems
 | 8     | Array Nesting                                       | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/array-nesting/)                                       |
 | 9     | Binary Tree Tilt                                    | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/binary-tree-tilt/)                                    |
 | 10    | Count Primes                                        | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/count-primes/)                                        |
-| 11    | Evaluate Division                                   | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
+| 11    | Evaluate Division                                   | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/evaluate-division/)                                   |
 | 12    | Find Minimum in Rotated Sorted Array                | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 13    | Find Right Interval                                 | :heavy_check_mark: |                    | LeetCode                                                                                       |
-| 14    | Gas Station                                         | :heavy_check_mark: |                    | LeetCode                                                                                       |
+| 14    | Gas Station                                         | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/gas-station/)                                         |
 | 15    | Koko Eating Bananas                                 | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 16    | Largest Component Size by Commom Factor             | :heavy_check_mark: |                    | LeetCode                                                                                       |
 | 17    | Longest Harmonious Subsequence                      | :heavy_check_mark: |                    | LeetCode                                                                                       |
@@ -82,3 +82,4 @@ List of solved problems
 | 78    | Word Break                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/word-break/)                                          |
 | 79    | Container With Most Water                           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/container-with-most-water/)                           |
 | 80    | LRU Cache                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/lru-cache/)                                           |
+| 81    | Linked List Cycle                                   | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/linked-list-cycle/)                                   |
