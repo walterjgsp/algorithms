@@ -83,3 +83,5 @@ List of solved problems
 | 79    | Container With Most Water                           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/container-with-most-water/)                           |
 | 80    | LRU Cache                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/lru-cache/)                                           |
 | 81    | Linked List Cycle                                   | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/linked-list-cycle/)                                   |
+| 82    | Three Sum                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/3sum/)                                                |
+| 83    | Best Sightseeing Pair                               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/best-sightseeing-pair/)                               |
