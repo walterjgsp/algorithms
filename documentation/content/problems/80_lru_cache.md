@@ -21,6 +21,18 @@ it should invalidate the least recently used item before inserting a new item.
 
 <h2 class="title is-5"> Solution </h2>
 
+In the LRU Cache the least used recent key is evicted from the memory. One way to keep a track of key usage is keeping the key in one
+of the extremities on the selected structure to simulate the memory. Every time that a key is used (being the actions of get or put)
+the value will be placed at the start, and before the put operation remove the least used key if the maximum size of the array was already
+reached.
+
+One solution is to keep an array of keys, and each time the functions are called the array is rearranged to match the condition stated.
+This make the solution **O(n*m)** where n is the number of operations and m the maximum size of the cache.
+
+If a linked list is used with an unordered map is possible to make the solution **O(1)** for both operations (get and put). The map will be
+used to keep a track of all the keys in my list and the pointers to the list nodes of this keys. Every time a action is called we rearrange
+only the node that was used placing it at the front of the list, and this operations are **O(1)** for a list.
+
 {{< highlight cpp >}}
 class LRUCache {
 private:
