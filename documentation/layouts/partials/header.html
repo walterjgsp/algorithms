@@ -1,6 +1,6 @@
 <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/algorithms">
+    <a class="navbar-item" href="{{ .Permalink }}">
       <img class="has-text-link" src="{{ "/img/algorithm.svg" | relURL }}"  >
     </a>
 
@@ -15,11 +15,17 @@
     <div class="navbar-start">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-       <a class="navbar-item" href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} {{end}}>
+       <a class="navbar-item" href="{{ .URL | absLangURL }}" {{if  $currentPage.IsMenuCurrent "main" . }} {{end}}>
          {{ .Name }}
        </a>
      {{end}}
 
+    </div>
+
+    <div class="navbar-end">
+        {{ range $.Site.Home.AllTranslations }}
+        <a class="navbar-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
     </div>
   </div>
 </nav>

@@ -4,6 +4,17 @@ title= "Algorithms"
 pygmentsUseClasses=true
 description = "Repository of algorithms, problems and structures that i have learned to help me and the others if needed."
 Paginate = 5
+
+[languages]
+  [languages.en]
+    contentDir = "content/english"
+    languageName = "English"
+    weight = 10
+  [languages.pt]
+    contentDir = "content/portuguese"
+    languageName = "Português"
+    weight = 20
+
 [Params]
   RSSLink = "/index.xml"
   author = "walterjgsp" # add your company name
@@ -11,11 +22,22 @@ Paginate = 5
   twitter = "" # add your twitter profile
   email = "walterjgsp@gmail.com"
 
-[[menu.main]]
+[[languages.pt.menu.main]]
+    name = "Problemas"
+    weight = -100
+    url = "pt/problems/"
+
+[[languages.pt.menu.main]]
+    name = "FAQ"
+    weight = -90
+    url = "pt/faq/"
+
+[[languages.en.menu.main]]
     name = "Problems"
     weight = -100
     url = "/problems/"
-[[menu.main]]
+
+[[languages.en.menu.main]]
     name = "FAQ"
     weight = -90
     url = "/faq/"

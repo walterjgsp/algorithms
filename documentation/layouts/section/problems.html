@@ -7,17 +7,15 @@
     <div class="hero-body has-text-centered">
       <h1 class="title is-size-1" >{{.Title}}</h1>
       <p class="subtitle is-size-5 has-text-grey">{{.Params.description}}<br></p>
+      <div class="buttons has-addons is-centered filter-button-group">
+        <span class="button" data-filter="Easy">Easy</span>
+        <span class="button" data-filter="Medium">Medium</span>
+        <span class="button" data-filter="Hard">Hard</span>
+      </div>
     </div>
   </section>
 
   <div class="container">
-
-    <div class="buttons has-addons is-centered filter-button-group">
-      <span class="button" data-filter="Easy">Easy</span>
-      <span class="button" data-filter="Medium">Medium</span>
-      <span class="button" data-filter="Hard">Hard</span>
-    </div>
-
     <div class="grid">
       <div class="grid-sizer"></div>
       <div class="gutter-sizer"></div>
@@ -69,7 +67,7 @@
 
     $('.filter-button-group').on( 'click', '.button', function() {
       var filterValue = $(this).attr('data-filter');
-      $(this).toggleClass("is-active")
+      $(this).toggleClass("is-active is-link")
       filterMap.has(filterValue) ? filterMap.delete(filterValue) :  filterMap.add(filterValue)
       $('.grid').isotope();
     });
