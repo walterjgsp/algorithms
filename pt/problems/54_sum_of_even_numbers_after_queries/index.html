@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Sum of Even Numbers After Queries </title>
+
+    
+    <meta name="description" content="Given an array A of integers, and an array queries of queries return the answer to all queries."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/54_sum_of_even_numbers_after_queries/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/54_sum_of_even_numbers_after_queries/">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Sum of Even Numbers After Queries</h1>
+        <span class="tag has-text-white level_tag" value=0 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>We have an array A of integers, and an array queries of queries.</p>
+
+<p>For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index]. Then, the answer to the i-th query is the sum of the even values of A.</p>
+
+<p>(Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.)</p>
+
+<p>Return the answer to all queries. Your answer array should have answer[i] as the answer to the i-th query.</p>
+
+<h2 class="title is-4"> Questions to ask </h2>
+
+<p>Is the input array mutable or read only? Mutable</p>
+
+<p>Can i have negative numbers in my input array? Yes</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>To solve this problem we gonna keep an auxiliary variable to keep a track of the sum of all even values in the array. So, we loop through adding
+the value to this variable if it is even. Now we need to apply the changes proposed by the queries and also track the new sum. To do this we use simple math.
+If the query index has a even value we subtract this value from the variable with the total sum of even values, we appply the change and if the new value
+is even we add to the variable and also in the result array.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sumEvenAfterQueries</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">queries</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">actual_sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">value</span><span class="p">:</span><span class="n">A</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">value</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">actual_sum</span><span class="o">+=</span><span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">query</span> <span class="p">:</span> <span class="n">queries</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">position</span> <span class="o">=</span> <span class="n">query</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">to_sum</span> <span class="o">=</span> <span class="n">query</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">position</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">actual_sum</span><span class="o">-=</span><span class="n">A</span><span class="p">[</span><span class="n">position</span><span class="p">];</span>
+
+        <span class="n">A</span><span class="p">[</span><span class="n">position</span><span class="p">]</span><span class="o">+=</span><span class="n">to_sum</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">position</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">actual_sum</span><span class="o">+=</span><span class="n">A</span><span class="p">[</span><span class="n">position</span><span class="p">];</span>
+
+        <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">actual_sum</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Time Complexity: <strong>O(n+m)</strong> where n is the size of the initial array and m the number of queries.</p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

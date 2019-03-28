@@ -52,7 +52,7 @@
   <body>
     <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/algorithms">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/problems/">
       <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
     </a>
 
@@ -67,15 +67,23 @@
     <div class="navbar-start">
       
       
-       <a class="navbar-item" href="/algorithms/problems/"  >
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/problems/"  >
          Problems
        </a>
      
-       <a class="navbar-item" href="/algorithms/faq/" >
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/faq/" >
          FAQ
        </a>
      
 
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
     </div>
   </div>
 </nav>
@@ -86,17 +94,15 @@
     <div class="hero-body has-text-centered">
       <h1 class="title is-size-1" >Problems</h1>
       <p class="subtitle is-size-5 has-text-grey">List of solved problems<br></p>
+      <div class="buttons has-addons is-centered filter-button-group">
+        <span class="button" data-filter="Easy">Easy</span>
+        <span class="button" data-filter="Medium">Medium</span>
+        <span class="button" data-filter="Hard">Hard</span>
+      </div>
     </div>
   </section>
 
   <div class="container">
-
-    <div class="buttons has-addons is-centered filter-button-group">
-      <span class="button" data-filter="Easy">Easy</span>
-      <span class="button" data-filter="Medium">Medium</span>
-      <span class="button" data-filter="Hard">Hard</span>
-    </div>
-
     <div class="grid">
       <div class="grid-sizer"></div>
       <div class="gutter-sizer"></div>
@@ -331,6 +337,20 @@
         </a>
       </div>
       
+      <div class="grid-item">
+        <a href="http://walterjgsp.github.io/algorithms/problems/85_sliding_window_maximum/">
+          <div class="box">
+            <h4 class="has-text-link">Sliding Window Maximum</h4>
+            <p class="is-divider is-marginless"></p>
+            <p class="has-text-justified">Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.</p>
+            <span class="tag has-text-white level_tag" value=2 ></span>
+            
+              <span class="tag has-text-white language_tag" value=C&#43;&#43; >C&#43;&#43;</span>
+            
+          </div>
+        </a>
+      </div>
+      
 
     </div>
   </div>
@@ -364,7 +384,7 @@
 
     $('.filter-button-group').on( 'click', '.button', function() {
       var filterValue = $(this).attr('data-filter');
-      $(this).toggleClass("is-active")
+      $(this).toggleClass("is-active is-link")
       filterMap.has(filterValue) ? filterMap.delete(filterValue) :  filterMap.add(filterValue)
       $('.grid').isotope();
     });

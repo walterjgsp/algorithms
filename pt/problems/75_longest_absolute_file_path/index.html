@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Longest Absolute File Path </title>
+
+    
+    <meta name="description" content="Given a string representing the file system in the above format, return the length of the longest absolute path to file in the abstracted file system. If there is no file in the system, return 0."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/75_longest_absolute_file_path/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/75_longest_absolute_file_path/">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Longest Absolute File Path</h1>
+        <span class="tag has-text-white level_tag" value=1 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Suppose we abstract our file system by a string in the following manner:</p>
+
+<p>The string <strong>&ldquo;dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext&rdquo;</strong> represents:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">dir</span>
+    <span class="n">subdir1</span>
+    <span class="n">subdir2</span>
+        <span class="n">file</span><span class="p">.</span><span class="n">ext</span>
+</code></pre></div>
+
+<p>The directory dir contains an empty sub-directory subdir1 and a sub-directory subdir2 containing a file file.ext.</p>
+
+<p>The string <strong>&ldquo;dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext&rdquo;</strong> represents:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">dir</span>
+    <span class="n">subdir1</span>
+        <span class="n">file1</span><span class="p">.</span><span class="n">ext</span>
+        <span class="n">subsubdir1</span>
+    <span class="n">subdir2</span>
+        <span class="n">subsubdir2</span>
+            <span class="n">file2</span><span class="p">.</span><span class="n">ext</span>
+</code></pre></div>
+
+<p>The directory dir contains two sub-directories subdir1 and subdir2. subdir1 contains a file file1.ext
+and an empty second-level sub-directory subsubdir1. subdir2 contains a second-level
+sub-directory subsubdir2 containing a file file2.ext.</p>
+
+<p>We are interested in finding the longest (number of characters) absolute path to
+a file within our file system. For example, in the second example above, the longest
+absolute path is <em>&ldquo;dir/subdir2/subsubdir2/file2.ext&rdquo;</em>, and its length is 32 (not including the double quotes).</p>
+
+<p>Given a string representing the file system in the above format, return the
+length of the longest absolute path to file in the abstracted file system.
+If there is no file in the system, return 0.</p>
+
+<p>Note:</p>
+
+<pre><code>The name of a file contains at least a . and an extension.
+The name of a directory or sub-directory will not contain a ..
+</code></pre>
+
+<p>Time complexity required: O(n) where n is the size of the input string.</p>
+
+<p>Notice that a/aa/aaa/file1.txt is not the longest file path, if there is another path aaaaaaaaaaaaaaaaaaaaa/sth.png.</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>Let&rsquo;s break the problem in smaller subproblems that are simple to solve, in the end we going to have the full solution.</p>
+
+<p>The first problem is how to split the string in a way that we can determine who is parent of who? Observing the problem statement
+we can split in the &lsquo;\n&rsquo; character and determine who is parent of who based on the number of &lsquo;\t&rsquo;. Writing a function in
+C++ to do this and return an array, we have:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">splitInput</span><span class="p">(</span><span class="n">string</span> <span class="n">input</span><span class="p">){</span>
+  <span class="n">stringstream</span> <span class="n">ss</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">temp</span><span class="p">;</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span><span class="sc">&#39;\n&#39;</span><span class="p">)){</span>
+      <span class="n">arr</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>When getline is used the input string is splitted and in the same time the divider (&rsquo;\n&rsquo;) is removed from the string.</p>
+
+<p>Now, we a way to get the depth of each string in the array we retrieve. One way to do this is looking for the &lsquo;\t&rsquo;.
+We create now another function that remove the depth from an input string and at the same time return how much was removed.
+To solve this problem we are going to make a DFS on the paths. So, if the depth of our stack is bigger then the depth of the folder or file
+we are processing, we remove elements until the depth are the same.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">removeDepth</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">in</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">index</span><span class="o">&lt;</span><span class="n">in</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">in</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">==</span><span class="sc">&#39;\t&#39;</span><span class="p">){</span>
+        <span class="n">index</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">depth</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">in</span> <span class="o">=</span> <span class="n">in</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="n">in</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+    <span class="k">return</span> <span class="n">depth</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>One of the important parts of the problem is that we can consider only file paths. This means that if we don&rsquo;t have a file, the
+path can be longest but will not count. To make the code more modular we make a function to check if a string represents a file:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">bool</span> <span class="nf">isFile</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">file</span><span class="p">){</span>
+    <span class="n">size_t</span> <span class="n">found</span><span class="o">=</span><span class="n">file</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="sc">&#39;.&#39;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">found</span><span class="o">!=</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Now, the only information missing is the size of the path:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">filePathSize</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">pathSize</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">path</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">pathSize</span><span class="o">+=</span><span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">pathSize</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Bringing everything together:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">lengthLongestPath</span><span class="p">(</span><span class="n">string</span> <span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">splitInput</span><span class="p">(</span><span class="n">input</span><span class="p">),</span><span class="n">helper</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">longest</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">depth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">s</span><span class="p">:</span><span class="n">arr</span><span class="p">){</span>
+        <span class="n">depth</span> <span class="o">=</span> <span class="n">removeDepth</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">depth</span><span class="o">&lt;</span><span class="n">helper</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+            <span class="n">helper</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+        <span class="n">helper</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">isFile</span><span class="p">(</span><span class="n">helper</span><span class="p">.</span><span class="n">back</span><span class="p">())){</span>
+            <span class="n">longest</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">longest</span><span class="p">,</span><span class="n">filePathSize</span><span class="p">(</span><span class="n">helper</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">longest</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

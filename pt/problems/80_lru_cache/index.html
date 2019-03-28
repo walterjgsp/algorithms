@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> LRU Cache </title>
+
+    
+    <meta name="description" content="Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/80_lru_cache/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/80_lru_cache/">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >LRU Cache</h1>
+        <span class="tag has-text-white level_tag" value=2 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.</p>
+
+<p>get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity,
+it should invalidate the least recently used item before inserting a new item.</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>In the LRU Cache the least used recent key is evicted from the memory. One way to keep a track of key usage is keeping the key in one
+of the extremities on the selected structure to simulate the memory. Every time that a key is used (being the actions of get or put)
+the value will be placed at the start, and before the put operation remove the least used key if the maximum size of the array was already
+reached.</p>
+
+<p>One solution is to keep an array of keys, and each time the functions are called the array is rearranged to match the condition stated.
+This make the solution <strong>O(n*m)</strong> where n is the number of operations and m the maximum size of the cache.</p>
+
+<p>If a linked list is used with an unordered map is possible to make the solution <strong>O(1)</strong> for both operations (get and put). The map will be
+used to keep a track of all the keys in my list and the pointers to the list nodes of this keys. Every time a action is called we rearrange
+only the node that was used placing it at the front of the list, and this operations are <strong>O(1)</strong> for a list.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">LRUCache</span> <span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="k">struct</span> <span class="n">Node</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">;</span>
+    <span class="n">Node</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">){</span>
+      <span class="n">key</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">v</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="o">&gt;</span> <span class="n">mapping</span><span class="p">;</span>
+  <span class="n">list</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">lru</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">maxSize</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">LRUCache</span><span class="p">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">maxSize</span> <span class="o">=</span> <span class="n">capacity</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">get</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">mapping</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!=</span><span class="n">mapping</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span>
+          <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
+          <span class="n">lru</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]);</span>
+          <span class="n">addFront</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">val</span><span class="p">);</span>
+          <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">removeBack</span><span class="p">(){</span>
+      <span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">lru</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+      <span class="kt">int</span> <span class="n">key</span> <span class="o">=</span> <span class="n">it</span><span class="p">.</span><span class="n">key</span><span class="p">;</span>
+      <span class="n">lru</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+      <span class="k">return</span> <span class="n">key</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">addFront</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
+      <span class="n">lru</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">val</span><span class="p">));</span>
+      <span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">lru</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">put</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">mapping</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!=</span><span class="n">mapping</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span>
+          <span class="n">lru</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">mapping</span><span class="p">[</span><span class="n">key</span><span class="p">]);</span>
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">lru</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;=</span><span class="n">maxSize</span><span class="p">){</span>
+          <span class="n">mapping</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">removeBack</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="n">addFront</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

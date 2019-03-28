@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms Repository on Algorithms</title>
+    <link>http://walterjgsp.github.io/algorithms/pt/</link>
+    <description>Recent content in Algorithms Repository on Algorithms</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Mar 2019 19:06:02 -0300</lastBuildDate>
+    
+	<atom:link href="http://walterjgsp.github.io/algorithms/pt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sliding Window Maximum</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/85_sliding_window_maximum/</link>
+      <pubDate>Thu, 28 Mar 2019 19:06:02 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/85_sliding_window_maximum/</guid>
+      <description>Problem Statement  Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+Questions to ask  Can i have negative numbers in my input array? Yes
+Solution  vector&amp;lt;int&amp;gt; maxSlidingWindow(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) {deque&amp;lt;int&amp;gt; indexes;vector&amp;lt;int&amp;gt; result;for(int i=0;i&amp;lt;nums.</description>
+    </item>
+    
+    <item>
+      <title>LRU Cache</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/80_lru_cache/</link>
+      <pubDate>Wed, 20 Mar 2019 21:46:11 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/80_lru_cache/</guid>
+      <description>Problem Statement  Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Container With Most Water</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/79_container_with_most_water/</link>
+      <pubDate>Wed, 20 Mar 2019 06:40:40 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/79_container_with_most_water/</guid>
+      <description>Problem Statement  Given n non-negative integers a1, a2, &amp;hellip;, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Note: You may not slant the container and n is at least 2.</description>
+    </item>
+    
+    <item>
+      <title>Word Break</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/78_word_break/</link>
+      <pubDate>Mon, 18 Mar 2019 21:21:57 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/78_word_break/</guid>
+      <description>Problem Statement  Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+Note:
+The same word in the dictionary may be reused multiple times in the segmentation.
+You may assume the dictionary does not contain duplicate words.
+Solution  Starting from the end to the start, we break the string in two parts from.</description>
+    </item>
+    
+    <item>
+      <title>Longest Absolute File Path</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/75_longest_absolute_file_path/</link>
+      <pubDate>Thu, 14 Mar 2019 09:29:55 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/75_longest_absolute_file_path/</guid>
+      <description>Problem Statement  Suppose we abstract our file system by a string in the following manner:
+The string &amp;ldquo;dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext&amp;rdquo; represents:
+dirsubdir1subdir2file.ext  The directory dir contains an empty sub-directory subdir1 and a sub-directory subdir2 containing a file file.ext.
+The string &amp;ldquo;dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext&amp;rdquo; represents:
+dirsubdir1file1.extsubsubdir1subdir2subsubdir2file2.ext  The directory dir contains two sub-directories subdir1 and subdir2. subdir1 contains a file file1.ext and an empty second-level sub-directory subsubdir1.</description>
+    </item>
+    
+    <item>
+      <title>Min Cost Climbing Stairs</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/74_min_cost_clibing_stairs/</link>
+      <pubDate>Wed, 13 Mar 2019 21:30:24 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/74_min_cost_clibing_stairs/</guid>
+      <description>Problem Statement  On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Solution  To solve this problem we going to use dynamic programming.</description>
+    </item>
+    
+    <item>
+      <title>Sum of Even Numbers After Queries</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/54_sum_of_even_numbers_after_queries/</link>
+      <pubDate>Wed, 13 Mar 2019 09:02:23 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/54_sum_of_even_numbers_after_queries/</guid>
+      <description>Problem Statement  We have an array A of integers, and an array queries of queries.
+For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index]. Then, the answer to the i-th query is the sum of the even values of A.
+(Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.)
+Return the answer to all queries.</description>
+    </item>
+    
+    <item>
+      <title>Anagrams</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/06_anagrams/</link>
+      <pubDate>Wed, 13 Mar 2019 06:58:22 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/06_anagrams/</guid>
+      <description>Problem Statement  Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.
+Any characters can be deleted from either of the strings.
+Questions to ask  Characters in the string are only lowercase? Yes
+Can special characters exist in the string? No
+Solution  The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string.</description>
+    </item>
+    
+    <item>
+      <title>Valid Anagram</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/37_valid_anagram/</link>
+      <pubDate>Wed, 13 Mar 2019 06:57:57 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/37_valid_anagram/</guid>
+      <description>Problem Statement  Given two strings s and t , write a function to determine if t is an anagram of s.
+Questions to ask  Characters in the string are only lowercase? Yes
+Can special characters exist in the string? No
+Solution  The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string.</description>
+    </item>
+    
+    <item>
+      <title>Advantage Shuffle</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/04_advantage_suffle/</link>
+      <pubDate>Mon, 11 Mar 2019 21:14:47 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/04_advantage_suffle/</guid>
+      <description>Problem Statement  Given two arrays A and B of equal size, the advantage of A with respect to B is the number of indices i for which A[i] &amp;gt; B[i].
+Return any permutation of A that maximizes its advantage with respect to B.
+Questions to ask  Is the input array already sorted? Not sorted
+Is the input array mutable or read only? Mutable
+Can i have negative numbers in my input array?</description>
+    </item>
+    
+    <item>
+      <title>Sort Array By Parity</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/27_sort_array_parity/</link>
+      <pubDate>Sat, 09 Mar 2019 14:29:27 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/27_sort_array_parity/</guid>
+      <description>Problem Statement  Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
+You may return any answer array that satisfies this condition.
+Questions to ask  Is the input array mutable or read only? Mutable
+Can i have negative numbers in my input array? Yes
+Solution  There are two solutions for this problem with time complexity O(n) with just one pass in the array.</description>
+    </item>
+    
+    <item>
+      <title>Squares of a Sorted Array</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/71_squares_of_sorted_array/</link>
+      <pubDate>Sat, 09 Mar 2019 01:26:01 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/71_squares_of_sorted_array/</guid>
+      <description>Problem Statement  Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Questions to ask  Can i have negative numbers in my input array?
+Is the input array mutable or read only?
+Solution  The naive solution is to traverse the array calculating the square of each value and adding the result in a array to return.</description>
+    </item>
+    
+    <item>
+      <title>Edit Distance</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/65_edit_distance/</link>
+      <pubDate>Sat, 02 Mar 2019 15:26:52 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/65_edit_distance/</guid>
+      <description>Problem Statement  Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word:
+ Insert a character Delete a character Replace a character    Solution 
+If word1 = &amp;ldquo;horse&amp;rdquo; and word2 = &amp;ldquo;ros&amp;rdquo;, how can we solve the problem? In a first look the problem seens much more complex than it is.</description>
+    </item>
+    
+    <item>
+      <title>Add Two Numbers</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/03_add_two_numbers/</link>
+      <pubDate>Mon, 18 Feb 2019 21:24:09 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/03_add_two_numbers/</guid>
+      <description>Problem Statement  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Solution  Assuming a list node like this:
+struct ListNode {int val;ListNode *next;ListNode(int x) : val(x), next(NULL) {}};  Since the digits are already stored in reverse order with the less significant value first and the return must be the same way, is only necessary to execute the add operation in each value taking care to not lose any pointer and avoid access to null pointer nodes.</description>
+    </item>
+    
+    <item>
+      <title>Add One Row to Tree</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/02_add_one_row_to_tree/</link>
+      <pubDate>Mon, 18 Feb 2019 19:24:15 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/02_add_one_row_to_tree/</guid>
+      <description>Problem Statement  Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.
+The adding rule is: given a positive integer depth d, for each NOT null tree nodes N in depth d-1, create two tree nodes with value v as N&amp;rsquo;s left subtree root and right subtree root.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://walterjgsp.github.io/algorithms/pt/faq/how_to_c/</link>
+      <pubDate>Sun, 17 Feb 2019 19:22:35 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/faq/how_to_c/</guid>
+      <description>Todo código feito para C++ usa a versão C++14. Para compilar execute o seguinte comando:
+g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt; E para rodar o código e verificar os resultados:
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Two Sum</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/01_two_sum/</link>
+      <pubDate>Sat, 16 Feb 2019 19:37:40 -0200</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/01_two_sum/</guid>
+      <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Questions to ask  Is the input array already sorted? No
+Is the input array mutable or read only? Mutable
+Solution  There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://walterjgsp.github.io/algorithms/pt/faq/how_to_kotlin/</link>
+      <pubDate>Sun, 17 Feb 2019 19:30:50 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/faq/how_to_kotlin/</guid>
+      <description>Para compilar código em Kotlin use o seguinte comando:
+kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar E para executar o código:
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,21 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Mar 2019 21:46:11 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2019 19:06:02 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sliding Window Maximum</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/85_sliding_window_maximum/</link>
+      <pubDate>Thu, 28 Mar 2019 19:06:02 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/85_sliding_window_maximum/</guid>
+      <description>Problem Statement  Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+Questions to ask  Can i have negative numbers in my input array? Yes
+Solution  vector&amp;lt;int&amp;gt; maxSlidingWindow(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) {deque&amp;lt;int&amp;gt; indexes;vector&amp;lt;int&amp;gt; result;for(int i=0;i&amp;lt;nums.</description>
+    </item>
     
     <item>
       <title>LRU Cache</title>

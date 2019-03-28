@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Edit Distance </title>
+
+    
+    <meta name="description" content="Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/65_edit_distance/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/65_edit_distance/">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Edit Distance</h1>
+        <span class="tag has-text-white level_tag" value=2 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Given two words <strong>word1</strong> and <strong>word2</strong>, find the minimum number of operations required to convert <strong>word1</strong> to <strong>word2</strong>.</p>
+
+<p>You have the following 3 operations permitted on a word:</p>
+
+<div class="margin_left">
+  <ol>
+    <li>Insert a character</li>
+    <li>Delete a character</li>
+    <li>Replace a character</li>
+  </ol>
+</div>
+
+<p><br/>
+<h2 class="title is-5"> Solution </h2></p>
+
+<p>If <strong>word1</strong> = &ldquo;horse&rdquo; and <strong>word2</strong> = &ldquo;ros&rdquo;, how can we solve the problem? In a first look the problem seens much more complex
+than it is. In an attempt to make simple, let&rsquo;s break it in smaller problems a go back to these words latter.</p>
+
+<p>How many operations do we need to convert an empty string &ldquo; &rdquo; into &ldquo;ab&rdquo;? The answer is easy, using the insert operation in two moves
+we can insert character &ldquo;a&rdquo; and &ldquo;b&rdquo; into the empty string. And the opposite? Also easy, we can delete the characters in two operations.
+And what about having two strings with only one character that area equal (&ldquo;a&rdquo; and &ldquo;a&rdquo;)? No movements needed there. And two different
+characters (&ldquo;a&rdquo; and &ldquo;b&rdquo;)? Also one operation, replace a character. Now we know how to treat the basic cases, 10% of the problem is solved.</p>
+
+<p>We now know the operations we can execute on <strong>word1</strong>, but, how we represent then? Treating a string as an array of characters and using
+one index in each word (<strong>index1</strong> for <strong>word1</strong> and <strong>index2</strong> for <strong>word2</strong>).</p>
+
+<p><strong>Insert</strong></p>
+
+<p>From the first index (<strong>index1 = 0</strong> and <strong>index2 = 0</strong>) in both words keep the index of the first word and add 1 in <strong>index2</strong>. This means that
+i don&rsquo;t have more problem with the first position on <strong>word2</strong> is already solved, i inserted the right character, so let&rsquo;s go to the other
+character but keeping the same index on <strong>word1</strong> since i&rsquo;m still processing it.</p>
+
+<p><strong>Replace</strong></p>
+
+<p>Both indexes increment since we have made the replacement operation and made both values equal, so i go to the next position.</p>
+
+<p><strong>Delete</strong></p>
+
+<p>Deletion is the opposite of insertion. When in insertion we keep the <strong>index1</strong> in deletion we ignore this index, meaning remove the character,
+and keep the <strong>index2</strong> the same because we still need to find a match.</p>
+
+<p>I imagine that this complete know 30% of our problem. We already know the basic cases and how to implement each operation on a atomic
+base.</p>
+
+<p>I found easier to implement starting from the end, this way, when an index is smaller than 0 means that my word ended and i need to return
+only the value of the other index plus 1. But the logic is the same regards the way you decide to go: from one index get the minimum of
+all three operations being applied if the character value for the arrays are different.</p>
+
+<p>With this in mind we can come up with the simple algorithm for treating individual characters of a string:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">minDistance</span><span class="p">(</span><span class="n">string</span> <span class="n">word1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index1</span><span class="p">,</span> <span class="n">string</span> <span class="n">word2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index2</span><span class="p">){</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">index1</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">index2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">index2</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">word1</span><span class="p">[</span><span class="n">index1</span><span class="p">]</span><span class="o">==</span><span class="n">word2</span><span class="p">[</span><span class="n">index2</span><span class="p">])</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">min</span><span class="p">(</span><span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="n">distance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>With this code you solve the problem, but the complexity of this implementation is exponential O(2<sup>n</sup>).
+That is not a good solution. How can we make our code better?</p>
+
+<p>If we observe the solution, we process some pair of indexes more than one time and we can solve the problem by solving smaller parts
+of the problem (<strong>overlapping sub-problems</strong>). Other condition is that an optimal solution can be constructed from optimal solutions
+of the subproblems (<strong>optimal substructure</strong>). This two are necessary conditions to apply dynamic programming. Doing with memoization, keeping a
+track of all the solved subproblems using the index as a key of a map, we have the following code.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">memo</span><span class="p">;</span>
+
+<span class="n">minDistance</span><span class="p">(</span><span class="n">string</span> <span class="n">word1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index1</span><span class="p">,</span> <span class="n">string</span> <span class="n">word2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index2</span><span class="p">){</span>
+  <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">key</span> <span class="o">=</span> <span class="n">make_pair</span><span class="p">(</span><span class="n">index1</span><span class="p">,</span><span class="n">index2</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">memo</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!=</span><span class="n">memo</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">];</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">index1</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">index2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">index2</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">index1</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">word1</span><span class="p">[</span><span class="n">index1</span><span class="p">]</span><span class="o">==</span><span class="n">word2</span><span class="p">[</span><span class="n">index2</span><span class="p">])</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">min</span><span class="p">(</span><span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">word2</span><span class="p">,</span><span class="n">index2</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">=</span><span class="n">distance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Time complexity : <strong>O(mn)</strong>
+Space complexity : <strong>O(mn)</strong></p>
+
+<p>Where m is the size of word1 and n the size of word2</p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

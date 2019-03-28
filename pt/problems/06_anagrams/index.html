@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Anagrams </title>
+
+    
+    <meta name="description" content="Given two strings, a and b , that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/06_anagrams/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/06_anagrams/">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Anagrams</h1>
+        <span class="tag has-text-white level_tag" value=0 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.</p>
+
+<p>Any characters can be deleted from either of the strings.</p>
+
+<h2 class="title is-4"> Questions to ask </h2>
+
+<p>Characters in the string are only lowercase? Yes</p>
+
+<p>Can special characters exist in the string? No</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and sum the absolute value of each index to a result variable.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">getMinimumDeletionsToAnagram</span><span class="p">(</span><span class="n">string</span> <span class="n">s1</span><span class="p">,</span> <span class="n">string</span> <span class="n">s2</span><span class="p">){</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span><span class="n">s1</span><span class="p">){</span>
+    <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span><span class="n">s2</span><span class="p">){</span>
+    <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">val</span> <span class="p">:</span> <span class="n">count</span><span class="p">){</span>
+    <span class="n">result</span><span class="o">+=</span><span class="n">abs</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Time Complexity: <strong>O(n)</strong></p>
+
+<p>Space Complexity: <strong>O(1)</strong></p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://www.hackerrank.com/>HackerRank</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

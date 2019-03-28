@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Squares of a Sorted Array </title>
+
+    
+    <meta name="description" content="Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/71_squares_of_sorted_array/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/71_squares_of_sorted_array/">
+      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Squares of a Sorted Array</h1>
+        <span class="tag has-text-white level_tag" value=0 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.</p>
+
+<h2 class="title is-4"> Questions to ask </h2>
+
+<p>Can i have negative numbers in my input array?</p>
+
+<p>Is the input array mutable or read only?</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>The naive solution is to traverse the array calculating the square of each value and adding the result in a array to return. After this loop
+we sort the result array and return.</p>
+
+<p>The time complexity of this code is <strong>O(N logn)</strong> that is the cost to sort the array.</p>
+
+<p>A more optimized solution can be achived if we use two pointers and the information that the array is already sorted.</p>
+
+<p>Keep one pointer in the initial position and other in the final position of the input array. Using absolute difference we discover the bigger
+value and we add the square of this value in the result array. The last step is to move the pointer were we found the bigger value,
+if was the initial we increment this pointer, otherwise we decrement the final position pointer. We are going to have a result array sorted in reverse order,
+reverse the array and we found a solution.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortedSquares</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">start</span><span class="o">&lt;=</span><span class="n">end</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">start</span><span class="p">])</span><span class="o">&lt;</span><span class="n">abs</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">end</span><span class="p">])){</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">end</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="n">end</span><span class="p">]);</span>
+            <span class="n">end</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">start</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="n">start</span><span class="p">]);</span>
+            <span class="n">start</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">reverse</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">result</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The time complexity of this code is <strong>O(n)</strong></p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>
