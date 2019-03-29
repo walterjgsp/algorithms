@@ -196,7 +196,7 @@ The adding rule is: given a positive integer depth d, for each NOT null tree nod
       <guid>http://walterjgsp.github.io/algorithms/faq/how_to_c/</guid>
       <description>All the C++ code were done using the C++14 version. To compile use the following command:
 g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt; And to run the code:
-./&amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
     <item>
@@ -220,7 +220,7 @@ Solution  There are three main approaches to solve this problem: Naive, Time Opt
       <guid>http://walterjgsp.github.io/algorithms/faq/how_to_kotlin/</guid>
       <description>To compile use the following command:
 kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar And to run the code:
-java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
   </channel>

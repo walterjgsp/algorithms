@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Two Sum </title>
 
     
-    <meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target."> 
+    <meta name="description" content="Dado um vetor de números inteiros, retorne os índices dos dois números de forma que eles se somem a um alvo específico."> 
     
     
     
@@ -101,47 +101,47 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>Dado um vetor de números inteiros, retorne os índices dos dois números de forma que eles se somem a um alvo específico.</p>
 
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>Você pode assumir que cada entrada teria exatamente uma solução, e você não pode usar o mesmo elemento duas vezes.</p>
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões para fazer </h2>
 
-<p>Is the input array already sorted? No</p>
+<p>O vetor já esta ordenado? Não</p>
 
-<p>Is the input array mutable or read only? Mutable</p>
+<p>O array de entrada é mutável ou somente leitura? Mutável</p>
 
-<h2 class="title is-4"> Solution </h2>
+<h2 class="title is-4"> Solução </h2>
 
-<p>There are three main approaches to solve this problem: <strong>Naive</strong>, <strong>Time Optimized</strong>,<strong>Memory Optimized</strong>.</p>
+<p>Existem três abordagens principais para resolver este problema: <strong>Naive</strong>, <strong>Time Optimized</strong>, <strong>Memory Optimized</strong>.</p>
 
 <p><strong>Naive</strong></p>
 
-<p>The naive approach consists in choosing the first position of the array and matching with the subsequents until we find the target value.
-If we don&rsquo;t find it, we pick the second position and repeat the process. We repeat this process until we find the target value or all the pairs of positions are already tested.</p>
+<p>A abordagem ingênua consiste em escolher a primeira posição da matriz e combinar com os subsequentes até encontrarmos o valor alvo.
+Se não encontrarmos, escolhemos a segunda posição e repetimos o processo. Repetimos esse processo até encontrarmos o valor alvo ou todos os pares de posições já estão testados.</p>
 
-<p>Why should we avoid this naive approach? The time complexity for this solution is <strong>O(n²)</strong>.</p>
+<p>Por que devemos evitar essa abordagem ingênua? A complexidade de tempo para esta solução é <strong>O(n²)</strong>.</p>
 
 <p><strong>Time Optimized</strong></p>
 
-<p>What if we could keep in memory all values that we&rsquo;ve already encountered such that it is possible to query a certain target value, would it help us solve the problem ?</p>
+<p>E se pudéssemos manter na memória todos os valores que já encontramos, de modo que seja possível consultar um determinado valor de destino, isso nos ajudaria a resolver o problema?</p>
 
-<p>The time optimized solution is based on a basic data structure, Map (HashMap).
-With this structure we can keep a track of all the past values and also query if a value was already seen in O(1). How this helps?</p>
+<p>A solução otimizada de tempo é baseada em uma estrutura de dados básica, Map (HashMap).
+Com essa estrutura, podemos manter um controle de todos os valores anteriores e também consultar se um valor já foi visto em O(1). Como isso ajuda?</p>
 
-<p>Let&rsquo;s say we have this kind of input:</p>
+<p>Vamos dizer que temos esse tipo de entrada:</p>
 
 <p><strong>Array =  [2, 11, 7, 15]</strong></p>
 
 <p><strong>Target = 9</strong></p>
 
-<p>If we lookup at the number 2 at the first index, knowing the target value, which is the value that we need to find in the array so that the sum of the two add to the target 9?
-With basic math we find that is 7. The number 7 exists in the array, so i found my answer? Not yet.It is impossible to predict the future, but we can keep a track about the past,
-this is why we use a <strong>map</strong>.</p>
+<p>Se olharmos para o número 2 no primeiro índice, conhecendo o valor alvo, qual é o valor que precisamos encontrar no array para que a soma dos dois seja adicionada ao alvo 9?
+Com matemática básica, achamos que é 7. O número 7 existe na matriz, então eu encontrei a minha resposta? Ainda não. É impossível prever o futuro, mas podemos acompanhar o passado,
+É por isso que usamos um <strong>map</strong>.</p>
 
-<p>In this approach, we traverse the array, looking for | target - number|, if we find it voilà! Otherwise, we add the value the current value on our map and proceed</p>
+<p>Nesta abordagem, percorremos o array, procurando por | target - number |, se acharmos voilà! Caso contrário, adicionamos o valor ao valor atual em nosso mapa e prosseguimos</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">index_val</span><span class="p">;</span>
@@ -160,30 +160,30 @@ this is why we use a <strong>map</strong>.</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>With this approach we have the following complexity:</p>
+<p>Com essa abordagem, temos a seguinte complexidade:</p>
 
-<p>Time Complexity : <strong>O(n)</strong></p>
+<p>Complexidade do Tempo: <strong>O(n)</strong></p>
 
-<p>Space Complexity : <strong>O(n)</strong></p>
+<p>Complexidade do espaço: <strong>O(n)</strong></p>
 
-<p>where n is the number of elements in the array.</p>
+<p>onde n é o número de elementos no vetor.</p>
 
 <p><strong>Memory Optimized</strong></p>
 
-<p>Let&rsquo;s assume that we don&rsquo;t have memory to spend when trying to solve this problem, and we just want to know if two values exists in the array, how we address it now?
-If we can, we sort the array.</p>
+<p>Vamos supor que não temos memória para gastar ao tentar resolver este problema, e apenas queremos saber se existem dois valores na matriz, como o endereçamos agora?
+Se pudermos, ordenamos o array.</p>
 
-<p>With the array sorted we keep two pointers, one pointing to the first position of the array and the other pointing to the last. We get the two values of each pointer
-and compare the result of the sum to the target. If the result is bigger than our target, we need to move the biggest pointer down, so our sum is smaller. Otherwise,
-if we need to make result bigger, we increment the pointer with the smaller value (the one pointing to the first positon).</p>
+<p>Com o array ordenado, mantemos dois ponteiros, um apontando para a primeira posição do array e o outro apontando para o último. Nós obtemos os dois valores de cada ponteiro
+e compare o resultado da soma ao alvo. Se o resultado for maior que o nosso alvo, precisamos mover o maior ponteiro para baixo, então nossa soma é menor. De outra forma,
+se precisarmos aumentar o resultado, incrementamos o ponteiro com o valor menor (aquele que aponta para a primeira posição).</p>
 
-<p>With this approach we have the following complexity:</p>
+<p>Com essa abordagem, temos a seguinte complexidade:</p>
 
-<p>Time Complexity : <strong>O(nlogn)</strong></p>
+<p>Complexidade do Tempo: <strong>O(nlogn)</strong></p>
 
-<p>Space Complexity : <strong>O(1)</strong></p>
+<p>Complexidade do espaço: <strong>O(1)</strong></p>
 
-<p>where n is the number of elements in the array.</p>
+<p>onde n é o número de elementos no vetor.</p>
 
 
     <br/>

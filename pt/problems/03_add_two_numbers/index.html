@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -126,7 +126,7 @@ value taking care to not lose any pointer and avoid access to null pointer nodes
 
 <p>The solution become simple and the implementation straightforward.</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ListNode</span><span class="o">*</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ListNode</span><span class="o">*</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">ListNode</span> <span class="o">*</span><span class="n">dummy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="o">*</span><span class="n">it</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">carry</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 
@@ -156,7 +156,7 @@ value taking care to not lose any pointer and avoid access to null pointer nodes
 
   <span class="k">return</span> <span class="n">dummy</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 
 <p>Time complexity <strong>O(max(n,m))</strong> where n is the size of list1 and m the size of list2</p>
 

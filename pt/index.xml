@@ -196,7 +196,7 @@ The adding rule is: given a positive integer depth d, for each NOT null tree nod
       <guid>http://walterjgsp.github.io/algorithms/pt/faq/how_to_c/</guid>
       <description>Todo código feito para C++ usa a versão C++14. Para compilar execute o seguinte comando:
 g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt; E para rodar o código e verificar os resultados:
-./&amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
     <item>
@@ -205,11 +205,11 @@ g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;g
       <pubDate>Sat, 16 Feb 2019 19:37:40 -0200</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/pt/problems/01_two_sum/</guid>
-      <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Questions to ask  Is the input array already sorted? No
-Is the input array mutable or read only? Mutable
-Solution  There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
+      <description>Enunciado do problema  Dado um vetor de números inteiros, retorne os índices dos dois números de forma que eles se somem a um alvo específico.
+Você pode assumir que cada entrada teria exatamente uma solução, e você não pode usar o mesmo elemento duas vezes.
+Questões para fazer  O vetor já esta ordenado? Não
+O array de entrada é mutável ou somente leitura? Mutável
+Solução  Existem três abordagens principais para resolver este problema: Naive, Time Optimized, Memory Optimized.</description>
     </item>
     
     <item>
@@ -220,7 +220,7 @@ Solution  There are three main approaches to solve this problem: Naive, Time Opt
       <guid>http://walterjgsp.github.io/algorithms/pt/faq/how_to_kotlin/</guid>
       <description>Para compilar código em Kotlin use o seguinte comando:
 kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar E para executar o código:
-java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
   </channel>

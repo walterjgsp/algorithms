@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -121,7 +121,7 @@ This make the solution <strong>O(n*m)</strong> where n is the number of operatio
 used to keep a track of all the keys in my list and the pointers to the list nodes of this keys. Every time a action is called we rearrange
 only the node that was used placing it at the front of the list, and this operations are <strong>O(1)</strong> for a list.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">LRUCache</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span><span class="err"> </span><span class="nc">LRUCache</span> <span class="p">{</span>
 <span class="k">private</span><span class="o">:</span>
   <span class="k">struct</span> <span class="n">Node</span><span class="p">{</span>
     <span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">;</span>

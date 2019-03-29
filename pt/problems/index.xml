@@ -194,11 +194,11 @@ The adding rule is: given a positive integer depth d, for each NOT null tree nod
       <pubDate>Sat, 16 Feb 2019 19:37:40 -0200</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/pt/problems/01_two_sum/</guid>
-      <description>Problem Statement  Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Questions to ask  Is the input array already sorted? No
-Is the input array mutable or read only? Mutable
-Solution  There are three main approaches to solve this problem: Naive, Time Optimized,Memory Optimized.</description>
+      <description>Enunciado do problema  Dado um vetor de números inteiros, retorne os índices dos dois números de forma que eles se somem a um alvo específico.
+Você pode assumir que cada entrada teria exatamente uma solução, e você não pode usar o mesmo elemento duas vezes.
+Questões para fazer  O vetor já esta ordenado? Não
+O array de entrada é mutável ou somente leitura? Mutável
+Solução  Existem três abordagens principais para resolver este problema: Naive, Time Optimized, Memory Optimized.</description>
     </item>
     
   </channel>
