@@ -84,3 +84,7 @@ public:
     }
 };
 {{< /highlight >}}
+
+Time complexity for both operations: **O(1)**
+
+Space complexity : **O(n)**
