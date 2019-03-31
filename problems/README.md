@@ -87,3 +87,4 @@ List of solved problems
 | 83    | Best Sightseeing Pair                               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/best-sightseeing-pair/)                               |
 | 84    | Copy List with Random Pointer                       | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/copy-list-with-random-pointer/)                       |
 | 85    | Sliding Window Maximum                              | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/sliding-window-maximum/)                              |
+| 86    | Trapping Rain Water                                 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/trapping-rain-water/)                                 |

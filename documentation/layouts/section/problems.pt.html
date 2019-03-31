@@ -1,0 +1,83 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main"}}
+<div id="main">
+  <section class="hero ">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-size-1" >{{.Title}}</h1>
+      <p class="subtitle is-size-5 has-text-grey">{{.Params.description}}<br></p>
+      <div class="buttons has-addons is-centered filter-button-group">
+        <span class="button" data-filter="Easy">Fácil</span>
+        <span class="button" data-filter="Medium">Médio</span>
+        <span class="button" data-filter="Hard">Difícil</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <div class="gutter-sizer"></div>
+      {{ range .Data.Pages.ByDate }}
+      <div class="grid-item">
+        <a href="{{ .Permalink }}">
+          <div class="box">
+            <h4 class="has-text-link">{{ .Title }}</h4>
+            <p class="is-divider is-marginless"></p>
+            <p class="has-text-justified">{{ .Params.description }}</p>
+            <span class="tag has-text-white level_tag" value={{ .Params.level }} ></span>
+            {{ range $i, $language :=  .Params.languages }}
+              <span class="tag has-text-white language_tag" value={{ $language }} >{{ $language }}</span>
+            {{ end }}
+          </div>
+        </a>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+
+  <br/>
+  <script type="text/javascript">
+
+    let filterMap = new Set();
+
+    $.each($( ".level_tag" ), function(i,val){
+      const level = level_object[val.attributes.value.value]
+      $( this ).css("background-color",level.color)
+      $( this ).text(level.value)
+    })
+
+    $('.grid').isotope({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      masonry: {
+        gutter: 15,
+        fitWidth: true,
+        columnWidth: '.grid-sizer'
+      },
+      filter: function() {
+        // _this_ is the item element. Get text of element's .number
+        var level = $(this).find('.level_tag').text();
+        // return true to show, false to hide
+        return (filterMap.size === 0) || (filterMap.has(level)) ;
+      }
+    })
+
+    $('.filter-button-group').on( 'click', '.button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $(this).toggleClass("is-active is-link")
+      filterMap.has(filterValue) ? filterMap.delete(filterValue) :  filterMap.add(filterValue)
+      $('.grid').isotope();
+    });
+
+    $.each($( ".language_tag" ), function(i,val){
+      $( this ).css("background-color",language_colors[val.attributes.value.value])
+    })
+
+  </script>
+</div>
+{{ end }}
+
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
