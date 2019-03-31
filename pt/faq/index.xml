@@ -19,7 +19,7 @@
       <guid>http://walterjgsp.github.io/algorithms/pt/faq/how_to_c/</guid>
       <description>Todo código feito para C++ usa a versão C++14. Para compilar execute o seguinte comando:
 g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt; E para rodar o código e verificar os resultados:
-./&amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@ g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;g
       <guid>http://walterjgsp.github.io/algorithms/pt/faq/how_to_kotlin/</guid>
       <description>Para compilar código em Kotlin use o seguinte comando:
 kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar E para executar o código:
-java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
     </item>
     
   </channel>

@@ -6,10 +6,21 @@
     <description>Recent content in Problemas on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Mar 2019 19:06:02 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 17:30:00 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/pt/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Trapping Rain Water</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/86_trapping_rain_water/</link>
+      <pubDate>Sun, 31 Mar 2019 17:30:00 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/86_trapping_rain_water/</guid>
+      <description>Enunciado do problema  Dados n inteiros não negativos representando um mapa de elevação onde a largura de cada barra é 1, calcule quanta água será retida após a chuva.
+Questões importantes  Os limites do vetor também podem reter água? Não
+Solução  Para resolver este problema, calcule dois arrays auxiliares contendo os valores máximos à direita e à esquerda de uma i-ésima posição. A altura menos o valor mínimo centered os dois vetores vai mostrar quanta água pode ficar presa em todas as posições do vetor.</description>
+    </item>
     
     <item>
       <title>Sliding Window Maximum</title>

@@ -6,10 +6,21 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Mar 2019 19:06:02 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 17:30:00 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Trapping Rain Water</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/86_trapping_rain_water/</link>
+      <pubDate>Sun, 31 Mar 2019 17:30:00 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/86_trapping_rain_water/</guid>
+      <description>Problem Statement  Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+Questions to ask  Can the boundaries hold water? No
+Solution  To solve this problem compute two auxiliary arrays containing the maximum values at the right and at the left of a i-th position. The height minus the minimum value between the two arrays is going to show how much water can be trapped in every position of the array.</description>
+    </item>
     
     <item>
       <title>Sliding Window Maximum</title>
