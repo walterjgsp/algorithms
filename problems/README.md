@@ -89,3 +89,4 @@ List of solved problems
 | 85    | Sliding Window Maximum                              | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/sliding-window-maximum/)                              |
 | 86    | Trapping Rain Water                                 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/trapping-rain-water/)                                 |
 | 87    | House Robber                                        | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/house-robber/)                                        |
+| 88    | The Skyline Problem                                 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/the-skyline-problem/)                                 |
