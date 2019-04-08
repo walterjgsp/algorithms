@@ -14,7 +14,6 @@ Output:
 
 class Solution {
 public:
-
     vector<int> getVec(const string &word){
         vector<int> counter (26,0);
 

@@ -13,7 +13,6 @@ using namespace std;
 
 class Solution {
 public:
-
     bool canWalk(int row, int col, vector<int> limits){
         return row>=limits[0] && row<limits[1] && col>=limits[2] && col<limits[3];
     }

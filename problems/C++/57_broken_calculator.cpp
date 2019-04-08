@@ -12,9 +12,7 @@ using namespace std;
 
 class Solution {
 public:
-
     int brokenCalc(int X, int Y) {
-
         int operations = 0;
         while(X!=Y){
             if(X>Y){

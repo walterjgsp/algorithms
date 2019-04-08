@@ -19,6 +19,7 @@ using namespace std;
 class Solution {
 private:
     map<int,int> memo;
+    
 public:
     vector<int> loudAndRich(vector<vector<int>>& richer, vector<int>& quiet) {
         memo.clear();

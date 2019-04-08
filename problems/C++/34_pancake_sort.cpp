@@ -11,7 +11,6 @@ using namespace std;
 
 class Solution {
 public:
-
     vector<int> pancakeSort(vector<int>& A) {
         vector<int> res;
         int x,i;

@@ -14,6 +14,7 @@ using namespace std;
 class Solution{
 private:
   map<pair<int,int>,int> memo;
+  
 public:
   int minDistance(string word1, string word2){
     memo.clear();

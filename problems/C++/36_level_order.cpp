@@ -18,7 +18,6 @@
 
 class Solution {
 public:
-
     vector<vector<int>> levelOrderRecursive(TreeNode* root) {
         vector<vector<int>> result;
         helperRecursive(root,result,0);

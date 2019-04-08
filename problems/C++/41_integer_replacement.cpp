@@ -11,6 +11,7 @@ using namespace std;
 class Solution {
 private:
     unordered_map<int,int> memo;
+    
 public:
     int integerReplacement(int n) {
 
