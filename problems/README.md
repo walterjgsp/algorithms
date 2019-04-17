@@ -93,3 +93,4 @@ List of solved problems
 | 89    | Largest Rectangle in Histogram                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/largest-rectangle-in-histogram/)                      |
 | 90    | Network Delay Time                                  | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/network-delay-time/)                                  |
 | 91    | Recover a Tree From Preorder Traversal              | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/)              |
+| 92    | Frog Jump                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/frog-jump/)                                           |
