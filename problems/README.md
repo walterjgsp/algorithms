@@ -94,3 +94,5 @@ List of solved problems
 | 90    | Network Delay Time                                  | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/network-delay-time/)                                  |
 | 91    | Recover a Tree From Preorder Traversal              | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/)              |
 | 92    | Frog Jump                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/frog-jump/)                                           |
+| 93    | Common Child                                        | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/common-child/problem)                       |
+| 94    | Bus Routes                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/bus-routes/)                                          |
