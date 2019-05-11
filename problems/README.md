@@ -96,3 +96,4 @@ List of solved problems
 | 92    | Frog Jump                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/frog-jump/)                                           |
 | 93    | Common Child                                        | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/common-child/problem)                       |
 | 94    | Bus Routes                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/bus-routes/)                                          |
+| 95    | Journey to the Moon                                 | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/journey-to-the-moon/problem)                |
