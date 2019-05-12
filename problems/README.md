@@ -97,3 +97,4 @@ List of solved problems
 | 93    | Common Child                                        | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/common-child/problem)                       |
 | 94    | Bus Routes                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/bus-routes/)                                          |
 | 95    | Journey to the Moon                                 | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/journey-to-the-moon/problem)                |
+| 96    | Partition Array for Maximum Sum                     | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/partition-array-for-maximum-sum/)                     |
