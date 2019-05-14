@@ -26,6 +26,8 @@ And to run the code:
 
 ## Run Kotlin
 
+First is necessary to install Kotlin command line [kotlinc](https://kotlinlang.org/docs/tutorials/command-line.html)
+
 To compile use the following command:
 
 ```bash

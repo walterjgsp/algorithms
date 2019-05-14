@@ -81,7 +81,7 @@ List of solved problems
 | 77    | Capacity To Ship Packages Within D Days             | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)             |
 | 78    | Word Break                                          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/word-break/)                                          |
 | 79    | Container With Most Water                           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/container-with-most-water/)                           |
-| 80    | LRU Cache                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/lru-cache/)                                           |
+| 80    | LRU Cache                                           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/lru-cache/)                                           |
 | 81    | Linked List Cycle                                   | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/linked-list-cycle/)                                   |
 | 82    | Three Sum                                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/3sum/)                                                |
 | 83    | Best Sightseeing Pair                               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/best-sightseeing-pair/)                               |
