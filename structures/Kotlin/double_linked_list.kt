@@ -36,6 +36,9 @@ class DoubleLinkedList(){
             it = it.next
             if(it==null)
                 tail = it
+            else{
+                it.prev = null
+            }
         }
 
         head = it
@@ -61,6 +64,9 @@ class DoubleLinkedList(){
             it = it.prev
             if(it==null)
                 head = it
+            else{
+                it.next = null
+            }
         }
 
         tail = it
@@ -81,4 +87,5 @@ fun main(args: Array<String>) {
     dList.printList()
     println(dList.size)
     dList.popBack()
+    dList.printList()
 }
