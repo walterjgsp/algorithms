@@ -5,11 +5,12 @@ using namespace std;
 class Heap{
 private:
     vector<int> heap;
+    bool isMinHeap;
 
     void heapifyUp(int index){
         if(index != 0){
             int parent = (index-1)/2;
-            if(heap[parent]<heap[index]){
+            if(compare(heap[index],heap[parent])){
                 swap(heap[parent],heap[index]);
                 heapifyUp(parent);
             }
@@ -32,13 +33,13 @@ private:
             if(!children.empty()){
                 int maxIndex = 0;
                 for(int i=1;i<children.size();i++){
-                    if(children[maxIndex].first<children[i].first){
+                    if(compare(children[i].first,children[maxIndex].first)){
                         maxIndex = i;
                     }
                 }
 
                 int toHeapify = children[maxIndex].second;
-                if(heap[index]<heap[toHeapify]){
+                if(compare(heap[toHeapify],heap[index])){
                     swap(heap[index],heap[toHeapify]);
                     heapifyDown(toHeapify);
                 }
@@ -46,9 +47,17 @@ private:
         }
     }
 
+    bool compare(const int &v1, const int &v2){
+        if(isMinHeap){
+            return v1<v2;
+        }
+        return v1>v2;
+    }
+
 public:
-    Heap(){
+    Heap(bool minHeap = false){
         heap.clear();
+        isMinHeap = minHeap;
     }
 
     void push(const int &value){
@@ -88,7 +97,7 @@ public:
 
 int main(){
 
-    Heap heap;
+    Heap heap(true);
     heap.push(4);
     heap.push(1);
     heap.push(6);
