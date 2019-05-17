@@ -31,14 +31,14 @@ private:
             }
 
             if(!children.empty()){
-                int maxIndex = 0;
+                int heapIndex = 0;
                 for(int i=1;i<children.size();i++){
-                    if(compare(children[i].first,children[maxIndex].first)){
-                        maxIndex = i;
+                    if(compare(children[i].first,children[heapIndex].first)){
+                        heapIndex = i;
                     }
                 }
 
-                int toHeapify = children[maxIndex].second;
+                int toHeapify = children[heapIndex].second;
                 if(compare(heap[toHeapify],heap[index])){
                     swap(heap[index],heap[toHeapify]);
                     heapifyDown(toHeapify);
