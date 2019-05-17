@@ -111,6 +111,17 @@ public:
         tail = it;
     }
 
+    bool empty(){
+        return size>0;
+    }
+
+    int back(){
+        if(tail){
+            return tail->value;
+        }
+        return NULL;
+    }
+
 };
 
 int main(){
@@ -121,6 +132,7 @@ int main(){
     dList.printList();
     dList.insert_at(0,2);
     dList.printList();
+    cout<<dList.back()<<endl;
 
     return 0;
 }

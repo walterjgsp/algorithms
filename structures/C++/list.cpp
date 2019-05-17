@@ -2,28 +2,31 @@
 
 using namespace std;
 
-template <typename T> struct Node{
-	T value;
-	Node<T> *next;
+template <typename T> 
+class List{
+private:
+	template <typename Type> struct Node{
+		Type value;
+		Node<Type> *next;
 
-	Node(){
-		next = NULL;
-	}
+		Node(){
+			next = NULL;
+		}
 
-	Node(T val){
-		value = val;
-		next = NULL;
-	}
-};
-
-template <typename T> struct List{
+		Node(T val){
+			value = val;
+			next = NULL;
+		}
+	};
 	Node<T> *start;
 	Node<T> *end;
-	int size;
+	int length;
 
+	
+public:
 	List(){
 		start = end = NULL;
-		size = 0;
+		length = 0;
 	}
 
 	void push_back(T value){
@@ -36,7 +39,7 @@ template <typename T> struct List{
 		}
 
 		end = temp;
-		size++;
+		length++;
 	}
 
 	void push_front(T value){
@@ -49,7 +52,7 @@ template <typename T> struct List{
 		}
 
 		start = temp;
-		size++;
+		length++;
 	}
 
 	void printList(){
@@ -62,11 +65,11 @@ template <typename T> struct List{
 	}
 
 	int size(){
-		return size;
+		return length;
 	}
 
 	bool empty(){
-		if(size==0)
+		if(length==0)
 			return true;
 		return false;
 	}
@@ -80,7 +83,7 @@ template <typename T> struct List{
 	T front(){
 		if(start!=NULL)
 			return start->value;
-		return NULL
+		return NULL;
 	}
 };
 

@@ -44,6 +44,28 @@ class DoubleLinkedList(){
         head = it
     }
 
+    fun insertAt(value : Int, index : Int){
+        if(index<=0 || head==null){
+            pushFront(value)
+        }else if(index>=size){
+            pushBack(value)
+        }else{
+            size++
+            var it:Node? = head
+            var walk = index
+            while(it?.next!=null && walk>1){
+                it = it?.next
+                walk--
+            }
+
+            val newNode = Node(value=value)
+
+            newNode.next = it?.next
+            it?.next = newNode
+            newNode.prev = it
+        }
+    }
+
     fun pushBack(value : Int){
         val newNode = Node(value=value)
         if(tail!=null){
@@ -71,6 +93,10 @@ class DoubleLinkedList(){
 
         tail = it
     }
+
+    fun isEmpty() : Boolean {
+        return size>0
+    }
 }
 
 fun main(args: Array<String>) {
@@ -84,6 +110,7 @@ fun main(args: Array<String>) {
     dList.popFront()
     dList.printList()
     dList.pushBack(6)
+    dList.insertAt(7,1)
     dList.printList()
     println(dList.size)
     dList.popBack()
