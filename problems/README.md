@@ -44,7 +44,7 @@ List of solved problems
 | 40    | Design Twitter                                      | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 41    | Integer Replacement                                 | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 42    | Friends Of Appropriate Ages                         | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
-| 43    | Maximum Subarray                                    | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
+| 43    | Maximum Subarray                                    | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/maximum-subarray/)                                    |
 | 44    | Maximum Average Subarray I                          | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 45    | Jewel and Stones                                    | :heavy_check_mark: | :heavy_check_mark: | LeetCode                                                                                       |
 | 46    | Odd Even Jump                                       | :heavy_check_mark: |                    | LeetCode                                                                                       |
@@ -99,3 +99,4 @@ List of solved problems
 | 95    | Journey to the Moon                                 | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/journey-to-the-moon/problem)                |
 | 96    | Partition Array for Maximum Sum                     | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/partition-array-for-maximum-sum/)                     |
 | 97    | Contacts                                            | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/contacts/problem)                           |
+| 98    | Burst Balloons                                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/burst-balloons/)                                      |
