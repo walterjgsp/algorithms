@@ -100,3 +100,4 @@ List of solved problems
 | 96    | Partition Array for Maximum Sum                     | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/partition-array-for-maximum-sum/)                     |
 | 97    | Contacts                                            | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/contacts/problem)                           |
 | 98    | Burst Balloons                                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/burst-balloons/)                                      |
+| 99    | Minimum Cost to Merge Stones                        | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/minimum-cost-to-merge-stones/)                        |
