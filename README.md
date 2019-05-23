@@ -48,3 +48,10 @@ Services that i decided to use in this repository so i could test a more profess
 * [TravisCI](https://travis-ci.org/walterjgsp/algorithms)
 * [CodeFactor](https://www.codefactor.io/repository/github/walterjgsp/algorithms)
 * [Codacy](https://app.codacy.com/project/walterjgsp/algorithms/dashboard)
+
+
+#### Important commands
+
+Add 0 in front of each filename:
+
+rename 's/\d+/sprintf("%04d", $&)/e' *.cpp
