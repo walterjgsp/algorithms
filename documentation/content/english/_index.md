@@ -8,7 +8,7 @@ draft = false
 <div class="container">
   <div class="has-text-justified">
     <p>
-      This repo contains questions from LeetCode (most of them), Interviewbit, URI and Codeforces. We suggest you to try their platform so you can get new problems and articles about algorithms.
+      This repo contains questions from LeetCode (most of them), HackerRank, Interviewbit, URI, Codeforces. We suggest you to try their platform so you can get new problems and articles about algorithms.
     </p>
     <br/>
     <p>

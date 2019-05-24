@@ -101,3 +101,5 @@ List of solved problems
 | 97    | Contacts                                            | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/contacts/problem)                           |
 | 98    | Burst Balloons                                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/burst-balloons/)                                      |
 | 99    | Minimum Cost to Merge Stones                        | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/minimum-cost-to-merge-stones/)                        |
+| 100   | Candy                                               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/candy/)                                               |
+| 101   | Minimum Number of Arrows to Burst Balloons          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)          |

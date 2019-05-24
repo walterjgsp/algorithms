@@ -23,7 +23,7 @@ void helperRecursive(TreeNode *node,vector<int> &content){
   helperRecursive(node->right,content);
 }
 
-vector<int> preOrderRecursive(TreeNode *root){
+vector<int> inOrderRecursive(TreeNode *root){
   vector<int> to_return;
   helperRecursive(root,to_return);
   return to_return;

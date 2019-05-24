@@ -25,7 +25,6 @@ int lcs(string s1, string s2) {
 
 int main(){
   string s1 = "123321",s2="321123";
-  Solution sol;
   cout<<lcs(s1,s2)<<endl;
   return 0;
 }
