@@ -103,3 +103,5 @@ List of solved problems
 | 99    | Minimum Cost to Merge Stones                        | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/minimum-cost-to-merge-stones/)                        |
 | 100   | Candy                                               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/candy/)                                               |
 | 101   | Minimum Number of Arrows to Burst Balloons          | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)          |
+| 102   | Couples Holding Hands                               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/couples-holding-hands/)                               |
+| 103   | Roads and Libraries                                 | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/torque-and-development/problem)             |
