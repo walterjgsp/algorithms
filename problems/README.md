@@ -61,7 +61,7 @@ List of solved problems
 | 57    | Broken Calculator                                   | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/broken-calculator/)                                   |
 | 58    | Satisfiability of Equality Equations                | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/satisfiability-of-equality-equations/)                |
 | 59    | Rotting Oranges                                     | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/rotting-oranges/)                                     |
-| 60    | Kth Largest Element in a Stream                     | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/)                     |
+| 60    | Kth Largest Element in a Stream                     | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/)                     |
 | 61    | Friend Circles                                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/friend-circles/)                                      |
 | 62    | Max Chunks To Make Sorted                           | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/max-chunks-to-make-sorted/)                           |
 | 63    | Coin Change II                                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/coin-change-2/)                                       |
