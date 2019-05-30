@@ -77,6 +77,34 @@ private:
         return it;
     }
 
+    BNode* remove(BNode* node,const int &value){
+        if(!node)
+            return node;
+
+        if(node->data == value){
+            BNode* to_delete = node, *newNode;
+            if(node->left){
+                newNode = node->left;
+                BNode *it = newNode;
+                while(it->right){
+                    it = it->right;
+                }
+
+                it->right = node->right;
+            }else{
+                newNode = node->right;
+            }
+            delete to_delete;
+            return newNode;
+        }else if(node->data > value){
+            node->left = remove(node->left,value);
+        }else{
+            node->right = remove(node->right,value);
+        }
+
+        return node;
+    }
+
 public:
     BST(){
         root = nullptr;
@@ -91,9 +119,7 @@ public:
     }
 
     void remove(const int &value){
-        if(!root)
-            return;
-
+        root = remove(root,value);
     }
 
     void printBST(){
@@ -139,6 +165,8 @@ int main(){
     cout<<binarySearchTree.query(11)<<endl;
     cout<<binarySearchTree.query(15)<<endl;
     cout<<binarySearchTree.findMinimum()<<endl;
+    binarySearchTree.remove(11);
+    binarySearchTree.printBST();
 
     return 0;
 }   
