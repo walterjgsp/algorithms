@@ -12,6 +12,10 @@ private:
             data = x;
             left = nullptr, right = nullptr;
         }
+
+        bool isLeaf(){
+            return left == nullptr && right == nullptr;
+        }
     };
     BNode *root;
 
@@ -60,7 +64,19 @@ private:
         cout<<node->data<<" ";
         inorderPrint(node->right);
     }
-    
+
+    BNode* findMinimumParent(BNode *node){
+        if(!node)
+            return nullptr;
+
+        BNode *it = node;
+        while (it->left->left){
+            it = it->left;
+        }
+        
+        return it;
+    }
+
 public:
     BST(){
         root = nullptr;
@@ -75,7 +91,9 @@ public:
     }
 
     void remove(const int &value){
-        //todo
+        if(!root)
+            return;
+
     }
 
     void printBST(){
@@ -99,6 +117,14 @@ public:
 
         return false;
     }
+
+    int findMinimum(){
+        auto it = findMinimumParent(root);
+        if(it){
+            return it->left->data;
+        }
+        return INT_MAX;
+    }
 };
 
 int main(){
@@ -112,6 +138,7 @@ int main(){
     binarySearchTree.printBST();
     cout<<binarySearchTree.query(11)<<endl;
     cout<<binarySearchTree.query(15)<<endl;
+    cout<<binarySearchTree.findMinimum()<<endl;
 
     return 0;
 }   
