@@ -107,3 +107,4 @@ List of solved problems
 | 103   | Roads and Libraries                                 | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/torque-and-development/problem)             |
 | 104   | Minimum Loss                                        | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/minimum-loss/problem)                       |
 | 105   | Index Pairs of a String                             | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/index-pairs-of-a-string/)                             |
+| 106   | Snakes and Ladders                                  | :heavy_check_mark: |                    | [HackerRank](https://www.hackerrank.com/challenges/the-quickest-way-up/problem)                |
