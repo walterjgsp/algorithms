@@ -66,15 +66,19 @@ public:
         helper.pop();
         to_return.push_back(actual_vertex);
       }else{
+        visited.insert(actual_vertex);
         vector<int> neighbors = graph.getNeighbors(actual_vertex);
-        for(auto neighbor : neighbors)
-          helper.push_back(neighbor);
+        for(auto neighbor : neighbors){
+          if(visited.find(neighbor)==visited.end()){
+            helper.push(neighbor);
+          }
+        }
       }
     }
 
     return to_return;
   }
-}
+};
 
 int main(){
   Graph graph(4);
