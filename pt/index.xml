@@ -108,11 +108,11 @@ Return the answer to all queries.</description>
       <pubDate>Wed, 13 Mar 2019 06:58:22 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/pt/problems/06_anagrams/</guid>
-      <description>Problem Statement  Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.
-Any characters can be deleted from either of the strings.
-Questions to ask  Characters in the string are only lowercase? Yes
-Can special characters exist in the string? No
-Solution  The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string.</description>
+      <description>Enunciado do problema  Dadas duas strings, a e b, que podem ou não ter o mesmo comprimento, determine o número mínimo de exclusões de caracteres necessárias para tornar a e b anagramas.
+Qualquer caractere pode ser excluído de qualquer uma das strings.
+Questões para fazer  Caracteres na string são apenas minúsculos? Sim
+Podem existir caracteres especiais na string? Não
+Solução  A solução é bem direta. Sabendo que o caractere é um número de 0 a 255, crie um vetor para contar a frequência dos caracteres da primeira string.</description>
     </item>
     
     <item>
@@ -121,10 +121,10 @@ Solution  The solution is pretty straightforward. Knowing that the a character i
       <pubDate>Wed, 13 Mar 2019 06:57:57 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/pt/problems/37_valid_anagram/</guid>
-      <description>Problem Statement  Given two strings s and t , write a function to determine if t is an anagram of s.
-Questions to ask  Characters in the string are only lowercase? Yes
-Can special characters exist in the string? No
-Solution  The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string.</description>
+      <description>Problem Statement  Dadas duas strings s e t, escreva uma função para determinar se t é um anagrama de s.
+Questions to ask  Caracteres na string são apenas minúsculos? Sim
+Podem existir caracteres especiais na string? Não
+Solution  A solução é bem direta. Sabendo que o caractere é um número de 0 a 255, crie um vetor para contar a frequência dos caracteres da primeira string. Agora você passará pelo segundo array e removerá o caractere do array que conta a freqüência.</description>
     </item>
     
     <item>
@@ -133,11 +133,11 @@ Solution  The solution is pretty straightforward. Knowing that the a character i
       <pubDate>Mon, 11 Mar 2019 21:14:47 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/pt/problems/04_advantage_suffle/</guid>
-      <description>Problem Statement  Given two arrays A and B of equal size, the advantage of A with respect to B is the number of indices i for which A[i] &amp;gt; B[i].
-Return any permutation of A that maximizes its advantage with respect to B.
-Questions to ask  Is the input array already sorted? Not sorted
-Is the input array mutable or read only? Mutable
-Can i have negative numbers in my input array?</description>
+      <description>Enunciado do problema  Dados dois vetores A e B de tamanho igual, a vantagem de A em relação a B é o número de índices i para os quais A[i]&amp;gt;B[i].
+Retorne qualquer permutação de A que maximize sua vantagem em relação a B.
+Questões para fazer  O vetor de entrada está ordenado? Não ordenado
+O array de entrada é mutável ou somente leitura? Mutável
+Posso ter números negativos no meu vetor de entrada?</description>
     </item>
     
     <item>
@@ -183,10 +183,9 @@ If word1 = &amp;ldquo;horse&amp;rdquo; and word2 = &amp;ldquo;ros&amp;rdquo;, ho
       <pubDate>Mon, 18 Feb 2019 21:24:09 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/pt/problems/03_add_two_numbers/</guid>
-      <description>Problem Statement  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Solution  Assuming a list node like this:
-struct ListNode {int val;ListNode *next;ListNode(int x) : val(x), next(NULL) {}};  Since the digits are already stored in reverse order with the less significant value first and the return must be the same way, is only necessary to execute the add operation in each value taking care to not lose any pointer and avoid access to null pointer nodes.</description>
+      <description>Enunciado do problema  Você recebe duas listas encadeadas não vazias que representam dois inteiros não negativos. Os dígitos são armazenados na ordem inversa e cada um de seus nós contém um único dígito. Adicione os dois números e retorne-os como uma lista encadeada.
+Você pode assumir que os dois números não contêm nenhum zero inicial, exceto o próprio número 0.
+Solução  Assumindo um nó da lista sendo este:</description>
     </item>
     
     <item>

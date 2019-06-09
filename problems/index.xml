@@ -108,7 +108,7 @@ Return the answer to all queries.</description>
       <pubDate>Wed, 13 Mar 2019 06:58:22 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/problems/06_anagrams/</guid>
-      <description>Problem Statement  Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.
+      <description>Problem Statement  Given two strings, a and b, that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams.
 Any characters can be deleted from either of the strings.
 Questions to ask  Characters in the string are only lowercase? Yes
 Can special characters exist in the string? No

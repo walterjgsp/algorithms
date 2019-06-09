@@ -9,7 +9,7 @@
     <title> Anagrams </title>
 
     
-    <meta name="description" content="Given two strings, a and b , that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams."> 
+    <meta name="description" content="Dadas duas strings, a e b, que podem ou não ter o mesmo comprimento, determine o número mínimo de exclusões de caracteres necessárias para tornar a e b anagramas."> 
     
     
     
@@ -50,9 +50,9 @@
   <body>
     <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/06_anagrams/">
-      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
-    </a>
+      <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">
+        <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+      </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
       <span aria-hidden="true"></span>
@@ -101,21 +101,23 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.</p>
+<p>Dadas duas strings, a e b, que podem ou não ter o mesmo comprimento, determine o número mínimo de exclusões de caracteres necessárias para tornar a e b anagramas.</p>
 
-<p>Any characters can be deleted from either of the strings.</p>
+<p>Qualquer caractere pode ser excluído de qualquer uma das strings.</p>
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões para fazer </h2>
 
-<p>Characters in the string are only lowercase? Yes</p>
+<p>Caracteres na string são apenas minúsculos? Sim</p>
 
-<p>Can special characters exist in the string? No</p>
+<p>Podem existir caracteres especiais na string? Não</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and sum the absolute value of each index to a result variable.</p>
+<p>A solução é bem direta. Sabendo que o caractere é um número de 0 a 255, crie um vetor para contar a frequência dos caracteres da primeira string. Agora você passará pelo segundo array e removerá o caractere do vetor que conta a freqüência. Faça um loop pelo vetor de frequência e some o valor absoluto de cada índice a uma variável de resultado.</p>
+
+<p>Como os caracteres são apenas minúsculos, um vetor de 26 posições poderia ser utilizado ao invés de um de 255 fazendo a subtração do valor ASCII &lsquo;a&rsquo; de cada caractere.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">getMinimumDeletionsToAnagram</span><span class="p">(</span><span class="n">string</span> <span class="n">s1</span><span class="p">,</span> <span class="n">string</span> <span class="n">s2</span><span class="p">){</span>
   <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
@@ -136,9 +138,9 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Time Complexity: <strong>O(n)</strong></p>
+<p>Complexidade do Tempo: <strong>O(n)</strong></p>
 
-<p>Space Complexity: <strong>O(1)</strong></p>
+<p>Complexidade do espaço: <strong>O(1)</strong></p>
 
 
     <br/>

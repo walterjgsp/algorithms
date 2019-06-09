@@ -9,7 +9,7 @@
     <title> Add Two Numbers </title>
 
     
-    <meta name="description" content="Add the two numbers and return it as a linked list."> 
+    <meta name="description" content="Adicione dois números e retorne-os como uma lista encadeada."> 
     
     
     
@@ -50,9 +50,9 @@
   <body>
     <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/03_add_two_numbers/">
-      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
-    </a>
+      <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">
+        <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+      </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
       <span aria-hidden="true"></span>
@@ -101,17 +101,17 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-5"> Problem Statement </h2>
+    <h2 class="title is-5"> Enunciado do problema </h2>
 
-<p>You are given two non-empty linked lists representing two non-negative integers.
-The digits are stored in reverse order and each of their nodes contain a single digit.
-Add the two numbers and return it as a linked list.</p>
+<p>Você recebe duas listas encadeadas não vazias que representam dois inteiros não negativos.
+Os dígitos são armazenados na ordem inversa e cada um de seus nós contém um único dígito.
+Adicione os dois números e retorne-os como uma lista encadeada.</p>
 
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>Você pode assumir que os dois números não contêm nenhum zero inicial, exceto o próprio número 0.</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>Assuming a list node like this:</p>
+<p>Assumindo um nó da lista sendo este:</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="n">ListNode</span> <span class="p">{</span>
    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
@@ -120,11 +120,11 @@ Add the two numbers and return it as a linked list.</p>
 <span class="p">};</span>
 </code></pre></div>
 
-<p>Since the digits are already stored in reverse order with the less significant value first
-and the return must be the same way, is only necessary to execute the add operation in each
-value taking care to not lose any pointer and avoid access to null pointer nodes.</p>
+<p>Como os dígitos já estão armazenados em ordem inversa com o valor menos significativo primeiro
+e o retorno deve ser da mesma forma, só é necessário executar a operação de adição em cada
+valor tomando cuidado para não perder nenhum ponteiro e evitar o acesso a nós de ponteiros nulos.</p>
 
-<p>The solution become simple and the implementation straightforward.</p>
+<p>A solução se torna simples e a implementação é direta.</p>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">ListNode</span><span class="o">*</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">ListNode</span> <span class="o">*</span><span class="n">dummy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="o">*</span><span class="n">it</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">;</span>
@@ -158,7 +158,7 @@ value taking care to not lose any pointer and avoid access to null pointer nodes
 <span class="p">}</span>
 </code></pre></div></p>
 
-<p>Time complexity <strong>O(max(n,m))</strong> where n is the size of list1 and m the size of list2</p>
+<p>Complexidade de tempo <strong>O(max (n, m))</strong> onde n é o tamanho da lista 1 e m o tamanho da lista 2</p>
 
 
     <br/>

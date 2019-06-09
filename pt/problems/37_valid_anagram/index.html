@@ -9,7 +9,7 @@
     <title> Valid Anagram </title>
 
     
-    <meta name="description" content="Given two strings s and t , write a function to determine if t is an anagram of s."> 
+    <meta name="description" content="Dadas duas strings s e t, escreva uma função para determinar se t é um anagrama de s."> 
     
     
     
@@ -50,9 +50,9 @@
   <body>
     <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/37_valid_anagram/">
-      <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
-    </a>
+      <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">
+        <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+      </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
       <span aria-hidden="true"></span>
@@ -103,18 +103,17 @@
 
     <h2 class="title is-4"> Problem Statement </h2>
 
-<p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
+<p>Dadas duas strings s e t, escreva uma função para determinar se t é um anagrama de s.</p>
 
 <h2 class="title is-4"> Questions to ask </h2>
 
-<p>Characters in the string are only lowercase? Yes</p>
+<p>Caracteres na string são apenas minúsculos? Sim</p>
 
-<p>Can special characters exist in the string? No</p>
+<p>Podem existir caracteres especiais na string? Não</p>
 
 <h2 class="title is-5"> Solution </h2>
 
-<p>The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and if some value is different from 0 return false. Otherwise return true when
-the loop finish.</p>
+<p>A solução é bem direta. Sabendo que o caractere é um número de 0 a 255, crie um vetor para contar a frequência dos caracteres da primeira string. Agora você passará pelo segundo array e removerá o caractere do array que conta a freqüência. Faça um loop pela matriz de frequência e, se algum valor for diferente de 0, retorne false. Caso contrário, retorne verdadeiro quando loop terminar.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">bool</span> <span class="nf">isAnagram</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">t</span><span class="p">){</span>
   <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">counter</span> <span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
@@ -136,9 +135,9 @@ the loop finish.</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Time Complexity: <strong>O(n)</strong></p>
+<p>Complexidade do Tempo: <strong>O(n)</strong></p>
 
-<p>Space Complexity: <strong>O(1)</strong></p>
+<p>Complexidade do espaço: <strong>O(1)</strong></p>
 
 
     <br/>
