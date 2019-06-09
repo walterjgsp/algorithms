@@ -1,6 +1,6 @@
 +++
 title = "Add Two Numbers"
-description = "Add the two numbers and return it as a linked list."
+description = "Adicione dois números e retorne-os como uma lista encadeada."
 date = 2019-02-18T21:24:09-03:00
 weight = 20
 draft = false
@@ -11,17 +11,17 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/add-two-numbers/"
 +++
-<h2 class="title is-5"> Problem Statement </h2>
+<h2 class="title is-5"> Enunciado do problema </h2>
 
-You are given two non-empty linked lists representing two non-negative integers.
-The digits are stored in reverse order and each of their nodes contain a single digit.
-Add the two numbers and return it as a linked list.
+Você recebe duas listas encadeadas não vazias que representam dois inteiros não negativos.
+Os dígitos são armazenados na ordem inversa e cada um de seus nós contém um único dígito.
+Adicione os dois números e retorne-os como uma lista encadeada.
 
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Você pode assumir que os dois números não contêm nenhum zero inicial, exceto o próprio número 0.
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-Assuming a list node like this:
+Assumindo um nó da lista sendo este:
 
 {{< highlight cpp >}}
 struct ListNode {
@@ -31,11 +31,11 @@ struct ListNode {
 };
 {{< /highlight >}}
 
-Since the digits are already stored in reverse order with the less significant value first
-and the return must be the same way, is only necessary to execute the add operation in each
-value taking care to not lose any pointer and avoid access to null pointer nodes.
+Como os dígitos já estão armazenados em ordem inversa com o valor menos significativo primeiro
+e o retorno deve ser da mesma forma, só é necessário executar a operação de adição em cada
+valor tomando cuidado para não perder nenhum ponteiro e evitar o acesso a nós de ponteiros nulos.
 
-The solution become simple and the implementation straightforward.
+A solução se torna simples e a implementação é direta.
 
 {{< highlight cpp >}}
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -70,4 +70,4 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 }
 {{< /highlight >}}
 
-Time complexity **O(max(n,m))** where n is the size of list1 and m the size of list2
+Complexidade de tempo **O(max (n, m))** onde n é o tamanho da lista 1 e m o tamanho da lista 2

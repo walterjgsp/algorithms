@@ -1,6 +1,6 @@
 +++
 title = "Valid Anagram"
-description = "Given two strings s and t , write a function to determine if t is an anagram of s."
+description = "Dadas duas strings s e t, escreva uma função para determinar se t é um anagrama de s."
 date = 2019-03-13T06:57:57-03:00
 weight = 20
 draft = false
@@ -13,18 +13,17 @@ link = "https://leetcode.com/problems/valid-anagram/"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
 
-Given two strings s and t , write a function to determine if t is an anagram of s.
+Dadas duas strings s e t, escreva uma função para determinar se t é um anagrama de s.
 
 <h2 class="title is-4"> Questions to ask </h2>
 
-Characters in the string are only lowercase? Yes
+Caracteres na string são apenas minúsculos? Sim
 
-Can special characters exist in the string? No
+Podem existir caracteres especiais na string? Não
 
 <h2 class="title is-5"> Solution </h2>
 
-The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and if some value is different from 0 return false. Otherwise return true when
-the loop finish.
+A solução é bem direta. Sabendo que o caractere é um número de 0 a 255, crie um vetor para contar a frequência dos caracteres da primeira string. Agora você passará pelo segundo array e removerá o caractere do array que conta a freqüência. Faça um loop pela matriz de frequência e, se algum valor for diferente de 0, retorne false. Caso contrário, retorne verdadeiro quando loop terminar.
 
 {{< highlight cpp >}}
 bool isAnagram(string s, string t){
@@ -47,6 +46,6 @@ bool isAnagram(string s, string t){
 }
 {{< /highlight >}}
 
-Time Complexity: **O(n)**
+Complexidade do Tempo: **O(n)**
 
-Space Complexity: **O(1)**
+Complexidade do espaço: **O(1)**

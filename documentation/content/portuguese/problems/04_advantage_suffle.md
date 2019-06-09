@@ -1,6 +1,6 @@
 +++
 title = "Advantage Shuffle"
-description = "Given two arrays A and B of equal size, the advantage of A with respect to B is the number of indices i for which A[i] > B[i]."
+description = "Dados dois vetores A e B de tamanho igual, a vantagem de A em relação a B é o número de índices i para os quais A[i]>B[i]."
 date = 2019-03-11T21:14:47-03:00
 weight = 20
 draft = false
@@ -11,27 +11,27 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/advantage-shuffle/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-Given two arrays A and B of equal size, the advantage of A with respect to B is the number of indices i for which A[i] > B[i].
+Dados dois vetores A e B de tamanho igual, a vantagem de A em relação a B é o número de índices i para os quais A[i]>B[i].
 
-Return any permutation of A that maximizes its advantage with respect to B.
+Retorne qualquer permutação de A que maximize sua vantagem em relação a B.
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões para fazer </h2>
 
-Is the input array already sorted? Not sorted
+O vetor de entrada está ordenado? Não ordenado
 
-Is the input array mutable or read only? Mutable
+O array de entrada é mutável ou somente leitura? Mutável
 
-Can i have negative numbers in my input array? Only positive numbers
+Posso ter números negativos no meu vetor de entrada? Apenas números positivos
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-This problem is solved in a greedy way and can be proved with the technique "Greedy stays ahead".
+Este problema é resolvido de forma gulosa e pode ser provado com a técnica "Greedy fica à frente".
 
-Create an array **result** with size the same of A and B. Make an array of pairs using array B where each pair is (B[i],i) being i the index of B.
-Sort both arrays (**A** and **PairB**). Now is possible to find the number of elements in A that are bigger then the elements in B and
-where they need to be. To finish the solution place the missing elements of A in any place of the result array.
+Crie um array **result** com tamanho igual a A e B. Faça um array de pares usando o array B onde cada par é (B[i],i) sendo i o índice de B.
+Ordene os dois arrays (**A** e **PairB**). Agora é possível encontrar o número de elementos em A que são maiores que os elementos em B e
+onde eles precisam estar. Para finalizar a solução, coloque os elementos ausentes de A em qualquer lugar do vetor de resultados.
 
 {{< highlight cpp >}}
 vector<int> advantageCount(vector<int>& A, vector<int>& B) {
@@ -77,5 +77,5 @@ vector<int> advantageCount(vector<int>& A, vector<int>& B) {
 }
 {{< /highlight >}}
 
-In one pass you pick the bigger values of A and place in the right position in the result array.
-The time complexity will be the cost to sort both arrays is **O(nlogn)**
+Em uma passada, você escolhe os valores maiores de A e coloca na posição correta no vetor resultante.
+A complexidade do tempo será o custo para ordenar ambos os arrays que é **O(nlogn)**

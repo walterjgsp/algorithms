@@ -1,6 +1,6 @@
 +++
 title = "Anagrams"
-description = "Given two strings, a and b , that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams."
+description = "Dadas duas strings, a e b, que podem ou não ter o mesmo comprimento, determine o número mínimo de exclusões de caracteres necessárias para tornar a e b anagramas."
 date = 2019-03-13T06:58:22-03:00
 weight = 20
 draft = false
@@ -11,21 +11,23 @@ source = "HackerRank"
 source_link = "https://www.hackerrank.com/"
 link = "https://www.hackerrank.com/challenges/making-anagrams/problem"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.
+Dadas duas strings, a e b, que podem ou não ter o mesmo comprimento, determine o número mínimo de exclusões de caracteres necessárias para tornar a e b anagramas.
 
-Any characters can be deleted from either of the strings.
+Qualquer caractere pode ser excluído de qualquer uma das strings.
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões para fazer </h2>
 
-Characters in the string are only lowercase? Yes
+Caracteres na string são apenas minúsculos? Sim
 
-Can special characters exist in the string? No
+Podem existir caracteres especiais na string? Não
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-The solution is pretty straightforward. Knowing that the a character is a number from 0 to 255, make an array to count the frequency of characters from the first string. Now you will loop trough the second array and remove the character from the array that count the frequency. Loop through the frequency array and sum the absolute value of each index to a result variable.
+A solução é bem direta. Sabendo que o caractere é um número de 0 a 255, crie um vetor para contar a frequência dos caracteres da primeira string. Agora você passará pelo segundo array e removerá o caractere do vetor que conta a freqüência. Faça um loop pelo vetor de frequência e some o valor absoluto de cada índice a uma variável de resultado.
+
+Como os caracteres são apenas minúsculos, um vetor de 26 posições poderia ser utilizado ao invés de um de 255 fazendo a subtração do valor ASCII 'a' de cada caractere.
 
 {{< highlight cpp >}}
 int getMinimumDeletionsToAnagram(string s1, string s2){
@@ -47,6 +49,6 @@ int getMinimumDeletionsToAnagram(string s1, string s2){
 }
 {{< /highlight >}}
 
-Time Complexity: **O(n)**
+Complexidade do Tempo: **O(n)**
 
-Space Complexity: **O(1)**
+Complexidade do espaço: **O(1)**

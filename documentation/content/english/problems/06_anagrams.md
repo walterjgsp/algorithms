@@ -1,6 +1,6 @@
 +++
 title = "Anagrams"
-description = "Given two strings, a and b , that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams."
+description = "Given two strings, a and b, that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams."
 date = 2019-03-13T06:58:22-03:00
 weight = 20
 draft = false
@@ -13,7 +13,7 @@ link = "https://www.hackerrank.com/challenges/making-anagrams/problem"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
 
-Given two strings, a and b , that may or may not be of the same length,determine the minimum number of character deletions required to make a and b anagrams.
+Given two strings, a and b, that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams.
 
 Any characters can be deleted from either of the strings.
 
