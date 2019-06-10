@@ -13,7 +13,7 @@ link = "https://leetcode.com/problems/remove-duplicate-letters/"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
 
-Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results and the letters positions is the same.
 
 <h2 class="title is-5"> Solution </h2>
 
@@ -22,7 +22,7 @@ when we are assembling the new word with only the distinct characters in the lex
 
 After the count we will define in a greedy way if we put the letter in our string result or not. For this we will also have a vector where we will identify whether a letter was used or not in the formation of our results string.
 
-Each time a new character is processed first let's reduce 1 to the vector that stores the character frequency, since we just processed  and do not have it as available anymore. If this character has already been used in the final word formation, we only continue to the next iteration. If not, we have to check three conditions:
+Each time a new character is processed first let's reduce 1 from the vector that stores the character frequency, since we just processed  and do not have it as available anymore. If this character has already been used in the final word formation, we only continue to the next iteration. If not, we have to check three conditions:
 
 <div class="margin_left">
   <ol>

@@ -13,7 +13,7 @@ link = "https://leetcode.com/problems/remove-duplicate-letters/"
 +++
 <h2 class="title is-4"> Enunciado do problema </h2>
 
-Dada uma string que contém apenas letras minúsculas, remova as letras duplicadas para que cada letra apareça uma vez e somente uma vez. Você deve certificar-se de que seu resultado é o menor em ordem lexicográfica entre todos os resultados possíveis.
+Dada uma string que contém apenas letras minúsculas, remova as letras duplicadas para que cada letra apareça uma vez e somente uma vez. Você deve certificar-se de que seu resultado é o menor em ordem lexicográfica entre todos os resultados possíveis e que a posição das letras é mantido.
 
 <h2 class="title is-5"> Solução </h2>
 
