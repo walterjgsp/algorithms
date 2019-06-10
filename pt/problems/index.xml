@@ -6,10 +6,20 @@
     <description>Recent content in Problemas on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2019 17:30:00 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2019 22:19:37 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/pt/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remove Duplicate Letters</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/109_remove_duplicate_letters/</link>
+      <pubDate>Sun, 09 Jun 2019 22:19:37 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/109_remove_duplicate_letters/</guid>
+      <description>Enunciado do problema  Dada uma string que contém apenas letras minúsculas, remova as letras duplicadas para que cada letra apareça uma vez e somente uma vez. Você deve certificar-se de que seu resultado é o menor em ordem lexicográfica entre todos os resultados possíveis.
+Solução  Para resolver esse problema, primeiramente vamos contar a frequência de cada caractere no texto de entrada. Isso irá nos auxiliar na tomada de decisão quando estivermos montando a nova palavra com apenas os caracteres distinto na ordem lexicográfica.</description>
+    </item>
     
     <item>
       <title>Trapping Rain Water</title>

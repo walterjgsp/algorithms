@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Remove Duplicate Letters </title>
+
+    
+    <meta name="description" content="Dada uma string que contém apenas letras minúsculas, remova as letras duplicadas para que cada letra apareça uma vez e somente uma vez."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/problems/109_remove_duplicate_letters/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+      <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">
+        <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+      </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Remove Duplicate Letters</h1>
+        <span class="tag has-text-white level_tag" value=2 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Enunciado do problema </h2>
+
+<p>Dada uma string que contém apenas letras minúsculas, remova as letras duplicadas para que cada letra apareça uma vez e somente uma vez. Você deve certificar-se de que seu resultado é o menor em ordem lexicográfica entre todos os resultados possíveis.</p>
+
+<h2 class="title is-5"> Solução </h2>
+
+<p>Para resolver esse problema, primeiramente vamos contar a frequência de cada caractere no texto de entrada.
+Isso irá nos auxiliar na tomada de decisão quando estivermos montando a nova palavra com apenas os caracteres distinto na ordem lexicográfica.</p>
+
+<p>Após a contagem vamos definir de maneira gulosa se colocamos a letra na nossa string resultado ou não. Para isso vamos ter também um vetor onde iremos identificar se uma letra foi usada ou não na formação da nossa string de resultados.</p>
+
+<p>Cada vez que um novo caractere for processado primeiro vamos reduzir 1 ao vetor que guarda a frequência de caracteres, pois acabamos de processar um e não temos ele mais como disponível. Se esse caractere já tiver sido utilizado na formação da palavra final, apenas continuamos para a próxima iteração. Em caso negativo nós temos que verificar três condições:</p>
+
+<p><div class="margin_left">
+  <ol>
+    <li>A palavra resultado esta vazia</li>
+    <li>A letra que estou tentando adicionar é menor do que a última letra da string resultado</li>
+    <li>Ainda existe o último caractere da palavra resultado para ser utilizado futuramente</li>
+  </ol>
+</div>
+</br></p>
+
+<p>Enquanto todas essas condições forem positivas nós vamos remover a última letra do resultado e marcar ela como não utilizada no nosso vetor de utilizados. Quando o loop terminar nós adicionamos a letra que estamos processando no final da palavra resultado e marcamos ela como utilizada.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="nf">removeDuplicateLetters</span><span class="p">(</span><span class="n">string</span> <span class="n">text</span><span class="p">){</span>
+    <span class="n">string</span> <span class="n">result</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span><span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span> <span class="n">text</span><span class="p">){</span>
+        <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">used</span><span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">c</span><span class="p">:</span> <span class="n">text</span><span class="p">){</span>
+        <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">used</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">])</span>
+            <span class="k">continue</span><span class="p">;</span>
+        
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">result</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">c</span><span class="o">&lt;</span><span class="n">result</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">count</span><span class="p">[</span><span class="n">result</span><span class="p">.</span><span class="n">back</span><span class="p">()]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+            <span class="n">used</span><span class="p">[</span><span class="n">result</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="n">result</span><span class="o">+=</span><span class="n">c</span><span class="p">;</span>
+        <span class="n">used</span><span class="p">[</span><span class="n">c</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Complexidade de tempo: <strong>O(n)</strong></p>
+
+<p>Complexidade de espaço: <strong>O(n)</strong></p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com/>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

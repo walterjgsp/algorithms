@@ -6,10 +6,20 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2019 17:30:00 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2019 22:19:02 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remove Duplicate Letters</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/109_remove_duplicate_letters/</link>
+      <pubDate>Sun, 09 Jun 2019 22:19:02 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/109_remove_duplicate_letters/</guid>
+      <description>Problem Statement  Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Solution  To solve this problem, let&amp;rsquo;s first count the frequency of each character in the input text. This will aid us in decision making when we are assembling the new word with only the distinct characters in the lexicographic order.</description>
+    </item>
     
     <item>
       <title>Trapping Rain Water</title>
