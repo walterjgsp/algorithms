@@ -1,6 +1,6 @@
 +++
 title = "Sliding Window Maximum"
-description = "Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window."
+description = "Dado um array nums, há uma janela deslizante de tamanho k que está se movendo da esquerda da matriz para a direita. Você só pode ver os números k na janela. Cada vez que a janela deslizante se move para a direita por uma posição. Retorne a janela deslizante máxima."
 date = 2019-03-28T19:06:02-03:00
 weight = 20
 draft = false
@@ -11,16 +11,17 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/sliding-window-maximum/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right.
-You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+Dado um array nums, há uma janela deslizante de tamanho k que está se movendo da esquerda da matriz para a direita. Você só pode ver os números k na janela. Cada vez que a janela deslizante se move para a direita por uma posição. Retorne a janela deslizante máxima.
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
-Can i have negative numbers in my input array? Yes
+Posso ter números negativos no meu vetor de entrada? sim
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
+
+A ideia de resolver este problema é sempre manter o maior número encontrado como primeiro em uma janela deslizante. Isso é possível usando uma deque, mantendo um os índices do array. Em cada loop, primeiro verifique se o elemento frontal da janela deslizante é válido, menor que a posição atual menos k. Segundo, verifique se o número atual é maior que o da fila, em caso positivo, remova a parte traseira até que nenhum elemento menor que o atual seja encontrado. Adicione o elemento atual à parte traseira e adicione a frente como resposta para esta posição atual da janela.
 
 {{< highlight cpp >}}
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
@@ -46,6 +47,6 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 }
 {{< /highlight >}}
 
-Time complexity: **O(n)**
+Complexidade de tempo: **O(n)**
 
-Space complexity: **O(n)**
+Complexidade de espaço: **O(n)**

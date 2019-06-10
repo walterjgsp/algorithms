@@ -22,6 +22,8 @@ Can i have negative numbers in my input array? Yes
 
 <h2 class="title is-5"> Solution </h2>
 
+The idea to solve this problem is always keep the biggest number found as first in a sliding window. This is possible using a dequeue keeping a track of the array indexes. In each loop, first check if the front element of the sliding window is valid, smaller than the current position minus k. Second, check if the current number is bigger than the back of the queue, if it is, remove the back until no more elements smaller than the current are found. Add the current element to the rear and add the front as answer for this current window position. 
+
 {{< highlight cpp >}}
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     deque<int> indexes;
@@ -46,6 +48,6 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 }
 {{< /highlight >}}
 
-Time complexity: **O(n)**
+Time complexity: **O(n)**, the elements enter and go out of the queue just one time.
 
 Space complexity: **O(n)**
