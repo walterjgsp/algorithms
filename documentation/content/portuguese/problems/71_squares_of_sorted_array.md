@@ -1,6 +1,6 @@
 +++
 title = "Squares of a Sorted Array"
-description = "Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order."
+description = "Dada um vetor de inteiros A ordenada em ordem não decrescente, retorne um vetor dos quadrados de cada número, também em ordem não decrescente ordenado."
 date = 2019-03-09T01:26:01-03:00
 weight = 20
 draft = false
@@ -11,29 +11,26 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/squares-of-a-sorted-array/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Dada um vetor de inteiros A ordenada em ordem não decrescente, retorne um vetor dos quadrados de cada número, também em ordem não decrescente ordenado.
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
-Can i have negative numbers in my input array?
+Posso ter números negativos no meu vetor de entrada? Sim
 
-Is the input array mutable or read only?
+O array de entrada é mutável ou somente leitura? Não
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-The naive solution is to traverse the array calculating the square of each value and adding the result in a array to return. After this loop
-we sort the result array and return.
+A solução ingênua é percorrer o array calculando o quadrado de cada valor e adicionando o resultado em um array para retornar. Depois desse loop ordenamos o array resultante e retornamos.
 
-The time complexity of this code is **O(N logn)** that is the cost to sort the array.
+A complexidade temporal deste código é **O(N logn)**, que é o custo para ordenar o array.
 
-A more optimized solution can be achived if we use two pointers and the information that the array is already sorted.
+Uma solução mais otimizada pode ser obtida se usarmos dois ponteiros e as informações que o vetor já está ordenado.
 
-Keep one pointer in the initial position and other in the final position of the input array. Using absolute difference we discover the bigger
-value and we add the square of this value in the result array. The last step is to move the pointer were we found the bigger value,
-if was the initial we increment this pointer, otherwise we decrement the final position pointer. We are going to have a result array sorted in reverse order,
-reverse the array and we found a solution.
+Mantenha um ponteiro na posição inicial e outro na posição final do array de entrada. Usando a diferença absoluta, descobrimos a maior
+valor e nós adicionamos o quadrado deste valor no vetor de resultados. O último passo é mover o ponteiro se o maior valor encontrado foi o inicial, incrementamos esse ponteiro, senão decrementamos o ponteiro da posição final. Nós vamos ter um array de resultado ordenado na ordem inversa, ao inverter o vetor encontramos uma solução.
 
 {{< highlight cpp >}}
 vector<int> sortedSquares(vector<int>& A) {
@@ -54,4 +51,4 @@ vector<int> sortedSquares(vector<int>& A) {
 }
 {{< /highlight >}}
 
-The time complexity of this code is **O(n)**
+A complexidade de tempo desse código é **O(n)**
