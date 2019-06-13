@@ -1,6 +1,6 @@
 +++
 title = "Min Cost Climbing Stairs"
-description = "You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1."
+description = "Você precisa encontrar um custo mínimo para chegar ao topo de uma escada e começar do degrau com o índice 0 ou com o índice 1."
 date = 2019-03-13T21:30:24-03:00
 weight = 20
 draft = false
@@ -13,17 +13,17 @@ link = "https://leetcode.com/problems/min-cost-climbing-stairs/"
 +++
 <h2 class="title is-4"> Problem Statement </h2>
 
-On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Em uma escada, o i-ésimo degrau tem algum custo de valor não negativo [i] atribuído (0 indexado).
 
-Once you pay the cost, you can either climb one or two steps. You need to find minimum
-cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Depois de pagar o custo, você pode subir um ou dois degraus. Você precisa encontrar o mínimo
+custo para chegar ao topo do andar, e você pode começar a partir do degrau com o índice 0 ou com o índice 1.
 
 <h2 class="title is-5"> Solution </h2>
 
-To solve this problem we going to use dynamic programming. For each index in the array, the most important values are i-2 and i-1
-because they represent the immediate cost that i need to pay so i can arrive at my actual index. Since i want to minimize the cost,
-i will choose the minimum value between my actual cost and one of the previous costs that make it possible i arrive at my actual position.
-Keeping a track of this values with an array make it possible to find an answer.
+Para resolver este problema, vamos usar a programação dinâmica. Para cada índice no array os valores mais importantes são i-2 e i-1
+porque eles representam o custo imediato que eu preciso pagar para que eu possa chegar ao meu índice real. Desde que eu quero minimizar o custo,
+eu escolherei o valor mínimo entre o meu custo real e um dos custos anteriores que tornam possível chegar à minha posição atual.
+Manter um controle desses valores com um vetor possibilita encontrar uma resposta.
 
 {{< highlight cpp >}}
 int minCostClimbingStairs(vector<int>& cost) {
@@ -39,6 +39,6 @@ int minCostClimbingStairs(vector<int>& cost) {
 }
 {{< /highlight >}}
 
-Time Complexity: **O(n)**
+Complexidade de tempo: **O(n)**
 
-Space Complexity: **O(n)**
+Complexidade de espaço: **O(n)**

@@ -90,8 +90,8 @@ se precisarmos aumentar o resultado, incrementamos o ponteiro com o valor menor 
 
 Com essa abordagem, temos a seguinte complexidade:
 
-Complexidade do Tempo: **O(nlogn)**
+Complexidade de tempo: **O(nlogn)**
 
-Complexidade do espaço: **O(1)**
+Complexidade de espaço: **O(1)**
 
 onde n é o número de elementos no vetor.
