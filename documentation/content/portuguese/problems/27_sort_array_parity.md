@@ -1,6 +1,6 @@
 +++
 title = "Sort Array By Parity"
-description = "Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A."
+description = "Dado um array A de inteiros não negativos, retorne um array que consiste em todos os elementos pares de A, seguidos por todos os elementos ímpares de A."
 date = 2019-03-09T14:29:27-03:00
 weight = 20
 draft = false
@@ -11,26 +11,26 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/sort-array-by-parity/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
+Dado um array A de inteiros não negativos, retorne um array que consiste em todos os elementos pares de A, seguidos por todos os elementos ímpares de A.
 
-You may return any answer array that satisfies this condition.
+Você pode retornar qualquer array de resposta que satisfaça essa condição.
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
-Is the input array mutable or read only? Mutable
+O array de entrada é mutável ou somente leitura? Mutável
 
-Can i have negative numbers in my input array? Yes
+Posso ter números negativos no meu vetor de entrada? sim
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-There are two solutions for this problem with time complexity **O(n)** with just one pass in the array.
+Existem duas soluções para esse problema com complexidade de tempo **O(n)** com apenas uma passada no vetor.
 
-**Two Arrays**
+**Dois arrays**
 
-Use two auxilary arrays, one for odd numbers and the other for even numbers, when looping through place each value in the right array.
-After all the values are processed you merge the two arrays into one and return.
+Use dois arrays auxiliares, um para números ímpares e outro para números pares, ao fazer um loop coloque cada valor no seu devido array.
+Depois que todos os valores forem processados, você mesclará os dois arrays em um e retornará.
 
 {{< highlight cpp >}}
 vector<int> sortArrayByParity(vector<int>& A) {
@@ -51,9 +51,9 @@ vector<int> sortArrayByParity(vector<int>& A) {
 
 **Two pointers**
 
-Use one pointer in the start of the array and another pointer in the end, loop until *start* is smaller than *end* pointer. If the value
-in start position is odd and in end position is even, swap these two values and move the pointers toward the middle. Otherwise, just check
-the pointers condition to move each one.
+Use um ponteiro no início do vetor e outro ponteiro no final, faça um loop até que *start* seja menor que o ponteiro *end*. Se o valor
+na posição inicial é ímpar e na posição final é par, troque esses dois valores e mova os ponteiros para o meio. Caso contrário, basta verificar as condições de cada
+os ponteiros para mover cada um.
 
 {{< highlight cpp >}}
 vector<int> sortArrayByParityInPlace(vector<int>& A) {

@@ -11,14 +11,14 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/min-cost-climbing-stairs/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
 Em uma escada, o i-ésimo degrau tem algum custo de valor não negativo [i] atribuído (0 indexado).
 
 Depois de pagar o custo, você pode subir um ou dois degraus. Você precisa encontrar o mínimo
 custo para chegar ao topo do andar, e você pode começar a partir do degrau com o índice 0 ou com o índice 1.
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
 Para resolver este problema, vamos usar a programação dinâmica. Para cada índice no array os valores mais importantes são i-2 e i-1
 porque eles representam o custo imediato que eu preciso pagar para que eu possa chegar ao meu índice real. Desde que eu quero minimizar o custo,

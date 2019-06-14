@@ -1,6 +1,6 @@
 +++
 title = "Word Break"
-description = "Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words."
+description = "Dada uma string não vazia e um dicionário wordDict contendo uma lista de palavras não vazias, determine se s pode ser segmentado em uma seqüência separada por espaço de uma ou mais palavras do dicionário."
 date = 2019-03-18T21:21:57-03:00
 weight = 20
 draft = false
@@ -11,23 +11,23 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/word-break/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-Given a non-empty string **s** and a dictionary wordDict containing a list of non-empty words, determine if **s** can be segmented into a space-separated sequence of one or more dictionary words.
+Dada uma string não vazia e um dicionário wordDict contendo uma lista de palavras não vazias, determine se **s** pode ser segmentado em uma seqüência separada por espaço de uma ou mais palavras do dicionário.
 
-Note:
+Nota:
 
-The same word in the dictionary may be reused multiple times in the segmentation.
+A mesma palavra no dicionário pode ser reutilizada várias vezes na segmentação.
 
-You may assume the dictionary does not contain duplicate words.
+Você pode assumir que o dicionário não contém palavras duplicadas.
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-Starting from the end to the start, we break the string in two parts from. First check if the right most part is in the dictionary, if it is then check if the left most part is a sequence
-of one or more words from the dictionary. If the both checks are true return true.
+Começando do final ao começo, nós quebramos a palavra em duas partes. Primeiro verifique se a parte mais à direita está no dicionário, se esta então verifique se a parte esquerda é uma sequência
+de uma ou mais palavras do dicionário. Se as duas verificações forem verdadeiras, retorne true.
 
-The trick of this problem is how to solve this in an optimized way. Is possible to use recursion with memoization since the problem presents **overlapping sub-problems** and **optimal substructure**.
-Using a Hash Map we can reduce the complexity by avoiding the same data being processed more than one time.
+O truque desse problema é como resolver isso de maneira otimizada. É possível usar a recursão com memorização, pois o problema apresenta **subproblemas sobrepostos** e **subestrutura ótima**.
+Usando um hash, podemos reduzir a complexidade evitando que os mesmos dados sejam processados ​​mais de uma vez.
 
 {{< highlight cpp >}}
 bool helperWordBreak(unordered_map<string,bool> &memo,const unordered_set<string> &dict, string word){

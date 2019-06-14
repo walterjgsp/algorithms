@@ -1,6 +1,6 @@
 +++
 title = "Sum of Even Numbers After Queries"
-description = "Given an array A of integers, and an array queries of queries return the answer to all queries."
+description = "Dado um vetor A de inteiros, e um vetor de consultas de queries, retornar a a soma dos valores pares de A após todas as consultas."
 date = 2019-03-13T09:02:23-03:00
 weight = 20
 draft = false
@@ -11,28 +11,27 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/sum-of-even-numbers-after-queries/"
 +++
-<h2 class="title is-4"> Problem Statement </h2>
+<h2 class="title is-4"> Enunciado do problema </h2>
 
-We have an array A of integers, and an array queries of queries.
+Temos um vetor A de inteiros e um vetor de consultas de queries.
 
-For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index]. Then, the answer to the i-th query is the sum of the even values of A.
+Para a i-ésima consulta  val = queries[i][0], index = queries[i][1], adicionamos val a A[index]. Então, a resposta para a i-ésima consulta é a soma dos valores pares de A.
 
-(Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.)
+(Aqui, o índice dado = queries[i][1] é um índice baseado em 0, e cada consulta modifica permanentemente o array A.)
 
-Return the answer to all queries. Your answer array should have answer[i] as the answer to the i-th query.
+Retorna a resposta para todas as perguntas. Seu vetor de respostas deve ter a resposta[i] como a resposta para a i-ésima consulta.
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
 Is the input array mutable or read only? Mutable
 
 Can i have negative numbers in my input array? Yes
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-To solve this problem we gonna keep an auxiliary variable to keep a track of the sum of all even values in the array. So, we loop through adding
-the value to this variable if it is even. Now we need to apply the changes proposed by the queries and also track the new sum. To do this we use simple math.
-If the query index has a even value we subtract this value from the variable with the total sum of even values, we appply the change and if the new value
-is even we add to the variable and also in the result array. 
+Para resolver este problema, vamos manter uma variável auxiliar para manter uma faixa da soma de todos os valores pares no vetor. Então, nós passamos por todo o vetor e adicionamos
+o valor para essa variável se for par. Agora precisamos aplicar as alterações propostas pelas consultas e também acompanhar a nova soma. Para fazer isso, usamos matemática simples.
+Se o índice de consulta tiver um valor par, subtraímos esse valor da variável com a soma total dos valores pares, aplicamos a alteração e se o novo valor for par nós adicionamos à variável e também ao vetor de resultados. 
 
 {{< highlight cpp >}}
 vector<int> sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries) {
@@ -63,4 +62,4 @@ vector<int> sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries) {
 {{< /highlight >}}
 
 
-Time Complexity: **O(n+m)** where n is the size of the initial array and m the number of queries.
+Complexidade de tempo: **O(n+m)** onde n é o tamanho da matriz inicial e m o número de consultas.
