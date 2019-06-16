@@ -113,3 +113,5 @@ List of solved problems
 | 109   | Remove Duplicate Letters                            | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/remove-duplicate-letters/)                            |
 | 110   | Combination Sum II                                  | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/combination-sum-ii/)                                  |
 | 111   | Construct Quad Tree                                 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/construct-quad-tree/)                                 |
+| 112   | Dungeon Game                                        | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/dungeon-game/)                                        |
+| 113   | Shortest Path in Binary Matrix                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/shortest-path-in-binary-matrix/)                      |
