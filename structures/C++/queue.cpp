@@ -2,13 +2,13 @@
 
 using namespace std;
 
-class Queue{
+template <typename T> class Queue{
 private:
     struct QNode{
-        int data;
+        T data;
         QNode *next;
 
-        QNode(const int &x){
+        QNode(const T &x){
             data = x;
             next = nullptr;
         }
@@ -66,7 +66,7 @@ public:
 };
 
 int main(){
-    Queue q;
+    Queue<int> q;
     q.push(1);
     q.push(2);
     q.push(4);

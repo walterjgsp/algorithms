@@ -24,8 +24,13 @@ Paginate = 5
 
 [[languages.pt.menu.main]]
     name = "Problemas"
-    weight = -100
+    weight = -110
     url = "pt/problems/"
+
+[[languages.pt.menu.main]]
+  name = "Estruturas"
+  weight = -100
+  url = "pt/structures/"
 
 [[languages.pt.menu.main]]
     name = "FAQ"
@@ -34,8 +39,13 @@ Paginate = 5
 
 [[languages.en.menu.main]]
     name = "Problems"
-    weight = -100
+    weight = -110
     url = "/problems/"
+
+[[languages.en.menu.main]]
+    name = "Structures"
+    weight = -100
+    url = "/structures/"
 
 [[languages.en.menu.main]]
     name = "FAQ"
