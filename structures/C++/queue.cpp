@@ -37,13 +37,14 @@ public:
 
     void push(const int &x){
         QNode *newNode = new QNode(x);
-        if(!start){
+        if(start==nullptr){
             start = newNode;
-            end = newNode;
-        }else{
-            end->next = newNode;
-            end = end->next;
         }
+
+        if(end!=nullptr){
+            end->next = newNode;
+        }
+        end = newNode;
         capacity++;
     }
 

@@ -13,11 +13,16 @@ using namespace std;
 
 struct Point{
     int x,y;
-    Point(int _x=0, int _y=0){
-        x = _x, y = _y;
+    Point(int t_x=0, int t_y=0){
+        x = t_x, y = t_y;
     }
+
     string toString(){
         return "("+to_string(x)+","+to_string(y)+")";
+    }
+
+    double distanceToMe(int t_x, int t_y){
+        return sqrt(pow(x - t_x, 2) + pow(y - t_y, 2));
     }
 };
 

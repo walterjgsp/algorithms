@@ -11,4 +11,30 @@ languages = []
 
 ... Sua estrutura aqui
 
-<h2 class="title is-4"> Implementação </h2>
+<div class="container has-text-centered">
+<h3 class="title is-5 margin_top"> Complexidades </h3>
+
+<table class="table is-striped is-bordered center" >
+    <thead>
+        <tr>
+            <th>Operação</th>
+            <th>Caso médio</th> 
+            <th>Pior caso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Espaço</td>
+            <td>O(n)</td> 
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td>Busca</td>
+            <td>O(n)</td> 
+            <td>O(n)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h2 class="title is-4 margin_top"> Implementação </h2>

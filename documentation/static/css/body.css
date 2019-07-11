@@ -16,6 +16,15 @@ p{
   margin-left: 20px;
 }
 
+.margin_top{
+  margin-top: 20px;
+}
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
 .box { transition: all .2s ease-in-out !important;  }
 
 .box:hover { transform: scale(1.02) !important; }

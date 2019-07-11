@@ -11,4 +11,30 @@ languages = []
 
 ...Your data structure here
 
-<h2 class="title is-4"> Implementation </h2>
+<div class="container has-text-centered">
+<h3 class="title is-5 margin_top"> Complexity </h3>
+
+<table class="table is-striped is-bordered center" >
+    <thead>
+        <tr>
+            <th>Operation</th>
+            <th>Average</th> 
+            <th>Worst Case</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Space</td>
+            <td>O(n)</td> 
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td>Search</td>
+            <td>O(n)</td> 
+            <td>O(n)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h2 class="title is-4 margin_top"> Implementation </h2>
