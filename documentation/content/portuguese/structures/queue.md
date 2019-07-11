@@ -1,6 +1,6 @@
 +++
 title = "Fila"
-description = "Estrutura de dados linear que segue a obedece a ordem FIFO (First In First Out) em suas funções"
+description = "Estrutura de dados linear que obedece a ordem FIFO (First In First Out) em suas funções"
 date = 2019-07-04T19:40:35-03:00
 weight = 20
 draft = false
@@ -16,7 +16,7 @@ as seguintes operações:
 
 <div class="margin_left">
   <ol>
-    <li><b>Peek</b> : essa operação retorna o primeiro elemento da fila, em alguns casos pode ser também implementada como **Front**</li>
+    <li><b>Peek</b> : essa operação retorna o primeiro elemento da fila, em alguns casos pode ser também implementada como <b>Front</b></li>
     <li><b>Push</b>: a operação adiciona um elemento na última posição da fila</li>
     <li><b>Pop</b> : essa operação remove um elemento da primeira posição da fila. Em algumas implementações, a operação remove e retorna o elemento que removeu </li>
   </ol>

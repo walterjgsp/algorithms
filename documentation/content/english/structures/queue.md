@@ -15,7 +15,7 @@ following operations:
 
 <div class="margin_left">
   <ol>
-    <li><b>Peek</b> : this operation returns the first element of the queue, in some cases it can also be implemented as **Front**</li>
+    <li><b>Peek</b> : this operation returns the first element of the queue, in some cases it can also be implemented as <b>Front</b></li>
     <li><b>Push</b>: the operation adds an element in the last position of the queue</li>
     <li><b>Pop</b> : this operation removes an element from the first position in the queue. In some implementations, the operation removes and returns the element that you removed </li>
   </ol>

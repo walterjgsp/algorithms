@@ -28,14 +28,14 @@ public:
         return capacity;
     }
 
-    int front(){
+    T front(){
         if(start){
             return start->data;
         }
         return -1;
     }
 
-    void push(const int &x){
+    void push(const T &x){
         QNode *newNode = new QNode(x);
         if(start==nullptr){
             start = newNode;
