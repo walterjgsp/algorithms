@@ -2,7 +2,7 @@
 
 using namespace std;
 
-template <typename T> class List{
+template <typename T> class LinkedList{
 private:
 	struct Node{
 		T value;
@@ -23,7 +23,7 @@ private:
 
 	
 public:
-	List(){
+	LinkedList(){
 		start = end = NULL;
 		length = 0;
 	}
@@ -54,7 +54,7 @@ public:
 		length++;
 	}
 
-	void printList(){
+	void printLinkedList(){
 		Node *aux = start;
 		while(aux!=NULL){
 			cout<<aux->value<<" ";
@@ -87,13 +87,13 @@ public:
 };
 
 int main(){
-	List<int> lista;
+	LinkedList<int> lista;
 
 	lista.push_back(1);
 	lista.push_back(3);
-	lista.printList();
+	lista.printLinkedList();
 	lista.push_front(4);
-	lista.printList();
+	lista.printLinkedList();
 
 	return 0;
 }

@@ -11,9 +11,7 @@ public:
         for(int i=0;i<connections.size();i++){
             if(visited.find(i)==visited.end()){
                 stack<int> dfs;
-
                 
-
                 dfs.push(i);
                 rec_stack[i]=true;
                 while(!dfs.empty()){
