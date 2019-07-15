@@ -2,12 +2,12 @@
 
 using namespace std;
 
-class DoubleLinkedList{
+template <typename T> class DoubleLinkedList{
 private:
     struct Node{
         Node *prev,*next;
-        int value;
-        Node(int val){
+        T value;
+        Node(T val){
             prev = nullptr,next = nullptr;
             value = val;
         }
@@ -34,7 +34,7 @@ public:
         cout<<endl;
     }
 
-    void insert_at(int index, int val){
+    void insert_at(int index, T val){
         Node *it = head;
         if(!it && index < 1) {
             push_front(val);
@@ -54,7 +54,7 @@ public:
         }
     }
 
-    void push_front(int val){
+    void push_front(T val){
         Node *newNode = new Node(val);
         if(!head){
             head = newNode;
@@ -82,7 +82,7 @@ public:
         head = it;
     }
 
-    void push_back(int val){
+    void push_back(T val){
         Node *newNode = new Node(val);
         if(!tail){
             tail = newNode;
@@ -115,17 +115,17 @@ public:
         return size>0;
     }
 
-    int back(){
+    T back(){
         if(tail){
             return tail->value;
         }
-        return NULL;
+        return nullptr;
     }
 
 };
 
 int main(){
-    DoubleLinkedList dList;
+    DoubleLinkedList<int> dList;
     dList.push_front(4);
     dList.push_back(3);
     dList.printList();
