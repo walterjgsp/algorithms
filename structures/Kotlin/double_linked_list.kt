@@ -1,13 +1,13 @@
-class DoubleLinkedList(){
-    private data class Node(var prev:Node? = null,var next:Node?=null, var value: Int)
+class DoubleLinkedList<T>(){
+    private data class Node<T>(var prev:Node<T>? = null,var next:Node<T>?=null, var value: T)
 
-    private var head:Node? = null
-    private var tail:Node? = null
+    private var head:Node<T>? = null
+    private var tail:Node<T>? = null
     var size:Int = 0
         private set
 
     fun printList(){
-        var it: Node? = head
+        var it: Node<T>? = head
         println("Lista:")
         while(it!=null){
             print(it.value.toString()+" ")
@@ -16,8 +16,8 @@ class DoubleLinkedList(){
         println()
     }
 
-    fun pushFront(value : Int){
-        val newNode = Node(value=value)
+    fun pushFront(value : T){
+        val newNode = Node<T>(value=value)
         if(head==null){
             head = newNode
             tail = head
@@ -30,7 +30,7 @@ class DoubleLinkedList(){
     }
 
     fun popFront(){
-        var it:Node? = head
+        var it:Node<T>? = head
         if(it!=null){
             size --
             it = it.next
@@ -44,21 +44,21 @@ class DoubleLinkedList(){
         head = it
     }
 
-    fun insertAt(value : Int, index : Int){
+    fun insertAt(value : T, index : Int){
         if(index<=0 || head==null){
             pushFront(value)
         }else if(index>=size){
             pushBack(value)
         }else{
             size++
-            var it:Node? = head
+            var it:Node<T>? = head
             var walk = index
             while(it?.next!=null && walk>1){
                 it = it?.next
                 walk--
             }
 
-            val newNode = Node(value=value)
+            val newNode = Node<T>(value=value)
 
             newNode.next = it?.next
             it?.next = newNode
@@ -66,8 +66,8 @@ class DoubleLinkedList(){
         }
     }
 
-    fun pushBack(value : Int){
-        val newNode = Node(value=value)
+    fun pushBack(value : T){
+        val newNode = Node<T>(value=value)
         if(tail!=null){
             tail?.next = newNode
             newNode?.prev = tail
@@ -80,7 +80,7 @@ class DoubleLinkedList(){
     }
 
     fun popBack(){
-        var it:Node? = tail
+        var it:Node<T>? = tail
         if(it!=null){
             size--
             it = it.prev
@@ -100,7 +100,7 @@ class DoubleLinkedList(){
 }
 
 fun main(args: Array<String>) {
-    val dList = DoubleLinkedList()
+    val dList = DoubleLinkedList<Int>()
     dList.printList()
     dList.pushFront(1)
     dList.printList()
