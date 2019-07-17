@@ -84,6 +84,20 @@ public:
 			return start->value;
 		return NULL;
 	}
+	
+	bool find(T value){
+		Node *it = start;
+		while(it){
+			if(it->value == value){
+				return true;
+			}
+			it = it->next;
+		}
+		return false;
+	}
+
+	//TODO add element in position
+	//TODO remove element from list
 };
 
 int main(){
@@ -94,6 +108,7 @@ int main(){
 	lista.printLinkedList();
 	lista.push_front(4);
 	lista.printLinkedList();
+	cout<<lista.find(3)<<endl;
 
 	return 0;
 }

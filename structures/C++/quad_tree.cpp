@@ -136,6 +136,8 @@ public:
             }
         }
     }
+
+    //TODO make nearest neighboor search algorithm
 };
 
 int main(){

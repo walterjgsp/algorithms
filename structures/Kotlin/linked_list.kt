@@ -16,6 +16,7 @@ class LinkedList<T> {
 
         newNode.next = front
         front = newNode
+        capacity++
     }
 
     fun pushBack(value : T){
@@ -26,6 +27,7 @@ class LinkedList<T> {
 
         back?.next = newNode
         back = newNode
+        capacity++
     }
 
     fun printList(){
@@ -36,6 +38,21 @@ class LinkedList<T> {
         }
         println()
     }
+
+    fun isEmpty() : Boolean {
+        return capacity == 0
+    }
+
+    fun find(value : T): Boolean{
+        var it: Node<T>? = front
+        while(it!=null){
+            if(it.value == value){
+                return true
+            }
+            it = it.next
+        }
+        return false
+    }
 }
 
 fun main(args: Array<String>) {
@@ -44,4 +61,5 @@ fun main(args: Array<String>) {
     list.pushFront(4)
     list.pushBack(1)
     list.printList()
+    println(list.find(2))
 }
