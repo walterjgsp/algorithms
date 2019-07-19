@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class BST{
+class BinarySearchTree{
 private:
     struct BNode{
         int data;
@@ -106,7 +106,7 @@ private:
     }
 
 public:
-    BST(){
+    BinarySearchTree(){
         root = nullptr;
     }
 
@@ -154,7 +154,7 @@ public:
 };
 
 int main(){
-    BST binarySearchTree;
+    BinarySearchTree binarySearchTree;
     binarySearchTree.insert(13);
     binarySearchTree.insert(7);
     binarySearchTree.insert(2,false);
