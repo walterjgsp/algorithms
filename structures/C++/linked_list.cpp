@@ -96,8 +96,69 @@ public:
 		return false;
 	}
 
-	//TODO add element in position
-	//TODO remove element from list
+	void insert_at(T value, int position){
+		Node *newNode = new Node(value);
+		Node *dummy = new Node(-1), *it = dummy;
+		dummy->next = start;
+		while(it->next && position>0){
+			it = it->next;
+			position--;
+		}
+		newNode->next = it->next;
+		it->next = newNode;
+
+		start =  dummy->next;
+
+		if(length == 0){
+			end = start;
+		}
+
+		delete dummy;
+		length++;
+	}
+
+	void pop_front(){
+		if(length==0)
+			return;
+		
+		Node *to_delete = start;
+		start = start->next;
+		delete to_delete;
+
+		if(length == 0){
+			end = nullptr;
+		}
+	}
+
+	void remove(T value){
+		if(length==0)
+			return;
+	
+		Node *dummy = new Node(-1), *it = dummy;
+		dummy->next = start;
+
+		while(it->next && it->next->value != value){
+			it = it->next;
+		}
+
+		if(it->next){
+			Node *to_delete = it->next;
+			it->next = to_delete->next;
+			length--;
+
+			if(to_delete == start){
+				start = it->next;
+			}
+
+			delete to_delete;
+		}
+
+		delete dummy;
+
+		if(length == 0){
+			end = nullptr;
+		}
+	}
 };
 
 int main(){
@@ -109,6 +170,16 @@ int main(){
 	lista.push_front(4);
 	lista.printLinkedList();
 	cout<<lista.find(3)<<endl;
+	lista.insert_at(2,0);
+	lista.printLinkedList();
+	lista.insert_at(5,2);
+	lista.printLinkedList();
+	lista.pop_front();
+	lista.printLinkedList();
+	lista.remove(4);
+	lista.printLinkedList();
+	lista.remove(3);
+	lista.printLinkedList();
 
 	return 0;
 }

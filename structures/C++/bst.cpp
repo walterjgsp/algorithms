@@ -144,6 +144,7 @@ public:
         return false;
     }
 
+    //TODO find minimum of specific value
     int findMinimum(){
         auto it = findMinimumParent(root);
         if(it){

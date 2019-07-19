@@ -21,6 +21,20 @@ class BinarySearchTree{
         }
     }
 
+    private fun queryRecursive(value: Int, node: BNode?) : Boolean{
+        if(node==null){
+            return false;
+        }else{
+            if(value == node.value){
+                return true;
+            }else if(value<node.value){
+                return queryRecursive(value,node.left)
+            }else{
+                return queryRecursive(value,node.right)
+            }
+        }
+    }
+
     private fun inorderHelper(node : BNode?){
         if(node!=null){
             inorderHelper(node.left)
@@ -38,7 +52,10 @@ class BinarySearchTree{
         root = insertHelper(value,root)
     }
 
-    //TODO query in bst 
+    fun query(value : Int, recursive: Boolean = true) : Boolean{
+        return queryRecursive(value,root)
+    }
+
     //TODO find minimum on bst
     //TODO remove element from bst
 }
@@ -48,4 +65,5 @@ fun main(args: Array<String>) {
     bst.insert(4)
     bst.insert(2)
     bst.printInorder()
+    println(bst.query(2))
 }
