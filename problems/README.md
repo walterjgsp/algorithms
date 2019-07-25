@@ -117,3 +117,4 @@ List of solved problems
 | 113   | Shortest Path in Binary Matrix                      | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/shortest-path-in-binary-matrix/)                      |
 | 114   | Car Pooling                                         | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/car-pooling/)                                         |
 | 115   | Corporate Flight Bookings                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/corporate-flight-bookings/)                           |
+| 116   | Shortest Path with Alternating Colors               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/shortest-path-with-alternating-colors/)               |
