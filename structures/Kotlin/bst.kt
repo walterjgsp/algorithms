@@ -56,7 +56,14 @@ class BinarySearchTree{
         return queryRecursive(value,root)
     }
 
-    //TODO find minimum on bst
+    fun findMinimum() : Int{
+        var it : BNode? = root
+        while(it?.left!=null){
+            it = it.left
+        }
+        return it?.value ?: MIN_VALUE
+    }
+
     //TODO remove element from bst
 }
 
