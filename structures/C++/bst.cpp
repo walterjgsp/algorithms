@@ -65,18 +65,6 @@ private:
         inorderPrint(node->right);
     }
 
-    BNode* findMinimumParent(BNode *node){
-        if(!node)
-            return nullptr;
-
-        BNode *it = node;
-        while (it->left->left){
-            it = it->left;
-        }
-        
-        return it;
-    }
-
     BNode* remove(BNode* node,const int &value){
         if(!node)
             return node;
@@ -144,13 +132,15 @@ public:
         return false;
     }
 
-    //TODO find minimum of specific value
     int findMinimum(){
-        auto it = findMinimumParent(root);
-        if(it){
-            return it->left->data;
+        if(!root)
+            return INT_MIN;
+            
+        BNode *it = root;
+        while(it->left){
+            it = it->left;
         }
-        return INT_MAX;
+        return it->data;
     }
 };
 
