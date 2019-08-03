@@ -118,3 +118,5 @@ List of solved problems
 | 114   | Car Pooling                                         | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/car-pooling/)                                         |
 | 115   | Corporate Flight Bookings                           | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/corporate-flight-bookings/)                           |
 | 116   | Shortest Path with Alternating Colors               | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/shortest-path-with-alternating-colors/)               |
+| 117   | Alphabet Board Path                                 | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/alphabet-board-path/)                                 |
+| 118   | Minimum Cost Tree From Leaf Values                  | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/)                  |
