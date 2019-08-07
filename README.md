@@ -47,6 +47,20 @@ And to run the code:
 java -jar <OUTPUT_FILE_NAME>
 ```
 
+## Run Java
+
+All the Java code were done using the JDK 11 version. To compile use the following command:
+
+```bash
+javac <INPUT_FILE_NAME>
+```
+
+And to run the code:
+
+```bash
+java Main
+```
+
 ### Services
 
 Services that i decided to use in this repository so i could test a more professional way of working:
