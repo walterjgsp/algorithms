@@ -22,7 +22,7 @@ public:
     
     int get(int index, int snap_id) {
         auto it = memo[index].upper_bound(snap_id);
-        return it == begin(memo[index]) ? 0 : prev(it)->second;
+        return it == memo[index].begin() ? 0 : prev(it)->second;
     }
 };
 
