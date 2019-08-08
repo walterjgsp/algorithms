@@ -121,4 +121,4 @@ List of solved problems
 | 117   | Alphabet Board Path                                 | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/alphabet-board-path/)                                 |
 | 118   | Minimum Cost Tree From Leaf Values                  | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/)                  |
 | 119   | Longest Well-Performing Interval                    | :heavy_check_mark: | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/longest-well-performing-interval/)                    |
-
+| 120   | Snapshot Array                                      | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/snapshot-array/)                                      |
