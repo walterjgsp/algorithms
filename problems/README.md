@@ -123,3 +123,4 @@ List of solved problems
 | 119   | Longest Well-Performing Interval                    | :heavy_check_mark: | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/longest-well-performing-interval/)                    |
 | 120   | Snapshot Array                                      | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/snapshot-array/)                                      |
 | 121   | One Edit Distance                                   | :heavy_check_mark: | :heavy_check_mark: |                    | [LintCode](https://www.lintcode.com/problem/one-edit-distance/description)                     |
+| 121   | Min Stack                                           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [LintCode](https://leetcode.com/problems/min-stack/)                                           |
