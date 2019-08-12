@@ -12,7 +12,7 @@
 Repository for algorithms, problems and data structures that we have used. This serves as a reference for everyone interested.
 For any suggestion on algorithm, problem or data structure, just open an issue with question label.
 
-This repo contains questions from LeetCode (most of them), HackerRank and CodeSignal.
+This repo contains questions from LeetCode (most of them), HackerRank, CodeSignal and LintCode.
 We suggest you to try their platform so you can get new problems and articles about algorithms.
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
@@ -74,5 +74,6 @@ Services that i decided to use in this repository so i could test a more profess
 #### Important commands
 
 Add 0 in front of each filename:
-
+```bash
 rename 's/\d+/sprintf("%04d", $&)/e' *.cpp
+```

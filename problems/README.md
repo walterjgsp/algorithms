@@ -122,3 +122,4 @@ List of solved problems
 | 118   | Minimum Cost Tree From Leaf Values                  | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/)                  |
 | 119   | Longest Well-Performing Interval                    | :heavy_check_mark: | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/longest-well-performing-interval/)                    |
 | 120   | Snapshot Array                                      | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/snapshot-array/)                                      |
+| 121   | One Edit Distance                                   | :heavy_check_mark: | :heavy_check_mark: |                    | [LintCode](https://www.lintcode.com/problem/one-edit-distance/description)                     |
