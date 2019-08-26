@@ -125,3 +125,4 @@ List of solved problems
 | 121   | One Edit Distance                                   | :heavy_check_mark: | :heavy_check_mark: |                    | [LintCode](https://www.lintcode.com/problem/one-edit-distance/description)                     |
 | 122   | Min Stack                                           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [LeetCode](https://leetcode.com/problems/min-stack/)                                           |
 | 123   | Maximal Rectangle                                   | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/maximal-rectangle/)                                   |
+| 124   | As Far from Land as Possible                        | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/as-far-from-land-as-possible/)                        |
