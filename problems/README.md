@@ -128,3 +128,4 @@ List of solved problems
 | 124   | As Far from Land as Possible                           | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/as-far-from-land-as-possible/)                           |
 | 125   | Compare Strings by Frequency of the Smallest Character | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/) |
 | 126   | Dinner Plate Stacks                                    | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/dinner-plate-stacks/)                                    |
+| 128   | Remove Zero Sum Consecutive Nodes from Linked List     | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/)     |
