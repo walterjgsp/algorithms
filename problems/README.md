@@ -130,3 +130,4 @@ List of solved problems
 | 126   | Dinner Plate Stacks                                    | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/dinner-plate-stacks/)                                    |
 | 127   | Invalid Transactions                                   | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/invalid-transactions/)                                   |
 | 128   | Remove Zero Sum Consecutive Nodes from Linked List     | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/)     |
+| 129   | Chief Hopper                                           | :heavy_check_mark: |                    |                    | [HackerRank](https://www.hackerrank.com/challenges/chief-hopper/problem)                          |
