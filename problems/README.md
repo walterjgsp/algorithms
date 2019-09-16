@@ -132,3 +132,4 @@ List of solved problems
 | 128   | Remove Zero Sum Consecutive Nodes from Linked List     | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/)     |
 | 129   | Chief Hopper                                           | :heavy_check_mark: |                    |                    | [HackerRank](https://www.hackerrank.com/challenges/chief-hopper/problem)                          |
 | 130   | ZigZag Conversion                                      | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/zigzag-conversion/)                                      |
+| 131   | Critical Connections in a Network                      | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/critical-connections-in-a-network/)                      |
