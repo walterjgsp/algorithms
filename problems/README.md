@@ -135,3 +135,4 @@ List of solved problems
 | 131   | Critical Connections in a Network                      | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/critical-connections-in-a-network/)                      |
 | 132   | Next Permutation                                       | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/next-permutation/)                                       |
 | 133   | Reverse Substrings Between Each Pair of Parentheses    | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/)    |
+| 134   | Smallest String With Swaps                             | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/smallest-string-with-swaps/)                             |
