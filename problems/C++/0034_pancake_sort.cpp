@@ -12,16 +12,27 @@ using namespace std;
 class Solution {
 public:
     vector<int> pancakeSort(vector<int>& A) {
-        vector<int> res;
-        int x,i;
-        for (x = A.size(); x > 0; --x) {
-            for (i = 0; A[i] != x; ++i);
-            reverse(A.begin(), A.begin() + i + 1);
-            res.push_back(i + 1);
-            reverse(A.begin(), A.begin() + x);
-            res.push_back(x);
+        vector<int> result;
+        
+        for(int i=A.size()-1;i>0;i--){
+            pair<int,int> max_index = {A[0],0};
+            for(int j=1;j<=i;j++){
+                if(max_index.first<A[j]){
+                    max_index.first = A[j];
+                    max_index.second = j;
+                }
+            }
+            
+            if(max_index.second>0){
+                reverse(A.begin(),A.begin()+max_index.second+1);
+                result.push_back(max_index.second+1);
+            }
+            reverse(A.begin(),A.begin()+i+1);
+            result.push_back(i+1);
         }
-        return res;
+        
+        
+        return result;
     }
 };
 
