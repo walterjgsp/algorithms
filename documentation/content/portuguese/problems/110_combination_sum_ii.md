@@ -1,6 +1,6 @@
 +++
 title = "Combination Sum II"
-description = ""
+description = "Dada uma coleção de números de candidatos (candidatos) e um número de destino (meta), localize todas as combinações exclusivas em candidatos em que os números dos candidatos somam a meta."
 date = 2019-06-12T21:59:28-03:00
 weight = 20
 draft = false

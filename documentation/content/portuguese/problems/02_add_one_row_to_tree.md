@@ -1,6 +1,6 @@
 +++
 title = "Add One Row to Tree"
-description = "Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1."
+description = "Dada a raiz de uma árvore binária, em seguida, valor v e profundidade d, é necessário adicionar uma linha de nós com valor v na profundidade especificada d. O nó raiz está na profundidade 1."
 date = 2019-02-18T19:24:15-03:00
 weight = 20
 draft = false
@@ -11,21 +11,21 @@ source = "LeetCode"
 source_link = "https://leetcode.com/"
 link = "https://leetcode.com/problems/add-one-row-to-tree/"
 +++
-<h2 class="title is-5"> Problem Statement </h2>
+<h2 class="title is-5"> Enunciado do problema </h2>
 
-Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v
-at the given depth d. The root node is at depth 1.
+Dada a raiz de uma árvore binária, em seguida, valor v e profundidade d, é necessário adicionar uma linha de nós com o valor v
+na profundidade dada d. O nó raiz está na profundidade 1.
 
-The adding rule is: given a positive integer depth d, for each NOT null tree nodes N in depth d-1,
-create two tree nodes with value v as N's left subtree root and right subtree root.
-And N's original left subtree should be the left subtree of the new left subtree root,
-its original right subtree should be the right subtree of the new right subtree root.
-If depth d is 1 that means there is no depth d-1 at all, then create a tree node with value v
-as the new root of the whole original tree, and the original tree is the new root's left subtree.
+A regra de adição é: dada uma profundidade inteira positiva d, para cada nó da árvore NÃO nulo N na profundidade d-1,
+crie dois nós de árvore com o valor v como raiz da subárvore esquerda de N e raiz da subárvore direita.
+E a subárvore esquerda original de N deve ser a subárvore esquerda da nova raiz da subárvore esquerda,
+sua subárvore direita original deve ser a subárvore direita da nova raiz da subárvore direita.
+Se a profundidade d for 1, significa que não há profundidade d-1, crie um nó de árvore com o valor v
+como a nova raiz de toda a árvore original e a árvore original é a subárvore esquerda da nova raiz.
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-Assuming that the node structure of the tree is:
+Supondo que a estrutura do nó da árvore seja:
 
 {{< highlight cpp >}}
 struct TreeNode {
@@ -40,18 +40,17 @@ struct TreeNode {
 }
 {{< /highlight >}}
 
-The problem can be solved recursively treating the base cases:
+O problema pode ser resolvido recursivamente tratando os casos básicos:
 
 <div class="margin_left">
   <ol>
-    <li>d-1 = 0 : This condition means that we need to add a new root to the tree. Create a new node and make him root with the actual root as left children.</li>
-    <li>d-1 = 1 : This node is parent of the new nodes that are going to be added. Create two new nodes for left and right and make the respective old childres of the
-parent left and right childres.</li>
-    <li>d-1 > 1 : This case means is necessary to go deeper in the tree. Check if the childs exists and if positive call the same function withe depth value minus 1. </li>
+    <li>d-1 = 0 : Essa condição significa que precisamos adicionar uma nova raiz à árvore. Crie um novo nó e faça com que ele faça root com a raiz real como filhos esquerdos.</li>
+    <li>d-1 = 1 : Este nó é pai dos novos nós que serão adicionados. Crie dois novos nós para esquerda e direita e crie os respectivos filhos antigos do pais filhos esquerdo e direito.</li>
+    <li>d-1 > 1 : Neste caso, é necessário ir mais fundo na árvore. Verifique se a criança existe e se positiva chama a mesma função com o valor de profundidade menos 1. </li>
   </ol>
 </div>
 
-With this information the following implementation is made:
+Com essas informações, a seguinte implementação é feita:
 
 {{< highlight cpp >}}
 TreeNode* addOneRow(TreeNode* root, int v, int d) {
@@ -76,4 +75,4 @@ TreeNode* addOneRow(TreeNode* root, int v, int d) {
 }
 {{< /highlight >}}
 
-Time complexity **O(n)**
+Complexidade de tempo: **O(n)**
