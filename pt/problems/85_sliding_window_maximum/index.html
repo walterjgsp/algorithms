@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Sliding Window Maximum </title>
 
     
-    <meta name="description" content="Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window."> 
+    <meta name="description" content="Dado um array nums, há uma janela deslizante de tamanho k que está se movendo da esquerda da matriz para a direita. Você só pode ver os números k na janela. Cada vez que a janela deslizante se move para a direita por uma posição. Retorne a janela deslizante máxima."> 
     
     
     
@@ -69,6 +69,10 @@
          Problemas
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
          FAQ
        </a>
@@ -99,16 +103,17 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right.
-You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.</p>
+<p>Dado um array nums, há uma janela deslizante de tamanho k que está se movendo da esquerda da matriz para a direita. Você só pode ver os números k na janela. Cada vez que a janela deslizante se move para a direita por uma posição. Retorne a janela deslizante máxima.</p>
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
-<p>Can i have negative numbers in my input array? Yes</p>
+<p>Posso ter números negativos no meu vetor de entrada? sim</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
+
+<p>A ideia de resolver este problema é sempre manter o maior número encontrado como primeiro em uma janela deslizante. Isso é possível usando uma deque, mantendo um os índices do array. Em cada loop, primeiro verifique se o elemento frontal da janela deslizante é válido, menor que a posição atual menos k. Segundo, verifique se o número atual é maior que o da fila, em caso positivo, remova a parte traseira até que nenhum elemento menor que o atual seja encontrado. Adicione o elemento atual à parte traseira e adicione a frente como resposta para esta posição atual da janela.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">maxSlidingWindow</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">indexes</span><span class="p">;</span>
@@ -133,9 +138,9 @@ You can only see the k numbers in the window. Each time the sliding window moves
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Time complexity: <strong>O(n)</strong></p>
+<p>Complexidade de tempo: <strong>O(n)</strong></p>
 
-<p>Space complexity: <strong>O(n)</strong></p>
+<p>Complexidade de espaço: <strong>O(n)</strong></p>
 
 
     <br/>
@@ -172,6 +177,12 @@ You can only see the k numbers in the window. Each time the sliding window moves
         <p class="level-item">
          <a href="pt/problems/" >
            Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
          </a>
        </p>
        

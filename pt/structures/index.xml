@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Estruturas de Dados on Algorithms</title>
+    <link>http://walterjgsp.github.io/algorithms/pt/structures/</link>
+    <description>Recent content in Estruturas de Dados on Algorithms</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jul 2019 19:05:13 -0300</lastBuildDate>
+    
+	<atom:link href="http://walterjgsp.github.io/algorithms/pt/structures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lista encadeada</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/structures/list/</link>
+      <pubDate>Thu, 11 Jul 2019 19:05:13 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/structures/list/</guid>
+      <description>Definição  &amp;hellip; Sua estrutura aqui
+Complexidades    Operação Caso médio Pior caso     Espaço O(n) O(n)   Busca O(n) O(n)     Implementação  </description>
+    </item>
+    
+    <item>
+      <title>Trie</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/structures/trie/</link>
+      <pubDate>Thu, 11 Jul 2019 19:05:07 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/structures/trie/</guid>
+      <description>Definição  &amp;hellip; Sua estrutura aqui
+Complexidades    Operação Caso médio Pior caso     Espaço O(n) O(n)   Busca O(n) O(n)     Implementação  </description>
+    </item>
+    
+    <item>
+      <title>Pilha</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/structures/stack/</link>
+      <pubDate>Thu, 11 Jul 2019 04:15:17 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/structures/stack/</guid>
+      <description>Definição  A pilha é uma estrutura de dados para conter objetos obedecendo a ordem de entrada LIFO (Last In First Out). Isso significa que o primeiro elemento a ser adicionado sera o último elemento a sair. Em sua forma mais clássica ela implementa as seguintes operações:
+ Top : essa operação retorna o último elemento adicionado a pilha, em alguns casos pode ser também implementada como Peek Push: a operação adiciona um elemento na última posição da pilha Pop : essa operação remove um elemento da última posição da pilha.</description>
+    </item>
+    
+    <item>
+      <title>Fila</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/structures/queue/</link>
+      <pubDate>Thu, 04 Jul 2019 19:40:35 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/structures/queue/</guid>
+      <description>Definição  A fila é uma estrutura de dados para conter objetos obedecendo a ordem de entrada FIFO( First In First Out ). Isso significa que o primeiro elemento a ser adicionado sera o primeiro elemento a sair. Em sua forma mais clássica ela implementa as seguintes operações:
+ Peek : essa operação retorna o primeiro elemento da fila, em alguns casos pode ser também implementada como Front Push: a operação adiciona um elemento na última posição da fila Pop : essa operação remove um elemento da primeira posição da fila.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Structures on Algorithms</title>
+    <link>http://walterjgsp.github.io/algorithms/structures/</link>
+    <description>Recent content in Data Structures on Algorithms</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jul 2019 19:04:54 -0300</lastBuildDate>
+    
+	<atom:link href="http://walterjgsp.github.io/algorithms/structures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trie</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/trie/</link>
+      <pubDate>Thu, 11 Jul 2019 19:04:54 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/trie/</guid>
+      <description>Definition  &amp;hellip;Your data structure here
+Complexity    Operation Average Worst Case     Space O(n) O(n)   Search O(n) O(n)     Implementation  </description>
+    </item>
+    
+    <item>
+      <title>Linked list</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/list/</link>
+      <pubDate>Thu, 11 Jul 2019 19:04:13 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/list/</guid>
+      <description>Definition  &amp;hellip;Your data structure here
+Complexity    Operation Average Worst Case     Space O(n) O(n)   Search O(n) O(n)     Implementation  </description>
+    </item>
+    
+    <item>
+      <title>Stack</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/stack/</link>
+      <pubDate>Thu, 11 Jul 2019 04:15:43 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/stack/</guid>
+      <description>Definition  The stack is a data structure that hold objects in the order of LIFO (Last In First Out) entry. This means that the first element to be added will be the last element to exit. In its most classic form it implements following operations:
+ Top : this operation returns the last element added to the stack, in some cases it can also be implemented as Peek Push: the operation adds an element to the last stack position Pop : this operation removes an element from the last stack position.</description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/queue/</link>
+      <pubDate>Thu, 04 Jul 2019 19:40:21 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/queue/</guid>
+      <description>Definition  The queue is a data structure to contain objects in the FIFO (First In First Out) order. This means that the first element to be added will be the first element to come out. In its most classic form it implements following operations:
+ Peek : this operation returns the first element of the queue, in some cases it can also be implemented as Front Push: the operation adds an element in the last position of the queue Pop : this operation removes an element from the first position in the queue.</description>
+    </item>
+    
+  </channel>
+</rss>

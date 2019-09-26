@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Squares of a Sorted Array </title>
 
     
-    <meta name="description" content="Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order."> 
+    <meta name="description" content="Dada um vetor de inteiros A ordenada em ordem não decrescente, retorne um vetor dos quadrados de cada número, também em ordem não decrescente ordenado."> 
     
     
     
@@ -69,6 +69,10 @@
          Problemas
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
          FAQ
        </a>
@@ -101,29 +105,26 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.</p>
+<p>Dada um vetor de inteiros A ordenada em ordem não decrescente, retorne um vetor dos quadrados de cada número, também em ordem não decrescente ordenado.</p>
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
-<p>Can i have negative numbers in my input array?</p>
+<p>Posso ter números negativos no meu vetor de entrada? Sim</p>
 
-<p>Is the input array mutable or read only?</p>
+<p>O array de entrada é mutável ou somente leitura? Não</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>The naive solution is to traverse the array calculating the square of each value and adding the result in a array to return. After this loop
-we sort the result array and return.</p>
+<p>A solução ingênua é percorrer o array calculando o quadrado de cada valor e adicionando o resultado em um array para retornar. Depois desse loop ordenamos o array resultante e retornamos.</p>
 
-<p>The time complexity of this code is <strong>O(N logn)</strong> that is the cost to sort the array.</p>
+<p>A complexidade temporal deste código é <strong>O(N logn)</strong>, que é o custo para ordenar o array.</p>
 
-<p>A more optimized solution can be achived if we use two pointers and the information that the array is already sorted.</p>
+<p>Uma solução mais otimizada pode ser obtida se usarmos dois ponteiros e as informações que o vetor já está ordenado.</p>
 
-<p>Keep one pointer in the initial position and other in the final position of the input array. Using absolute difference we discover the bigger
-value and we add the square of this value in the result array. The last step is to move the pointer were we found the bigger value,
-if was the initial we increment this pointer, otherwise we decrement the final position pointer. We are going to have a result array sorted in reverse order,
-reverse the array and we found a solution.</p>
+<p>Mantenha um ponteiro na posição inicial e outro na posição final do array de entrada. Usando a diferença absoluta, descobrimos a maior
+valor e nós adicionamos o quadrado deste valor no vetor de resultados. O último passo é mover o ponteiro se o maior valor encontrado foi o inicial, incrementamos esse ponteiro, senão decrementamos o ponteiro da posição final. Nós vamos ter um array de resultado ordenado na ordem inversa, ao inverter o vetor encontramos uma solução.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortedSquares</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
@@ -143,7 +144,7 @@ reverse the array and we found a solution.</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>The time complexity of this code is <strong>O(n)</strong></p>
+<p>A complexidade de tempo desse código é <strong>O(n)</strong></p>
 
 
     <br/>
@@ -180,6 +181,12 @@ reverse the array and we found a solution.</p>
         <p class="level-item">
          <a href="pt/problems/" >
            Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
          </a>
        </p>
        

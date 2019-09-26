@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Min Cost Climbing Stairs </title>
 
     
-    <meta name="description" content="You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1."> 
+    <meta name="description" content="Você precisa encontrar um custo mínimo para chegar ao topo de uma escada e começar do degrau com o índice 0 ou com o índice 1."> 
     
     
     
@@ -69,6 +69,10 @@
          Problemas
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
          FAQ
        </a>
@@ -99,19 +103,19 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).</p>
+<p>Em uma escada, o i-ésimo degrau tem algum custo de valor não negativo [i] atribuído (0 indexado).</p>
 
-<p>Once you pay the cost, you can either climb one or two steps. You need to find minimum
-cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.</p>
+<p>Depois de pagar o custo, você pode subir um ou dois degraus. Você precisa encontrar o mínimo
+custo para chegar ao topo do andar, e você pode começar a partir do degrau com o índice 0 ou com o índice 1.</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>To solve this problem we going to use dynamic programming. For each index in the array, the most important values are i-2 and i-1
-because they represent the immediate cost that i need to pay so i can arrive at my actual index. Since i want to minimize the cost,
-i will choose the minimum value between my actual cost and one of the previous costs that make it possible i arrive at my actual position.
-Keeping a track of this values with an array make it possible to find an answer.</p>
+<p>Para resolver este problema, vamos usar a programação dinâmica. Para cada índice no array os valores mais importantes são i-2 e i-1
+porque eles representam o custo imediato que eu preciso pagar para que eu possa chegar ao meu índice real. Desde que eu quero minimizar o custo,
+eu escolherei o valor mínimo entre o meu custo real e um dos custos anteriores que tornam possível chegar à minha posição atual.
+Manter um controle desses valores com um vetor possibilita encontrar uma resposta.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">minCostClimbingStairs</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">cost</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -126,9 +130,9 @@ Keeping a track of this values with an array make it possible to find an answer.
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Time Complexity: <strong>O(n)</strong></p>
+<p>Complexidade de tempo: <strong>O(n)</strong></p>
 
-<p>Space Complexity: <strong>O(n)</strong></p>
+<p>Complexidade de espaço: <strong>O(n)</strong></p>
 
 
     <br/>
@@ -165,6 +169,12 @@ Keeping a track of this values with an array make it possible to find an answer.
         <p class="level-item">
          <a href="pt/problems/" >
            Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
          </a>
        </p>
        

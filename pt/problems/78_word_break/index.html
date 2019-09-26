@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Word Break </title>
 
     
-    <meta name="description" content="Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words."> 
+    <meta name="description" content="Dada uma string não vazia e um dicionário wordDict contendo uma lista de palavras não vazias, determine se s pode ser segmentado em uma seqüência separada por espaço de uma ou mais palavras do dicionário."> 
     
     
     
@@ -69,6 +69,10 @@
          Problemas
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
          FAQ
        </a>
@@ -99,23 +103,23 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>Given a non-empty string <strong>s</strong> and a dictionary wordDict containing a list of non-empty words, determine if <strong>s</strong> can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<p>Dada uma string não vazia e um dicionário wordDict contendo uma lista de palavras não vazias, determine se <strong>s</strong> pode ser segmentado em uma seqüência separada por espaço de uma ou mais palavras do dicionário.</p>
 
-<p>Note:</p>
+<p>Nota:</p>
 
-<p>The same word in the dictionary may be reused multiple times in the segmentation.</p>
+<p>A mesma palavra no dicionário pode ser reutilizada várias vezes na segmentação.</p>
 
-<p>You may assume the dictionary does not contain duplicate words.</p>
+<p>Você pode assumir que o dicionário não contém palavras duplicadas.</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>Starting from the end to the start, we break the string in two parts from. First check if the right most part is in the dictionary, if it is then check if the left most part is a sequence
-of one or more words from the dictionary. If the both checks are true return true.</p>
+<p>Começando do final ao começo, nós quebramos a palavra em duas partes. Primeiro verifique se a parte mais à direita está no dicionário, se esta então verifique se a parte esquerda é uma sequência
+de uma ou mais palavras do dicionário. Se as duas verificações forem verdadeiras, retorne true.</p>
 
-<p>The trick of this problem is how to solve this in an optimized way. Is possible to use recursion with memoization since the problem presents <strong>overlapping sub-problems</strong> and <strong>optimal substructure</strong>.
-Using a Hash Map we can reduce the complexity by avoiding the same data being processed more than one time.</p>
+<p>O truque desse problema é como resolver isso de maneira otimizada. É possível usar a recursão com memorização, pois o problema apresenta <strong>subproblemas sobrepostos</strong> e <strong>subestrutura ótima</strong>.
+Usando um hash, podemos reduzir a complexidade evitando que os mesmos dados sejam processados ​​mais de uma vez.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">bool</span> <span class="nf">helperWordBreak</span><span class="p">(</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">memo</span><span class="p">,</span><span class="k">const</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">dict</span><span class="p">,</span> <span class="n">string</span> <span class="n">word</span><span class="p">){</span>
   <span class="k">if</span><span class="p">(</span><span class="n">memo</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="o">!=</span><span class="n">memo</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
@@ -182,6 +186,12 @@ Using a Hash Map we can reduce the complexity by avoiding the same data being pr
         <p class="level-item">
          <a href="pt/problems/" >
            Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
          </a>
        </p>
        

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Fila </title>
+
+    
+    <meta name="description" content="Estrutura de dados linear que obedece a ordem FIFO (First In First Out) em suas funções"> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/pt/structures/queue/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+      <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">
+        <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+      </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/problems/" >
+         Problemas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Fila</h1>
+        
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+          <span class="has-text-white tag is-warning" value=Kotlin>Kotlin</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Definição </h2>
+
+<p>A fila é uma estrutura de dados para conter objetos obedecendo a ordem de entrada FIFO( First In First Out ). Isso significa
+que o primeiro elemento a ser adicionado sera o primeiro elemento a sair. Em sua forma mais clássica ela implementa
+as seguintes operações:</p>
+
+<div class="margin_left">
+  <ol>
+    <li><b>Peek</b> : essa operação retorna o primeiro elemento da fila, em alguns casos pode ser também implementada como <b>Front</b></li>
+    <li><b>Push</b>: a operação adiciona um elemento na última posição da fila</li>
+    <li><b>Pop</b> : essa operação remove um elemento da primeira posição da fila. Em algumas implementações, a operação remove e retorna o elemento que removeu </li>
+  </ol>
+</div>
+
+<div class="container has-text-centered">
+<h3 class="title is-5 margin_top"> Complexidades </h3>
+
+<table class="table is-striped is-bordered center" >
+    <thead>
+        <tr>
+            <th>Operação</th>
+            <th>Caso médio</th> 
+            <th>Pior caso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Espaço</td>
+            <td>O(n)</td> 
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td>Busca</td>
+            <td>O(n)</td> 
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td>Peek</td>
+            <td>O(1)</td> 
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Push</td>
+            <td>O(1)</td> 
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Pop</td>
+            <td>O(1)</td> 
+            <td>O(1)</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h2 class="title is-4 margin_top"> Implementação </h2>
+
+<p>A fila pode ser implementada de duas maneiras: através de um vetor estático com tamanho fixo onde é armazenado o índice da posição inicial e esse valor vai rotacionando pelo vetor, ou através de uma lista encadeada.</p>
+
+<p>Ao se implementar com uma lista encadeada é necessário manter um ponteiro para a última posição da lista de forma que a inserção mantenha a complexidade <strong>O(1)</strong>.</p>
+
+
+    <br/>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="pt/problems/" >
+           Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

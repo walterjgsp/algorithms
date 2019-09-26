@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,6 +67,10 @@
       
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/problems/" >
          Problems
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/structures/" >
+         Structures
        </a>
      
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/faq/" >
@@ -134,15 +138,15 @@ as the new root of the whole original tree, and the original tree is the new roo
 <div class="margin_left">
   <ol>
     <li>d-1 = 0 : This condition means that we need to add a new root to the tree. Create a new node and make him root with the actual root as left children.</li>
-    <li>d-1 = 1 : This node is parent of the new nodes that are going to be added. Create two new nodes for left and right and make the respective old childres of the
-parent left and right childres.</li>
-    <li>d-1 > 1 : This case means is necessary to go deeper in the tree. Check if the childs exists and if positive call the same function withe depth value minus 1. </li>
+    <li>d-1 = 1 : This node is parent of the new nodes that are going to be added. Create two new nodes for left and right and make the respective old children of the
+parent left and right children.</li>
+    <li>d-1 > 1 : This case means is necessary to go deeper in the tree. Check if the childs exists and if positive call the same function with depth value minus 1. </li>
   </ol>
 </div>
 
 <p>With this information the following implementation is made:</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">TreeNode</span><span class="o">*</span> <span class="nf">addOneRow</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">TreeNode</span><span class="o">*</span> <span class="nf">addOneRow</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
         <span class="n">TreeNode</span><span class="o">*</span> <span class="n">newRoot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
@@ -162,7 +166,7 @@ parent left and right childres.</li>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">root</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 
 <p>Time complexity <strong>O(n)</strong></p>
 
@@ -201,6 +205,12 @@ parent left and right childres.</li>
         <p class="level-item">
          <a href="/algorithms/problems/" >
            Problems
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/structures/" >
+           Structures
          </a>
        </p>
        

@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Sort Array By Parity </title>
 
     
-    <meta name="description" content="Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A."> 
+    <meta name="description" content="Dado um array A de inteiros não negativos, retorne um array que consiste em todos os elementos pares de A, seguidos por todos os elementos ímpares de A."> 
     
     
     
@@ -69,6 +69,10 @@
          Problemas
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
          FAQ
        </a>
@@ -101,26 +105,26 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.</p>
+<p>Dado um array A de inteiros não negativos, retorne um array que consiste em todos os elementos pares de A, seguidos por todos os elementos ímpares de A.</p>
 
-<p>You may return any answer array that satisfies this condition.</p>
+<p>Você pode retornar qualquer array de resposta que satisfaça essa condição.</p>
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
-<p>Is the input array mutable or read only? Mutable</p>
+<p>O array de entrada é mutável ou somente leitura? Mutável</p>
 
-<p>Can i have negative numbers in my input array? Yes</p>
+<p>Posso ter números negativos no meu vetor de entrada? sim</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>There are two solutions for this problem with time complexity <strong>O(n)</strong> with just one pass in the array.</p>
+<p>Existem duas soluções para esse problema com complexidade de tempo <strong>O(n)</strong> com apenas uma passada no vetor.</p>
 
-<p><strong>Two Arrays</strong></p>
+<p><strong>Dois arrays</strong></p>
 
-<p>Use two auxilary arrays, one for odd numbers and the other for even numbers, when looping through place each value in the right array.
-After all the values are processed you merge the two arrays into one and return.</p>
+<p>Use dois arrays auxiliares, um para números ímpares e outro para números pares, ao fazer um loop coloque cada valor no seu devido array.
+Depois que todos os valores forem processados, você mesclará os dois arrays em um e retornará.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortArrayByParity</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">odd</span><span class="p">,</span><span class="n">even</span><span class="p">;</span>
@@ -139,11 +143,11 @@ After all the values are processed you merge the two arrays into one and return.
 
 <p><strong>Two pointers</strong></p>
 
-<p>Use one pointer in the start of the array and another pointer in the end, loop until <em>start</em> is smaller than <em>end</em> pointer. If the value
-in start position is odd and in end position is even, swap these two values and move the pointers toward the middle. Otherwise, just check
-the pointers condition to move each one.</p>
+<p>Use um ponteiro no início do vetor e outro ponteiro no final, faça um loop até que <em>start</em> seja menor que o ponteiro <em>end</em>. Se o valor
+na posição inicial é ímpar e na posição final é par, troque esses dois valores e mova os ponteiros para o meio. Caso contrário, basta verificar as condições de cada
+os ponteiros para mover cada um.</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortArrayByParityInPlace</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortArrayByParityInPlace</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 
   <span class="k">while</span><span class="p">(</span><span class="n">start</span><span class="o">&lt;</span><span class="n">end</span><span class="p">){</span>
@@ -164,7 +168,7 @@ the pointers condition to move each one.</p>
 
   <span class="k">return</span> <span class="n">A</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 
 <p>Time complexity: <strong>O(n)</strong></p>
 
@@ -203,6 +207,12 @@ the pointers condition to move each one.</p>
         <p class="level-item">
          <a href="pt/problems/" >
            Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
          </a>
        </p>
        

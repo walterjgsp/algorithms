@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +69,10 @@
          Problems
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/structures/" >
+         Structures
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/faq/" >
          FAQ
        </a>
@@ -101,7 +105,7 @@
 
     <h2 class="title is-4"> Problem Statement </h2>
 
-<p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.</p>
+<p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results and the letters positions is the same.</p>
 
 <h2 class="title is-5"> Solution </h2>
 
@@ -110,7 +114,7 @@ when we are assembling the new word with only the distinct characters in the lex
 
 <p>After the count we will define in a greedy way if we put the letter in our string result or not. For this we will also have a vector where we will identify whether a letter was used or not in the formation of our results string.</p>
 
-<p>Each time a new character is processed first let&rsquo;s reduce 1 to the vector that stores the character frequency, since we just processed  and do not have it as available anymore. If this character has already been used in the final word formation, we only continue to the next iteration. If not, we have to check three conditions:</p>
+<p>Each time a new character is processed first let&rsquo;s reduce 1 from the vector that stores the character frequency, since we just processed  and do not have it as available anymore. If this character has already been used in the final word formation, we only continue to the next iteration. If not, we have to check three conditions:</p>
 
 <p><div class="margin_left">
   <ol>
@@ -191,6 +195,12 @@ when we are assembling the new word with only the distinct characters in the lex
         <p class="level-item">
          <a href="/algorithms/problems/" >
            Problems
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/structures/" >
+           Structures
          </a>
        </p>
        

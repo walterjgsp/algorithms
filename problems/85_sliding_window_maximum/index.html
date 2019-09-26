@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +69,10 @@
          Problems
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/structures/" >
+         Structures
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/faq/" >
          FAQ
        </a>
@@ -110,6 +114,8 @@ You can only see the k numbers in the window. Each time the sliding window moves
 
 <h2 class="title is-5"> Solution </h2>
 
+<p>The idea to solve this problem is always keep the biggest number found as first in a sliding window. This is possible using a dequeue keeping a track of the array indexes. In each loop, first check if the front element of the sliding window is valid, smaller than the current position minus k. Second, check if the current number is bigger than the back of the queue, if it is, remove the back until no more elements smaller than the current are found. Add the current element to the rear and add the front as answer for this current window position.</p>
+
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">maxSlidingWindow</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">indexes</span><span class="p">;</span>
     <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
@@ -133,7 +139,7 @@ You can only see the k numbers in the window. Each time the sliding window moves
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Time complexity: <strong>O(n)</strong></p>
+<p>Time complexity: <strong>O(n)</strong>, the elements enter and go out of the queue just one time.</p>
 
 <p>Space complexity: <strong>O(n)</strong></p>
 
@@ -172,6 +178,12 @@ You can only see the k numbers in the window. Each time the sliding window moves
         <p class="level-item">
          <a href="/algorithms/problems/" >
            Problems
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/structures/" >
+           Structures
          </a>
        </p>
        

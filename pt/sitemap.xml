@@ -3,6 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/structures/list/</loc>
+    <lastmod>2019-07-11T19:05:13-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/structures/list/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/structures/list/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/structures/trie/</loc>
+    <lastmod>2019-07-11T19:05:07-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/structures/trie/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/structures/trie/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/structures/stack/</loc>
+    <lastmod>2019-07-11T04:15:17-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/structures/stack/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/structures/stack/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/structures/queue/</loc>
+    <lastmod>2019-07-04T19:40:35-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/structures/queue/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/structures/queue/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/problems/110_combination_sum_ii/</loc>
+    <lastmod>2019-06-12T21:59:28-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/problems/110_combination_sum_ii/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/problems/110_combination_sum_ii/"
+                />
+  </url>
+  
+  <url>
     <loc>http://walterjgsp.github.io/algorithms/pt/problems/109_remove_duplicate_letters/</loc>
     <lastmod>2019-06-09T22:19:37-03:00</lastmod>
     <xhtml:link
@@ -304,7 +379,7 @@
   
   <url>
     <loc>http://walterjgsp.github.io/algorithms/pt/</loc>
-    <lastmod>2019-06-09T22:19:37-03:00</lastmod>
+    <lastmod>2019-07-11T19:05:13-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -318,38 +393,23 @@
   </url>
   
   <url>
-    <loc>http://walterjgsp.github.io/algorithms/pt/categories/</loc>
-    <priority>0</priority>
+    <loc>http://walterjgsp.github.io/algorithms/pt/structures/</loc>
+    <lastmod>2019-07-11T19:05:13-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://walterjgsp.github.io/algorithms/categories/"
+                href="http://walterjgsp.github.io/algorithms/structures/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="http://walterjgsp.github.io/algorithms/pt/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://walterjgsp.github.io/algorithms/pt/faq/</loc>
-    <lastmod>2019-02-17T19:22:35-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://walterjgsp.github.io/algorithms/faq/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://walterjgsp.github.io/algorithms/pt/faq/"
+                href="http://walterjgsp.github.io/algorithms/pt/structures/"
                 />
   </url>
   
   <url>
     <loc>http://walterjgsp.github.io/algorithms/pt/problems/</loc>
-    <lastmod>2019-06-09T22:19:37-03:00</lastmod>
+    <lastmod>2019-06-12T21:59:28-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -363,8 +423,36 @@
   </url>
   
   <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/faq/</loc>
+    <lastmod>2019-02-17T19:30:50-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/faq/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/faq/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/algorithms/pt/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/categories/"
+                />
+  </url>
+  
+  <url>
     <loc>http://walterjgsp.github.io/algorithms/pt/tags/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

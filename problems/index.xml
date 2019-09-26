@@ -6,10 +6,24 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jun 2019 22:19:02 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 21:59:24 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Combination Sum II</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/110_combination_sum_ii/</link>
+      <pubDate>Wed, 12 Jun 2019 21:59:24 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/110_combination_sum_ii/</guid>
+      <description>Problem Statement  Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+Each number in candidates may only be used once in the combination.
+Note:
+All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Questions to ask  Is the input vector already ordered? No
+Can the input vector be modified?</description>
+    </item>
     
     <item>
       <title>Remove Duplicate Letters</title>
@@ -17,7 +31,7 @@
       <pubDate>Sun, 09 Jun 2019 22:19:02 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/problems/109_remove_duplicate_letters/</guid>
-      <description>Problem Statement  Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+      <description>Problem Statement  Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results and the letters positions is the same.
 Solution  To solve this problem, let&amp;rsquo;s first count the frequency of each character in the input text. This will aid us in decision making when we are assembling the new word with only the distinct characters in the lexicographic order.</description>
     </item>
     
@@ -40,7 +54,7 @@ Solution  To solve this problem compute two auxiliary arrays containing the maxi
       <guid>http://walterjgsp.github.io/algorithms/problems/85_sliding_window_maximum/</guid>
       <description>Problem Statement  Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
 Questions to ask  Can i have negative numbers in my input array? Yes
-Solution  vector&amp;lt;int&amp;gt; maxSlidingWindow(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) {deque&amp;lt;int&amp;gt; indexes;vector&amp;lt;int&amp;gt; result;for(int i=0;i&amp;lt;nums.</description>
+Solution  The idea to solve this problem is always keep the biggest number found as first in a sliding window.</description>
     </item>
     
     <item>

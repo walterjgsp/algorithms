@@ -2,14 +2,14 @@
 <html lang="en-us">
 
   <head>
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Sum of Even Numbers After Queries </title>
 
     
-    <meta name="description" content="Given an array A of integers, and an array queries of queries return the answer to all queries."> 
+    <meta name="description" content="Dado um vetor A de inteiros, e um vetor de consultas de queries, retornar a a soma dos valores pares de A após todas as consultas."> 
     
     
     
@@ -69,6 +69,10 @@
          Problemas
        </a>
      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/structures/" >
+         Estruturas
+       </a>
+     
        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/faq/" >
          FAQ
        </a>
@@ -101,28 +105,27 @@
     </section>
     <div class="section container">
 
-    <h2 class="title is-4"> Problem Statement </h2>
+    <h2 class="title is-4"> Enunciado do problema </h2>
 
-<p>We have an array A of integers, and an array queries of queries.</p>
+<p>Temos um vetor A de inteiros e um vetor de consultas de queries.</p>
 
-<p>For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index]. Then, the answer to the i-th query is the sum of the even values of A.</p>
+<p>Para a i-ésima consulta  val = queries[i][0], index = queries[i][1], adicionamos val a A[index]. Então, a resposta para a i-ésima consulta é a soma dos valores pares de A.</p>
 
-<p>(Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.)</p>
+<p>(Aqui, o índice dado = queries[i][1] é um índice baseado em 0, e cada consulta modifica permanentemente o array A.)</p>
 
-<p>Return the answer to all queries. Your answer array should have answer[i] as the answer to the i-th query.</p>
+<p>Retorna a resposta para todas as perguntas. Seu vetor de respostas deve ter a resposta[i] como a resposta para a i-ésima consulta.</p>
 
-<h2 class="title is-4"> Questions to ask </h2>
+<h2 class="title is-4"> Questões importantes </h2>
 
 <p>Is the input array mutable or read only? Mutable</p>
 
 <p>Can i have negative numbers in my input array? Yes</p>
 
-<h2 class="title is-5"> Solution </h2>
+<h2 class="title is-5"> Solução </h2>
 
-<p>To solve this problem we gonna keep an auxiliary variable to keep a track of the sum of all even values in the array. So, we loop through adding
-the value to this variable if it is even. Now we need to apply the changes proposed by the queries and also track the new sum. To do this we use simple math.
-If the query index has a even value we subtract this value from the variable with the total sum of even values, we appply the change and if the new value
-is even we add to the variable and also in the result array.</p>
+<p>Para resolver este problema, vamos manter uma variável auxiliar para manter uma faixa da soma de todos os valores pares no vetor. Então, nós passamos por todo o vetor e adicionamos
+o valor para essa variável se for par. Agora precisamos aplicar as alterações propostas pelas consultas e também acompanhar a nova soma. Para fazer isso, usamos matemática simples.
+Se o índice de consulta tiver um valor par, subtraímos esse valor da variável com a soma total dos valores pares, aplicamos a alteração e se o novo valor for par nós adicionamos à variável e também ao vetor de resultados.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sumEvenAfterQueries</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">queries</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
@@ -151,7 +154,7 @@ is even we add to the variable and also in the result array.</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Time Complexity: <strong>O(n+m)</strong> where n is the size of the initial array and m the number of queries.</p>
+<p>Complexidade de tempo: <strong>O(n+m)</strong> onde n é o tamanho da matriz inicial e m o número de consultas.</p>
 
 
     <br/>
@@ -188,6 +191,12 @@ is even we add to the variable and also in the result array.</p>
         <p class="level-item">
          <a href="pt/problems/" >
            Problemas
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="pt/structures/" >
+           Estruturas
          </a>
        </p>
        

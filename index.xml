@@ -6,10 +6,64 @@
     <description>Recent content in Algorithms Repository on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jun 2019 22:19:02 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 19:04:54 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Trie</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/trie/</link>
+      <pubDate>Thu, 11 Jul 2019 19:04:54 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/trie/</guid>
+      <description>Definition  &amp;hellip;Your data structure here
+Complexity    Operation Average Worst Case     Space O(n) O(n)   Search O(n) O(n)     Implementation  </description>
+    </item>
+    
+    <item>
+      <title>Linked list</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/list/</link>
+      <pubDate>Thu, 11 Jul 2019 19:04:13 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/list/</guid>
+      <description>Definition  &amp;hellip;Your data structure here
+Complexity    Operation Average Worst Case     Space O(n) O(n)   Search O(n) O(n)     Implementation  </description>
+    </item>
+    
+    <item>
+      <title>Stack</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/stack/</link>
+      <pubDate>Thu, 11 Jul 2019 04:15:43 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/stack/</guid>
+      <description>Definition  The stack is a data structure that hold objects in the order of LIFO (Last In First Out) entry. This means that the first element to be added will be the last element to exit. In its most classic form it implements following operations:
+ Top : this operation returns the last element added to the stack, in some cases it can also be implemented as Peek Push: the operation adds an element to the last stack position Pop : this operation removes an element from the last stack position.</description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>http://walterjgsp.github.io/algorithms/structures/queue/</link>
+      <pubDate>Thu, 04 Jul 2019 19:40:21 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/structures/queue/</guid>
+      <description>Definition  The queue is a data structure to contain objects in the FIFO (First In First Out) order. This means that the first element to be added will be the first element to come out. In its most classic form it implements following operations:
+ Peek : this operation returns the first element of the queue, in some cases it can also be implemented as Front Push: the operation adds an element in the last position of the queue Pop : this operation removes an element from the first position in the queue.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum II</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/110_combination_sum_ii/</link>
+      <pubDate>Wed, 12 Jun 2019 21:59:24 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/110_combination_sum_ii/</guid>
+      <description>Problem Statement  Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+Each number in candidates may only be used once in the combination.
+Note:
+All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Questions to ask  Is the input vector already ordered? No
+Can the input vector be modified?</description>
+    </item>
     
     <item>
       <title>Remove Duplicate Letters</title>
@@ -17,7 +71,7 @@
       <pubDate>Sun, 09 Jun 2019 22:19:02 -0300</pubDate>
       
       <guid>http://walterjgsp.github.io/algorithms/problems/109_remove_duplicate_letters/</guid>
-      <description>Problem Statement  Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+      <description>Problem Statement  Given a string which contains only lowercase letters, remove duplicate letters so that every letter appear once and only once. You must make sure your result is the smallest in lexicographical order among all possible results and the letters positions is the same.
 Solution  To solve this problem, let&amp;rsquo;s first count the frequency of each character in the input text. This will aid us in decision making when we are assembling the new word with only the distinct characters in the lexicographic order.</description>
     </item>
     
@@ -40,7 +94,7 @@ Solution  To solve this problem compute two auxiliary arrays containing the maxi
       <guid>http://walterjgsp.github.io/algorithms/problems/85_sliding_window_maximum/</guid>
       <description>Problem Statement  Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
 Questions to ask  Can i have negative numbers in my input array? Yes
-Solution  vector&amp;lt;int&amp;gt; maxSlidingWindow(vector&amp;lt;int&amp;gt;&amp;amp; nums, int k) {deque&amp;lt;int&amp;gt; indexes;vector&amp;lt;int&amp;gt; result;for(int i=0;i&amp;lt;nums.</description>
+Solution  The idea to solve this problem is always keep the biggest number found as first in a sliding window.</description>
     </item>
     
     <item>
@@ -217,7 +271,7 @@ The adding rule is: given a positive integer depth d, for each NOT null tree nod
       <guid>http://walterjgsp.github.io/algorithms/faq/how_to_c/</guid>
       <description>All the C++ code were done using the C++14 version. To compile use the following command:
 g++ -std=c++14 &amp;lt;INPUT_FILE_NAME&amp;gt; -o &amp;lt;OUTPUT_FILE_NAME&amp;gt; And to run the code:
-./&amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+./&amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
     <item>
@@ -241,7 +295,7 @@ Solution  There are three main approaches to solve this problem: Naive, Time Opt
       <guid>http://walterjgsp.github.io/algorithms/faq/how_to_kotlin/</guid>
       <description>To compile use the following command:
 kotlinc &amp;lt;INPUT_FILE_NAME&amp;gt; -include-runtime -d &amp;lt;OUTPUT_FILE_NAME&amp;gt;.jar And to run the code:
-java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt;</description>
+java -jar &amp;lt;OUTPUT_FILE_NAME&amp;gt; </description>
     </item>
     
   </channel>
