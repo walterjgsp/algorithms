@@ -45,9 +45,9 @@ The problem can be solved recursively treating the base cases:
 <div class="margin_left">
   <ol>
     <li>d-1 = 0 : This condition means that we need to add a new root to the tree. Create a new node and make him root with the actual root as left children.</li>
-    <li>d-1 = 1 : This node is parent of the new nodes that are going to be added. Create two new nodes for left and right and make the respective old childres of the
-parent left and right childres.</li>
-    <li>d-1 > 1 : This case means is necessary to go deeper in the tree. Check if the childs exists and if positive call the same function withe depth value minus 1. </li>
+    <li>d-1 = 1 : This node is parent of the new nodes that are going to be added. Create two new nodes for left and right and make the respective old children of the
+parent left and right children.</li>
+    <li>d-1 > 1 : This case means is necessary to go deeper in the tree. Check if the childs exists and if positive call the same function with depth value minus 1. </li>
   </ol>
 </div>
 

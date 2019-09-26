@@ -1,5 +1,5 @@
 +++
-title = "Lista Encadeada"
+title = "Linked list"
 description = ""
 date = 2019-07-11T19:04:13-03:00
 weight = 20
