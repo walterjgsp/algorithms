@@ -4,6 +4,9 @@
 // If n is even, replace n with n/2.
 // If n is odd, you can replace n with either n + 1 or n - 1.
 // What is the minimum number of replacements needed for n to become 1?
+
+import java.util.*;
+
 class Main{
     public static void main(String[] args) {
         Solution sol = new Solution();
