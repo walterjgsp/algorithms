@@ -139,3 +139,5 @@ List of solved problems
 | 135   | Smallest String With Swaps                             | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/smallest-string-with-swaps/)                             |
 | 136   | Two City Scheduling                                    | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/two-city-scheduling/)                                    |
 | 137   | Design Circular Queue                                  | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/design-circular-queue/)                                  |
+| 138   | Remove All Adjacent Duplicates in String II            | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)            |
+| 139   | Get Equal Substrings Within Budget                     | :heavy_check_mark: |                    |                    | [LeetCode](https://leetcode.com/problems/get-equal-substrings-within-budget/)                     |
