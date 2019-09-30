@@ -6,10 +6,21 @@
     <description>Recent content in Problemas on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jun 2019 21:59:28 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2019 06:59:48 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/pt/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Letter Combinations of a Phone Number</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/134_letter_combinations_phone_number/</link>
+      <pubDate>Mon, 30 Sep 2019 06:59:48 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/134_letter_combinations_phone_number/</guid>
+      <description>Enunciado do problema  Dada uma sequência contendo dígitos de 2 a 9, inclusive, retorne todas as combinações possíveis de letras que o número possa representar.
+O mapeamento do dígito para as letras é {2, &amp;ldquo;abc&amp;rdquo;}, {3, &amp;ldquo;def&amp;rdquo;}, {4, &amp;ldquo;ghi&amp;rdquo;}, {5, &amp;ldquo;jkl&amp;rdquo;}, {6, &amp;ldquo;mno&amp;rdquo;}, {7, &amp;ldquo;pqrs&amp;rdquo;}, {8, &amp;ldquo;tuv&amp;rdquo;}, {9, &amp;ldquo;wxyz&amp;rdquo;}. Observe que 1 não é mapeado para nenhuma letra.
+Solução  Para resolver esse problema, usamos uma abordagem recursiva. Primeiro, definimos um caso base, que fará com que nossas chamadas recursivas parem.</description>
+    </item>
     
     <item>
       <title>Combination Sum II</title>

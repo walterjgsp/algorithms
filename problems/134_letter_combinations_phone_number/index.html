@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Letter Combinations of a Phone Number </title>
+
+    
+    <meta name="description" content="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent."> 
+    
+    
+    
+    
+    
+
+    <link rel="canonical" href="http://walterjgsp.github.io/algorithms/problems/134_letter_combinations_phone_number/">  
+
+    <link rel="shortcut icon" type="image/png"  href="/algorithms/img/icon.png" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="/algorithms/css/body.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/highlight.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma.min.css" rel="stylesheet" type="text/css">
+    <link href="/algorithms/css/bulma-extensions.min.css" rel="stylesheet" type="text/css">
+  
+    <script src="/algorithms/js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/bulma-extensions.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/languages_colors.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/masonry.pkgd.min.js" type="text/javascript">
+    </script>
+
+    <script src="/algorithms/js/isotope.pkgd.min.js" type="text/javascript">
+    </script>
+
+  </head>
+
+
+  <body>
+    <header> <nav class="navbar is-spaced has-shadow is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+      <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">
+        <img class="has-text-link" src="/algorithms/img/algorithm.svg"  >
+      </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+      
+      
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/problems/" >
+         Problems
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/structures/" >
+         Structures
+       </a>
+     
+       <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/faq/" >
+         FAQ
+       </a>
+     
+
+    </div>
+
+    <div class="navbar-end">
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/">English</a>
+        
+        <a class="navbar-item" href="http://walterjgsp.github.io/algorithms/pt/">Português</a>
+        
+    </div>
+  </div>
+</nav>
+ </header>
+    <main>
+  <div id="main">
+    <section class="hero ">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-size-1" >Letter Combinations of a Phone Number</h1>
+        <span class="tag has-text-white level_tag" value=1 >Easy</span>
+        
+          <span class="has-text-white tag is-warning" value=C&#43;&#43;>C&#43;&#43;</span>
+        
+      </div>
+    </section>
+    <div class="section container">
+
+    <h2 class="title is-4"> Problem Statement </h2>
+
+<p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.</p>
+
+<p>The mapping of digit to letters is {2,&ldquo;abc&rdquo;},{3,&ldquo;def&rdquo;},{4,&ldquo;ghi&rdquo;},{5,&ldquo;jkl&rdquo;},{6,&ldquo;mno&rdquo;},{7,&ldquo;pqrs&rdquo;},{8,&ldquo;tuv&rdquo;},{9,&ldquo;wxyz&rdquo;}. Note that 1 does not map to any letters.</p>
+
+<h2 class="title is-5"> Solution </h2>
+
+<p>To solve this problem we use a recursive approach. First we define a base case, that will make our recursion calls stop. In this problem will be
+when we arrive at the end of the input string. For all the other calls in the algorithm we gonna get the respective letters from the current digit
+that are being processed, add to the end of a possible combination and call in recursive way the same function until the recursion stops.</p>
+
+<p>The code to this solution:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">letters</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">2</span><span class="p">,</span><span class="s">&#34;abc&#34;</span><span class="p">},{</span><span class="mi">3</span><span class="p">,</span><span class="s">&#34;def&#34;</span><span class="p">},{</span><span class="mi">4</span><span class="p">,</span><span class="s">&#34;ghi&#34;</span><span class="p">},{</span><span class="mi">5</span><span class="p">,</span><span class="s">&#34;jkl&#34;</span><span class="p">},{</span><span class="mi">6</span><span class="p">,</span><span class="s">&#34;mno&#34;</span><span class="p">},{</span><span class="mi">7</span><span class="p">,</span><span class="s">&#34;pqrs&#34;</span><span class="p">},{</span><span class="mi">8</span><span class="p">,</span><span class="s">&#34;tuv&#34;</span><span class="p">},{</span><span class="mi">9</span><span class="p">,</span><span class="s">&#34;wxyz&#34;</span><span class="p">}};</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">recursiveCombination</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">digits</span><span class="p">,</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">string</span> <span class="n">curr</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">index</span><span class="o">&gt;=</span><span class="n">digits</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">curr</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">letter</span> <span class="p">:</span> <span class="n">letters</span><span class="p">[</span><span class="n">digits</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">]){</span>
+        <span class="n">curr</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">letter</span><span class="p">);</span>
+        <span class="n">recursiveCombination</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">curr</span><span class="p">);</span>
+        <span class="n">curr</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">letterCombinations</span><span class="p">(</span><span class="n">string</span> <span class="n">digits</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">digits</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">string</span> <span class="n">curr</span><span class="p">;</span>
+    <span class="n">recursiveCombination</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">curr</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Time complexity: <strong>O(3ˆn)</strong></p>
+
+
+    <br/>
+    <p class="is-size-7 has-text-right">
+      question from
+      <a href=https://leetcode.com>LeetCode</a>
+    </p>
+
+    </div>
+
+    <script type="text/javascript">
+      $.each($( ".tag" ), function(i,val){
+        $( this ).css("background-color",language_colors[val.attributes.value.value])
+      })
+
+      $.each($( ".level_tag" ), function(i,val){
+        const level = level_object[val.attributes.value.value]
+        $( this ).css("background-color",level.color)
+        $( this ).text(level.value)
+      })
+
+    </script>
+  </div>
+</main>
+    <footer>
+    <footer class="footer">
+    <nav class="level">
+      <div class="level-left">
+        <p>&copy; Licence MIT.</p>
+      </div>
+      <div class="level-right">
+        
+        
+        <p class="level-item">
+         <a href="/algorithms/problems/" >
+           Problems
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/structures/" >
+           Structures
+         </a>
+       </p>
+       
+        <p class="level-item">
+         <a href="/algorithms/faq/" >
+           FAQ
+         </a>
+       </p>
+       
+      </div>
+    </nav>
+
+  </footer>
+
+</footer>
+  </body>
+
+
+
+</html>

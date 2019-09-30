@@ -6,10 +6,21 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jun 2019 21:59:24 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2019 06:59:35 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Letter Combinations of a Phone Number</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/134_letter_combinations_phone_number/</link>
+      <pubDate>Mon, 30 Sep 2019 06:59:35 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/134_letter_combinations_phone_number/</guid>
+      <description>Problem Statement  Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+The mapping of digit to letters is {2,&amp;ldquo;abc&amp;rdquo;},{3,&amp;ldquo;def&amp;rdquo;},{4,&amp;ldquo;ghi&amp;rdquo;},{5,&amp;ldquo;jkl&amp;rdquo;},{6,&amp;ldquo;mno&amp;rdquo;},{7,&amp;ldquo;pqrs&amp;rdquo;},{8,&amp;ldquo;tuv&amp;rdquo;},{9,&amp;ldquo;wxyz&amp;rdquo;}. Note that 1 does not map to any letters.
+Solution  To solve this problem we use a recursive approach. First we define a base case, that will make our recursion calls stop. In this problem will be when we arrive at the end of the input string.</description>
+    </item>
     
     <item>
       <title>Combination Sum II</title>

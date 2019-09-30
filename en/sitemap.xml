@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://walterjgsp.github.io/algorithms/problems/134_letter_combinations_phone_number/</loc>
+    <lastmod>2019-09-30T06:59:35-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/problems/134_letter_combinations_phone_number/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/problems/134_letter_combinations_phone_number/"
+                />
+  </url>
+  
+  <url>
     <loc>http://walterjgsp.github.io/algorithms/structures/trie/</loc>
     <lastmod>2019-07-11T19:04:54-03:00</lastmod>
     <xhtml:link
@@ -379,7 +394,7 @@
   
   <url>
     <loc>http://walterjgsp.github.io/algorithms/</loc>
-    <lastmod>2019-07-11T19:04:54-03:00</lastmod>
+    <lastmod>2019-09-30T06:59:35-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -389,6 +404,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://walterjgsp.github.io/algorithms/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://walterjgsp.github.io/algorithms/problems/</loc>
+    <lastmod>2019-09-30T06:59:35-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/problems/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/problems/"
                 />
   </url>
   
@@ -404,21 +434,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://walterjgsp.github.io/algorithms/structures/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://walterjgsp.github.io/algorithms/problems/</loc>
-    <lastmod>2019-06-12T21:59:24-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="http://walterjgsp.github.io/algorithms/pt/problems/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://walterjgsp.github.io/algorithms/problems/"
                 />
   </url>
   
