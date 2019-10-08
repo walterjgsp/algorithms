@@ -6,10 +6,21 @@
     <description>Recent content in Problems on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Sep 2019 06:59:35 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 08:55:56 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Is Graph Bipartite</title>
+      <link>http://walterjgsp.github.io/algorithms/problems/51_is_graph_bipartite/</link>
+      <pubDate>Mon, 07 Oct 2019 08:55:56 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/problems/51_is_graph_bipartite/</guid>
+      <description>Problem Statement  Given an undirected graph, return true if and only if it is bipartite.
+Recall that a graph is bipartite if we can split it&amp;rsquo;s set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
+The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.</description>
+    </item>
     
     <item>
       <title>Letter Combinations of a Phone Number</title>

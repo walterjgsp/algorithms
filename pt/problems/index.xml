@@ -6,10 +6,21 @@
     <description>Recent content in Problemas on Algorithms</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Sep 2019 06:59:48 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 08:55:56 -0300</lastBuildDate>
     
 	<atom:link href="http://walterjgsp.github.io/algorithms/pt/problems/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Is Graph Bipartite</title>
+      <link>http://walterjgsp.github.io/algorithms/pt/problems/51_is_graph_bipartite/</link>
+      <pubDate>Mon, 07 Oct 2019 08:55:56 -0300</pubDate>
+      
+      <guid>http://walterjgsp.github.io/algorithms/pt/problems/51_is_graph_bipartite/</guid>
+      <description>Enunciado do problema  Dado um gráfico não direcionado, retorne true se e somente se for bipartido.
+Lembre-se de que um gráfico é bipartido se pudermos dividir seu conjunto de nós em dois subconjuntos independentes A e B, de modo que cada extremidade do gráfico tenha um nó em A e outro nó em B.
+O gráfico é fornecido da seguinte forma: o gráfico [i] é uma lista de índices j para os quais existe a borda entre os nós iej.</description>
+    </item>
     
     <item>
       <title>Letter Combinations of a Phone Number</title>

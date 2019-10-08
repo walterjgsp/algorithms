@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://walterjgsp.github.io/algorithms/problems/51_is_graph_bipartite/</loc>
+    <lastmod>2019-10-07T08:55:56-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="http://walterjgsp.github.io/algorithms/pt/problems/51_is_graph_bipartite/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://walterjgsp.github.io/algorithms/problems/51_is_graph_bipartite/"
+                />
+  </url>
+  
+  <url>
     <loc>http://walterjgsp.github.io/algorithms/problems/134_letter_combinations_phone_number/</loc>
     <lastmod>2019-09-30T06:59:35-03:00</lastmod>
     <xhtml:link
@@ -394,7 +409,7 @@
   
   <url>
     <loc>http://walterjgsp.github.io/algorithms/</loc>
-    <lastmod>2019-09-30T06:59:35-03:00</lastmod>
+    <lastmod>2019-10-07T08:55:56-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -409,7 +424,7 @@
   
   <url>
     <loc>http://walterjgsp.github.io/algorithms/problems/</loc>
-    <lastmod>2019-09-30T06:59:35-03:00</lastmod>
+    <lastmod>2019-10-07T08:55:56-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
