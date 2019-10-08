@@ -1,6 +1,8 @@
 const language_colors = {
   "C++":"#0066ff",
-  "Kotlin": "#7300e6"
+  "Kotlin": "#7300e6",
+  "Java": "#E68A85",
+  "Python": "#0CF23F"
 }
 
 const level_object = [
