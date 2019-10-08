@@ -61,6 +61,14 @@ And to run the code:
 java Main
 ```
 
+## Run Python
+
+All Python code were done using Python 3.7 version. To run the code use the following command:
+
+```bash
+python3 <INPUT_FILE_NAME> 
+```
+
 ### Services
 
 Services that i decided to use in this repository so i could test a more professional way of working:
