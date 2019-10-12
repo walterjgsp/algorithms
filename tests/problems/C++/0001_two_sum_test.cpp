@@ -1,4 +1,4 @@
-#include "../../../problems/C++/0001_two_sum.h"
+#include "../../../problems/C++/0001_two_sum.hpp"
 #include <bits/stdc++.h>
 
 using namespace std;

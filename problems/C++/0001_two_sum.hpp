@@ -1,5 +1,5 @@
-#ifndef TWO_SUM_H_INCLUDED
-#define TWO_SUM_H_INCLUDED
+#ifndef TWO_SUM_HPP_INCLUDED
+#define TWO_SUM_HPP_INCLUDED
 
 #include <bits/stdc++.h>
 #include "0001_two_sum.cpp"
