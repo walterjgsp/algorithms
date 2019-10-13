@@ -15,6 +15,4 @@ addons:
 install:
 - "[ $CXX = g++ ] && export CXX=g++-6 || true"
 script:
-  - build-wrapper-linux-x86-64 --out-dir bw-output make all
-  - make
-  - make test
+  - bash test_cpp.sh
