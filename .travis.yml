@@ -18,4 +18,3 @@ script:
   - build-wrapper-linux-x86-64 --out-dir bw-output make all
   - make
   - make test
-  - sonar-scanner
