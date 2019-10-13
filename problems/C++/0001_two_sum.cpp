@@ -9,10 +9,14 @@
 
 using namespace std;
 
-vector<int> twoSum(vector<int>& nums, int target) {
+vector<int> twoSum(vector<int> nums, int target) {
   unordered_map<int,int> index_val;
-  index_val[nums[0]]=0;
   vector<int> result;
+
+  if(nums.empty())
+    return result;
+
+  index_val[nums[0]]=0;
   for(int i=1;i<nums.size();i++){
     if(index_val.find(target-nums[i])!=index_val.end()){
       result.push_back(index_val[target-nums[i]]);
