@@ -5,6 +5,10 @@
 # https://github.com/rsp/travis-hello#readme
 
 tn=1
+clearFiles(){
+    echo Clearing all generated files
+    rm -rf ./*.run
+}
 t() {
     echo Test $tn $@
 }
@@ -12,14 +16,19 @@ pass() {
     echo Test $tn OK
     tn=$(($tn+1))
 }
+
 fail() {
     echo Test $tn FAILED
+    clearFiles
     exit 1
 }
 
-t program should run
-./hello >/dev/null 2>&1 && pass || fail
-t program should print Hello
-cmp <(./hello) <(echo Hello) && pass || fail
+cd tests/C++/problems
+
+for file in *
+do
+    g++ -std=c++14 $file -o "$file.run"
+    exec ./$file.run
+done
 
 echo ALL TESTS PASSED
