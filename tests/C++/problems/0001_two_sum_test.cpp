@@ -8,9 +8,10 @@
 using namespace std;
 
 TEST_CASE( "Two sum are tested" ) {
-    REQUIRE( areVectorsEqual(twoSum({2,11,7,15},9),{0,2}) );
-    REQUIRE( areVectorsEqual(twoSum({2,11,7,15},10),{}) );
-    REQUIRE( areVectorsEqual(twoSum({1,5,6,7,1,4,2,11,7,15},9),{1,5}) );
-    REQUIRE( areVectorsEqual(twoSum({2},2),{}) );
-    REQUIRE( areVectorsEqual(twoSum({},9),{}) );
+    Solution sol;
+    REQUIRE( areVectorsEqual(sol.twoSum({2,11,7,15},9),{0,2}) );
+    REQUIRE( areVectorsEqual(sol.twoSum({2,11,7,15},10),{}) );
+    REQUIRE( areVectorsEqual(sol.twoSum({1,5,6,7,1,4,2,11,7,15},9),{1,5}) );
+    REQUIRE( areVectorsEqual(sol.twoSum({2},2),{}) );
+    REQUIRE( areVectorsEqual(sol.twoSum({},9),{}) );
 }
