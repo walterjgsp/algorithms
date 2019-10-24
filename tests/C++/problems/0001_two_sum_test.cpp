@@ -8,6 +8,7 @@
 using namespace std;
 
 TEST_CASE( "Two sum are tested" ) {
+    UNSCOPED_INFO("Problem 0001 Two Sum");
     Solution sol;
     REQUIRE( areVectorsEqual(sol.twoSum({2,11,7,15},9),{0,2}) );
     REQUIRE( areVectorsEqual(sol.twoSum({2,11,7,15},10),{}) );
