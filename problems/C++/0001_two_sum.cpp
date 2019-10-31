@@ -9,7 +9,9 @@
 
 using namespace std;
 
-vector<int> twoSum(vector<int> nums, int target) {
+Solution::Solution(){}
+
+vector<int> Solution::twoSum(vector<int> nums, int target) {
   unordered_map<int,int> index_val;
   vector<int> result;
 
