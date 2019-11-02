@@ -10,7 +10,7 @@ clearFiles(){
     rm -rf ./*.run
 }
 
-cd tests/C++/problems
+cd C++/tests/problems
 
 clearFiles
 

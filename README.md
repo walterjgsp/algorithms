@@ -17,6 +17,8 @@ We suggest you to try their platform so you can get new problems and articles ab
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
+The problmes list can be found at [Problems](PROBLEMS.md)
+
 ## Run C++
 
 All the C++ code were done using the C++14 version. To compile use the following command:
