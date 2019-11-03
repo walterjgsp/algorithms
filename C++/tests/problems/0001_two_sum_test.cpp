@@ -2,8 +2,8 @@
 
 #include "../../problems/0001_two_sum.hpp"
 #include <bits/stdc++.h>
-#include "../frameworks/catch.hpp"
-#include "../frameworks/asserts.hpp"
+#include "../../frameworks/catch.hpp"
+#include "../../frameworks/asserts.hpp"
 
 using namespace std;
 
