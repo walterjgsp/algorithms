@@ -6,29 +6,15 @@
 
 tn=1
 clearFiles(){
-    echo Clearing all generated files
+    echo Clearing all generated/previous files
     rm -rf ./*.run
 }
-t() {
-    echo Test $tn $@
-}
-pass() {
-    echo Test $tn OK
-    tn=$(($tn+1))
-}
 
-fail() {
-    echo Test $tn FAILED
-    clearFiles
-    exit 1
-}
+cd C++/tests/problems
 
-cd tests/C++/problems
+clearFiles
 
-for file in *
-do
-    g++ -std=c++14 $file -o "$file.run"
-    exec ./$file.run
-done
+g++ -std=c++14 *.cpp -o "tests.run"
+exec ./tests.run -s
 
 echo ALL TESTS PASSED
