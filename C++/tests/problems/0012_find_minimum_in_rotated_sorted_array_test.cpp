@@ -1,4 +1,3 @@
-
 #include "../../problems/0012_find_minimum_in_rotated_sorted_array.hpp"
 #include <bits/stdc++.h>
 #include "../../frameworks/catch.hpp"

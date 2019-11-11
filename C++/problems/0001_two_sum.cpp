@@ -5,11 +5,9 @@
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 #include "0001_two_sum.hpp"
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 
 using namespace std;
-
-Solution::Solution(){}
 
 vector<int> Solution::twoSum(vector<int> nums, int target) {
   unordered_map<int,int> index_val;
