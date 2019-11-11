@@ -6,11 +6,9 @@
 using namespace std;
 class Solution{
 public:
-    Solution();
     vector<int> twoSum(vector<int> nums, int target);
 };
 
 #include "0001_two_sum.cpp"
-
 
 #endif
