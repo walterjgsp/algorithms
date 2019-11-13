@@ -11,5 +11,4 @@ public:
 
 #include "0145_longest_substring_without_repeating_characters.cpp"
 
-
 #endif
