@@ -11,15 +11,15 @@
 using namespace std;
 
 void Solution::bfs(vector<vector<int>> &grid, int row, int col, int value){
-        if(row<0 || row>=grid.size() || col<0 || col>=grid[0].size()) return;
-        if(grid[row][col]==1) return;
-        
-        grid[row][col] = value;
-        
-        for(int i=0;i<dir.size()-1;i++){
-            bfs(grid,row+dir[i],col+dir[i+1],value);
-        }
+    if(row<0 || row>=grid.size() || col<0 || col>=grid[0].size()) return;
+    if(grid[row][col]==1) return;
+    
+    grid[row][col] = value;
+    
+    for(int i=0;i<dir.size()-1;i++){
+        bfs(grid,row+dir[i],col+dir[i+1],value);
     }
+}
 
 int Solution::closedIsland(vector<vector<int>>& grid){
     int result = 0;
