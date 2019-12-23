@@ -7,6 +7,14 @@ matrix:
         - "[ $CXX = g++ ] && export CXX=g++-6 || true"
       script:
         - bash test_cpp.sh
+
+    - language: python
+      python: 3.7
+      before_script:
+        - cd Python/tests/problems
+      script:
+        - python -m unittest discover
+
 sudo: false
 addons:
   sonarcloud:

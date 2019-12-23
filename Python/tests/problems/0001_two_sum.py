@@ -17,4 +17,3 @@ class TwoSumTestSolution(TestCase):
         self.assertListEqual(Solution.two_sum([2, 11, 7, 15], 10), [0, 0])
         self.assertListEqual(Solution.two_sum([], 9), [0, 0])
         self.assertListEqual(Solution.two_sum([2], 2), [0, 0])
-
