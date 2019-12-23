@@ -1,7 +1,13 @@
+matrix:
+  include:
+    - language: cpp
+      compiler:
+        - gcc
+      install:
+        - "[ $CXX = g++ ] && export CXX=g++-6 || true"
+      script:
+        - bash test_cpp.sh
 sudo: false
-language: cpp
-compiler:
-  - gcc
 addons:
   sonarcloud:
     organization: "walterjgsp-github" # the key of the org you chose at step #3
@@ -12,7 +18,3 @@ addons:
     - llvm-toolchain-precise-3.8
     packages:
     - g++-6
-install:
-- "[ $CXX = g++ ] && export CXX=g++-6 || true"
-script:
-  - bash test_cpp.sh
