@@ -7,6 +7,13 @@ matrix:
         - "[ $CXX = g++ ] && export CXX=g++-6 || true"
       script:
         - bash test_cpp.sh
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.8
+          packages:
+            - g++-6
 
     - language: python
       python: 3.7
@@ -18,9 +25,3 @@ addons:
   sonarcloud:
     organization: "walterjgsp-github" # the key of the org you chose at step #3
     token: $SONAR_TOKEN
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.8
-    packages:
-    - g++-6
