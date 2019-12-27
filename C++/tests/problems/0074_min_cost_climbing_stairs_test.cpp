@@ -1,10 +1,10 @@
-#include "../../problems/0074_min_cost_clibing_stairs.hpp"
+#include "../../problems/0074_min_cost_climbing_stairs.hpp"
 #include <bits/stdc++.h>
 #include "../../frameworks/catch.hpp"
 
 using namespace std;
 
-TEST_CASE( "Min Cost Clibing Stairs" ) {
+TEST_CASE( "Min Cost Climbing Stairs" ) {
     Solution sol;
 
     vector<int> arr1 = {10, 15, 20};

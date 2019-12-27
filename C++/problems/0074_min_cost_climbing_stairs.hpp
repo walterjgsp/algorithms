@@ -9,6 +9,6 @@ public:
     int minCostClimbingStairs(vector<int>& cost);
 };
 
-#include "0074_min_cost_clibing_stairs.cpp"
+#include "0074_min_cost_climbing_stairs.cpp"
 
 #endif
