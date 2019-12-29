@@ -15,5 +15,4 @@ TEST_CASE( "Jump Game III" ) {
 
     vector<int> nums3 = {3,0,2,1,2};
     REQUIRE( sol.canReach(nums3,2) == false );     
-
 }
