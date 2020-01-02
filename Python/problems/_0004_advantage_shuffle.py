@@ -17,7 +17,7 @@ def convert_to_list_of_dicts(list_to_convert: List) -> List[dict]:
 
 
 class Solution:
-    def advantageCount(self, A: List[int], B: List[int]) -> List[int]:
+    def advantage_count(self, A: List[int], B: List[int]) -> List[int]:
         result = [None] * len(A)
 
         b_helper = self.get_ordered_dict_list(B)
@@ -46,12 +46,3 @@ class Solution:
         result = convert_to_list_of_dicts(list_to_convert)
         result = sorted(result, key=lambda it: it['value'])
         return result
-
-
-if __name__ == "__main__":
-    # numsA = [2, 7, 11, 15]
-    # numsB = [1, 10, 4, 11]
-    numsA = [12, 24, 8, 32]
-    numsB = [13, 25, 32, 11]
-    solution = Solution()
-    print(solution.advantageCount(numsA, numsB))

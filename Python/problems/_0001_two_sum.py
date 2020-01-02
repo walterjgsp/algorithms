@@ -17,9 +17,3 @@ class Solution:
             except KeyError:
                 known_items[item] = index
         return [0, 0]
-
-
-if __name__ == '__main__':
-    input_nums = [2, 7, 11, 15]
-    input_target = 9
-    print(str(Solution.two_sum(input_nums, input_target)))
