@@ -6,6 +6,8 @@
 #
 # You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
+from typing import List
+
 
 # Definition for singly-linked list.
 class ListNode:
@@ -59,7 +61,7 @@ class Solution:
         return node.val if node else 0
 
 
-def linked_list_from_list(list_of_numbers: list) -> ListNode:
+def linked_list_from_list(list_of_numbers: List) -> ListNode:
     temp_head = ListNode(None)
     current_node = temp_head
     for value in list_of_numbers:
@@ -67,19 +69,16 @@ def linked_list_from_list(list_of_numbers: list) -> ListNode:
     return temp_head.next
 
 
+def list_from_linked_list(head: ListNode) -> List:
+    result = []
+    while head is not None:
+        result.append(head.val)
+        head = head.next
+    return result
+
+
 def print_list_node(node: ListNode):
     while node is not None:
         print(f"{node.val}", end=" ")
         node = node.next
     print()
-
-
-if __name__ == '__main__':
-    first_list_of_numbers = [2, 4, 3]
-    second_list_of_numbers = [5, 6, 4]
-    first_list = linked_list_from_list(first_list_of_numbers)
-    second_list = linked_list_from_list(second_list_of_numbers)
-    solution = Solution()
-    print_list_node(first_list)
-    print_list_node(second_list)
-    print_list_node(solution.addTwoNumbers(first_list, second_list))
