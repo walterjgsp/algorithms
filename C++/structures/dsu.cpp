@@ -48,5 +48,5 @@ int main(){
     dsu.Union(4,5);
     cout<<dsu.Find(4)<<endl;
     cout<<dsu.Find(2)<<endl;
-		cout<<dsu.Find(3)<<endl;
+    cout<<dsu.Find(3)<<endl;
 }
