@@ -9,4 +9,3 @@ class ArrangeCoinsTestSolution(TestCase):
         expected_result = 3
         result = Solution.arrange_coins(n)
         self.assertEquals(expected_result, result)
-
