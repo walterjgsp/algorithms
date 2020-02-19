@@ -13,11 +13,11 @@ Repository for algorithms, problems and data structures that we have used. This 
 For any suggestion on algorithm, problem or data structure, just open an issue with question label.
 
 This repo contains questions from LeetCode (most of them), HackerRank, CodeSignal and LintCode.
-We suggest you to try their platform so you can get new problems and articles about algorithms.
+We suggest you try their platform so you can get new problems and articles about algorithms.
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
-The problmes list can be found at [Problems](PROBLEMS.md)
+The problems list can be found at [Problems](PROBLEMS.md)
 
 ## Run C++
 
