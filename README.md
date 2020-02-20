@@ -13,11 +13,11 @@ Repository for algorithms, problems and data structures that we have used. This 
 For any suggestion on algorithm, problem or data structure, just open an issue with question label.
 
 This repo contains questions from LeetCode (most of them), HackerRank, CodeSignal and LintCode.
-We suggest you to try their platform so you can get new problems and articles about algorithms.
+We suggest you try their platform so you can get new problems and articles about algorithms.
 
 The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
 
-The problmes list can be found at [Problems](PROBLEMS.md)
+The problems list can be found at [Problems](PROBLEMS.md)
 
 ## Run C++
 
@@ -51,7 +51,7 @@ java -jar <OUTPUT_FILE_NAME>
 
 ## Run Java
 
-All the Java code were done using the JDK 11 version. To compile use the following command:
+All the Java code were done using the JDK 11 version. Compile using the following command:
 
 ```bash
 javac <INPUT_FILE_NAME>
@@ -65,7 +65,7 @@ java Main
 
 ## Run Python
 
-All Python code were done using Python 3.7 version. To run the code use the following command:
+All Python code was done using Python 3.7 version. Run the code using the following command:
 
 ```bash
 python3 <INPUT_FILE_NAME> 
