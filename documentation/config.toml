@@ -5,6 +5,9 @@ pygmentsUseClasses=true
 description = "Repository of algorithms, problems and structures that i have learned to help me and the others if needed."
 Paginate = 5
 
+[markup.goldmark.renderer]
+unsafe=true
+
 [languages]
   [languages.en]
     contentDir = "content/english"
@@ -18,7 +21,7 @@ Paginate = 5
 [Params]
   RSSLink = "/index.xml"
   author = "walterjgsp" # add your company name
-  github = "" # add your github profile name
+  github = "walterjgsp" # add your github profile name
   twitter = "" # add your twitter profile
   email = "walterjgsp@gmail.com"
 

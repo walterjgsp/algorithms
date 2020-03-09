@@ -5,14 +5,14 @@ using namespace std;
 class Trie{
 private:
 	class TNode{
-		public:
-			vector<TNode*> children;
-			bool endWord;
-			TNode(){
-				children = vector<TNode*> (26,NULL);
-				endWord = false;
-			}
-		};
+	public:
+		vector<TNode*> children;
+		bool endWord;
+		TNode(){
+			children = vector<TNode*> (26,NULL);
+			endWord = false;
+		}
+	};
 
 	TNode *root;
 
