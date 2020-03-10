@@ -8,10 +8,11 @@
 //
 // Return the minimum number of minutes that must elapse until no cell has a fresh orange.
 // If this is impossible, return -1 instead.
+package org.algorithm.problems
 
 import java.util.ArrayDeque
 
-class Solution constructor() {
+class `0059_rotting_oranges` {
 
     private val walkMask:Array<Pair<Int,Int>> = arrayOf(Pair(0,1),Pair(1,0),Pair(-1,0),Pair(0,-1))
 
@@ -62,10 +63,4 @@ class Solution constructor() {
 
         return result
     }
-}
-
-fun main(args:Array<String>){
-  var grid:Array<IntArray> = arrayOf(intArrayOf(2,1,1),intArrayOf(1,1,0),intArrayOf(0,1,1));
-  var sol: Solution = Solution()
-  println(sol.orangesRotting(grid))
 }

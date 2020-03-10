@@ -8,7 +8,9 @@
 //
 // Return the number of 4-directional walks from the starting square to the ending
 // square, that walk over every non-obstacle square exactly once.
-class Solution {
+package org.algorithm.problems
+
+class `0049_unique_paths_iii` {
     
     private val visited = mutableSetOf<Int>()
     private var result = 0
@@ -56,10 +58,4 @@ class Solution {
         
         visited.remove(newKey)
     }
-}
-
-fun main(args: Array<String>) {
-    val grid = arrayOf(intArrayOf(1,0,0,0),intArrayOf(0,0,0,0),intArrayOf(0,0,2,-1))
-    val sol = Solution
-    println(sol.uniquePathsIII(grid))
 }

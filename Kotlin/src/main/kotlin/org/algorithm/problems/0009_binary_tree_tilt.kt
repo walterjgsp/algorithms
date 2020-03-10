@@ -20,7 +20,12 @@
  *     var right: TreeNode? = null
  * }
  */
-class Solution {
+
+package org.algorithm.problems
+
+import org.algorithm.shared.TreeNode
+
+class `0009_binary_tree_tilt` {
     private var result:Int = 0;
     fun findTilt(root: TreeNode?): Int {
         result = 0;

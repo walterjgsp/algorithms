@@ -11,8 +11,9 @@ Output:
   ["nat","tan"],
   ["bat"]
 ] */
+package org.algorithm.problems
 
-class Solution constructor() {
+class `0047_group_of_anagrams` {
 
     fun getStringArray(word : String): String{
         var counter:IntArray = IntArray(26);
@@ -46,12 +47,3 @@ class Solution constructor() {
     }
 }
 
-fun main(args:Array<String>){
-  var sol : Solution = Solution();
-  var strs : Array<String> = arrayOf("eat", "tea", "tan", "ate", "nat", "bat");
-  var groups : List<List<String>> = sol.groupAnagrams(strs);
-
-  groups.forEach{
-    group -> println(group.joinToString());
-  };
-}

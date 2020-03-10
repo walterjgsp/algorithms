@@ -8,8 +8,9 @@
 //
 // Input: [ [1,2], [2,3], [3,4], [1,3] ]
 // Output: 1
+package org.algorithm.problems
 
-class Solution {
+class `0020_non_overlapping_intervals` {
     fun eraseOverlapIntervals(intervals: Array<IntArray>): Int {
         if(intervals.isEmpty()) 
             return 0
@@ -31,12 +32,4 @@ class Solution {
         }
         return result
     }
-}
-
-
-fun main(args:Array<String>){
-  val vec:Array<IntArray> = arrayOf(intArrayOf(1,2),intArrayOf(2,3),intArrayOf(3,4),intArrayOf(1,3));
-  val sol:Solution = Solution();
-
-  println(sol.eraseOverlapIntervals(vec));
 }

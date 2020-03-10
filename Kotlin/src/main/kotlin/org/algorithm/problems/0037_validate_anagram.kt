@@ -1,7 +1,8 @@
 //Problem Statement
 //Given two strings s and t , write a function to determine if t is an anagram of s.
+package org.algorithm.problems
 
-class Solution {
+class `0037_validate_anagram` {
     fun isAnagram(s: String, t: String): Boolean {
         var counter: IntArray = IntArray(26) { i-> 0};
 
@@ -20,11 +21,4 @@ class Solution {
 
         return true;
     }
-}
-
-fun main(args:Array<String>){
-  var s:String = "anagram";
-  var t:String = "nagaram";
-  var sol : Solution = Solution();
-  println(sol.isAnagram(s,t));
 }

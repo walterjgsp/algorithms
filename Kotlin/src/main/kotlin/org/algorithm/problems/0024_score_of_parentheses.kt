@@ -8,9 +8,11 @@
 // - (A) has score 2 * A, where A is a balanced parentheses string.
 
 // Exemple: () = 1; (())=2; (()(())) = 6
+package org.algorithm.problems
+
 import java.util.Stack
 
-class Solution {
+class `0024_score_of_parentheses` {
     fun scoreOfParentheses(S: String): Int {
         val values = Stack<Int>()
         val paren = Stack<Int>()
@@ -38,9 +40,4 @@ class Solution {
         
         return if(values.empty()) 0 else values.peek()
     }
-}
-
-fun main(args: Array<String>) {
-    val sol = Solution()
-    println(sol.scoreOfParentheses("(()(()))"))
 }

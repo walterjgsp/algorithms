@@ -6,8 +6,9 @@ Example :
 
 Input: [1,2,3,3]
 Output: 3 */
+package org.algorithm.problems
 
-class Solution {
+class `0039_n_repeated_element_in_size_2n_array` {
     fun repeatedNTimes(A: IntArray): Int {
         var unique:HashSet<Int> = HashSet<Int>();
 
@@ -20,10 +21,4 @@ class Solution {
 
         return 0;
     }
-}
-
-fun main(args:Array<String>){
-  val vec:IntArray = intArrayOf(1,2,3,3);
-  val sol:Solution = Solution();
-  println(sol.repeatedNTimes(vec));
 }

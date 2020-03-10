@@ -5,8 +5,9 @@
 /*
 The letters in J are guaranteed distinct, and all characters in J and S are
 letters. Letters are case sensitive, so "a" is considered a different type of stone from "A". */
+package org.algorithm.problems
 
-class Solution constructor(){
+class `0045_jewels_and_stones`{
     fun numJewelsInStones(J: String, S: String): Int {
         val counter:IntArray = IntArray(256) { i->0 };
         var result:Int = 0;
@@ -23,12 +24,4 @@ class Solution constructor(){
 
         return result;
     }
-}
-
-fun main(args:Array<String>){
-  var j:String = "aA";
-  var s:String =  "aAAbbbb";
-  val sol:Solution = Solution();
-
-  println(sol.numJewelsInStones(j,s));
 }

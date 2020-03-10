@@ -5,8 +5,9 @@
 // After this process, we have some array B.
 //
 // Return the smallest possible difference between the maximum value of B and the minimum value of B.
+package org.algorithm.problems
 
-class Solution {
+class `0026_smallest_range_i` {
     fun smallestRangeI(A: IntArray, K: Int): Int {
         var maxVal:Int = Int.MIN_VALUE;
         var minVal:Int = Int.MAX_VALUE;
@@ -22,11 +23,4 @@ class Solution {
             return (maxVal-K)-(minVal+K);
         }
     }
-}
-
-fun main(args:Array<String>){
-  val vec:IntArray = intArrayOf(1,3,6);
-  val sol:Solution = Solution();
-
-  println(sol.smallestRangeI(vec,3));
 }

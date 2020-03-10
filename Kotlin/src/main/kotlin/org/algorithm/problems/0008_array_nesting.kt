@@ -16,8 +16,9 @@
 //
 // One of the longest S[K]:
 // S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}
+package org.algorithm.problems
 
-class Solution {
+class `0008_array_nesting` {
     fun arrayNesting(nums: IntArray): Int {
         var visited:HashSet<Int> = HashSet<Int>();
         var result:Int = 0;
@@ -47,8 +48,3 @@ class Solution {
     }
 }
 
-fun main(args:Array<String>){
-  var sol: Solution = Solution();
-  var vec: IntArray = intArrayOf(5,4,0,3,1,6,2);
-  println(sol.arrayNesting(vec));
-}

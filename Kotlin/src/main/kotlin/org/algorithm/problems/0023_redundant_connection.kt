@@ -14,7 +14,9 @@
 
 // Input: [[1,2], [1,3], [2,3]]
 // Output: [2,3]
-class Solution {
+package org.algorithm.problems
+
+class `0023_redundant_connection` {
 
     private lateinit var parent: IntArray
     
@@ -53,10 +55,4 @@ class Solution {
 
         return result;
     }
-}
-
-fun main(args: Array<String>) {
-    val edges = arrayOf(intArrayOf(1,2),intArrayOf(2,3),intArrayOf(3,4),intArrayOf(1,4),intArrayOf(1,5))
-    val sol = Solution()
-    println(sol.findRedundantConnection(edges).joinToString())
 }

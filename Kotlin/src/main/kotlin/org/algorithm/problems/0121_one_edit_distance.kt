@@ -1,6 +1,8 @@
 // Problem Statement
 // Given two strings S and T, determine if they are both one edit distance apart.
-class Solution{
+package org.algorithm.problems
+
+class `0121_one_edit_distance` {
 
     fun isOneEditDistance(s1 : String, s2 : String) : Boolean{
         var diff_count = 0
@@ -35,10 +37,4 @@ class Solution{
 
         return diff_count == 1
     }
-}
-
-fun main(args: Array<String>) {
-    val sol = Solution()
-    println(sol.isOneEditDistance("geek","geeks"))
-
 }

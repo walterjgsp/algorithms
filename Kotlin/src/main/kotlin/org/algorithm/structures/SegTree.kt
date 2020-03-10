@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class SegTree(val array: IntArray){
     private var treeArray:MutableList<Int>
     private var arrSize: Int
@@ -63,10 +65,10 @@ class SegTree(val array: IntArray){
     
 }
 
-fun main(args: Array<String>) {
-    val input = intArrayOf(1,2,3,1,3,5,6,4,1,2)
-    val segTree = SegTree(input)
-    println(segTree.queryInterval(3,7))
-    segTree.updateInterval(0,3,2)
-    segTree.printSegTree()
-}
+//fun main(args: Array<String>) {
+//    val input = intArrayOf(1,2,3,1,3,5,6,4,1,2)
+//    val segTree = SegTree(input)
+//    println(segTree.queryInterval(3,7))
+//    segTree.updateInterval(0,3,2)
+//    segTree.printSegTree()
+//}

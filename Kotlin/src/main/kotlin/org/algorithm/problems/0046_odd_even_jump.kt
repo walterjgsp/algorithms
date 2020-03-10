@@ -18,6 +18,8 @@
 // the array (index A.length - 1) by jumping some number of times (possibly 0 or more than once.)
 //
 // Return the number of good starting indexes.
+package org.algorithm.problems
+
 class BST{
     data class Node(
         var value: Int,
@@ -86,7 +88,7 @@ class BST{
     }
 }
 
-class Solution {
+class `0046_odd_even_jump` {
     fun oddEvenJumps(A: IntArray): Int {
         val bst = BST()
         var result = 0
@@ -117,10 +119,4 @@ class Solution {
 
         return result
     }
-}
-
-fun main(args: Array<String>) {
-    val arr = intArrayOf(10,13,12,14,15)
-    val sol = Solution()
-    println(sol.oddEvenJumps(arr))
 }

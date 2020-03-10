@@ -14,8 +14,9 @@
 // ¤ ¤
 // ¤ ¤
 // return 2.
+package org.algorithm.problems
 
-class Solution {
+class `0007_arrange_coins` {
     fun arrangeCoins(n: Int): Int {
         var row:Int = 1;
         var result:Int = 0;
@@ -29,10 +30,4 @@ class Solution {
 
         return result;
     }
-}
-
-fun main( args : Array<String> ){
-  val n:Int = 8;
-  val sol:Solution = Solution();
-  println(sol.arrangeCoins(n));
 }

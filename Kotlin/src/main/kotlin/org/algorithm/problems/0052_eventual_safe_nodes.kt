@@ -13,8 +13,9 @@
 // The directed graph has N nodes with labels 0, 1, ..., N-1, where N is the length
 // of graph.  The graph is given in the following form: graph[i] is a list of labels
 // j such that (i, j) is a directed edge of the graph.
+package org.algorithm.problems
 
-class Solution constructor() {
+class `0052_eventual_safe_nodes` {
 
     val memo:HashMap<Int,Boolean> = HashMap<Int,Boolean>();
 
@@ -55,11 +56,4 @@ class Solution constructor() {
         memo.put(vertex,isSafe);
         return memo[vertex]!!;
     }
-}
-
-fun main(args:Array<String>){
-  var graph:Array<IntArray> = arrayOf(intArrayOf(1,2),intArrayOf(2,3),intArrayOf(5),intArrayOf(0),intArrayOf(5),intArrayOf(),intArrayOf());
-  var sol : Solution = Solution();
-
-  println(sol.eventualSafeNodes(graph));
 }

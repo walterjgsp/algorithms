@@ -35,6 +35,7 @@
 // // User 1's news feed should return a list with 1 tweet id -> [5],
 // // since user 1 is no longer following user 2.
 // twitter.getNewsFeed(1);
+package org.algorithm.problems
 
 class Twitter {
 
@@ -85,15 +86,4 @@ class Twitter {
         users.get(followerId)!!.remove(followeeId);
     }
 
-}
-
-fun main(args:Array<String>){
-  val twitter:Twitter = Twitter();
-  twitter.postTweet(1, 5);
-  println(twitter.getNewsFeed(1));
-  twitter.follow(1, 2);
-  twitter.postTweet(2, 6);
-  println(twitter.getNewsFeed(1));
-  twitter.unfollow(1, 2);
-  println(twitter.getNewsFeed(1));
 }

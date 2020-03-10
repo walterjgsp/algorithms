@@ -4,10 +4,11 @@
 // sort each chunk.  After concatenating them, the result equals the sorted array.
 //
 // What is the most number of chunks we could have made?
+package org.algorithm.problems
 
 import java.util.ArrayDeque
 
-class Solution constructor() {
+class `0062_max_chunks_to_make_sorted` {
     fun maxChunksToSorted(arr: IntArray): Int {
 
         var sorted : ArrayDeque<Int> = ArrayDeque<Int>()
@@ -27,11 +28,4 @@ class Solution constructor() {
 
         return result
     }
-}
-
-fun main(args:Array<String>){
-  var arr:IntArray = intArrayOf(1,0,2,3,4)
-  val sol = Solution()
-
-  println(sol.maxChunksToSorted(arr))
 }

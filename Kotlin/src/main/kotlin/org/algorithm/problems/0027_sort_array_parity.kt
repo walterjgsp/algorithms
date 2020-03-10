@@ -4,8 +4,9 @@
 // return an array consisting of all the even elements of A, followed by all the odd elements of A.
 //
 // You may return any answer array that satisfies this condition.
+package org.algorithm.problems
 
-class Solution {
+class `0027_sort_array_parity` {
     fun sortArrayByParity(A: IntArray): IntArray {
         var even:MutableList<Int> = mutableListOf();
         var odd:MutableList<Int> = mutableListOf();
@@ -20,10 +21,4 @@ class Solution {
         even.addAll(odd);
         return even.toIntArray();
     }
-}
-
-fun main(args:Array<String>){
-  var arr:IntArray = intArrayOf(4,1,9,2,8,6,5);
-  var sol:Solution = Solution();
-  println(sol.sortArrayByParity(arr).joinToString(prefix = "[", postfix = "]"));
 }

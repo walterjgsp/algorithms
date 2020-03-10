@@ -7,7 +7,9 @@
 // the number of non-tiring days.
 
 // Return the length of the longest well-performing interval.
-class Solution {
+package org.algorithm.problems
+
+class `0119_longest_well_performing_interval` {
     fun longestWPI(hours: IntArray): Int {
         var sum : Int = 0;
         var result : Int = 0;
@@ -35,10 +37,4 @@ class Solution {
         
         return result;
     }
-}
-
-fun main(args: Array<String>) {
-    val sol = Solution();
-    val hours = intArrayOf(9,9,6,0,6,6,9);
-    println(sol.longestWPI(hours));
 }

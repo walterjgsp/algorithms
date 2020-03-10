@@ -2,14 +2,14 @@
 // Time Complexity: O(nlogn)
 // Space Complexity: O(n)
 //
-class ListNode(var num: Int = 0) {
-  var next: ListNode? = null;
-}
+package org.algorithm.algorithms
 
-class MergeSort constructor(){
+import org.algorithm.shared.ListNode
+
+class MergeSortLL{
 
   fun mergeSort(list : ListNode?) : ListNode?{
-    var helper: MutableList<ListNode?> = mutableListOf<ListNode?>();
+    val helper: MutableList<ListNode?> = mutableListOf<ListNode?>();
     var iterator: ListNode? = list;
 
     while(iterator!=null){
@@ -21,11 +21,11 @@ class MergeSort constructor(){
     }
 
     while(helper.size>1){
-      var l1: ListNode? = helper[0];
+      val l1: ListNode? = helper[0];
       helper.removeAt(0);
-      var l2: ListNode? = helper[0];
+      val l2: ListNode? = helper[0];
       helper.removeAt(0);
-      var result: ListNode? = merge(l1,l2);
+      val result: ListNode? = merge(l1,l2);
       helper.add(result);
     }
 
@@ -34,12 +34,12 @@ class MergeSort constructor(){
 
   fun merge(l1 : ListNode?, l2 :ListNode?) :ListNode?{
 
-    var dummy : ListNode? = ListNode(-1);
+    val dummy : ListNode? = ListNode(-1);
     var iterator: ListNode? = dummy;
     var itl1: ListNode? = l1;
     var itl2: ListNode? = l2;
     while(itl1!=null && itl2!=null){
-      if(itl1.num<itl2.num){
+      if(itl1.`val`<itl2.`val`){
         iterator?.next = itl1;
         itl1 = itl1.next;
       }else{
@@ -57,33 +57,4 @@ class MergeSort constructor(){
 
     return dummy?.next;
   }
-}
-
-fun vecToLinkedList(vec: IntArray) : ListNode?{
-
-  var dummy : ListNode? = ListNode(-1);
-  var iterator : ListNode? = dummy;
-  for(index in vec.indices){
-    iterator?.next = ListNode(vec[index]);
-    iterator = iterator?.next;
-  }
-
-  return dummy?.next;
-}
-
-fun printListNode(list : ListNode?){
-  var iterator: ListNode? = list;
-  while(iterator!=null){
-    print("${iterator.num} ");
-    iterator = iterator.next;
-  }
-  println();
-}
-
-fun main(args:Array<String>){
-  val vec : IntArray  = intArrayOf(8,10,1,3,2,15);
-  val list : ListNode? = vecToLinkedList(vec);
-  printListNode(list);
-  var merger : MergeSort = MergeSort();
-  printListNode(merger.mergeSort(list));
 }

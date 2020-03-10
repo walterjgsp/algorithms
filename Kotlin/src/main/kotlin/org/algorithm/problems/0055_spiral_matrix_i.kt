@@ -7,8 +7,9 @@
 //  [ 7, 8, 9 ]
 // ]
 // Output: [1,2,3,6,9,8,7,4,5]
+package org.algorithm.problems
 
-class Solution constructor(){
+class `0055_spiral_matrix_i`{
 
     fun canWalk(row:Int,col:Int,limits:IntArray) : Boolean {
         return row>=limits[0] && row<limits[1] && col>=limits[2] && col<limits[3];
@@ -44,8 +45,3 @@ class Solution constructor(){
     }
 };
 
-fun main(args:Array<String>){
-  var matrix:Array<IntArray> = arrayOf(intArrayOf(1,2,3,4),intArrayOf(5,6,7,8),intArrayOf(9,10,11,12),intArrayOf(13,14,15,16));
-  var sol:Solution = Solution();
-  println(sol.spiralOrder(matrix).joinToString());
-}

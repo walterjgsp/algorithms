@@ -1,8 +1,9 @@
 // Problem Statement
 
 // Count the number of prime numbers less than a non-negative number, n.
+package org.algorithm.problems
 
-class Solution {
+class `0010_count_primes` {
     fun countPrimes(n: Int): Int {
         var primes:BooleanArray = BooleanArray(n) { i -> true }
         var result:Int = 0;
@@ -20,10 +21,4 @@ class Solution {
 
         return result;
     }
-}
-
-fun main(args: Array<String>){
-  var n:Int = 10;
-  var sol: Solution = Solution();
-  println(sol.countPrimes(n));
 }

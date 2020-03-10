@@ -1,9 +1,11 @@
 //Problem Statement
 // Given an array of integers A sorted in non-decreasing order,
 // return an array of the squares of each number, also in sorted non-decreasing order.
+package org.algorithm.problems
+
 import java.lang.Math;
 
-class Solution constructor(){
+class `0071_squares_of_sorted_array`{
     fun sortedSquares(A: IntArray): IntArray {
         var start: Int = 0
         var end: Int = A.size-1
@@ -25,10 +27,4 @@ class Solution constructor(){
 
         return result;
     }
-}
-
-fun main(args:Array<String>){
-  val arr:IntArray = intArrayOf(-7,-3,2,3,11)
-  val sol:Solution = Solution()
-  println(sol.sortedSquares(arr).joinToString())
 }

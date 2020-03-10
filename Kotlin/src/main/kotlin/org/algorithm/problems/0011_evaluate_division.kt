@@ -8,10 +8,11 @@
 // Given a / b = 2.0, b / c = 3.0.
 // queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ? .
 // return [6.0, 0.5, -1.0, 1.0, -1.0 ].
+package org.algorithm.problems
 
 import java.util.ArrayDeque;
 
-class Solution {
+class `0011_evaluate_division` {
     fun calcEquation(equations: Array<Array<String>>, values: DoubleArray, queries: Array<Array<String>>): DoubleArray {
 
         val graph = HashMap<String,ArrayList<Pair<String,Double>>>();
@@ -78,12 +79,4 @@ class Solution {
 
         return result.toDoubleArray();
     }
-}
-
-fun main(args:Array<String>){
-  val equations:Array<Array<String>> = arrayOf(arrayOf("a","b"),arrayOf("b","c"),arrayOf("e","d"));
-  val queries:Array<Array<String>> = arrayOf(arrayOf("a", "c"), arrayOf("b", "a"), arrayOf("a", "e"), arrayOf("a", "a"), arrayOf("x", "x"));
-  val values:DoubleArray = doubleArrayOf(2.0,3.0,5.0);
-  val sol:Solution = Solution();
-  println(sol.calcEquation(equations,values,queries).joinToString(prefix = "[", postfix = "]"));
 }

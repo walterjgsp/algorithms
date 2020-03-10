@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class LRUCache(val capacity : Int){
     private data class Node(val key:Int ,var value:Int, var next:Node? = null, var prev:Node? = null)
 
@@ -81,16 +83,16 @@ class LRUCache(val capacity : Int){
     }    
 }
 
-fun main(args: Array<String>) {
-    val lru = LRUCache(2)
-    lru.put(2,1)
-    lru.put(1,1)
-    lru.printCache()
-    println(lru.get(2))
-    lru.printCache()
-    lru.put(4,1)
-    lru.printCache()
-    println(lru.get(1))
-    lru.printCache()
-    println(lru.get(2))
-}
+//fun main(args: Array<String>) {
+//    val lru = LRUCache(2)
+//    lru.put(2,1)
+//    lru.put(1,1)
+//    lru.printCache()
+//    println(lru.get(2))
+//    lru.printCache()
+//    lru.put(4,1)
+//    lru.printCache()
+//    println(lru.get(1))
+//    lru.printCache()
+//    println(lru.get(2))
+//}

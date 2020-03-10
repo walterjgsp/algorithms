@@ -11,6 +11,7 @@
 // Note that if A requests B, B does not necessarily request A.  Also, people will not friend request themselves.
 //
 // How many total friend requests are made?
+package org.algorithm.problems
 
 class Solution {
     fun numFriendRequests(ages: IntArray): Int {

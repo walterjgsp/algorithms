@@ -8,6 +8,8 @@
 //
 // Follow up:
 // Could you do both operations in O(1) time complexity?
+package org.algorithm.problems
+
 class LRUCache(val capacity: Int) {
 
     data class Node(

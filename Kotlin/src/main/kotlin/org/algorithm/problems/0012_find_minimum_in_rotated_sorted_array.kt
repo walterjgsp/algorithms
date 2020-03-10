@@ -8,7 +8,9 @@
 //
 // You may assume no duplicate exists in the array.
 //
-class Solution {
+package org.algorithm.problems
+
+class `0012_find_minimum_in_rotated_sorted_array` {
     fun findMin(nums: IntArray): Int {
         var lower:Int=0;
         var higher:Int=nums.size-1;
@@ -25,11 +27,4 @@ class Solution {
 
         return nums[lower];
     }
-}
-
-fun main(args:Array<String>){
-  var vec:IntArray = intArrayOf(4,5,6,7,0,1,2);
-  val sol:Solution = Solution();
-
-  println(sol.findMin(vec));
 }

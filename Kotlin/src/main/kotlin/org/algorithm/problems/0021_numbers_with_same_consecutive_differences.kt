@@ -6,7 +6,9 @@
 // the number 0 itself. For example, 01 has one leading zero and is invalid, but 0 is valid.
 //
 // You may return the answer in any order.
-class Solution {
+package org.algorithm.problems
+
+class `0021_numbers_with_same_consecutive_differences` {
 
     private val result = mutableSetOf<Int>()
 
@@ -35,9 +37,4 @@ class Solution {
         }
         return result.toIntArray()
     }
-}
-
-fun main(args: Array<String>) {
-    var sol = Solution()
-    println(sol.numsSameConsecDiff(2,1))    
 }

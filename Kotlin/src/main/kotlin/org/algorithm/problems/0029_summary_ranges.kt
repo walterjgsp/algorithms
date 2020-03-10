@@ -6,7 +6,9 @@
 //
 // Input:  [0,1,2,4,5,7,9,10]
 // Output: ["0->2","4->5","7","9->10"]
-class Solution {
+package org.algorithm.problems
+
+class `0029_summary_ranges` {
     data class Interval(var start:Int,var end:Int){
         override fun toString(): String{
             return if(start == end){
@@ -36,10 +38,4 @@ class Solution {
         return result
         
     }
-}
-
-fun main(args: Array<String>) {
-    val arr = intArrayOf(0,2,3,4,6,8,9)
-    val sol = Solution()
-    println(sol.summaryRanges(arr).jointToString())
 }

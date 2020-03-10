@@ -5,8 +5,9 @@
 //
 // Return the k-values corresponding to a sequence of pancake flips that sort A.
 // Any valid answer that sorts the array within 10 * A.length flips will be judged as correct.
+package org.algorithm.problems
 
-class Solution {
+class `0034_pancake_sort` {
     fun pancakeSort(A: IntArray): List<Int> {
         val result = mutableListOf<Int>()
         
@@ -40,10 +41,4 @@ class Solution {
             end -= 1
         }
     }
-}
-
-fun main(args: Array<String>) {
-    val sol = Solution()
-    val arr = intArrayOf(10,5,1,6,3,8,2,4,7,9)
-    println(sol.pancakeSort(arr).jointToString())
 }

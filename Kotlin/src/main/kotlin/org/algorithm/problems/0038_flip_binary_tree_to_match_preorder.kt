@@ -27,7 +27,11 @@
  *     var right: TreeNode? = null
  * }
  */
-class Solution {
+package org.algorithm.problems
+
+import org.algorithm.shared.TreeNode
+
+class `0038_flip_binary_tree_to_match_preorder` {
     
     private val result = mutableListOf<Int>()
     private var index = 0
@@ -49,26 +53,26 @@ class Solution {
         if(node.`val`==voyage[index]){
             index+=1
             
-            if(node?.left!=null && node?.right!=null){
-                val left = node!!.left.`val`
-                val right = node!!.right.`val`
+            if(node.left!=null && node.right!=null){
+                val left = node.left!!.`val`
+                val right = node.right!!.`val`
                 
                 if(left!=voyage[index]){
                     if(right == voyage[index]){
-                        val temp = node?.left
-                        node?.left = node?.right
-                        node?.right = temp
+                        val temp = node.left
+                        node.left = node.right
+                        node.right = temp
                         result.add(node.`val`)
                     }else{
                         return false
                     }
                 }
                 
-                return flipHelper(node!!.left,voyage) && flipHelper(node!!.right,voyage)
-            }else if(node?.left!=null){
-                return flipHelper(node!!.left,voyage)
-            }else if(node?.right!=null){
-                return flipHelper(node!!.right,voyage)
+                return flipHelper(node.left,voyage) && flipHelper(node.right,voyage)
+            }else if(node.left!=null){
+                return flipHelper(node.left,voyage)
+            }else if(node.right!=null){
+                return flipHelper(node.right,voyage)
             }
             return true
         }else{

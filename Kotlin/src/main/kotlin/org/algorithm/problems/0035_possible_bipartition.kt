@@ -6,9 +6,11 @@
 // Formally, if dislikes[i] = [a, b], it means it is not allowed to put the people numbered a and b into the same group.
 //
 // Return true if and only if it is possible to split everyone into two groups in this way.
+package org.algorithm.problems
+
 import java.util.ArrayDeque
 
-class Solution {
+class `0035_possible_bipartition` {
     fun possibleBipartition(N: Int, dislikes: Array<IntArray>): Boolean {
         val graph = Array<MutableList<Int>>(N){mutableListOf<Int>()}
         val colors = IntArray(N){-1}
@@ -42,11 +44,4 @@ class Solution {
         
         return true;
     }
-}
-
-fun main(args: Array<String>) {
-    val dislikes = arrayOf<IntArray>(intArrayOf(1,2),intArrayOf(2,3),intArrayOf(2,4))
-    val sol = Solution()
-    println(sol.possibleBipartition(4,dislikes))
-
 }

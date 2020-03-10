@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class Heap<T:Comparable<T>>(val isMinHeap : Boolean = false){
 
     private val heap: MutableList<T> = mutableListOf<T>()
@@ -74,20 +76,5 @@ class Heap<T:Comparable<T>>(val isMinHeap : Boolean = false){
         val tmp = this[index1]
         this[index1] = this[index2]
         this[index2] = tmp
-    }
-}
-
-fun main(args: Array<String>) {
-    val heap = Heap<Int>()
-
-    heap.push(4);
-    heap.push(1);
-    heap.push(6);
-    heap.push(2);
-    heap.push(3);
-    heap.push(10);
-    while(!heap.isEmpty()){
-        println(heap.peek())
-        heap.pop()
     }
 }

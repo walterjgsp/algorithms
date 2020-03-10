@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class DoubleLinkedList<T>(){
     private data class Node<T>(var prev:Node<T>? = null,var next:Node<T>?=null, var value: T)
 
@@ -97,22 +99,4 @@ class DoubleLinkedList<T>(){
     fun isEmpty() : Boolean {
         return size>0
     }
-}
-
-fun main(args: Array<String>) {
-    val dList = DoubleLinkedList<Int>()
-    dList.printList()
-    dList.pushFront(1)
-    dList.printList()
-    dList.pushFront(5)
-    dList.pushFront(3)
-    dList.printList()
-    dList.popFront()
-    dList.printList()
-    dList.pushBack(6)
-    dList.insertAt(7,1)
-    dList.printList()
-    println(dList.size)
-    dList.popBack()
-    dList.printList()
 }

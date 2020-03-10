@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class Queue<T>{
     private data class Node<T>(
         val value : T,
@@ -43,14 +45,4 @@ class Queue<T>{
             iterator = iterator.next
         }
     }
-}
-
-fun main(args: Array<String>) {
-    val queue:Queue<String> = Queue<String>()
-    queue.push("Maria")
-    queue.push("João")
-    queue.printQueue()
-    println("\nRemoving first")
-    queue.pop()
-    queue.printQueue()
 }

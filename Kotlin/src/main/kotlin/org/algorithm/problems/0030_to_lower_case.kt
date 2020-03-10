@@ -1,7 +1,9 @@
 // Problem Statement
 
 // Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
-class Solution {
+package org.algorithm.problems
+
+class `0030_to_lower_case` {
     fun toLowerCase(str: String): String {
         var result:String=""
         for(i in 0 until str.length){
@@ -14,10 +16,4 @@ class Solution {
         
         return result
     }
-}
-
-fun main(args: Array<String>) {
-    val sol = Solution()
-    val str = "LOVELY"
-    println(sol.toLowerCase(str))
 }

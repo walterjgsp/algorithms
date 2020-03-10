@@ -2,11 +2,11 @@
 
 /* Sort a linked list in O(n log n) time using constant space complexity. */
 
-class ListNode(var `val`: Int = 0) {
-     var next: ListNode? = null
-}
+package org.algorithm.problems
 
-class Solution {
+import org.algorithm.shared.ListNode
+
+class `0033_sort_linked_list` {
     fun sortList(head: ListNode?): ListNode? {
 
         if(head == null )
@@ -60,33 +60,4 @@ class Solution {
 
         return dummy?.next;
     }
-}
-
-fun vecToLinkedList(vec: IntArray) : ListNode?{
-
-  var dummy : ListNode? = ListNode(-1);
-  var iterator : ListNode? = dummy;
-  for(index in vec.indices){
-    iterator?.next = ListNode(vec[index]);
-    iterator = iterator?.next;
-  }
-
-  return dummy?.next;
-}
-
-fun printListNode(list : ListNode?){
-  var iterator: ListNode? = list;
-  while(iterator!=null){
-    print("${iterator.`val`} ");
-    iterator = iterator.next;
-  }
-  println();
-}
-
-fun main(args:Array<String>){
-  val vec : IntArray  = intArrayOf(8,10,1,3,2,15);
-  val list : ListNode? = vecToLinkedList(vec);
-  printListNode(list);
-  var merger : Solution = Solution();
-  printListNode(merger.sortList(list));
 }

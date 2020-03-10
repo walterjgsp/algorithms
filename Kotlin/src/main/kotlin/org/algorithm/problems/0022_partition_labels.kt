@@ -1,6 +1,6 @@
+package org.algorithm.problems
 
-
-class Solution {
+class `0022_partition_labels` {
     fun partitionLabels(S: String): List<Int> {
         val lettersIntervals = MutableList<Pair<Int,Int>>(26) { _ -> Pair(Int.MAX_VALUE,Int.MIN_VALUE)}
         val result = mutableListOf<Int>()
@@ -49,10 +49,4 @@ class Solution {
 
         return result
     }
-}
-
-fun main(args: Array<String>) {
-    val word = "ababcbacadefegdehijhklij"
-    val sol = Solution()
-    println(sol.partitionLabels(word))
 }

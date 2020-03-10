@@ -13,7 +13,9 @@
 // the transformation of a word.
 //
 // Return the number of different transformations among all words we have.
-class Solution {
+package org.algorithm.problems
+
+class `0031_unique_morse_code_words` {
     
     private val letters = mutableListOf<String>(".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..")
     
@@ -35,11 +37,4 @@ class Solution {
         
         return unique.size
     }
-}
-
-fun main(args: Array<String>) {
-    val words = mutableListOf<String>("gin", "zen", "gig", "msg")
-    val sol = Solution()
-
-    println(sol.uniqueMorseRepresentations(words))
 }

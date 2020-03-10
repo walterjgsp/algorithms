@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class LinkedList<T> {
     private data class Node<T>(
         val value : T,
@@ -53,13 +55,4 @@ class LinkedList<T> {
         }
         return false
     }
-}
-
-fun main(args: Array<String>) {
-    val list =  LinkedList<Int>()
-    list.pushFront(3)
-    list.pushFront(4)
-    list.pushBack(1)
-    list.printList()
-    println(list.find(2))
 }

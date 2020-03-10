@@ -11,9 +11,13 @@
  *     var right: TreeNode? = null
  * }
  */
-class Solution {
+package org.algorithm.problems
+
+import org.algorithm.shared.TreeNode
+
+class `0048_all_nodes_distance_k_in_binary_tree` {
     
-    private val parents = HashMap<Int,TreeNode?>()
+    private val parents = HashMap<Int, TreeNode?>()
     private var targetFound = false
     private val result = mutableListOf<Int>()
     private val visited = mutableSetOf<Int>()
@@ -40,12 +44,12 @@ class Solution {
         if(currDist==K){
             result.add(node.`val`)
         }else{
-            if(node?.left!=null && !visited.contains(node?.left.`val`)){
-                populateResult(node?.left,currDist+1,K)
+            if(node.left!=null && !visited.contains(node.left?.`val`)){
+                populateResult(node.left,currDist+1,K)
             }
             
-            if(node?.right!=null && !visited.contains(node?.right.`val`)){
-                populateResult(node?.right,currDist+1,K)
+            if(node.right!=null && !visited.contains(node.right?.`val`)){
+                populateResult(node.right,currDist+1,K)
             }
             
             val parent = parents.get(node.`val`)
@@ -58,18 +62,18 @@ class Solution {
     private fun findTarget(node: TreeNode?, target: TreeNode?){
         if(node!=null){
             if(node!=target){
-                if(node?.left!=null){
-                    parents.put(node?.left.`val`,node)
-                    findTarget(node?.left,target)
+                if(node.left!=null){
+                    parents.put(node.left!!.`val`,node)
+                    findTarget(node.left,target)
                 }
                 
                 if(targetFound){
                     return
                 }
                 
-                if(node?.right!=null){
-                    parents.put(node?.right.`val`,node)
-                    findTarget(node?.right,target)
+                if(node.right!=null){
+                    parents.put(node.right!!.`val`,node)
+                    findTarget(node.right,target)
                 }
             }else{
                 targetFound = true

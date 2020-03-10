@@ -2,8 +2,9 @@
 //Given an array consisting of n integers, find the contiguous
 //subarray of given length k that has the maximum average value.
 //And you need to output the maximum average value.
+package org.algorithm.problems
 
-class Solution constructor() {
+class `0044_maximum_average_subarray_i` {
     fun findMaxAverage(nums: IntArray, k: Int): Double {
         var result:Double = Double.NEGATIVE_INFINITY;
         var actualSum:Double = 0.0;
@@ -24,12 +25,4 @@ class Solution constructor() {
 
         return result;
     }
-};
-
-fun main(args:Array<String>){
-  var vec:IntArray = intArrayOf(1,12,-5,-6,50,3);
-  var k:Int = 4;
-  var sol:Solution = Solution();
-
-  println(sol.findMaxAverage(vec,k));
 }

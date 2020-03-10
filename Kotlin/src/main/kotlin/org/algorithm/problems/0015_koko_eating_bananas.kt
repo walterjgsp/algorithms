@@ -12,8 +12,9 @@
 // the guards come back.
 //
 // Return the minimum integer K such that she can eat all the bananas within H hours.
+package org.algorithm.problems
 
-class Solution {
+class `0015_koko_eating_bananas` {
 
     private fun hoursToEat(piles:IntArray, eatSpeed:Int): Int{
         var hours:Int = 0;
@@ -48,12 +49,4 @@ class Solution {
 
         return minBananas;
     }
-}
-
-fun main(args:Array<String>){
-  var piles:IntArray = intArrayOf(30,11,23,4,20);
-  var H:Int = 6;
-  var sol:Solution = Solution();
-
-  println(sol.minEatingSpeed(piles,H));
 }

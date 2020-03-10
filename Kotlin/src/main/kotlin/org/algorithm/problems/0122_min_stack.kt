@@ -5,10 +5,11 @@
 //     pop() -- Removes the element on top of the stack.
 //     top() -- Get the top element.
 //     getMin() -- Retrieve the minimum element in the stack.
+package org.algorithm.problems
 
 import java.util.Stack;
 
-class MinStack() {
+class `0122_min_stack` {
 
     private val currStack = Stack<Int>()
     private val minStack = Stack<Int>()
@@ -37,15 +38,4 @@ class MinStack() {
         return minStack.peek()
     }
 
-}
-
-fun main(args: Array<String>) {
-    val minStack = MinStack();
-    minStack.push(-2);
-    minStack.push(0);
-    minStack.push(-3);
-    println(minStack.getMin());  
-    minStack.pop();
-    println(minStack.top());      
-    println(minStack.getMin());   
 }

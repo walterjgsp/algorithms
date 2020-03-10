@@ -5,9 +5,11 @@
 // forms a container, such that the container contains the most water.
 //
 // Note: You may not slant the container and n is at least 2.
+package org.algorithm.problems
+
 import java.lang.Math;
 
-class Solution {
+class `0079_container_with_most_water` {
     fun maxArea(height: IntArray): Int {
         var start = 0;
         var end = height.size-1;
@@ -27,10 +29,4 @@ class Solution {
 
         return maxArea;
     }
-}
-
-fun main(args:Array<String>){
-  val heights = intArrayOf(1,8,6,2,5,4,8,3,7);
-  val sol = Solution();
-  println(sol.maxArea(heights));
 }

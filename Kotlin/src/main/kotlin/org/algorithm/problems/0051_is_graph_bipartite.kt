@@ -9,9 +9,11 @@
 // for which the edge between nodes i and j exists.  Each node is an integer
 // between 0 and graph.length - 1.  There are no self edges or parallel edges:
 // graph[i] does not contain i, and it doesn't contain any element twice.
+package org.algorithm.problems
+
 import java.util.ArrayDeque
 
-class Solution {
+class `0051_is_graph_bipartite` {
     fun isBipartite(graph: Array<IntArray>): Boolean {
         val colors = IntArray(graph.size){-1}
         val processed = mutableSetOf<Int>()
@@ -48,10 +50,4 @@ class Solution {
         }
         return true
     }
-}
-
-fun main(args: Array<String>) {
-    val graph = arrayOf(intArrayOf(1,3),intArrayOf(0,2),intArrayOf(1,3),intArrayOf(0,2))
-    val sol = Solution()
-    println(sol.isBipartite(graph))
 }

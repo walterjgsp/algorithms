@@ -9,8 +9,9 @@
 //
 // Return the answer to all queries.  Your answer array should have answer[i]
 // as the answer to the i-th query.
+package org.algorithm.problems
 
-class Solution constructor() {
+class `0054_sum_of_even_numbers_after_queries` {
     fun sumEvenAfterQueries(A: IntArray, queries: Array<IntArray>): IntArray {
         var result:MutableList<Int> = mutableListOf<Int>();
         var evenSum: Int = 0;
@@ -37,11 +38,4 @@ class Solution constructor() {
 
         return result.toIntArray();
     }
-}
-
-fun main(args:Array<String>){
-  var sol:Solution = Solution();
-  var A: IntArray = intArrayOf(1,2,3,4);
-  var queries:Array<IntArray> = arrayOf(intArrayOf(1,0),intArrayOf(-3,1),intArrayOf(-4,0),intArrayOf(2,3));
-  println(sol.sumEvenAfterQueries(A,queries).joinToString(prefix = "[", postfix = "]"));
 }

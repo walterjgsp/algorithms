@@ -1,3 +1,5 @@
+package org.algorithm.structures
+
 class Stack<T>{
     private data class Node<T>(
         val value: T,
@@ -30,14 +32,4 @@ class Stack<T>{
             iterator = iterator.next
         }
     }
-}
-
-fun main(args: Array<String>) {
-    val stack: Stack<Int> = Stack<Int>()
-    stack.push(3)
-    stack.push(2)
-    stack.printStack()
-    println("\nRemoving last")
-    stack.pop()
-    stack.printStack()
 }

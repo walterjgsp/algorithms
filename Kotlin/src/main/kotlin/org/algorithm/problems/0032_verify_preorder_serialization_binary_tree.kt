@@ -25,10 +25,11 @@
 //
 // Input: "9,3,4,#,#,1,#,#,2,#,6,#,#"
 // Output: true
+package org.algorithm.problems
 
 import java.util.Stack
 
-class Solution {    
+class `0032_verify_preorder_serialization_binary_tree` {
     fun isValidSerialization(preorder: String): Boolean {
         val helper = Stack<Pair<String,Int>>()
         val splited = preorder.split(',')
@@ -68,10 +69,4 @@ class Solution {
         val last = this.pop()
         this.push(Pair<String,Int>(last.first,last.second+1))
     }
-}
-
-fun main(args: Array<String>) {
-    val preorder = "9,3,4,#,#,1,#,#,2,#,6,#,#"
-    val sol = Solution()
-    println(sol.isValidSerialization(preorder))
 }

@@ -6,6 +6,8 @@
 // integer array nums, which contains initial elements from the stream.
 // For each call to the method KthLargest.add, return the element representing the
 // kth largest element in the stream.
+package org.algorithm.problems
+
 import java.util.*;
 
 class KthLargest(val k: Int, nums: IntArray) {
@@ -38,12 +40,3 @@ class KthLargest(val k: Int, nums: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
-    val kth = KthLargest(3,intArrayOf(4,5,8,2))
-
-    println(kth.add(3))
-    println(kth.add(5))
-    println(kth.add(10))
-    println(kth.add(9))
-    println(kth.add(4))
-}
