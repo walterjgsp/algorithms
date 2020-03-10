@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class `0001_two_sum_test` {
 
     @Test
-    fun testTwoSum_smallEntry(){
+    fun test_smallEntry(){
         val nums: IntArray = intArrayOf(2, 7, 11, 15)
         val target = 9
         val solution = `0001_two_sum`()

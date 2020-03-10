@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 class `0003_add_two_numbers_test` {
 
     @Test
-    fun testEqualSizeNumbers() {
+    fun test_equalSizeNumbers() {
         val vec1: IntArray = intArrayOf(2, 4, 3)
         val vec2: IntArray = intArrayOf(5, 5, 4)
         val list1: ListNode? = vec1.vecToLinkedList()

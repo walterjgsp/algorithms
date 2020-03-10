@@ -20,6 +20,16 @@ matrix:
       script:
         - python -m unittest discover "Python/tests/problems" "*_test.py"
 
+    - language: java
+      jdk:
+        - oraclejdk8
+      before_install:
+        - cd Kotlin
+        - chmod +x gradlew
+        - chmod +x gradle/wrapper/gradle-wrapper.jar
+      script:
+        - ./gradlew test
+
 sudo: false
 addons:
   sonarcloud:
