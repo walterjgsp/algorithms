@@ -2,17 +2,17 @@ package org.algorithm.structures
 
 class LinkedList<T> {
     private data class Node<T>(
-        val value : T,
-        var next: Node<T>? = null
+            val value: T,
+            var next: Node<T>? = null
     )
 
-    private var front:Node<T>? = null
-    private var back:Node<T>? = null
-    private var capacity:Int = 0
+    private var front: Node<T>? = null
+    private var back: Node<T>? = null
+    private var capacity: Int = 0
 
-    fun pushFront(value : T){
+    fun pushFront(value: T) {
         val newNode = Node<T>(value = value)
-        if(back==null){
+        if (back == null) {
             back = newNode
         }
 
@@ -21,9 +21,9 @@ class LinkedList<T> {
         capacity++
     }
 
-    fun pushBack(value : T){
+    fun pushBack(value: T) {
         val newNode = Node<T>(value = value)
-        if(front == null){
+        if (front == null) {
             front = newNode
         }
 
@@ -32,23 +32,23 @@ class LinkedList<T> {
         capacity++
     }
 
-    fun printList(){
+    fun printList() {
         var iterator: Node<T>? = front
-        while(iterator!=null){
+        while (iterator != null) {
             print("${iterator.value} ")
             iterator = iterator.next
         }
         println()
     }
 
-    fun isEmpty() : Boolean {
+    fun isEmpty(): Boolean {
         return capacity == 0
     }
 
-    fun find(value : T): Boolean{
+    fun find(value: T): Boolean {
         var it: Node<T>? = front
-        while(it!=null){
-            if(it.value == value){
+        while (it != null) {
+            if (it.value == value) {
                 return true
             }
             it = it.next

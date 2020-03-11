@@ -7,24 +7,24 @@ package org.algorithm.problems
 
 import java.lang.Math;
 
-class `0006_anagrams`{
-    fun getMinimumDeletionsToAnagram(A : String, B:String): Int {
-      var countA:IntArray = IntArray(26) ;
-      var countB:IntArray = IntArray(26) ;
-      var result:Int = 0;
+class `0006_anagrams` {
+    fun getMinimumDeletionsToAnagram(A: String, B: String): Int {
+        val countA: IntArray = IntArray(26);
+        val countB: IntArray = IntArray(26);
+        var result: Int = 0;
 
-      for(letter in A){
-        countA[letter-'a']++;
-      }
+        for (letter in A) {
+            countA[letter - 'a']++;
+        }
 
-      for(letter in B){
-        countB[letter-'a']++;
-      }
+        for (letter in B) {
+            countB[letter - 'a']++;
+        }
 
-      for(index in 0..countA.size-1){
-        result+=Math.abs(countA[index]-countB[index]);
-      }
+        for (index in 0..countA.size - 1) {
+            result += Math.abs(countA[index] - countB[index]);
+        }
 
-      return result;
+        return result;
     }
 }

@@ -14,35 +14,35 @@ import java.util.ArrayDeque
 
 class `0059_rotting_oranges` {
 
-    private val walkMask:Array<Pair<Int,Int>> = arrayOf(Pair(0,1),Pair(1,0),Pair(-1,0),Pair(0,-1))
+    private val walkMask: Array<Pair<Int, Int>> = arrayOf(Pair(0, 1), Pair(1, 0), Pair(-1, 0), Pair(0, -1))
 
-    fun canWalk(grid: Array<IntArray>,row :Int, col: Int, dir:Pair<Int,Int>) :Boolean{
-        return row+dir.first>=0 && row+dir.first<grid.size && col+dir.second>=0 && col+dir.second<grid[0].size && grid[row+dir.first][col+dir.second]==1
+    fun canWalk(grid: Array<IntArray>, row: Int, col: Int, dir: Pair<Int, Int>): Boolean {
+        return row + dir.first >= 0 && row + dir.first < grid.size && col + dir.second >= 0 && col + dir.second < grid[0].size && grid[row + dir.first][col + dir.second] == 1
     }
 
     fun orangesRotting(grid: Array<IntArray>): Int {
-        var bfs:ArrayDeque<Pair<Int,Int>> = ArrayDeque<Pair<Int,Int>>()
+        var bfs: ArrayDeque<Pair<Int, Int>> = ArrayDeque<Pair<Int, Int>>()
         var result: Int = -1
 
-        for(row in 0..grid.size-1){
-            for(col in 0..grid[0].size-1){
-                if(grid[row][col]==2){
-                    bfs.add(Pair(row,col));
+        for (row in 0..grid.size - 1) {
+            for (col in 0..grid[0].size - 1) {
+                if (grid[row][col] == 2) {
+                    bfs.add(Pair(row, col));
                 }
             }
         }
 
-        while(bfs.isNotEmpty()){
-            var tam : Int = bfs.size;
+        while (bfs.isNotEmpty()) {
+            var tam: Int = bfs.size;
 
-            for(index in 0..tam-1){
-                var coord:Pair<Int,Int> = bfs.pollFirst();
-                for(dir in walkMask){
-                    if(canWalk(grid,coord.first,coord.second,dir)){
-                        val row = coord.first+dir.first
-                        val col = coord.second+dir.second
-                        grid[row][col]=2
-                        bfs.add(Pair(row,col))
+            for (index in 0..tam - 1) {
+                var coord: Pair<Int, Int> = bfs.pollFirst();
+                for (dir in walkMask) {
+                    if (canWalk(grid, coord.first, coord.second, dir)) {
+                        val row = coord.first + dir.first
+                        val col = coord.second + dir.second
+                        grid[row][col] = 2
+                        bfs.add(Pair(row, col))
                     }
                 }
             }
@@ -50,15 +50,15 @@ class `0059_rotting_oranges` {
             result++
         }
 
-        for(row in 0..grid.size-1){
-            for(col in 0..grid[0].size-1){
-                if(grid[row][col]==1){
+        for (row in 0..grid.size - 1) {
+            for (col in 0..grid[0].size - 1) {
+                if (grid[row][col] == 1) {
                     return -1
                 }
             }
         }
 
-        if(result<0)
+        if (result < 0)
             return 0
 
         return result

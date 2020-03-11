@@ -13,29 +13,23 @@
 // How many total friend requests are made?
 package org.algorithm.problems
 
-class Solution {
+class `0042_friends_of_appropriate_ages` {
     fun numFriendRequests(ages: IntArray): Int {
-        var counter:IntArray = IntArray(121) {i->0};
-        var result:Int = 0;
+        val counter: IntArray = IntArray(121) { i -> 0 };
+        var result: Int = 0;
 
-        for(age in ages){
+        for (age in ages) {
             counter[age]++;
         }
 
-        for(i in 1..counter.size-1){
-            counter[i]+=counter[i-1];
+        for (i in 1..counter.size - 1) {
+            counter[i] += counter[i - 1];
         }
 
-        for(age in ages){
-            result+=maxOf(0,counter[age]-counter[age/2+7]-1);
+        for (age in ages) {
+            result += maxOf(0, counter[age] - counter[age / 2 + 7] - 1);
         }
 
         return result;
     }
-};
-
-fun main(args:Array<String>){
-  var ages:IntArray = intArrayOf(20,30,100,110,120);
-  var sol:Solution = Solution();
-  println(sol.numFriendRequests(ages));
 }

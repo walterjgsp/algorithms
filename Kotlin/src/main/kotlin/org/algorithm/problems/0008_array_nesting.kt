@@ -20,31 +20,30 @@ package org.algorithm.problems
 
 class `0008_array_nesting` {
     fun arrayNesting(nums: IntArray): Int {
-        var visited:HashSet<Int> = HashSet<Int>();
-        var result:Int = 0;
+        val visited: HashSet<Int> = HashSet<Int>();
+        var result: Int = 0;
 
-        for(index in nums.indices){
-            if(!visited.contains(index)){
-                var dfs:ArrayList<Int> = ArrayList<Int>();
-                var actual_counter:Int = 0;
+        for (index in nums.indices) {
+            if (!visited.contains(index)) {
+                val dfs: ArrayList<Int> = ArrayList<Int>();
+                var actual_counter: Int = 0;
                 dfs.add(index);
 
-                while(!dfs.isEmpty()){
-                    var last:Int = dfs.last();
-                    dfs.removeAt(dfs.size-1);
+                while (!dfs.isEmpty()) {
+                    val last: Int = dfs.last();
+                    dfs.removeAt(dfs.size - 1);
 
-                    if(!visited.contains(last)){
+                    if (!visited.contains(last)) {
                         visited.add(last);
                         dfs.add(nums[last]);
                         actual_counter++;
                     }
                 }
 
-                result = maxOf(result,actual_counter);
+                result = maxOf(result, actual_counter);
             }
         }
 
         return result;
     }
 }
-

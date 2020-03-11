@@ -11,17 +11,17 @@ import java.util.ArrayDeque
 class `0062_max_chunks_to_make_sorted` {
     fun maxChunksToSorted(arr: IntArray): Int {
 
-        var sorted : ArrayDeque<Int> = ArrayDeque<Int>()
-        var result : Int = 0
+        var sorted: ArrayDeque<Int> = ArrayDeque<Int>()
+        var result: Int = 0
 
-        for(pos in 0..arr.size-1){
+        for (pos in 0..arr.size - 1) {
             sorted.add(arr[pos])
 
-            while(sorted.isNotEmpty() && sorted.getLast()<=pos){
+            while (sorted.isNotEmpty() && sorted.getLast() <= pos) {
                 sorted.pollLast()
             }
 
-            if(sorted.isEmpty()){
+            if (sorted.isEmpty()) {
                 result++
             }
         }

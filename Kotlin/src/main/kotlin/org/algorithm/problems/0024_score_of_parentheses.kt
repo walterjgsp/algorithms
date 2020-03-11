@@ -16,28 +16,28 @@ class `0024_score_of_parentheses` {
     fun scoreOfParentheses(S: String): Int {
         val values = Stack<Int>()
         val paren = Stack<Int>()
-        
-        for(c in S){
-            if(c=='('){
+
+        for (c in S) {
+            if (c == '(') {
                 paren.push(1)
-                if(values.size<paren.size){
+                if (values.size < paren.size) {
                     values.push(0)
                 }
-            }else{
+            } else {
                 paren.pop()
                 val diff = values.size - paren.size
-                if(diff == 1){
+                if (diff == 1) {
                     var curr = values.pop()
                     curr += 1
                     values.push(curr)
-                }else if(diff == 2){
-                    var curr = 2*values.pop()
+                } else if (diff == 2) {
+                    var curr = 2 * values.pop()
                     curr += values.pop()
                     values.push(curr)
                 }
             }
         }
-        
-        return if(values.empty()) 0 else values.peek()
+
+        return if (values.empty()) 0 else values.peek()
     }
 }

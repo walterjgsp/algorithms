@@ -13,24 +13,24 @@ package org.algorithm.problems
 
 class `0054_sum_of_even_numbers_after_queries` {
     fun sumEvenAfterQueries(A: IntArray, queries: Array<IntArray>): IntArray {
-        var result:MutableList<Int> = mutableListOf<Int>();
+        val result: MutableList<Int> = mutableListOf<Int>();
         var evenSum: Int = 0;
 
-        for(value in A){
-            if(value%2==0){
+        for (value in A) {
+            if (value % 2 == 0) {
                 evenSum += value;
             }
         }
 
-        for(query in queries){
-            if(A[query[1]]%2==0){
-                evenSum-=A[query[1]];
+        for (query in queries) {
+            if (A[query[1]] % 2 == 0) {
+                evenSum -= A[query[1]];
             }
 
-            A[query[1]]+=query[0];
+            A[query[1]] += query[0];
 
-            if(A[query[1]]%2==0){
-                evenSum+=A[query[1]];
+            if (A[query[1]] % 2 == 0) {
+                evenSum += A[query[1]];
             }
 
             result.add(evenSum);

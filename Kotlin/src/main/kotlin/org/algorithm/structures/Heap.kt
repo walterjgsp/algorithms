@@ -1,72 +1,72 @@
 package org.algorithm.structures
 
-class Heap<T:Comparable<T>>(val isMinHeap : Boolean = false){
+class Heap<T : Comparable<T>>(val isMinHeap: Boolean = false) {
 
     private val heap: MutableList<T> = mutableListOf<T>()
 
-    private fun heapifyUp(index : Int){
-        if(index>=0){
-            val parent: Int = (index-1)/2
-            if(heap[index]>heap[parent]){
-                heap.swap(index,parent)
+    private fun heapifyUp(index: Int) {
+        if (index >= 0) {
+            val parent: Int = (index - 1) / 2
+            if (heap[index] > heap[parent]) {
+                heap.swap(index, parent)
                 heapifyUp(parent)
             }
         }
     }
 
-    private fun heapifyDown(index : Int){
-        if(index<heap.size){
-            val left = 2*index+1
-            val right = 2*index+2
+    private fun heapifyDown(index: Int) {
+        if (index < heap.size) {
+            val left = 2 * index + 1
+            val right = 2 * index + 2
 
-            val children = mutableListOf<Pair<T,Int>>()
+            val children = mutableListOf<Pair<T, Int>>()
 
-            if(left<heap.size){
-                children.add(Pair(heap[left],left))
+            if (left < heap.size) {
+                children.add(Pair(heap[left], left))
             }
 
-            if(right<heap.size){
-                children.add(Pair(heap[right],right))
+            if (right < heap.size) {
+                children.add(Pair(heap[right], right))
             }
 
-            if(!children.isEmpty()){
+            if (!children.isEmpty()) {
                 var swapIndex = 0
-                for(i in 1 until children.size){
-                    if(children[swapIndex].first < children[i].first){
+                for (i in 1 until children.size) {
+                    if (children[swapIndex].first < children[i].first) {
                         swapIndex = i
                     }
                 }
 
                 val toHeapify = children[swapIndex].second
-                if(heap[toHeapify]>heap[index]){
-                    heap.swap(index,toHeapify);
+                if (heap[toHeapify] > heap[index]) {
+                    heap.swap(index, toHeapify);
                     heapifyDown(toHeapify);
                 }
             }
         }
     }
 
-    fun printHeap(){
+    fun printHeap() {
         println(heap)
     }
 
-    fun push(value : T){
+    fun push(value: T) {
         heap.add(value)
-        heapifyUp(heap.size-1)
+        heapifyUp(heap.size - 1)
     }
 
-    fun peek() : T{
+    fun peek(): T {
         return heap.first()
     }
 
-    fun isEmpty() : Boolean{
+    fun isEmpty(): Boolean {
         return heap.isEmpty()
     }
 
-    fun pop(){
-        if(!heap.isEmpty()){
+    fun pop() {
+        if (!heap.isEmpty()) {
             heap.removeAt(0)
-            if(heap.isNotEmpty()){
+            if (heap.isNotEmpty()) {
                 heapifyDown(0)
             }
         }

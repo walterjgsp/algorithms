@@ -10,34 +10,34 @@ package org.algorithm.problems
 class `0034_pancake_sort` {
     fun pancakeSort(A: IntArray): List<Int> {
         val result = mutableListOf<Int>()
-        
-        for(i in A.size-1 downTo 1){
-            var max_index = Pair(A[0],0)
-            for(j in 1..i){
-                if(max_index.first<A[j]){
-                    max_index = Pair(A[j],j)
+
+        for (i in A.size - 1 downTo 1) {
+            var max_index = Pair(A[0], 0)
+            for (j in 1..i) {
+                if (max_index.first < A[j]) {
+                    max_index = Pair(A[j], j)
                 }
             }
-            
-            if(max_index.second>0){
-                A.reverse(0,max_index.second)
-                result.add(max_index.second+1)    
+
+            if (max_index.second > 0) {
+                A.reverse(0, max_index.second)
+                result.add(max_index.second + 1)
             }
-            A.reverse(0,i)
-            result.add(i+1)
+            A.reverse(0, i)
+            result.add(i + 1)
         }
-        
+
         return result;
     }
-    
-    private fun IntArray.reverse(from: Int, until: Int){
+
+    private fun IntArray.reverse(from: Int, until: Int) {
         var start = from
         var end = until
-        while(start<end){
-            var temp = this[start]
+        while (start < end) {
+            val temp = this[start]
             this[start] = this[end]
             this[end] = temp
-            start+=1
+            start += 1
             end -= 1
         }
     }

@@ -40,28 +40,28 @@ package org.algorithm.problems
 class Twitter {
 
     /** Initialize your data structure here. */
-    val users:HashMap<Int,HashSet<Int>> = HashMap<Int,HashSet<Int>>();
-    val feedList:MutableList<Pair<Int,Int>> = mutableListOf<Pair<Int,Int>>();
+    val users: HashMap<Int, HashSet<Int>> = HashMap<Int, HashSet<Int>>();
+    val feedList: MutableList<Pair<Int, Int>> = mutableListOf<Pair<Int, Int>>();
 
     /** Compose a new tweet. */
     fun postTweet(userId: Int, tweetId: Int) {
-        if(!users.containsKey(userId)){
-            users.put(userId,HashSet<Int>());
+        if (!users.containsKey(userId)) {
+            users.put(userId, HashSet<Int>());
         }
-        feedList.add(Pair(userId,tweetId));
+        feedList.add(Pair(userId, tweetId));
     }
 
     /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
     fun getNewsFeed(userId: Int): List<Int> {
-        val newsFeed:MutableList<Int> = mutableListOf<Int>();
+        val newsFeed: MutableList<Int> = mutableListOf<Int>();
 
-        for(index in feedList.lastIndex downTo 0){
-            var feed = feedList[index];
-            if(newsFeed.size==10){
+        for (index in feedList.lastIndex downTo 0) {
+            val feed = feedList[index];
+            if (newsFeed.size == 10) {
                 break;
             }
 
-            if(feed.first == userId || (users.containsKey(userId) && users.get(userId)!!.contains(feed.first))){
+            if (feed.first == userId || (users.containsKey(userId) && users.get(userId)!!.contains(feed.first))) {
                 newsFeed.add(feed.second);
             }
         }
@@ -71,19 +71,18 @@ class Twitter {
 
     /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
     fun follow(followerId: Int, followeeId: Int) {
-        if(!users.containsKey(followerId)){
-            users.put(followerId,HashSet<Int>());
+        if (!users.containsKey(followerId)) {
+            users.put(followerId, HashSet<Int>());
         }
         users.get(followerId)!!.add(followeeId)
     }
 
     /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
     fun unfollow(followerId: Int, followeeId: Int) {
-        if(!users.containsKey(followerId)){
+        if (!users.containsKey(followerId)) {
             return
         }
 
         users.get(followerId)!!.remove(followeeId);
     }
-
 }

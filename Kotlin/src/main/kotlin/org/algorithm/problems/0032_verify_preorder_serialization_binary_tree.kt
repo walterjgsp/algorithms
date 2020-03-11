@@ -31,42 +31,42 @@ import java.util.Stack
 
 class `0032_verify_preorder_serialization_binary_tree` {
     fun isValidSerialization(preorder: String): Boolean {
-        val helper = Stack<Pair<String,Int>>()
+        val helper = Stack<Pair<String, Int>>()
         val splited = preorder.split(',')
         var index = 0
-        
-        while(index<splited.size){
-            if(splited[index]=="#"){
-                if(helper.isEmpty()){
-                  if(index==0 && splited.size==1)
-                    return true
-                  else
-                    return false
-                }                 
-                
+
+        while (index < splited.size) {
+            if (splited[index] == "#") {
+                if (helper.isEmpty()) {
+                    if (index == 0 && splited.size == 1)
+                        return true
+                    else
+                        return false
+                }
+
                 helper.incrementLast()
-                while(!helper.isEmpty() && helper.peek().second==2){
+                while (!helper.isEmpty() && helper.peek().second == 2) {
                     helper.pop();
-                    if(!helper.isEmpty()){
+                    if (!helper.isEmpty()) {
                         helper.incrementLast()
                     }
                 }
-            }else{
-                helper.push(Pair(splited[index],0))
+            } else {
+                helper.push(Pair(splited[index], 0))
             }
-            
-            index+=1
-            
-            if(helper.empty()){
+
+            index += 1
+
+            if (helper.empty()) {
                 break;
             }
         }
-        
+
         return helper.isEmpty() && index == splited.size
     }
-    
-    private fun Stack<Pair<String,Int>>.incrementLast(){
+
+    private fun Stack<Pair<String, Int>>.incrementLast() {
         val last = this.pop()
-        this.push(Pair<String,Int>(last.first,last.second+1))
+        this.push(Pair<String, Int>(last.first, last.second + 1))
     }
 }

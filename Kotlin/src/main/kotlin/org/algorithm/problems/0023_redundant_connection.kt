@@ -19,38 +19,38 @@ package org.algorithm.problems
 class `0023_redundant_connection` {
 
     private lateinit var parent: IntArray
-    
-    private fun find(x : Int): Int{
-        if(parent[x]==x){
+
+    private fun find(x: Int): Int {
+        if (parent[x] == x) {
             return x
         }
         return find(parent[x])
     }
 
-    private fun Union(x: Int, y: Int) : Boolean{
+    private fun Union(x: Int, y: Int): Boolean {
         val xparent = find(x)
         val yparent = find(y)
 
-        return if(xparent!=yparent){
+        return if (xparent != yparent) {
             parent[yparent] = xparent
             true
-        }else{
+        } else {
             false
         }
     }
 
     fun findRedundantConnection(edges: Array<IntArray>): IntArray {
-        parent = IntArray(edges.size+1)
-        for(i in 0 until parent.size){
+        parent = IntArray(edges.size + 1)
+        for (i in 0 until parent.size) {
             parent[i] = i
         }
 
         var result: IntArray = intArrayOf()
 
-        for(edge in edges){
-            if(!Union(edge[0],edge[1])){
+        for (edge in edges) {
+            if (!Union(edge[0], edge[1])) {
                 result = edge
-            }            
+            }
         }
 
         return result;

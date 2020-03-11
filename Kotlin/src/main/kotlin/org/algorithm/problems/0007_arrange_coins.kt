@@ -18,13 +18,13 @@ package org.algorithm.problems
 
 class `0007_arrange_coins` {
     fun arrangeCoins(n: Int): Int {
-        var row:Int = 1;
-        var result:Int = 0;
-        var coins:Int = n;
+        var row: Int = 1;
+        var result: Int = 0;
+        var coins: Int = n;
 
-        while(coins>=row){
+        while (coins >= row) {
             result++;
-            coins-=row;
+            coins -= row;
             row++;
         }
 

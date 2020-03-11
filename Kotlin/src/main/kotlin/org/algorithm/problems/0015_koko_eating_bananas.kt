@@ -16,12 +16,12 @@ package org.algorithm.problems
 
 class `0015_koko_eating_bananas` {
 
-    private fun hoursToEat(piles:IntArray, eatSpeed:Int): Int{
-        var hours:Int = 0;
+    private fun hoursToEat(piles: IntArray, eatSpeed: Int): Int {
+        var hours: Int = 0;
 
-        for(pile in piles){
-            hours+=pile/eatSpeed;
-            if(pile%eatSpeed>0){
+        for (pile in piles) {
+            hours += pile / eatSpeed;
+            if (pile % eatSpeed > 0) {
                 hours++;
             }
         }
@@ -30,19 +30,19 @@ class `0015_koko_eating_bananas` {
     }
 
     fun minEatingSpeed(piles: IntArray, H: Int): Int {
-        var minBananas:Int = 1;
-        var maxBananas:Int = 0;
+        var minBananas: Int = 1;
+        var maxBananas: Int = 0;
 
-        for(pile in piles){
-            maxBananas = maxOf(maxBananas,pile);
+        for (pile in piles) {
+            maxBananas = maxOf(maxBananas, pile);
         }
 
-        while(minBananas<maxBananas){
-            var midBananas:Int = minBananas+(maxBananas-minBananas)/2;
+        while (minBananas < maxBananas) {
+            val midBananas: Int = minBananas + (maxBananas - minBananas) / 2;
 
-            if(hoursToEat(piles,midBananas)<=H){
+            if (hoursToEat(piles, midBananas) <= H) {
                 maxBananas = midBananas;
-            }else{
+            } else {
                 minBananas = midBananas + 1;
             }
         }

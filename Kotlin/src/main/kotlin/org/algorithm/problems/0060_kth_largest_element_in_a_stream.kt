@@ -10,33 +10,32 @@ package org.algorithm.problems
 
 import java.util.*;
 
-class KthLargest(val k: Int, nums: IntArray) {
+class `0060_kth_largest_element_in_a_stream`(val k: Int, nums: IntArray) {
 
     private val pq = PriorityQueue<Int>()
 
-    init{
-        for(num in nums){
-            if(pq.size>=k){
-                if(pq.peek()<num){
+    init {
+        for (num in nums) {
+            if (pq.size >= k) {
+                if (pq.peek() < num) {
                     pq.add(num)
                     pq.poll()
                 }
-            }else{
+            } else {
                 pq.add(num)
             }
         }
     }
 
     fun add(value: Int): Int {
-        if(pq.size>=k){
-            if(pq.peek()<value){
+        if (pq.size >= k) {
+            if (pq.peek() < value) {
                 pq.add(value)
                 pq.poll()
             }
-        }else{
+        } else {
             pq.add(value)
         }
         return pq.peek();
     }
 }
-

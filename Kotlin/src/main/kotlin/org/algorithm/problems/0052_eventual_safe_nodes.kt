@@ -17,18 +17,18 @@ package org.algorithm.problems
 
 class `0052_eventual_safe_nodes` {
 
-    val memo:HashMap<Int,Boolean> = HashMap<Int,Boolean>();
+    val memo: HashMap<Int, Boolean> = HashMap<Int, Boolean>();
 
     fun eventualSafeNodes(graph: Array<IntArray>): List<Int> {
-        val result:MutableList<Int> = mutableListOf<Int>();
+        val result: MutableList<Int> = mutableListOf<Int>();
 
-        for(i in graph.indices){
-            if(!memo.containsKey(i)){
-                val visited:HashSet<Int> = HashSet<Int>();
-                dfs(graph,i,visited);
+        for (i in graph.indices) {
+            if (!memo.containsKey(i)) {
+                val visited: HashSet<Int> = HashSet<Int>();
+                dfs(graph, i, visited);
             }
 
-            if(memo[i]!!){
+            if (memo[i]!!) {
                 result.add(i);
             }
         }
@@ -36,24 +36,24 @@ class `0052_eventual_safe_nodes` {
         return result;
     }
 
-    fun dfs(graph:Array<IntArray>, vertex : Int, visited: HashSet<Int>) : Boolean{
-        if(memo.containsKey(vertex))
+    fun dfs(graph: Array<IntArray>, vertex: Int, visited: HashSet<Int>): Boolean {
+        if (memo.containsKey(vertex))
             return memo[vertex]!!;
 
-        if(visited.contains(vertex)){
-            memo.put(vertex,false);
+        if (visited.contains(vertex)) {
+            memo.put(vertex, false);
             return memo[vertex]!!;
         }
 
         visited.add(vertex);
 
-        var isSafe:Boolean = true;
+        var isSafe: Boolean = true;
 
-        for(neighbor in graph[vertex]){
-            isSafe = isSafe && dfs(graph,neighbor,visited);
+        for (neighbor in graph[vertex]) {
+            isSafe = isSafe && dfs(graph, neighbor, visited);
         }
 
-        memo.put(vertex,isSafe);
+        memo.put(vertex, isSafe);
         return memo[vertex]!!;
     }
 }

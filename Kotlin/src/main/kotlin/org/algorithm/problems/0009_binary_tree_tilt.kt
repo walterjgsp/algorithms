@@ -26,7 +26,7 @@ package org.algorithm.problems
 import org.algorithm.shared.TreeNode
 
 class `0009_binary_tree_tilt` {
-    private var result:Int = 0;
+    private var result: Int = 0;
     fun findTilt(root: TreeNode?): Int {
         result = 0;
 
@@ -35,16 +35,16 @@ class `0009_binary_tree_tilt` {
         return result;
     }
 
-    fun helperTilt(node: TreeNode?): Int{
+    fun helperTilt(node: TreeNode?): Int {
 
-        if(node==null)
+        if (node == null)
             return 0;
 
-        var sumLeft:Int = helperTilt(node?.left);
-        val sumRight:Int = helperTilt(node?.right);
+        val sumLeft: Int = helperTilt(node.left);
+        val sumRight: Int = helperTilt(node.right);
 
         result += kotlin.math.abs(sumRight - sumLeft);
 
-        return node.`val`+sumRight+sumLeft;
+        return node.`val` + sumRight + sumLeft;
     }
 }

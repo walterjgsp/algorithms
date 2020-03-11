@@ -13,54 +13,54 @@ package org.algorithm.problems
 class LRUCache(val capacity: Int) {
 
     data class Node(
-      val key:Int,
-      val value:Int
+            val key: Int,
+            val value: Int
     )
 
     private val lru = mutableListOf<Node>()
 
-    private fun removeFirst(){
-      lru.removeAt(0)
+    private fun removeFirst() {
+        lru.removeAt(0)
     }
-    
-    private fun addNode(key: Int, value: Int){
-      lru.add(Node(key,value));
+
+    private fun addNode(key: Int, value: Int) {
+        lru.add(Node(key, value));
     }
 
     fun get(key: Int): Int {
-      val index = lru.indexOfFirst{ it.key == key}
-      if(index == -1){
-        return -1
-      }else{
-        val it = lru[index]
-        lru.removeAt(index)
-        addNode(it.key,it.value)
-        return it.value
-      }
+        val index = lru.indexOfFirst { it.key == key }
+        if (index == -1) {
+            return -1
+        } else {
+            val it = lru[index]
+            lru.removeAt(index)
+            addNode(it.key, it.value)
+            return it.value
+        }
     }
 
     fun put(key: Int, value: Int) {
-      val index = lru.indexOfFirst{ it.key == key}
-      if(index != -1){
-        lru.removeAt(index)
-      }else if(lru.size>=capacity){
-        removeFirst()
-      }
+        val index = lru.indexOfFirst { it.key == key }
+        if (index != -1) {
+            lru.removeAt(index)
+        } else if (lru.size >= capacity) {
+            removeFirst()
+        }
 
-      addNode(key,value)
+        addNode(key, value)
     }
 
-    fun printCache(){
-      println(lru)
+    fun printCache() {
+        println(lru)
     }
 }
 
 fun main(args: Array<String>) {
-  val cache = LRUCache(2)
-  cache.put(1,1)
-  cache.put(2,2)
-  cache.printCache()
-  println(cache.get(1))
-  cache.put(3,3)
-  cache.printCache()
+    val cache = LRUCache(2)
+    cache.put(1, 1)
+    cache.put(2, 2)
+    cache.printCache()
+    println(cache.get(1))
+    cache.put(3, 3)
+    cache.printCache()
 }

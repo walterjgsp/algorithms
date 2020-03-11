@@ -4,34 +4,34 @@ package org.algorithm.problems
 
 class `0121_one_edit_distance` {
 
-    fun isOneEditDistance(s1 : String, s2 : String) : Boolean{
+    fun isOneEditDistance(s1: String, s2: String): Boolean {
         var diff_count = 0
         var i = 0
         var j = 0
 
-        while(i<s1.length && j<s2.length){
-            if(s1[i]!=s2[j]){
-                if(diff_count>1){
+        while (i < s1.length && j < s2.length) {
+            if (s1[i] != s2[j]) {
+                if (diff_count > 1) {
                     return false
                 }
 
-                if(s1.length == s2.length){
+                if (s1.length == s2.length) {
                     i++
                     j++
-                }else if(s1.length<s2.length){
+                } else if (s1.length < s2.length) {
                     j++
-                }else{
+                } else {
                     i++
                 }
 
                 diff_count++
-            }else{
+            } else {
                 i++
                 j++
             }
         }
 
-        if(i<s1.length || j<s2.length){
+        if (i < s1.length || j < s2.length) {
             diff_count++
         }
 

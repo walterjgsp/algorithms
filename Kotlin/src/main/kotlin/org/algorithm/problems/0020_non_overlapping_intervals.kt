@@ -12,21 +12,21 @@ package org.algorithm.problems
 
 class `0020_non_overlapping_intervals` {
     fun eraseOverlapIntervals(intervals: Array<IntArray>): Int {
-        if(intervals.isEmpty()) 
+        if (intervals.isEmpty())
             return 0
-        
-        intervals.sortWith(Comparator{ i1: IntArray, i2: IntArray ->
-            if(i1[1] == i2[1]) i1[0]-i2[0]
+
+        intervals.sortWith(Comparator { i1: IntArray, i2: IntArray ->
+            if (i1[1] == i2[1]) i1[0] - i2[0]
             else i1[1] - i2[1]
         })
-        
+
         var currInterval = intervals[0]
         var result = 0
-        
-        for(i in 1 until intervals.size){
-            if(currInterval[1]>intervals[i][0]){
-                result+=1
-            }else{
+
+        for (i in 1 until intervals.size) {
+            if (currInterval[1] > intervals[i][0]) {
+                result += 1
+            } else {
                 currInterval = intervals[i]
             }
         }

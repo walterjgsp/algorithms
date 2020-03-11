@@ -18,36 +18,34 @@ class `0003_add_two_numbers` {
         var it: ListNode? = dummy;
         var carry: Int = 0;
 
-        while(irl1!=null || irl2!=null){
-            var v1:Int = 0;
-            var v2:Int = 0;
+        while (irl1 != null || irl2 != null) {
+            var v1: Int = 0;
+            var v2: Int = 0;
 
-            if(irl1!=null){
+            if (irl1 != null) {
                 v1 = irl1.`val`;
                 irl1 = irl1.next;
             }
 
-            if(irl2!=null){
+            if (irl2 != null) {
                 v2 = irl2.`val`;
                 irl2 = irl2.next;
             }
 
-            var sum: Int = v1+v2+carry;
-            if(sum>9){
+            var sum: Int = v1 + v2 + carry;
+            if (sum > 9) {
                 carry = 1;
                 sum = sum % 10;
-            }else
+            } else
                 carry = 0;
 
             it?.next = ListNode(sum);
             it = it?.next;
         }
 
-        if(carry>0)
+        if (carry > 0)
             it?.next = ListNode(carry);
 
         return dummy?.next;
     }
 }
-
-

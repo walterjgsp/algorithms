@@ -9,33 +9,33 @@
 package org.algorithm.problems
 
 class `0029_summary_ranges` {
-    data class Interval(var start:Int,var end:Int){
-        override fun toString(): String{
-            return if(start == end){
+    data class Interval(var start: Int, var end: Int) {
+        override fun toString(): String {
+            return if (start == end) {
                 start.toString()
-            }else{
+            } else {
                 "$start->$end"
             }
         }
     }
-    
+
     fun summaryRanges(nums: IntArray): List<String> {
         val result = mutableListOf<String>()
-        if(nums.isEmpty()) 
+        if (nums.isEmpty())
             return result
-        
-        var currInterval = Interval(nums[0],nums[0])
-        for(i in 1 until nums.size){
-            if(kotlin.math.abs(nums[i]-currInterval.end)>1){
+
+        var currInterval = Interval(nums[0], nums[0])
+        for (i in 1 until nums.size) {
+            if (kotlin.math.abs(nums[i] - currInterval.end) > 1) {
                 result.add(currInterval.toString())
-                currInterval = Interval(nums[i],nums[i])
-            }else{
+                currInterval = Interval(nums[i], nums[i])
+            } else {
                 currInterval.end = nums[i]
             }
         }
         result.add(currInterval.toString())
-        
+
         return result
-        
+
     }
 }

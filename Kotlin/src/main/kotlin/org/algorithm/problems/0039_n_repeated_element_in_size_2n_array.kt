@@ -10,10 +10,10 @@ package org.algorithm.problems
 
 class `0039_n_repeated_element_in_size_2n_array` {
     fun repeatedNTimes(A: IntArray): Int {
-        var unique:HashSet<Int> = HashSet<Int>();
+        val unique: HashSet<Int> = HashSet<Int>();
 
-        for( value in A){
-            if(unique.contains(value)){
+        for (value in A) {
+            if (unique.contains(value)) {
                 return value;
             }
             unique.add(value);

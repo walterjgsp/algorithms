@@ -12,36 +12,36 @@ import java.util.ArrayDeque
 
 class `0035_possible_bipartition` {
     fun possibleBipartition(N: Int, dislikes: Array<IntArray>): Boolean {
-        val graph = Array<MutableList<Int>>(N){mutableListOf<Int>()}
-        val colors = IntArray(N){-1}
-        
-        for(dis in dislikes){
-            graph[dis[0]-1].add(dis[1]-1)
-            graph[dis[1]-1].add(dis[0]-1)
+        val graph = Array<MutableList<Int>>(N) { mutableListOf<Int>() }
+        val colors = IntArray(N) { -1 }
+
+        for (dis in dislikes) {
+            graph[dis[0] - 1].add(dis[1] - 1)
+            graph[dis[1] - 1].add(dis[0] - 1)
         }
-        
-        for(i in 0 until N){
-            if(colors[i]==-1){
+
+        for (i in 0 until N) {
+            if (colors[i] == -1) {
                 val bfs = ArrayDeque<Int>()
-                
+
                 bfs.push(i)
                 colors[i] = 1
-                while(!bfs.isEmpty()){
+                while (!bfs.isEmpty()) {
                     val curr = bfs.pop()
-                    for(son in graph[curr]){
-                        if(colors[son]!=-1){
-                            if(colors[son]==colors[curr]){
+                    for (son in graph[curr]) {
+                        if (colors[son] != -1) {
+                            if (colors[son] == colors[curr]) {
                                 return false
                             }
-                        }else{
-                            colors[son]= if(colors[curr]==1) 2 else 1
+                        } else {
+                            colors[son] = if (colors[curr] == 1) 2 else 1
                             bfs.push(son)
                         }
                     }
                 }
             }
         }
-        
+
         return true;
     }
 }

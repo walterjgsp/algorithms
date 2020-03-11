@@ -7,17 +7,17 @@ The letters in J are guaranteed distinct, and all characters in J and S are
 letters. Letters are case sensitive, so "a" is considered a different type of stone from "A". */
 package org.algorithm.problems
 
-class `0045_jewels_and_stones`{
+class `0045_jewels_and_stones` {
     fun numJewelsInStones(J: String, S: String): Int {
-        val counter:IntArray = IntArray(256) { i->0 };
-        var result:Int = 0;
+        val counter: IntArray = IntArray(256) { i -> 0 };
+        var result: Int = 0;
 
-        for(jewels in J){
+        for (jewels in J) {
             counter[jewels.toInt()]++;
         }
 
-        for(stones in S){
-            if(counter[stones.toInt()]>0){
+        for (stones in S) {
+            if (counter[stones.toInt()] > 0) {
                 result++;
             }
         }

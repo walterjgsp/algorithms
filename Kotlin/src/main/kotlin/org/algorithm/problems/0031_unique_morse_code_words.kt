@@ -16,25 +16,25 @@
 package org.algorithm.problems
 
 class `0031_unique_morse_code_words` {
-    
-    private val letters = mutableListOf<String>(".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..")
-    
-    fun toMorse(word: String):String{
-        var result:String = ""
-        for(c in word){
-            result+=letters[c-'a']
+
+    private val letters = mutableListOf<String>(".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..")
+
+    fun toMorse(word: String): String {
+        var result: String = ""
+        for (c in word) {
+            result += letters[c - 'a']
         }
         return result
     }
-    
+
     fun uniqueMorseRepresentations(words: Array<String>): Int {
-        
+
         val unique = mutableSetOf<String>()
-        
-        for(word in words){
+
+        for (word in words) {
             unique.add(toMorse(word))
         }
-        
+
         return unique.size
     }
 }

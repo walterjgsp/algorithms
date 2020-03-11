@@ -7,37 +7,37 @@ import java.util.Stack;
 
 class `0089_largest_rectangle_in_histogram` {
     fun largestRectangleArea(heights: IntArray): Int {
-        var result : Int = 0;
+        var result: Int = 0;
         val helper = Stack<Int>();
 
-        for(i in heights.indices){
-            while(!helper.empty() && heights[helper.peek()]>=heights[i]){
+        for (i in heights.indices) {
+            while (!helper.empty() && heights[helper.peek()] >= heights[i]) {
                 val lastHeight = heights[helper.peek()];
                 helper.pop();
 
-                val area: Int = lastHeight * if(helper.empty()){
-                        i
-                    }else{
-                        i-helper.peek()-1
-                    }
-                    
-                result = maxOf(result,area);
-                
+                val area: Int = lastHeight * if (helper.empty()) {
+                    i
+                } else {
+                    i - helper.peek() - 1
+                }
+
+                result = maxOf(result, area);
+
             }
             helper.add(i);
         }
 
-        while(!helper.empty()){
+        while (!helper.empty()) {
             val currHeight = heights[helper.peek()];
-            helper.pop(); 
+            helper.pop();
 
-            val area:Int = currHeight * if(helper.empty()){
-                        heights.size
-                    }else{
-                        heights.size-helper.peek()-1
-                    }
+            val area: Int = currHeight * if (helper.empty()) {
+                heights.size
+            } else {
+                heights.size - helper.peek() - 1
+            }
 
-            result = maxOf(result,area);
+            result = maxOf(result, area);
         }
 
         return result;

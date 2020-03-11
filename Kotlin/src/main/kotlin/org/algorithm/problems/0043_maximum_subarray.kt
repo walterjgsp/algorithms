@@ -5,12 +5,12 @@ package org.algorithm.problems
 
 class `0043_maximum_subarray` {
     fun maxSubArray(nums: IntArray): Int {
-        var actualSum:Int = nums[0];
-        var maxSum:Int = nums[0];
+        var actualSum: Int = nums[0];
+        var maxSum: Int = nums[0];
 
-        for(i in 1..nums.size-1){
-            actualSum = maxOf(actualSum+nums[i],nums[i]);
-            maxSum = maxOf(actualSum,maxSum);
+        for (i in 1..nums.size - 1) {
+            actualSum = maxOf(actualSum + nums[i], nums[i]);
+            maxSum = maxOf(actualSum, maxSum);
         }
 
         return maxSum;

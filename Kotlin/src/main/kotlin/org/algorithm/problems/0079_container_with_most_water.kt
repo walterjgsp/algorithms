@@ -12,17 +12,17 @@ import java.lang.Math;
 class `0079_container_with_most_water` {
     fun maxArea(height: IntArray): Int {
         var start = 0;
-        var end = height.size-1;
+        var end = height.size - 1;
         var maxArea = 0;
-        var area :Int;
+        var area: Int;
 
-        while(start<end){
-            area = Math.min(height[start],height[end])*(end-start);
-            maxArea = Math.max(maxArea,area);
+        while (start < end) {
+            area = Math.min(height[start], height[end]) * (end - start);
+            maxArea = Math.max(maxArea, area);
 
-            if(height[start]>height[end]){
+            if (height[start] > height[end]) {
                 end--;
-            }else{
+            } else {
                 start++;
             }
         }

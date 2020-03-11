@@ -26,27 +26,26 @@ import org.algorithm.shared.TreeNode
 
 class `0002_add_one_row_to_tree` {
     fun addOneRow(root: TreeNode?, v: Int, d: Int): TreeNode? {
-        if(root==null)
+        if (root == null)
             return root;
 
         var to_return: TreeNode? = root;
 
-        if(d==1){
+        if (d == 1) {
             val newRoot: TreeNode? = TreeNode(v);
             newRoot?.left = to_return;
             to_return = newRoot;
-        }
-        else if(d==2){
-            val newNodeL:TreeNode? = TreeNode(v);
+        } else if (d == 2) {
+            val newNodeL: TreeNode? = TreeNode(v);
             newNodeL?.left = to_return?.left;
             to_return?.left = newNodeL;
 
-            val newNodeR:TreeNode? = TreeNode(v);
+            val newNodeR: TreeNode? = TreeNode(v);
             newNodeR?.right = to_return?.right;
             to_return?.right = newNodeR;
-        }else{
-            to_return?.left = addOneRow(to_return?.left,v,d-1);
-            to_return?.right = addOneRow(to_return?.right,v,d-1);
+        } else {
+            to_return?.left = addOneRow(to_return?.left, v, d - 1);
+            to_return?.right = addOneRow(to_return?.right, v, d - 1);
         }
 
         return to_return;

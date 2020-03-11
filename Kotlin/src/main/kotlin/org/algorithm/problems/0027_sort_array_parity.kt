@@ -8,11 +8,11 @@ package org.algorithm.problems
 
 class `0027_sort_array_parity` {
     fun sortArrayByParity(A: IntArray): IntArray {
-        var even:MutableList<Int> = mutableListOf();
-        var odd:MutableList<Int> = mutableListOf();
+        val even: MutableList<Int> = mutableListOf();
+        val odd: MutableList<Int> = mutableListOf();
 
-        for(num in A){
-            if(num%2==0)
+        for (num in A) {
+            if (num % 2 == 0)
                 even.add(num);
             else
                 odd.add(num);

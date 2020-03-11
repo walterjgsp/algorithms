@@ -12,15 +12,15 @@ package org.algorithm.problems
 
 class `0012_find_minimum_in_rotated_sorted_array` {
     fun findMin(nums: IntArray): Int {
-        var lower:Int=0;
-        var higher:Int=nums.size-1;
+        var lower: Int = 0;
+        var higher: Int = nums.size - 1;
 
-        while(lower<higher){
-            var mid:Int = lower + (higher-lower)/2;
+        while (lower < higher) {
+            val mid: Int = lower + (higher - lower) / 2;
 
-            if(nums[mid]>nums.last()){
-                lower=mid+1;
-            }else{
+            if (nums[mid] > nums.last()) {
+                lower = mid + 1;
+            } else {
                 higher = mid;
             }
         }

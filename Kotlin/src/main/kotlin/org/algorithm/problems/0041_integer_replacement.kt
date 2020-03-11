@@ -6,28 +6,27 @@
 // What is the minimum number of replacements needed for n to become 1?
 package org.algorithm.problems
 
-class `0041_integer_replacement`{
-    var memo:HashMap<Int,Int> = HashMap<Int,Int>();
+class `0041_integer_replacement` {
+    var memo: HashMap<Int, Int> = HashMap<Int, Int>();
     fun integerReplacement(n: Int): Int {
-        if(n==Int.MAX_VALUE)
+        if (n == Int.MAX_VALUE)
             return 32;
 
-        if(memo.contains(n))
+        if (memo.contains(n))
             return memo.getValue(n);
 
-        var minReplacement:Int = 0;
+        var minReplacement: Int = 0;
 
-        if(n==1)
+        if (n == 1)
             return minReplacement;
 
-        if(n%2==0){
-            minReplacement = 1+integerReplacement(n/2);
-        }else{
-            minReplacement = 1+minOf(integerReplacement(n+1),integerReplacement(n-1));
+        if (n % 2 == 0) {
+            minReplacement = 1 + integerReplacement(n / 2);
+        } else {
+            minReplacement = 1 + minOf(integerReplacement(n + 1), integerReplacement(n - 1));
         }
 
-        memo.put(n,minReplacement);
+        memo.put(n, minReplacement);
         return minReplacement;
     }
 }
-

@@ -17,14 +17,14 @@ class `0122_min_stack` {
     fun push(x: Int) {
         currStack.push(x)
         var minValue = x
-        if(!minStack.isEmpty()){
-            minValue = minOf(minValue,minStack.peek())
+        if (!minStack.isEmpty()) {
+            minValue = minOf(minValue, minStack.peek())
         }
         minStack.push(minValue)
     }
 
     fun pop() {
-        if(!currStack.isEmpty()){
+        if (!currStack.isEmpty()) {
             currStack.pop()
             minStack.pop()
         }
@@ -37,5 +37,4 @@ class `0122_min_stack` {
     fun getMin(): Int {
         return minStack.peek()
     }
-
 }

@@ -1,18 +1,18 @@
 package org.algorithm.structures
 
-class Queue<T>{
+class Queue<T> {
     private data class Node<T>(
-        val value : T,
-        var next: Node<T>? = null
+            val value: T,
+            var next: Node<T>? = null
     )
 
-    private var front:Node<T>? = null
-    private var end:Node<T>? = null
-    private var capacity:Int = 0
+    private var front: Node<T>? = null
+    private var end: Node<T>? = null
+    private var capacity: Int = 0
 
-    fun push(newValue: T){
+    fun push(newValue: T) {
         val newNode = Node<T>(newValue)
-        if(front==null){
+        if (front == null) {
             front = newNode
         }
 
@@ -23,24 +23,24 @@ class Queue<T>{
 
     fun size() = capacity
 
-    fun peek(): T?{
+    fun peek(): T? {
         return front?.value
     }
 
-    fun pop(){
-        if(front!=null){
+    fun pop() {
+        if (front != null) {
             front = front?.next
 
-            if(front==null){
+            if (front == null) {
                 end = null
             }
             capacity--
         }
     }
 
-    fun printQueue(){
+    fun printQueue() {
         var iterator: Node<T>? = front
-        while(iterator!=null){
+        while (iterator != null) {
             print("${iterator.value} ")
             iterator = iterator.next
         }
