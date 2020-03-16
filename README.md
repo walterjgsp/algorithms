@@ -19,6 +19,12 @@ The documentation for this project can be found at: <https://walterjgsp.github.i
 
 The problems list can be found at [Problems](PROBLEMS.md)
 
+## Third Party Libraries
+
+The following libraries are used in the project and are necessary to install if you want to enjoy all the features in this project (testing):
+
+* [Gradle](https://gradle.org/): build tool for Kotlin.
+
 ## Run C++
 
 All the C++ code were done using the C++14 version. To compile use the following command:
