@@ -16,5 +16,4 @@ TEST_CASE( "Sort Integers by The Power Value" ) {
     REQUIRE( sol.getKth(10,20,5) == 13 );   
 
     REQUIRE( sol.getKth(1,1000,777) == 570 );   
-
 }
