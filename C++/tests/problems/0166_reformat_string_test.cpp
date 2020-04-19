@@ -16,5 +16,4 @@ TEST_CASE( "Reformat The String" ) {
     REQUIRE( sol.reformat("covid2019") == "d9i1v0o2c" );   
 
     REQUIRE( sol.reformat("ab123") == "3b2a1" );   
-
 }
