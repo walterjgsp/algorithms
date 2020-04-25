@@ -15,11 +15,11 @@ For any suggestion on algorithm, problem or data structure, just open an issue w
 This repo contains questions from LeetCode (most of them), HackerRank, CodeSignal and LintCode.
 We suggest you try their platform so you can get new problems and articles about algorithms.
 
-The documentation for this project can be found at: <https://walterjgsp.github.io/algorithms/>
+The documentation for this project can be found at <https://walterjgsp.github.io/algorithms/>
 
 The problems list can be found at [Problems](PROBLEMS.md)
 
-## Third Party Libraries
+## Third-Party Libraries
 
 The following libraries are used in the project and are necessary to install if you want to enjoy all the features in this project (testing):
 
