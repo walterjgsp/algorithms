@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from Python.problems.problem_0166_backspace_compare import Solution
+from Python.problems.problem_0168_backspace_compare import Solution
 
 
 class TestBackspaceCompareSolution(TestCase):
