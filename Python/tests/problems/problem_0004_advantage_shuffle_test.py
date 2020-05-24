@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from Python.problems._0004_advantage_shuffle import Solution
+from Python.problems.problem_0004_advantage_shuffle import Solution
 
 
 class AdvantageShuffleTestSolution(TestCase):

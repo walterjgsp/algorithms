@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from Python.problems._0007_arrange_coins import Solution
+from Python.problems.problem_0007_arrange_coins import Solution
 
 
 class ArrangeCoinsTestSolution(TestCase):

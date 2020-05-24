@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from Python.problems._0001_two_sum import Solution
+from Python.problems.problem_0001_two_sum import Solution
 
 
 class TwoSumTestSolution(TestCase):
