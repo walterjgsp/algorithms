@@ -1,6 +1,6 @@
 from unittest import TestCase
 from typing import List
-from Python.problems._0003_add_two_numbers import Solution, linked_list_from_list, list_from_linked_list
+from Python.problems.problem_0003_add_two_numbers import Solution, linked_list_from_list, list_from_linked_list
 
 
 class AddTwoNumbersTestSolution(TestCase):
