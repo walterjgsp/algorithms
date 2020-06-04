@@ -15,5 +15,4 @@ TEST_CASE( "Backspace String Compare" ) {
     REQUIRE(sol.backspaceCompare("a##c","#a#c"));   
     
     REQUIRE(!sol.backspaceCompare("a#c","b"));   
-
 }
