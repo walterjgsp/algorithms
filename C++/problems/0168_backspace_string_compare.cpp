@@ -22,6 +22,6 @@ string Solution::buildString(const string &word){
     return result;
 }
 
-bool Solution::backspaceCompare(string S, string T){
+bool Solution::backspaceCompare(const string &S,const string &T){
     return buildString(S) == buildString(T);
 }

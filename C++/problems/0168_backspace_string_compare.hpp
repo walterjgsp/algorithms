@@ -10,7 +10,7 @@ private:
     string buildString(const string &word);
 
 public:
-    bool backspaceCompare(string S, string T);
+    bool backspaceCompare(const string &S, const string &T);
 };
 
 #include "0168_backspace_string_compare.cpp"
