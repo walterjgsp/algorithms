@@ -41,7 +41,7 @@ class Solution:
                 next_pos = nums[index]
                 count = 0
 
-                while nums[next_pos] != -1:
+                while was_not_visited(nums[next_pos]):
                     actual_pos = next_pos
                     next_pos = nums[next_pos]
                     count += 1
