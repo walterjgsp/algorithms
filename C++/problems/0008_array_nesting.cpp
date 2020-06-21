@@ -1,4 +1,4 @@
-// Proble Statement
+// Problem Statement
 //
 // A zero-indexed array A of length N contains all integers from 0 to N-1.
 // Find and return the longest length of set S,
