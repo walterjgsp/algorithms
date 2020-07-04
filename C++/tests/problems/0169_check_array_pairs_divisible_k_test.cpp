@@ -20,5 +20,5 @@ TEST_CASE( "Check If Array Pairs Are Divisible by k" ) {
     REQUIRE(sol.canArrange(arr4,2) == true);   
 
     vector<int> arr5 = {-1,1,-2,2,-3,3,-4,4};
-    REQUIRE(sol.canArrange(arr4,3) == true);
+    REQUIRE(sol.canArrange(arr5,3) == true);
 }
