@@ -2,8 +2,11 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
-    kotlin("jvm") version "1.3.61"
+    kotlin("jvm") version "1.3.72"
 }
+
+group = "org.wcode.algorithm"
+version = "1.0-SNAPSHOT"
 
 repositories {
     jcenter()
@@ -11,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    implementation(kotlin("stdlib-jdk8"))
 
     testImplementation("org.assertj:assertj-core:3.12.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
@@ -19,6 +22,15 @@ dependencies {
     testImplementation("org.hamcrest:hamcrest:2.2")
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.4.2")
+}
+
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
 }
 
 tasks.test {
@@ -57,10 +69,10 @@ tasks.test {
                 logger.lifecycle("----")
                 logger.lifecycle("Test result: ${result.resultType}")
                 logger.lifecycle(
-                        "Test summary: ${result.testCount} tests, " +
-                                "${result.successfulTestCount} succeeded, " +
-                                "${result.failedTestCount} failed, " +
-                                "${result.skippedTestCount} skipped")
+                    "Test summary: ${result.testCount} tests, " +
+                            "${result.successfulTestCount} succeeded, " +
+                            "${result.failedTestCount} failed, " +
+                            "${result.skippedTestCount} skipped")
                 failedTests.takeIf { it.isNotEmpty() }?.prefixedSummary("\tFailed Tests")
                 skippedTests.takeIf { it.isNotEmpty() }?.prefixedSummary("\tSkipped Tests:")
             }
