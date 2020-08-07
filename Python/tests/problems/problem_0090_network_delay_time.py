@@ -4,6 +4,7 @@ from Python.problems.problem_0090_network_delay_time import Solution
 
 
 class NetworkDelayTimeTestSolution(TestCase):
+
     def setUp(self) -> None:
         self.simple_graph = _mount_simple_graph()
         self.two_way_graph = _mount_two_way_graph()
