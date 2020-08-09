@@ -1,12 +1,15 @@
 package org.algorithm.structures
 
 class Trie {
-    class TrieNode(var childs: Array<TrieNode?> = arrayOfNulls<TrieNode?>(26), var endWord: Boolean = false)
+    data class TrieNode(
+        var childs: Array<TrieNode?> = arrayOfNulls<TrieNode?>(26),
+        var endWord: Boolean = false
+    )
 
-    var root: TrieNode?;
+    var root: TrieNode?
 
     init {
-        root = TrieNode();
+        root = TrieNode()
     }
 
     fun addWord(word: String) {
