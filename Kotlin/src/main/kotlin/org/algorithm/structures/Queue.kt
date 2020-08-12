@@ -1,14 +1,18 @@
 package org.algorithm.structures
 
+import java.lang.StringBuilder
+
 class Queue<T> {
     private data class Node<T>(
-            val value: T,
-            var next: Node<T>? = null
+        val value: T,
+        var next: Node<T>? = null
     )
 
     private var front: Node<T>? = null
     private var end: Node<T>? = null
     private var capacity: Int = 0
+    val size: Int
+        get() = capacity
 
     fun push(newValue: T) {
         val newNode = Node<T>(newValue)
@@ -20,8 +24,6 @@ class Queue<T> {
         end = newNode
         capacity++
     }
-
-    fun size() = capacity
 
     fun peek(): T? {
         return front?.value
@@ -38,11 +40,15 @@ class Queue<T> {
         }
     }
 
-    fun printQueue() {
+    override fun toString() : String {
         var iterator: Node<T>? = front
+        val builder = StringBuilder()
         while (iterator != null) {
-            print("${iterator.value} ")
+            builder.append("${iterator.value} ")
             iterator = iterator.next
         }
+        return builder.toString()
     }
+
+    fun empty() = capacity == 0
 }

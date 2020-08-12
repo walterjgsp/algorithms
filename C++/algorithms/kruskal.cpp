@@ -83,7 +83,7 @@ public:
 
     vector<pair<int,pair<int,int>>> edgesToGraph;
 
-    while (!helper.empty()) {
+    while (!helper.empty() && edgesToGraph.size() < graph.getSize()) {
       auto current = helper.top();
       helper.pop();
 
