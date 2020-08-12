@@ -23,7 +23,7 @@ class Kruskal {
             val toParent = unionFind.find(smaller.to)
             if (fromParent != toParent) {
                 edges.add(smaller.toTriple())
-                unionFind.union(fromParent, unionFind.find(toParent))
+                unionFind.union(fromParent.first, unionFind.find(toParent.first).first)
             }
         }
 
