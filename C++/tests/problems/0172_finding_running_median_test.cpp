@@ -15,6 +15,4 @@ TEST_CASE( "Find the Running Median" ) {
     vector<int> arr2 = {12,4,5,3,8,7};
     vector<double> result2 = {12.0,8.0,5.0,4.5,5.0,6.0};
     REQUIRE(areVectorsEqual(sol.runningMedian(arr2),result2));   
-    
-   
 }
