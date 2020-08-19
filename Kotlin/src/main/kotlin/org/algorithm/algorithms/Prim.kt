@@ -4,7 +4,7 @@ import org.algorithm.shared.Edge
 import org.algorithm.shared.Graph
 import java.util.*
 
-class Prim {
+object Prim {
 
     fun minimumSpanningTree(graph: Graph, start: Int = 0): List<Triple<Int, Int, Int>> {
         val visited = mutableSetOf<Int>()
