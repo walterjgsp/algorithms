@@ -1,7 +1,0 @@
-Existe na bfs um conceito de tempo e espaço. Se pensarmos em uma árvore, o tempo estará
-na profundidade, no eixo vertical e o espaço na quantidade de nós no eixo horizontal
-Cada vez nós processamos um timeframe com todos os seus nós. E é assim que ela funciona
-e o porque ela encontra elementos o mais rápido possível, porque processamos primeiro no
-espaço antes de modificar o tempo.
-
-Na DFS nós andamos no tempo e ao inves de ser no espaço

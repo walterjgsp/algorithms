@@ -9,7 +9,7 @@ import java.util.*
  * Time Complexity: O(E log V)
  * Space Complexity: O(V+E)
  */
-class Kruskal {
+object Kruskal {
 
     fun minimumSpanningTree(graph: Graph): List<Triple<Int, Int, Int>> {
         val unionFind = UnionFind(graph.size)

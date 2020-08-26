@@ -37,14 +37,14 @@ class KruskalTest {
 
     @Test
     fun testMinimumSpanningTree() {
-        val kruskalResult = Kruskal().minimumSpanningTree(graph)
+        val kruskalResult = Kruskal.minimumSpanningTree(graph)
         val result = kruskalResult.sumBy { it.first }
         Assertions.assertEquals(16, result)
     }
 
     @Test
     fun testMinimumSpanningTreeGraph2(){
-        val kruskalResult = Kruskal().minimumSpanningTree(graph2)
+        val kruskalResult = Kruskal.minimumSpanningTree(graph2)
         val result = kruskalResult.sumBy { it.first }
         Assertions.assertEquals(39, result)
     }

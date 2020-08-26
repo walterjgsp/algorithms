@@ -7,11 +7,10 @@ import org.junit.jupiter.api.Test
 
 class PrimTest {
 
-    private var graph: Graph
-    private var graph2: Graph
+    private var graph: Graph = Graph(6)
+    private var graph2: Graph = Graph(7)
 
     init {
-        graph = Graph(6)
         graph.addEdge(0, 1, 1)
         graph.addEdge(0, 3, 4)
         graph.addEdge(0, 4, 3)
@@ -22,7 +21,6 @@ class PrimTest {
         graph.addEdge(3, 4, 4)
         graph.addEdge(4, 5, 7)
 
-        graph2 = Graph(7)
         graph2.addEdge(0, 3, 5);
         graph2.addEdge(0, 1, 7);
         graph2.addEdge(1, 2, 8);
@@ -38,14 +36,14 @@ class PrimTest {
 
     @Test
     fun testMinimumSpanningTree() {
-        val primResult = Prim().minimumSpanningTree(graph)
+        val primResult = Prim.minimumSpanningTree(graph)
         val result = primResult.sumBy { it.first }
         assertEquals(16, result)
     }
 
     @Test
     fun testMinimumSpanningTreeGraph2() {
-        val primResult = Prim().minimumSpanningTree(graph2)
+        val primResult = Prim.minimumSpanningTree(graph2)
         val result = primResult.sumBy { it.first }
         assertEquals(39, result)
     }
