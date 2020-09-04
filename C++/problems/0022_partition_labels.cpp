@@ -5,81 +5,46 @@
 // and return a list of integers representing the size of these parts.
 // Input: S = "ababcbacadefegdehijhklij"
 // Output: [9,7,8]
+#include "0022_partition_labels.hpp"
 #include <bits/stdc++.h>
 
 using namespace std;
 
-class Solution {
-private:
-    struct Interval{
-        int start, end;
-        Interval(int s, int e){
-            start = s;
-            end = e;
+vector<int> Solution::partitionLabels(string S) {
+    vector<int> result;
+
+    if (S.empty())return result;
+
+    vector <pair<int, int>> intervals(26, {-1, -1});
+    priority_queue < pair < int, int >, vector < pair < int, int >>, greater < pair < int, int>> > pq;
+
+    for (int i = 0; i < S.size(); i++) {
+        int index = S[i] - 'a';
+        if (intervals[index].first == -1) {
+            intervals[index].first = i;
         }
-
-        Interval(){};
-    };
-
-    static bool comparator(const Interval &i1, const Interval &i2){
-        if(i1.start == i2.start)
-            return i1.end<i2.end;
-        return i1.start<i2.start;
+        intervals[index].second = i;
     }
 
-public:
-    vector<int> partitionLabels(string S) {
-        vector<int> to_return;
-
-        if(S.empty())
-            return to_return;
-
-        unordered_map<char,Interval> helper;
-
-        for(int i=0;i<S.size();i++){
-            if(helper.find(S[i])!=helper.end()){
-                helper[S[i]].end = i;
-            }else{
-                helper[S[i]] = Interval(i,i);
-            }
+    for (auto it : intervals) {
+        if (it.first != -1) {
+            pq.push(it);
         }
-
-        vector<Interval> intervals, newIntervals;
-
-        for(auto it : helper){
-            intervals.push_back(it.second);
-        }
-
-        sort(intervals.begin(),intervals.end(),comparator);
-
-        newIntervals.push_back(intervals[0]);
-        for(int i=1;i<intervals.size();i++){
-            if(newIntervals.back().end>intervals[i].start){
-                newIntervals.back().end = max(newIntervals.back().end,intervals[i].end);
-            }else{
-                newIntervals.push_back(intervals[i]);
-            }
-        }
-
-        for(auto inter : newIntervals){
-            to_return.push_back(inter.end-inter.start+1);
-        }
-
-        return to_return;
     }
-};
 
-void printVec(const vector<int> &vec){
-  for(int val : vec)
-    cout<<val<<" ";
-  cout<<endl;
+    pair<int, int> curr_inter = pq.top();
+    pq.pop();
+    while (!pq.empty()) {
+        auto top = pq.top();
+        pq.pop();
+        if (curr_inter.second > top.first) {
+            curr_inter.second = max(curr_inter.second, top.second);
+        } else {
+            result.push_back(curr_inter.second - curr_inter.first + 1);
+            curr_inter = top;
+        }
+    }
+    result.push_back(curr_inter.second - curr_inter.first + 1);
+    return result;
 }
 
-int main(){
-  string word = "ababcbacadefegdehijhklij";
-  Solution sol;
-
-  printVec(sol.partitionLabels(word));
-
-  return 0;
-}
