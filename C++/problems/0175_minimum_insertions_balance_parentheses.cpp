@@ -51,7 +51,3 @@ int Solution::minInsertions(string s) {
 
     return result;
 }
-
-
-
-
