@@ -179,3 +179,5 @@ List of solved problems
 | 175   | Minimum Insertions to Balance a Parentheses String     | :heavy_check_mark: |                    |                    |                    | [LeetCode](https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/)                          |
 | 176   | Minimum Deletion Cost to Avoid Repeating Letters       | :heavy_check_mark: |                    |                    |                    | [LeetCode](https://leetcode.com/problems/minimum-deletion-cost-to-avoid-repeating-letters/)                            |
 | 177   | Unique Paths                                           |                    |                    | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/unique-paths/)                                                                |
+| 178   | Jump Game                                              |                    |                    | :heavy_check_mark: |                    | [LeetCode](https://leetcode.com/problems/jump-game/)                                                                   |
+
