@@ -70,6 +70,6 @@ class Main {
     public static void main(String[] args) {
         Solution sol = new Solution();
         int n = 4;
-        System.out.println(sol.solveNQueens(4));
+        System.out.println(sol.solveNQueens(n));
     }
 }
