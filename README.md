@@ -30,7 +30,7 @@ The following libraries are used in the project and are necessary to install if 
 All the C++ code were done using the C++14 version. To compile use the following command:
 
 ```bash
-g++ -std=c++14 <INPUT_FILE_NAME> -o <OUTPUT_FILE_NAME>
+g++ -std=c++20 <INPUT_FILE_NAME> -o <OUTPUT_FILE_NAME>
 ```
 
 And to run the code:
@@ -38,6 +38,13 @@ And to run the code:
 ```bash
 ./<OUTPUT_FILE_NAME>
 ```
+
+### Adding bits to Xcode
+
+If you are running on a Mac one of the options for the stdc++ library to work it's to add it on XCode. To do that first create the folder **bits**
+in the following path: ***/Library/Developer/CommandLineTools/usr/include/c++/v1***
+
+Then copy the file  stdc++.h inside the folder **C++/frameworks/** to the folder bits.
 
 ## Run Kotlin
 
