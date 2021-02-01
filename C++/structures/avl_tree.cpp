@@ -104,7 +104,6 @@ public:
 
     bool remove(int value){
         if(contains(value)){
-
             return true;
         }
         return false;
@@ -138,7 +137,6 @@ public:
             cout<<endl;
         }
     }
-
 };
 
 int main(){
