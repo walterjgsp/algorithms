@@ -10,5 +10,4 @@ TEST_CASE( "Maximum Score From Removing Stones" ) {
     REQUIRE(sol.maximumScore(2,4,6 == 6));
     REQUIRE(sol.maximumScore(4,4,6 == 7));
     REQUIRE(sol.maximumScore(1,8,8 == 8));
-
 }
