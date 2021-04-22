@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector<int> Solution::findCenter(vector<vector<int>>& edges){
+int Solution::findCenter(vector<vector<int>>& edges){
     vector<int> vertex(edges.size()+1);
         
     for(auto e : edges){
