@@ -12,5 +12,4 @@ TEST_CASE( "Find Center of Star Graph" ) {
 
     vector<vector<int>> edge2 = {{1,2},{5,1},{1,3},{1,4}}
     REQUIRE(sol.findCenter(edge2) == 1);
-
 }
