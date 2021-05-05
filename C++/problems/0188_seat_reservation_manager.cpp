@@ -13,7 +13,7 @@
 
 using namespace std;
 
-SeatManager:SeatManager(int n){
+SeatManager::SeatManager(int n){
     for(int i=1;i<=n;i++){
         pq.push(i);
     }
