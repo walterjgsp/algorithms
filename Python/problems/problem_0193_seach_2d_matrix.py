@@ -10,7 +10,7 @@ from typing import List
 class Solution:
 
     @staticmethod
-    def searchMatrix(matrix: List[List[int]], target: int) -> bool:
+    def search_matrix(matrix: List[List[int]], target: int) -> bool:
 
         if matrix[0][0] == target:
             return True
