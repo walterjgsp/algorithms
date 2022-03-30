@@ -15,4 +15,4 @@ class ArrangeCoinsTestSolution(TestCase):
     def test_array_nesting(self):
         for index, expected_result in enumerate(self.expected_result_list):
             result = Solution.array_nesting(self.nums_list[index])
-            self.assertEquals(expected_result, result)
+            self.assertEqual(expected_result, result)
