@@ -4,9 +4,6 @@
 // An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
 // You may assume all four edges of the grid are all surrounded by water.
 
-import java.util.Set;
-import java.util.HashSet;
-
 class Solution {
     public int numIslands(char[][] grid) {
         int count = 0;
