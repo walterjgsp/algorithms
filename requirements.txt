@@ -6,6 +6,6 @@ idna==2.8
 incremental==21.3.0
 PyHamcrest==1.9.0
 six==1.13.0
-Twisted==22.2.0
+Twisted==22.10.0
 typing==3.7.4.1
 zope.interface==4.7.1
